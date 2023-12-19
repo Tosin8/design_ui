@@ -1,6 +1,8 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 
+import 'home.dart';
+
 class ShoeUI extends StatefulWidget {
   const ShoeUI({super.key});
 
@@ -27,17 +29,23 @@ class _ShoeUIState extends State<ShoeUI> {
               children: [
                 FadeInUp(
                   duration: const Duration(seconds: 8),
-                  child: Container(
-                    width: 200, height: 50,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Colors.blueAccent, 
-                      boxShadow: [BoxShadow(color: Colors.white.withOpacity(0.8), spreadRadius: 1, blurRadius: 1,)]
-                      
-                     ), 
-                     child: const Align(child: Text('Shop Now', 
-                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600, color: Colors.white),)),
-                    ),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(context, 
+                      MaterialPageRoute(builder: (context) => ShoeHome()));
+                    },
+                    child: Container(
+                      width: 200, height: 50,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.blueAccent, 
+                        boxShadow: [BoxShadow(color: Colors.white.withOpacity(0.8), spreadRadius: 1, blurRadius: 1,)]
+                        
+                       ), 
+                       child: const Align(child: Text('Shop Now', 
+                       style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600, color: Colors.white),)),
+                      ),
+                  ),
                 ),
                   const SizedBox(height: 60,)
               ],
