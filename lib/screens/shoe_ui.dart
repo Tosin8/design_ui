@@ -1,5 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 
 import 'home.dart';
 
@@ -15,7 +16,7 @@ class _ShoeUIState extends State<ShoeUI> {
   Widget build(BuildContext context) {
     return Scaffold( 
       body: FadeIn(
-        duration: const Duration(seconds: 5),
+        duration: const Duration(seconds: 1),
         child: Container(
           width: double.infinity,
           decoration: const BoxDecoration(
@@ -28,11 +29,12 @@ class _ShoeUIState extends State<ShoeUI> {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 FadeInUp(
-                  duration: const Duration(seconds: 8),
+                  duration: const Duration(seconds: 2),
                   child: GestureDetector(
                     onTap: () {
                       Navigator.push(context, 
-                      MaterialPageRoute(builder: (context) => ShoeHome()));
+                      PageTransition
+                      (type: PageTransitionType.fade, child: const ShoeHome()));
                     },
                     child: Container(
                       width: 200, height: 50,

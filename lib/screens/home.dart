@@ -10,6 +10,8 @@ class ShoeHome extends StatefulWidget {
 class _ShoeHomeState extends State<ShoeHome> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold( body: Container(child: Center(child: Text('Hello'),),)
+
+    );
   }
 }
