@@ -10,6 +10,15 @@ class ShoeUI extends StatefulWidget {
 class _ShoeUIState extends State<ShoeUI> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold( 
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/shoe_ui/7.png'),
+            fit: BoxFit.cover,
+          ),
+          ),
+      )
+    );
   }
 }

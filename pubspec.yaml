@@ -67,6 +67,7 @@ flutter:
     - assets/shoe_ui/4.png
     - assets/shoe_ui/5.png
     - assets/shoe_ui/6.png
+    - assets/shoe_ui/7.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
