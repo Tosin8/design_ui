@@ -53,7 +53,7 @@ class VanillaHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final contactBook = ContactBook(); 
+   // final contactBook = ContactBook(); 
     return Scaffold( 
       appBar: AppBar(
         title: const Text('Contacts', 
@@ -64,11 +64,14 @@ class VanillaHome extends StatelessWidget {
           valueListenable: ContactBook(),
           builder: (
             contact, value, child) { 
+              final contacts = value as List<Contact>; 
               return ListView.builder(
-             itemCount: contactBook.length,
+           //  itemCount: contactBook.length,
+           itemCount: contacts.length,
             itemBuilder: (context, index) {
           
-              final contact = contactBook.contact(atIndex: index)!;
+              //final contact = contactBook.contact(atIndex: index)!;
+              final contact = contacts[index];
               return ListTile(
                 title: Text(contact.name),
               );  
