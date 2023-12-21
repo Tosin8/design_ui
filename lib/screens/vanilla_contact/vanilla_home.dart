@@ -16,7 +16,9 @@ static final ContactBook _shared = ContactBook._sharedInstance();
 factory ContactBook() => _shared; 
 
 // CREATING A CONACTS STORAGE. 
-final List<Contact> _contacts = [];
+final List<Contact> _contacts = [
+  
+];
 // exposing how many contacts it needs to hold on to.
 int get length => _contacts.length; 
 
@@ -43,7 +45,19 @@ class VanillaHome extends StatelessWidget {
         title: const Text('Contacts', style: TextStyle(color: Colors.white),),
         backgroundColor: Colors.blue,
         centerTitle: true,),
-        body: ListView.builder(itemBuilder: itemBuilder)
+        body: ListView.builder(
+           itemCount: contactBook.length,
+          itemBuilder: (context, index) {
+
+            final contact = contactBook.contact(atIndex: index)!;
+            return ListTile(
+              title: Text(contact.name),
+            );  
+          }, 
+         )
+
+         // Creating way of adding new contacts
+         
     );
   }
 }
