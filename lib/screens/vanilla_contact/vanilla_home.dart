@@ -44,7 +44,9 @@ void remove({required Contact contact}) {
 }
 
 // a function to retrieve contacts with index 
-Contact? contact({required int atIndex})  => _contacts.length > atIndex ? _contacts[atIndex] : null; 
+Contact? contact({required int atIndex})  => 
+//_contacts.length > atIndex ? _contacts[atIndex] : null; 
+value.length > atIndex ? value[atIndex]: null; 
 }
 class VanillaHome extends StatelessWidget {
   const VanillaHome({super.key});
