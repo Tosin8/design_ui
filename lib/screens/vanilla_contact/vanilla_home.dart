@@ -28,12 +28,22 @@ void add({required Contact contact}) {
 void remove({required Contact contact}) {
   _contacts.remove(contact);
 }
+
+// a function to retrieve contacts with index 
+Contact? contact({required int atIndex})  => _contacts.length > atIndex ? _contacts[atIndex] : null; 
 }
 class VanillaHome extends StatelessWidget {
   const VanillaHome({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    final contactBook = ContactBook(); 
+    return Scaffold( 
+      appBar: AppBar(
+        title: const Text('Contacts', style: TextStyle(color: Colors.white),),
+        backgroundColor: Colors.blue,
+        centerTitle: true,),
+        body: ListView.builder(itemBuilder: itemBuilder)
+    );
   }
 }

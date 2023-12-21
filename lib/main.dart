@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:ui_design/screens/vanilla_contact/vanilla_home.dart';
 
 
-import 'screens/shoe_app/shoe_ui.dart';
 
 void main() {
   runApp(const MyApp());
