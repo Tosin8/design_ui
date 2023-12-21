@@ -54,10 +54,27 @@ class VanillaHome extends StatelessWidget {
               title: Text(contact.name),
             );  
           }, 
-         )
+         ), 
 
          // Creating way of adding new contacts
-         
-    );
+         floatingActionButton: FloatingActionButton(onPressed: (){},
+         child: const Icon(Icons.add),
+    ), 
+    ); 
+  }
+}
+
+// adding new contacts
+class NewContactView extends StatefulWidget {
+  const NewContactView({super.key});
+
+  @override
+  State<NewContactView> createState() => _NewContactViewState();
+}
+
+class _NewContactViewState extends State<NewContactView> {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
   }
 }
