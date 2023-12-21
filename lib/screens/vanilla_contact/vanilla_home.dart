@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uuid/uuid.dart';
 
 
 // Creating class for Contact List
@@ -7,7 +8,7 @@ class Contact {
   final String name;
    Contact( {
     required this.name, 
-  }): id = const Uuid().v4();
+  }): id = const  Uuid().v4();
 }
 
 // Creating a Singleton of ContactBook, which is the _sharedInstance(), _shared and factor constructor. 
@@ -26,11 +27,20 @@ int get length => _contacts.length;
 
 // Creating functions to add and remove contacts
 void add({required Contact contact}) {
-  _contacts.add(contact);
+ // _contacts.add(contact);
+ final contacts = value; 
+ contacts.add(contact);
+ notifyListeners();
+ //value.add(contact); // adding a private constructor, then adding super constructor along the value Notifier
 }
 
 void remove({required Contact contact}) {
-  _contacts.remove(contact);
+  final contacts = value;
+  if (contacts.contains(contact)){
+    contacts.remove(contact);
+    notifyListeners();
+  }
+ // _contacts.remove(contact);
 }
 
 // a function to retrieve contacts with index 
