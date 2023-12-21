@@ -95,8 +95,19 @@ late final TextEditingController _controller;
     body: Column(children: [
     TextField(
     controller: _controller, 
-    decoration: InputDecoration(
-    hintText: 'Enter New Contact'),)],)
+    decoration: const InputDecoration(
+    hintText: 'Enter a new contact name here..'
+    ),
+    ),
+    TextButton(
+    onPressed: (){
+    final contact = Contact(name: _controller.text);
+    ContactBook().add(contact: contact);
+    Navigator.of(context).pop(); 
+    },
+     child: const Text('Add Contact'),)
+    ],
+    )
     );
   }
 }
