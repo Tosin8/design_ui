@@ -10,7 +10,8 @@ class Contact {
 }
 
 // Creating a Singleton of ContactBook, which is the _sharedInstance(), _shared and factor constructor. 
-class ContactBook {
+class ContactBook extends ValueNotifier<List<Contact>>{
+  // extending Contact Book with ValueNotifier because the class only manages one instance which is the Db of the contact. 
   ContactBook._sharedInstance(); // creating a private constructor. 
 static final ContactBook _shared = ContactBook._sharedInstance(); 
 factory ContactBook() => _shared; 
@@ -112,9 +113,18 @@ late final TextEditingController _controller;
      child: Container(
       width: 120,height: 40,
       decoration: BoxDecoration(color: Colors.blue, borderRadius: BorderRadius.circular(15)),
-      child: Align(child: const Text('Add Contact', style: TextStyle(color: Colors.white),))),)
+      child: const Align(
+        child: Text('Save Contact', 
+        style: TextStyle(
+          color: Colors.white),
+          )
+          )
+          ),
+          )
     ],
     )
     );
   }
 }
+
+// Using ValueNotifier to notify the homepaage about changes to ContactBook. 
