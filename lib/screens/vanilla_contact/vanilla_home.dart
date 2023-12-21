@@ -61,7 +61,10 @@ class VanillaHome extends StatelessWidget {
         backgroundColor: Colors.blue,
         centerTitle: true,),
         body: ValueListenableBuilder(
-          child: ListView.builder(
+          valueListenable: ContactBook(),
+          builder: (
+            contact, value, child) { 
+              return ListView.builder(
              itemCount: contactBook.length,
             itemBuilder: (context, index) {
           
@@ -70,7 +73,9 @@ class VanillaHome extends StatelessWidget {
                 title: Text(contact.name),
               );  
             }, 
-           ),
+           );
+             },
+          
         ), 
 
          // Creating way of adding new contacts
