@@ -5,9 +5,9 @@ import 'package:flutter/material.dart';
 class Contact {
   final String id; 
   final String name;
-  const Contact(this.id, {
+   Contact( {
     required this.name, 
-  });
+  }): id = const Uuid().v4();
 }
 
 // Creating a Singleton of ContactBook, which is the _sharedInstance(), _shared and factor constructor. 
