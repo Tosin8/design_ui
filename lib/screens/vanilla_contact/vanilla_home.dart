@@ -12,7 +12,7 @@ class Contact {
 // Creating a Singleton of ContactBook, which is the _sharedInstance(), _shared and factor constructor. 
 class ContactBook extends ValueNotifier<List<Contact>>{
   // extending Contact Book with ValueNotifier because the class only manages one instance which is the Db of the contact. 
-  ContactBook._sharedInstance(); // creating a private constructor. 
+  ContactBook._sharedInstance() : super([]); // creating a private constructor, then adding super constructor along the value Notifier. 
 static final ContactBook _shared = ContactBook._sharedInstance(); 
 factory ContactBook() => _shared; 
 
