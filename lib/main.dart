@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:ui_design/screens/shoe_ui.dart';
+import 'package:ui_design/screens/vanilla_contact/vanilla_home.dart';
+
+
+import 'screens/shoe_app/shoe_ui.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +22,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const ShoeUI()
+      home: const VanillaHome()
     );
   }
 }
