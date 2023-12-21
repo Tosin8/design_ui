@@ -57,7 +57,11 @@ class VanillaHome extends StatelessWidget {
          ), 
 
          // Creating way of adding new contacts
-         floatingActionButton: FloatingActionButton(onPressed: (){},
+         floatingActionButton: FloatingActionButton(
+          onPressed: () async{
+            await 
+          Navigator.of(context).pushNamed('/new-contact'); 
+         },
          child: const Icon(Icons.add),
     ), 
     ); 
@@ -105,7 +109,10 @@ late final TextEditingController _controller;
     ContactBook().add(contact: contact);
     Navigator.of(context).pop(); 
     },
-     child: const Text('Add Contact'),)
+     child: Container(
+      width: 120,height: 40,
+      decoration: BoxDecoration(color: Colors.blue, borderRadius: BorderRadius.circular(15)),
+      child: Align(child: const Text('Add Contact', style: TextStyle(color: Colors.white),))),)
     ],
     )
     );
