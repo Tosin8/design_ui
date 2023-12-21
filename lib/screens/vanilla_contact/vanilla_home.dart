@@ -92,7 +92,11 @@ late final TextEditingController _controller;
     appBar: AppBar(
     title: const Text('Add a new contact'),
     ),
-    body: Column(children: [],)
+    body: Column(children: [
+    TextField(
+    controller: _controller, 
+    decoration: InputDecoration(
+    hintText: 'Enter New Contact'),)],)
     );
   }
 }
