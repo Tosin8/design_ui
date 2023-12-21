@@ -56,19 +56,22 @@ class VanillaHome extends StatelessWidget {
     final contactBook = ContactBook(); 
     return Scaffold( 
       appBar: AppBar(
-        title: const Text('Contacts', style: TextStyle(color: Colors.white),),
+        title: const Text('Contacts', 
+        style: TextStyle(color: Colors.white),),
         backgroundColor: Colors.blue,
         centerTitle: true,),
-        body: ListView.builder(
-           itemCount: contactBook.length,
-          itemBuilder: (context, index) {
-
-            final contact = contactBook.contact(atIndex: index)!;
-            return ListTile(
-              title: Text(contact.name),
-            );  
-          }, 
-         ), 
+        body: ValueListenableBuilder(
+          child: ListView.builder(
+             itemCount: contactBook.length,
+            itemBuilder: (context, index) {
+          
+              final contact = contactBook.contact(atIndex: index)!;
+              return ListTile(
+                title: Text(contact.name),
+              );  
+            }, 
+           ),
+        ), 
 
          // Creating way of adding new contacts
          floatingActionButton: FloatingActionButton(
