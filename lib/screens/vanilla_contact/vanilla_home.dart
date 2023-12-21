@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 
 // Creating class for Contact List
 class Contact {
+  final String id; 
   final String name;
-  const Contact({
+  const Contact(this.id, {
     required this.name, 
   });
 }
