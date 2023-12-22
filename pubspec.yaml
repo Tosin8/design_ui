@@ -61,7 +61,14 @@ flutter:
     - assets/shoe_ui/6.png
     - assets/shoe_ui/7.png
     - assets/shoe_ui/8.jpg
-  #   - images/a_dot_ham.jpeg
+    - assets/city_tour/thailand.jpg
+    - assets/city_tour/bejing_china.jpg
+    - assets/city_tour/new_york.jpg
+    - assets/city_tour/singapore.jpg
+    - assets/city_tour/tokyo_japan.jpg
+    - assets/city_tour/syndey.jpg
+    
+      #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
   # For details regarding adding assets from package dependencies, see
