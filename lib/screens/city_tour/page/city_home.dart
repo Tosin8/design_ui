@@ -29,19 +29,26 @@ class _CityHomeState extends State<CityHome> {
         ],
 
       ),
-     // body: LocationWidget(), 
+     body: LocationWidget(), 
       bottomNavigationBar: BottomNavigationBar(
+        elevation: 0, 
+      //  selectedItemColor: Colors.white,
+        // unselectedItemColor: Colors.white54,
+        // backgroundColor: Colors.transparent, 
+        // showSelectedLabels: false, 
+        // showUnselectedLabels: false,
+
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(Icons.pin_drop_outlined),
             label: '', 
             ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search),
+            icon: Icon(Icons.add_location),
              label: '', 
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
+            icon: Icon(Icons.person_outline_outlined),
              label: '', 
             
           ),
