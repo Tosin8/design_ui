@@ -39,7 +39,7 @@ class CityImage extends StatelessWidget {
             children: [
 Text(location.name,
  style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20)),  
-CityLatLong(location: location, key: null,), 
+CityLatLong(location: location, ), 
             ],)
           )
         ],
