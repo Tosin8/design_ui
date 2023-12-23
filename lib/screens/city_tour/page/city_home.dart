@@ -31,7 +31,7 @@ class _CityHomeState extends State<CityHome> {
         ],
 
       ),
-     body: CityLocation(), 
+     body: const CityLocation(location: null,), 
       bottomNavigationBar: BottomNavigationBar(
         elevation: 0, 
       //  selectedItemColor: Colors.white,
