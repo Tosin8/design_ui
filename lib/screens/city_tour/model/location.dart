@@ -1,3 +1,5 @@
+import 'review.dart';
+
 class Location {
   final String name; 
   final String urlImage; 
