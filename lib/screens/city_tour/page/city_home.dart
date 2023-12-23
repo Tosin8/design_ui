@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
 
+import '../extension/city_location.dart';
+
 class CityHome extends StatefulWidget {
   const CityHome({super.key});
 
