@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'city_location.dart';
+import 'lat_long.dart';
 
 class CityImage extends StatelessWidget {
 
@@ -24,13 +25,21 @@ class CityImage extends StatelessWidget {
       ),
       child: Stack(
         children: [
-          buildImage(), 
+          SizedBox.expand(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(8),
+              child: Image.asset(
+                location.urlImage, 
+                fit: BoxFit.cover),
+                
+          ), ),
           Container(
             padding: const EdgeInsets.all(8), 
             child: Column(mainAxisAlignment: MainAxisAlignment.spaceBetween, 
             children: [
-buildTopText(), 
-LatLongWidget(location: location), 
+Text(location.name,
+ style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20)),  
+CityLatLong(location: location, key: null,), 
             ],)
           )
         ],
