@@ -33,7 +33,7 @@ class _CityLocationsState extends State<CityLocations> {
         Text(
           '${pageIndex + 1} /${locations.length}', 
           style: TextStyle(color: Colors.white70),
-        )
+        ), SizedBox(height: 12,)
       ],
     );
   }
