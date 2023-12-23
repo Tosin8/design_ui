@@ -29,7 +29,7 @@ class ExpandedContent extends StatelessWidget {
           location.addressLine2, 
           style: const TextStyle(color: Colors.black45),
         ), 
-        CityStars(stars: location.startRating), 
+        CityStars(stars: location.starRating), 
       ],
     ),
           SizedBox(height: 12), 
