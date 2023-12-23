@@ -29,7 +29,7 @@ class _CityHomeState extends State<CityHome> {
         ],
 
       ),
-     body: LocationWidget(), 
+     body: CityLocation(), 
       bottomNavigationBar: BottomNavigationBar(
         elevation: 0, 
       //  selectedItemColor: Colors.white,
