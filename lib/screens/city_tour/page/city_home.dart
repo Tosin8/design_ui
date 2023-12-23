@@ -1,4 +1,3 @@
-import 'dart:html';
 
 import 'package:flutter/material.dart';
 
@@ -31,7 +30,22 @@ class _CityHomeState extends State<CityHome> {
 
       ),
      // body: LocationWidget(), 
-      bottomNavigationBar: BottomNavigationBar(items: items),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: '', 
+            ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.search),
+             label: '', 
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+             label: '', 
+            
+          ),
+        ]),
     );
   }
 }
