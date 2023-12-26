@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_fadein/flutter_fadein.dart';
 
 class FurnitureSplash extends StatelessWidget {
   const FurnitureSplash({super.key});
@@ -23,7 +24,7 @@ class FurnitureSplash extends StatelessWidget {
                     begin: Alignment.bottomCenter,
                     end: Alignment.topRight,
                     colors: [
-                      Colors.black.withOpacity(0.3),
+                      Colors.black.withOpacity(0.4),
                       Colors.black.withOpacity(0.0),
                     ],
                   ),
@@ -48,9 +49,13 @@ class FurnitureSplash extends StatelessWidget {
                   
                   const Positioned(
                     top: -70,left: 20,
-                    child: Text(
-                      'Elegant\nSimple\nFurnitures.',
-                       style: TextStyle(fontSize: 35, fontWeight: FontWeight.w500),)), 
+                    child: FadeIn(
+                      duration: Duration(seconds: 4), 
+                      curve: Curves.easeIn,
+                      child: Text(
+                        'Elegant\nSimple\nFurnitures.',
+                         style: TextStyle(fontSize: 35, fontWeight: FontWeight.w500),),
+                    )), 
                   const Padding(
                     padding: EdgeInsets.symmetric(vertical: 100, horizontal: 80),
                     child: Text('Transform your home with \nthe best luxury furnitures. ', style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),textAlign: TextAlign.center,), 
