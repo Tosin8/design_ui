@@ -5,6 +5,19 @@ class FurnitureSplash extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold( 
+      body: ListView(
+        children: [
+          Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/images/furniture.jpg'),
+                fit: BoxFit.cover,
+              ),
+            ),
+          )
+        ],
+      ),
+    );
   }
 }
