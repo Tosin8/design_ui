@@ -58,35 +58,46 @@ class FurnitureSplash extends StatelessWidget {
                     )), 
                   const Padding(
                     padding: EdgeInsets.symmetric(vertical: 100, horizontal: 80),
-                    child: Text('Transform your home with \nthe best luxury furnitures. ', style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),textAlign: TextAlign.center,), 
+                    child: FadeIn( 
+                      duration: Duration(seconds: 6),
+                      curve: Curves.easeIn,
+                      child: Text('Transform your home with \nthe best luxury furnitures. ', style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),textAlign: TextAlign.center,)), 
                     
                     ), 
                     Positioned( 
                       left: 170, 
                       bottom: 80,
-                      child: Container(
-                        width: 66, height: 66,
-                        child: Image.asset('assets/furniture/icons/right-down.png')),
+                      child: FadeIn(
+                        duration: const Duration(seconds: 6) ,
+                        curve: Curves.easeIn,
+                        child: Container(
+                          width: 66, height: 66,
+                          child: Image.asset('assets/furniture/icons/right-down.png')),
+                      ),
                     ),   
                     Positioned( 
                       right: 20, 
                       bottom: 40,
-                      child: Container(
-                                width: 108,
-                                height: 108,
-                                decoration: const ShapeDecoration(
-                                  color: Color(0xFF5B5452),
-                                  shape: OvalBorder(),
-                                  shadows: [
-                                    BoxShadow(
-                                      color: Color(0x3F000000),
-                                      blurRadius: 4,
-                                      offset: Offset(0, 4),
-                                      spreadRadius: 0,
-                                    )
-                                  ],
-                                ),
-                           child: const Align(child: Text('START', style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w500),)),   ),
+                      child: FadeIn(
+                        duration: const Duration(seconds: 9),
+                        curve: Curves.easeIn,
+                        child: Container(
+                                  width: 108,
+                                  height: 108,
+                                  decoration: const ShapeDecoration(
+                                    color: Color(0xFF5B5452),
+                                    shape: OvalBorder(),
+                                    shadows: [
+                                      BoxShadow(
+                                        color: Color(0x3F000000),
+                                        blurRadius: 4,
+                                        offset: Offset(0, 4),
+                                        spreadRadius: 0,
+                                      )
+                                    ],
+                                  ),
+                             child: const Align(child: Text('START', style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w500),)),   ),
+                      ),
                     ),
 
 
