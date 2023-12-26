@@ -40,7 +40,7 @@ class FurnitureSplash extends StatelessWidget {
                
                  color: const Color(0xffCEC8BF),
              
-              child: const Stack(
+              child: Stack(
                 //fit: StackFit.loose,
                 clipBehavior: Clip.none,
       
@@ -53,7 +53,34 @@ class FurnitureSplash extends StatelessWidget {
                        style: TextStyle(fontSize: 35, fontWeight: FontWeight.w500),)), 
                   Padding(
                     padding: EdgeInsets.symmetric(vertical: 100, horizontal: 80),
-                    child: Text('Transform your home with \nthe best luxury furnitures. ', style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),textAlign: TextAlign.center,))]),
+                    child: Text('Transform your home with \nthe best luxury furnitures. ', style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),textAlign: TextAlign.center,), 
+                    
+                    ), 
+                    Positioned( 
+                      left: 150, 
+                      bottom: 70,
+                      child: Container(
+                        width: 66, height: 66,
+                        child: Image.asset('assets/furniture/icons/right-down.png')),
+                    ),   Container(
+          width: 108,
+          height: 108,
+          decoration: ShapeDecoration(
+            color: Color(0xFF5B5452),
+            shape: OvalBorder(),
+            shadows: [
+              BoxShadow(
+                color: Color(0x3F000000),
+                blurRadius: 4,
+                offset: Offset(0, 4),
+                spreadRadius: 0,
+              )
+            ],
+          ),
+     child: Text('START', style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w500),),   ),
+
+
+                    ]),
             )
           ],
         ),
