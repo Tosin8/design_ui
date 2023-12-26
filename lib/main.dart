@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'screens/city_tour/page/city_home.dart';
 import 'screens/furniture_app/splash.dart'; 
 
 void main() {
