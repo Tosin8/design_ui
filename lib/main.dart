@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'screens/city_tour/page/city_home.dart'; 
+import 'screens/city_tour/page/city_home.dart';
+import 'screens/furniture_app/splash.dart'; 
 
 void main() {
   runApp(const MyApp()); 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
     theme: ThemeData(
       primarySwatch: Colors.blue,
     ),
-    home: CityHome(), 
+    home: FurnitureSplash(), 
 
     ); 
   }
