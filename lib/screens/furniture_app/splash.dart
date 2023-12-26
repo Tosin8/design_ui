@@ -28,7 +28,7 @@ class FurnitureSplash extends StatelessWidget {
                     ],
                   ),
                 ),
-                child: Padding(
+                child: const Padding(
                   padding: EdgeInsets.only(top: 20, left: 180),
                   child: Text('KTEA', style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w500, ),
                   )),
@@ -41,7 +41,7 @@ class FurnitureSplash extends StatelessWidget {
                  color: const Color(0xffCEC8BF),
              
               child: const Stack(
-                fit: StackFit.loose,
+                //fit: StackFit.loose,
                 clipBehavior: Clip.none,
       
                 children:[
@@ -50,8 +50,10 @@ class FurnitureSplash extends StatelessWidget {
                     top: -70,left: 20,
                     child: Text(
                       'Elegant\nSimple\nFurnitures.',
-                       style: TextStyle(fontSize: 40, fontWeight: FontWeight.w500),)), 
-                  Text('Furniture your style \nwith teh most remarkable 24th century. ', style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18))]),
+                       style: TextStyle(fontSize: 35, fontWeight: FontWeight.w500),)), 
+                  Padding(
+                    padding: EdgeInsets.symmetric(vertical: 100, horizontal: 80),
+                    child: Text('Transform your home with \nthe best luxury furnitures. ', style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),textAlign: TextAlign.center,))]),
             )
           ],
         ),

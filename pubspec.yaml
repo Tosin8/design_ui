@@ -68,6 +68,7 @@ flutter:
     - assets/city_tour/tokyo_japan.jpg
     - assets/city_tour/syndey.jpg
     - assets/furniture/splash.jpg
+    - assets/furniture/icons/right-down.png
       #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
