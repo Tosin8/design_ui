@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_fadein/flutter_fadein.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:ui_design/screens/furniture_app/body/body.dart';
+import 'package:ui_design/screens/furniture_app/home/home.dart';
 
 class FurnitureSplash extends StatelessWidget {
   const FurnitureSplash({super.key});
@@ -87,7 +87,7 @@ class FurnitureSplash extends StatelessWidget {
                           onTap: (){
                             Navigator.push(context,
                             PageTransition(type: PageTransitionType.fade, 
-                            child: const FurnitureBody(), 
+                            child: const FurnitureHome(), 
                             )
                             ); 
                           },

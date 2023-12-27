@@ -4,9 +4,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../constants.dart';
 import '../size_config.dart';
+import 'component/titleText.dart';
 
-class FurnitureBody extends StatelessWidget {
-  const FurnitureBody({super.key});
+class FurnitureHome extends StatelessWidget {
+  const FurnitureHome({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,19 +20,26 @@ class FurnitureBody extends StatelessWidget {
       leading: IconButton(onPressed: (){},
        icon: SvgPicture.asset(
         'assets/furniture/icons/menu.svg', 
-        height: SizeConfig.defaultSize * 2,)),
+       // height: SizeConfig.defaultSize * 2,
+       )),
        actions: [
         IconButton(onPressed: (){},
-        icon: SvgPicture.asset('assets/furniture/icons/search.svg')),
-        Center(
+        icon: SvgPicture.asset('assets/furniture/icons/scan.svg')),
+        const Center(
           child: Text('Scan', style: TextStyle(color: kTextColor, fontWeight: FontWeight.bold),)
-        )
+        ), 
+        const SizedBox(width: 10), 
        
        ],
       ),
-      body: Container(
-        child: Text('Hello')
+      body: const SingleChildScrollView(
+        child: Column(
+          children: [
+            titleText(name: 'Browse by Categories',)
+          ],
+        )
       ),
     );
   }
 }
+
