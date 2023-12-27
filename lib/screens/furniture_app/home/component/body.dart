@@ -42,6 +42,13 @@ class CategoryCustomShape extends CustomClipper<Path> {
   @override
 Path getClip(Size size) {
   Path path = Path(); 
+  double height = size.height; 
+  double width = size.width;
+  double cornerSize = 30; 
+
+  path.lineTo(0, height - cornerSize); 
+  path.quadraticBezierTo(0, height, cornerSize, height); 
+  path.lineTo(width, height); 
   return path; 
 }
 
