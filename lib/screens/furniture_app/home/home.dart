@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../constants.dart';
 import '../size_config.dart';
+import 'component/body.dart';
 import 'component/titleText.dart';
 
 class FurnitureHome extends StatelessWidget {
@@ -32,13 +33,7 @@ class FurnitureHome extends StatelessWidget {
        
        ],
       ),
-      body: const SingleChildScrollView(
-        child: Column(
-          children: [
-            titleText(name: 'Browse by Categories',)
-          ],
-        )
-      ),
+      body: FurnitureBody(),
     );
   }
 }
