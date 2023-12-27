@@ -47,8 +47,11 @@ Path getClip(Size size) {
   double cornerSize = 30; 
 
   path.lineTo(0, height - cornerSize); 
-  path.quadraticBezierTo(0, height, cornerSize, height); 
-  path.lineTo(width, height); 
+  path.quadraticBezierTo(0, height, cornerSize, height);
+  path.lineTo(width - cornerSize, height) ; 
+  path.quadraticBezierTo(width, height, width, height - cornerSize); 
+  path.lineTo(width, 0); 
+  path.close(); 
   return path; 
 }
 
