@@ -34,6 +34,7 @@ class FurnitureBody extends StatelessWidget {
                     children: [
                       titleText(name: category.title), 
                       SizedBox(height: 20), 
+                      Text('${category.numOfProducts} + Products', style: TextStyle(color: kTextColor.withOpacity(0.6)),)
                     ],
                   ),),),
                 ), 
