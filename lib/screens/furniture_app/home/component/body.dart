@@ -14,13 +14,22 @@ class FurnitureBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           titleText(name: 'Browse by Categories',), 
           SizedBox(height: 20), 
-          CategoryCard(category: category,)
-        ],
-      )
-    );
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                CategoryCard(category: category,),
+                CategoryCard(category: category,),
+              ],
+            ),
+        )
+        
+   ]  ) ); 
+    
   }
 }
 
