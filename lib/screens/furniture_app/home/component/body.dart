@@ -40,15 +40,14 @@ class FurnitureBody extends StatelessWidget {
 
 class CategoryCustomShape extends CustomClipper<Path> {
   @override
-  Path getClip(Size size) {
-    // TODO: implement getClip
-    throw UnimplementedError();
-  }
+Path getClip(Size size) {
+  Path path = Path(); 
+  return path; 
+}
 
   @override
   bool shouldReclip(covariant CustomClipper<Path> oldClipper) {
-    // TODO: implement shouldReclip
-    throw UnimplementedError();
+  return true; 
   }
 
 }
