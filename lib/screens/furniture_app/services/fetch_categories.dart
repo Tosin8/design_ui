@@ -19,6 +19,7 @@ Future<List<Category>> fetchCategories() async {
         .map((data) => Category.fromJson(data))
         .toList();
 // It retuen list of categories
+print(categories); 
     return categories;
   } else {
     // If the server did not return a 200 OK response,

@@ -13,15 +13,17 @@ class FurnitureBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SingleChildScrollView(
+    return SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          titleText(name: 'Browse by Categories',), 
-          SizedBox(height: 20), 
+          const titleText(name: 'Browse by Categories',), 
+          const SizedBox(height: 20), 
           FutureBuilder(
             future: fetchCategories(),
-            builder: (context, snapshot) => snapshot.hasData? Categories() : CircularProgressIndicator(),
+            builder: (context, snapshot) => snapshot.hasData? Categories(
+              categories: snapshot.data as List<Category>,
+            ) :  Center(child: Image.asset('assets/furniture/icons/ripple.gif')),
           )
         
    ]  ) ); 
@@ -31,18 +33,16 @@ class FurnitureBody extends StatelessWidget {
 
 class Categories extends StatelessWidget {
   const Categories({
-    super.key,
+    super.key, required this.categories,
   });
 
+final List<Category> categories; 
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(
-        children: [
-          CategoryCard(category: category,),
-          CategoryCard(category: category,),
-        ],
+        children: List.generate(categories.length, (index) => CategoryCard(category: categories[index]))
       ),
             );
   }

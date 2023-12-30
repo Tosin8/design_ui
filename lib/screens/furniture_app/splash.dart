@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_fadein/flutter_fadein.dart';
 import 'package:page_transition/page_transition.dart';
@@ -49,29 +50,29 @@ class FurnitureSplash extends StatelessWidget {
       
                 children:[
                   
-                  const Positioned(
+                   Positioned(
                     top: -70,left: 20,
-                    child: FadeIn(
-                      duration: Duration(seconds: 4), 
-                      curve: Curves.easeIn,
+                    child: FadeInUp(
+                      duration: Duration(milliseconds: 500), 
+                      //curve: Curves.easeIn,
                       child: Text(
                         'Elegant\nSimple\nFurnitures.',
                          style: TextStyle(fontSize: 35, fontWeight: FontWeight.w500),),
                     )), 
-                  const Padding(
+                   Padding(
                     padding: EdgeInsets.symmetric(vertical: 100, horizontal: 80),
-                    child: FadeIn( 
-                      duration: Duration(seconds: 6),
-                      curve: Curves.easeIn,
+                    child: FadeInUp( 
+                      duration: Duration(seconds: 1),
+                     // curve: Curves.easeIn,
                       child: Text('Transform your home with \nthe best luxury furnitures. ', style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),textAlign: TextAlign.center,)), 
                     
                     ), 
                     Positioned( 
                       left: 170, 
                       bottom: 80,
-                      child: FadeIn(
-                        duration: const Duration(seconds: 6) ,
-                        curve: Curves.easeIn,
+                      child: FadeInUp(
+                        duration: const Duration(seconds: 1) ,
+                     //   curve: Curves.easeIn,
                         child: Container(
                           width: 66, height: 66,
                           child: Image.asset('assets/furniture/icons/right-down.png')),
@@ -80,9 +81,9 @@ class FurnitureSplash extends StatelessWidget {
                     Positioned( 
                       right: 20, 
                       bottom: 40,
-                      child: FadeIn(
-                        duration: const Duration(seconds: 9),
-                        curve: Curves.easeIn,
+                      child: FadeInUp(
+                        duration: const Duration(seconds: 2),
+                       // curve: Curves.easeIn,
                         child: GestureDetector( 
                           onTap: (){
                             Navigator.push(context,
