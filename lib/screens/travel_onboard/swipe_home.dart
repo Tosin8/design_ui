@@ -16,7 +16,11 @@ class _HomeSwipeState extends State<HomeSwipe> {
     final pages = [
       
     ]; 
-    return const Placeholder();
+    return PageView(
+      children: [
+
+      ], 
+    );
   }
 }
 
