@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ui_design/screens/swipe_onboard/swipe_home.dart';
 
-import 'screens/furniture_app/splash.dart'; 
+import 'screens/furniture_app/splash.dart';
+import 'screens/travel_onboard/swipe_home.dart'; 
 
 void main() {
   runApp(const MyApp()); 
