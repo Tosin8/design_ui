@@ -54,24 +54,24 @@ class _HomeSwipeState extends State<HomeSwipe> {
                child: Text('of tickets, transfers and a cool\nplace to stay.', 
                style: TextStyle(fontSize: 20),),
              ),  
-             const SizedBox(height: 150), 
+             const SizedBox(height: 130), 
               Padding(
-               padding: EdgeInsets.only(left: 25.0),
+               padding: const EdgeInsets.only(left: 25.0),
                child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   GestureDetector(
                     onTap: (){},
-                    child: Text('Skip')), 
+                    child: const Text('Skip')), 
                     Container(
-          width: 30,
-          height: 30,
-          decoration: ShapeDecoration(
-            color: Color(0xFFD9D9D9),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(14),
-            ),
-            shadows: [
+          width: 50,
+          height: 50,
+          decoration: BoxDecoration(
+            color: const Color(0xFFD9D9D9),
+            
+              borderRadius: BorderRadius.circular(10),
+            
+            boxShadow: const [
               BoxShadow(
                 color: Color(0x3F000000),
                 blurRadius: 4,
@@ -80,8 +80,9 @@ class _HomeSwipeState extends State<HomeSwipe> {
               )
             ],
           ),
+             child: const Icon(Icons.arrow_forward_ios), 
         ),
-        //SizedBox(width: 4),
+       //SizedBox(width: 0.5),
 
                 ],
                ),
