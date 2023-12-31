@@ -58,10 +58,31 @@ class _HomeSwipeState extends State<HomeSwipe> {
               Padding(
                padding: EdgeInsets.only(left: 25.0),
                child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   GestureDetector(
                     onTap: (){},
-                    child: Text('Skip'))
+                    child: Text('Skip')), 
+                    Container(
+          width: 30,
+          height: 30,
+          decoration: ShapeDecoration(
+            color: Color(0xFFD9D9D9),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(14),
+            ),
+            shadows: [
+              BoxShadow(
+                color: Color(0x3F000000),
+                blurRadius: 4,
+                offset: Offset(0, 4),
+                spreadRadius: 0,
+              )
+            ],
+          ),
+        ),
+        //SizedBox(width: 4),
+
                 ],
                ),
              )
