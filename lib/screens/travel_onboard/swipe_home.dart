@@ -1,6 +1,7 @@
 
 // using swipe pub dev. 
 import 'package:flutter/material.dart';
+import 'package:liquid_swipe/liquid_swipe.dart';
 import 'package:simple_shadow/simple_shadow.dart';
 
 class HomeSwipe extends StatefulWidget {
@@ -240,11 +241,16 @@ class _HomeSwipeState extends State<HomeSwipe> {
     ]; 
     return SafeArea(
       child: Scaffold(
-        body: PageView(
-          children: [
-        
-          ], 
-        ),
+        // body: PageView(
+        //   children:
+        // pages, 
+          
+        // ),
+      body: Builder(
+        builder: (context) {
+        return LiquidSwipe(pages: pages, 
+        );
+      })
       ),
     );
   }
