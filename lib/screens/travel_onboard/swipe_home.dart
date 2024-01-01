@@ -42,21 +42,20 @@ class _HomeSwipeState extends State<HomeSwipe> {
                  ),
                ),
                const SizedBox(height: 30), 
-             Padding(
-               padding: const EdgeInsets.only(left: 25.0),
-               child: FadeInUp(
-                 child: const Text('We will \ntake care', style: TextStyle(fontSize: 40, 
+             const Padding(
+               padding: EdgeInsets.only(left: 25.0),
+              
+                 child: Text('We will \ntake care', style: TextStyle(fontSize: 40, 
                  fontWeight: FontWeight.w600),),
-               ),
+               
              ),
              const SizedBox(height: 20), 
-              Padding(
-               padding: const EdgeInsets.only(left: 25.0),
-               child: FadeInUp(
-                 child: const Text('of tickets, transfers and a cool\nplace to stay.', 
+              const Padding(
+               padding: EdgeInsets.only(left: 25.0),
+               child: Text('of tickets, transfers and a cool\nplace to stay.', 
                  style: TextStyle(fontSize: 20),),
                ),
-             ),  
+              
              const SizedBox(height: 130), 
               
                     Center(
@@ -106,21 +105,19 @@ class _HomeSwipeState extends State<HomeSwipe> {
                  ),
                ),
                const SizedBox(height: 20), 
-              Padding(
-               padding: const EdgeInsets.only(left: 25.0),
-               child: FadeInUp(
-                 child: const Text('Flexible\nPayment', style: TextStyle(fontSize: 40, 
+              const Padding(
+               padding: EdgeInsets.only(left: 25.0),
+               child:  Text('Flexible\nPayment', style: TextStyle(fontSize: 40, 
                  fontWeight: FontWeight.w600),),
                ),
-             ),
+             
              const SizedBox(height: 10), 
-              Padding(
-               padding: const EdgeInsets.only(left: 25.0),
-               child: FadeInUp(
-                 child: const Text('of tickets, transfers and a cool\nplace to stay.', 
+              const Padding(
+               padding: EdgeInsets.only(left: 25.0),
+               child:  Text('of tickets, transfers and a cool\nplace to stay.', 
                  style: TextStyle(fontSize: 20),),
                ),
-             ),  
+              
              const SizedBox(height: 80), 
               
                     Center(
@@ -160,8 +157,10 @@ class _HomeSwipeState extends State<HomeSwipe> {
             ),
              const SizedBox(height: 30,), 
         
-               SimpleShadow(
-                 child: Image.asset('assets/travel_ui/relax.png', 
+               FadeInUp(
+                 child: SimpleShadow(
+                   child: Image.asset('assets/travel_ui/relax.png', 
+                   ),
                  ),
                ),
                const SizedBox(height: 20), 
