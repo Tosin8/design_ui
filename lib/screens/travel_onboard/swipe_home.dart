@@ -249,6 +249,15 @@ class _HomeSwipeState extends State<HomeSwipe> {
       body: Builder(
         builder: (context) {
         return LiquidSwipe(pages: pages, 
+        fullTransitionValue: 800, 
+        waveType: WaveType.liquidReveal, 
+        slideIconWidget: Icon(Icons.arrow_back_ios, color: Colors.white),
+        positionSlideIcon: 0.6,
+        onPageChangeCallback: (page) {
+          print(page); 
+          
+        },
+        liquidController: LiquidController(),
         );
       })
       ),
