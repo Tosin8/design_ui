@@ -193,13 +193,13 @@ class _HomeSwipeState extends State<HomeSwipe> {
                const SizedBox(height: 30), 
              const Padding(
                padding: EdgeInsets.only(left: 25.0),
-               child: Text('We will \ntake care', style: TextStyle(fontSize: 40, 
+               child: Text('Relax and\nEnjoy', style: TextStyle(fontSize: 40, 
                fontWeight: FontWeight.w600),),
              ),
              const SizedBox(height: 20), 
              const Padding(
                padding: EdgeInsets.only(left: 25.0),
-               child: Text('of tickets, transfers and a cool\nplace to stay.', 
+               child: Text('sight beach, swim , drink and\neat delicious meal.', 
                style: TextStyle(fontSize: 20),),
              ),  
              const SizedBox(height: 130), 
