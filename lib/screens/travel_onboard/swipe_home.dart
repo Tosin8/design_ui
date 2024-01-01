@@ -15,13 +15,7 @@ class _HomeSwipeState extends State<HomeSwipe> {
   Widget build(BuildContext context) {
     int page = 0; 
     final pages = [
-      
-    ]; 
-    return SafeArea(
-      child: Scaffold(
-        body: PageView(
-          children: [
-        Container(
+       Container(
         decoration: const BoxDecoration(
           color: Color(0xfffd9b42), 
           ),
@@ -171,7 +165,7 @@ class _HomeSwipeState extends State<HomeSwipe> {
         ), 
          Container(
         decoration: const BoxDecoration(
-          color: Color(0xfffd9b42), 
+          color: Color(0xffdf5789), 
           ),
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 30, ), 
@@ -184,25 +178,25 @@ class _HomeSwipeState extends State<HomeSwipe> {
               child: Text('Hooliday',
                style: TextStyle(fontSize: 20),),
             ),
-             const SizedBox(height: 40,), 
+             const SizedBox(height: 30,), 
         
                SimpleShadow(
-                 child: Image.asset('assets/travel_ui/travel.png', 
+                 child: Image.asset('assets/travel_ui/relax.png', 
                  ),
                ),
-               const SizedBox(height: 30), 
+               const SizedBox(height: 20), 
              const Padding(
                padding: EdgeInsets.only(left: 25.0),
                child: Text('Relax and\nEnjoy', style: TextStyle(fontSize: 40, 
                fontWeight: FontWeight.w600),),
              ),
-             const SizedBox(height: 20), 
+             const SizedBox(height: 10), 
              const Padding(
                padding: EdgeInsets.only(left: 25.0),
                child: Text('sight beach, swim , drink and\neat delicious meal.', 
                style: TextStyle(fontSize: 20),),
              ),  
-             const SizedBox(height: 130), 
+             const SizedBox(height: 80), 
               Padding(
                padding: const EdgeInsets.only(left: 25.0),
                child: Container(
@@ -231,7 +225,7 @@ class _HomeSwipeState extends State<HomeSwipe> {
                            ),
                               child: const Icon(Icons.arrow_forward_ios), 
                          ),
-                       // SizedBox(width: 0.5),
+                      
                  
                   ],
                  ),
@@ -242,7 +236,13 @@ class _HomeSwipeState extends State<HomeSwipe> {
             ),
           ), 
           
-        ), 
+        ),
+    ]; 
+    return SafeArea(
+      child: Scaffold(
+        body: PageView(
+          children: [
+        
           ], 
         ),
       ),
