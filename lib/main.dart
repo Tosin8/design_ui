@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_design/screens/custom_paint.dart';
 
 import 'screens/furniture_app/splash.dart';
 import 'screens/travel_onboard/swipe_home.dart'; 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
     theme: ThemeData(
       primarySwatch: Colors.blue,
     ),
-    home: const HomeSwipe(), 
+    home: const HelloP(), 
 
     ); 
   }
