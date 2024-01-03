@@ -28,8 +28,13 @@ class _FurnitureOnboardingState extends State<FurnitureOnboarding> with SingleTi
       'image': 'assets/furniture_onboard/3.jpg', 
     }
   ]; 
+
+
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold( 
+      body: PageView.builder(
+        itemBuilder: itemBuilder)
+    );
   }
 }
