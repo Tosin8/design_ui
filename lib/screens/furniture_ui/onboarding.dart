@@ -138,7 +138,7 @@ child: Stack (
                     ],
                   ),),),
               )), 
-              SizedBox(height: 20,)
+              const SizedBox(height: 20,)
           ],
         ),
       ))
