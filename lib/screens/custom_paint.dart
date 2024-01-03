@@ -13,7 +13,7 @@ class HelloP extends StatelessWidget {
             children:[ 
               Container(
                 width: double.infinity, height: double.infinity,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color:Colors.blueAccent
                 ),
               child:               CustomPaint(
@@ -57,8 +57,8 @@ Path path_0 = Path();
 
 Paint paint_0_fill = Paint()..style=PaintingStyle.fill;
 paint_0_fill.shader = ui.Gradient.linear(Offset(0,size.height*0.01000000), Offset(size.width*0.01000000,0), [
-  Color.fromRGBO(248, 117, 55, 1).withOpacity(1),
-  Color.fromRGBO(251, 168, 31, 1).withOpacity(1)], [0,1]);
+  const Color.fromRGBO(248, 117, 55, 1).withOpacity(1),
+  const Color.fromRGBO(251, 168, 31, 1).withOpacity(1)], [0,1]);
 canvas.drawPath(path_0,paint_0_fill);
 
 }

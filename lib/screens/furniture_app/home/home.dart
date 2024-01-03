@@ -3,9 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../constants.dart';
-import '../size_config.dart';
 import 'component/body.dart';
-import 'component/titleText.dart';
 
 class FurnitureHome extends StatelessWidget {
   const FurnitureHome({super.key});
