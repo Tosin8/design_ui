@@ -87,6 +87,9 @@ flutter:
     - assets/travel_ui/payment.png
     - assets/travel_ui/relax.png
     - assets/travel_ui/travel.png
+    - assets/furniture_onboard/1.jpg
+    - assets/furniture_onboard/2.jpg
+    - assets/furniture_onboard/3.jpg
     #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

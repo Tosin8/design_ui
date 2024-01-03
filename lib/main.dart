@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ui_design/screens/custom_paint.dart';
 import 'package:ui_design/screens/furniture_ui/onboarding.dart';
 
-import 'screens/furniture_app/home/home.dart';
 
 
 void main() {
