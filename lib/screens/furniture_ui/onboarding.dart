@@ -29,12 +29,33 @@ class _FurnitureOnboardingState extends State<FurnitureOnboarding> with SingleTi
     }
   ]; 
 
+late final AnimationController _controller = AnimationController (vsync: this, 
+duration: Duration(seconds: 20), 
+); 
 
   @override
   Widget build(BuildContext context) {
     return Scaffold( 
       body: PageView.builder(
-        itemBuilder: itemBuilder)
+        onPageChanged: (int index) {
+          
+        },
+        itemBuilder: (context, index) {
+          return Container(
+child: Stack (
+  children: [
+    Container(
+      height: MediaQuery.of(context).size.height, 
+      width: MediaQuery.of(context).size.height,
+      clipBehavior: Clip.hardEdge, 
+      decoration: BoxDecoration(
+      
+      ),
+      child: ScaleTransition(scale: scale),
+    )
+  ],)
+          ); 
+        })
     );
   }
 }
