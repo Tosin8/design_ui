@@ -93,7 +93,15 @@ const SizedBox(width: 10),
               ),
             ),
             Expanded(child: 
-            GridView.count(crossAxisCount: 2, padding: EdgeInsets.all(20), crossAxisSpacing: 20, mainAxisSpacing: 20,))
+            GridView.count(
+              crossAxisCount: 2,
+               padding: const EdgeInsets.all(20), crossAxisSpacing: 20, mainAxisSpacing: 20,
+               children: _listItem.map((item) => Card(
+                child: Container(
+                  decoration: BoxDecoration(
+                    image: DecorationImage(image: AssetImage(item))
+                  ),
+                ))),))
           ],
         ),
       )
