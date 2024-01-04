@@ -11,6 +11,13 @@ class _FurnitureGridState extends State<FurnitureGrid> {
   @override
   Widget build(BuildContext context) {
     return Scaffold( 
+      appBar: AppBar(
+        leading: Icon(Icons.menu), 
+        title: Text('Furniture'),
+        actions: [
+          
+        ],
+      ),
       body: Text('Hello World')
     );
   }
