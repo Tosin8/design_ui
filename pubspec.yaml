@@ -90,6 +90,16 @@ flutter:
     - assets/furniture_onboard/1.jpg
     - assets/furniture_onboard/2.jpg
     - assets/furniture_onboard/3.jpg
+
+    # gridview
+    - assets/furniture_grid/1.jpg
+    - assets/furniture_grid/2.jpg
+    - assets/furniture_grid/3.jpg
+    - assets/furniture_grid/4.jpg
+    - assets/furniture_grid/5.jpg
+    - assets/furniture_grid/6.jpg
+    - assets/furniture_grid/7.jpg
+    - assets/furniture_grid/8.jpg
     #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
