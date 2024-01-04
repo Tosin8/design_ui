@@ -92,19 +92,24 @@ const SizedBox(width: 10),
                 ),
               ),
             ),
+            SizedBox(height: 30), 
             Expanded(child: 
             GridView.count(
               crossAxisCount: 2,
-               padding: const EdgeInsets.all(20), crossAxisSpacing: 20, mainAxisSpacing: 20,
+               padding: const EdgeInsets.all(20), crossAxisSpacing: 20,
+                mainAxisSpacing: 20,
                children: _listItem.map((item) => Card(
                 child: Container(
                   decoration: BoxDecoration(
-                    image: DecorationImage(image: AssetImage(item))
+                    image: DecorationImage(
+                      image: AssetImage(item))
                   ),
-                ))),))
+                ))).toList()
+                ))
           ],
         ),
       )
+
     );
   }
 }
