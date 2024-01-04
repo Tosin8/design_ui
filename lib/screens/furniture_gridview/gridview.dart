@@ -64,11 +64,16 @@ const SizedBox(width: 10),
                   children: [
                     const Text('Lifestyle Sales', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 30),
                     ), 
+                    const SizedBox(height: 10), 
+                    const Text('Elegant furnitures of varieties made to\n last longer at the differences of the making ', style: TextStyle(color: Colors.white), 
+                    textAlign: TextAlign.center,), 
                     const SizedBox(height: 20), 
                     Container(
+
                       height: 50,
                       margin: const EdgeInsets.symmetric(horizontal: 50),
                       decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(10)),
+                      child: Center(child: Text('Shop Here', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: Colors.grey[700]),)),
                     ), 
                     const SizedBox(height: 20), 
 
