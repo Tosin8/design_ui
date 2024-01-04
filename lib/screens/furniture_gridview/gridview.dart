@@ -12,6 +12,17 @@ class FurnitureGrid extends StatefulWidget {
 
 class _FurnitureGridState extends State<FurnitureGrid> {
   @override
+
+  final List<String> _listItem =[
+    'assets/furniture_grid/1.jpg', 
+    'assets/furniture_grid/2.jpg', 
+    'assets/furniture_grid/3.jpg', 
+    'assets/furniture_grid/4.jpg', 
+    'assets/furniture_grid/5.jpg', 
+    'assets/furniture_grid/6.jpg', 
+    'assets/furniture_grid/7.jpg', 
+    'assets/furniture_grid/8.jpg', 
+  ]; 
   Widget build(BuildContext context) {
     return Scaffold( 
       appBar: AppBar(
@@ -75,12 +86,14 @@ const SizedBox(width: 10),
                       decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(10)),
                       child: Center(child: Text('Shop Here', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: Colors.grey[700]),)),
                     ), 
-                    const SizedBox(height: 20), 
+                    const SizedBox(height: 35), 
 
                   ],
                 ),
               ),
             ),
+            Expanded(child: 
+            GridView.count(crossAxisCount: 2, padding: EdgeInsets.all(20), crossAxisSpacing: 20, mainAxisSpacing: 20,))
           ],
         ),
       )
