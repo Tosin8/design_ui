@@ -37,7 +37,18 @@ SizedBox(width: 10),
  
       ),
 
-      body: const Text('Hello World')
+      body: Column(
+        children: [
+          Container(
+            
+            decoration: BoxDecoration(
+              
+              image: DecorationImage(image: AssetImage('assets/furniture_grid/9.jpg'), 
+            
+            )),
+          ),
+        ],
+      )
     );
   }
 }
