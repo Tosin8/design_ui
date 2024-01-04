@@ -48,7 +48,7 @@ const SizedBox(width: 10),
  
       ),
 
-      body: SingleChildScrollView(
+      body: Container(
         padding: const EdgeInsets.all(8.0), 
         child: Column(
           children: [
@@ -96,13 +96,15 @@ const SizedBox(width: 10),
             Expanded(child: 
             GridView.count(
               crossAxisCount: 2,
-               padding: const EdgeInsets.all(20), crossAxisSpacing: 20,
+               padding: const EdgeInsets.all(8), crossAxisSpacing: 20,
                 mainAxisSpacing: 20,
                children: _listItem.map((item) => Card(
                 child: Container(
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage(item))
+                      image: AssetImage(item), 
+                      fit: BoxFit.cover
+                      )
                   ),
                 ))).toList()
                 ))
