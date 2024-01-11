@@ -99,8 +99,15 @@ class _DiscoverState extends State<Discover> {
       color: Colors.black, child: Image.asset(_image[index], fit: BoxFit.cover)
         );
       },
-      staggeredTileBuilder: (index) => StaggeredTile.count(2, index.isEven ? 4:2),)
+      staggeredTileBuilder: (index) => StaggeredTile.count(2, index.isEven ? 4:2),
+      ),
+       Container(color: Colors.blue,), 
+       Center(
+        child: Text('Hello'),
+       ),
+       Center(child: Text('Hello'),)
            ])),
+          
          ] )
          ) )),
     ); 
