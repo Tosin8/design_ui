@@ -53,9 +53,25 @@ SliverToBoxAdapter(
 )
 
           ];
-        }, body: const DefaultTabController(
+        }, body: DefaultTabController(
           length: 4,
-         child: Column([])),
+         child: Column(
+          children: [
+            Container(
+child: const TabBar(
+  
+  tabs: [
+  Tab(text: 'Popular',), 
+  Tab(text: 'New'), 
+  Tab(text: 'Classic'), 
+  Tab(text: 'Sylish',), 
+  
+
+
+]),
+            )
+
+         ])),
         )
         );
     
