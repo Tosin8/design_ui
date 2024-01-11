@@ -71,11 +71,16 @@ child:  TabBar(
 
 
 ]),
-            )
+            ), 
+            Expanded(child: TabBarView(children: [
+              Container(color: Colors.blue,),
+              Container(color: Colors.red,),
+              Container(color: Colors.yellow,),
+              Container(color: Colors.green,),
 
          ])),
-        )
-        );
+       ] )
+       ) )); 
     
   }
 }
