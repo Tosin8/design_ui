@@ -11,6 +11,7 @@ class Discover extends StatefulWidget {
 }
 
 class _DiscoverState extends State<Discover> {
+  int index = 0; 
 
   final _image = [
 'assets/city_tour/thailand.jpg', 
@@ -92,9 +93,9 @@ class _DiscoverState extends State<Discover> {
               TabBarView(
                 children: [
                
-      FadeInLeft(
-        delay: Duration(milliseconds: 500),
-        duration: Duration(seconds: 1),
+      FadeInUp(
+        delay: Duration(milliseconds: index *  50),
+        duration: Duration(milliseconds: (index * 50) + 100),
         child: StaggeredGridView.countBuilder(
           padding: const EdgeInsets.all(0),
           crossAxisCount: 4, 
