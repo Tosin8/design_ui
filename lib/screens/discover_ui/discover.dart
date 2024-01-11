@@ -17,7 +17,15 @@ class _DiscoverState extends State<Discover> {
 'assets/city_tour/bejing_china.jpg', 
 'assets/city_tour/new_york.jpg', 
 'assets/city_tour/tokyo_japan.jpg', 
-'assets/city_tour/syndey.jpg'
+'assets/city_tour/syndey.jpg',
+'assets/shoe_ui/1.png',
+    'assets/shoe_ui/2.png',
+    'assets/shoe_ui/3.png',
+    'assets/shoe_ui/4.png',
+     'assets/shoe_ui/5.png',
+    'assets/shoe_ui/6.png',
+    'assets/shoe_ui/7.png',
+    'assets/shoe_ui/8.jpg', 
 
   ]; 
   @override
