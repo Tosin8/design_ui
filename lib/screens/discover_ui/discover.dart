@@ -94,7 +94,10 @@ class _DiscoverState extends State<Discover> {
        StaggeredGridView.countBuilder(
           padding: const EdgeInsets.all(0),
           crossAxisCount: 4, 
+
           itemCount: _image.length,
+          mainAxisSpacing: 1, crossAxisSpacing: 1,
+
           itemBuilder: (context, index) {
           return FadeInUp(
             delay: Duration(milliseconds: index * 50),
