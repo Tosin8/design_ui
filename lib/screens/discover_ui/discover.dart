@@ -96,8 +96,12 @@ class _DiscoverState extends State<Discover> {
           crossAxisCount: 4, 
           itemCount: _image.length,
           itemBuilder: (context, index) {
-          return Container(
-        color: Colors.black, child: Image.asset(_image[index], fit: BoxFit.cover)
+          return FadeInUp(
+            delay: Duration(milliseconds: index * 50),
+            duration: Duration(milliseconds: (index * 50) + 200),
+            child: Container(
+                    color: Colors.black, child: Image.asset(_image[index], fit: BoxFit.cover)
+            ),
           );
         },
         staggeredTileBuilder: (index) => StaggeredTile.count(2, index.isEven ? 4:2),
