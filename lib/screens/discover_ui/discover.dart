@@ -58,13 +58,15 @@ SliverToBoxAdapter(
          child: Column(
           children: [
             Container(
-child: const TabBar(
-  
-  tabs: [
+child:  TabBar(
+  labelColor: Colors.black,
+  indicatorColor: Colors.black,
+  unselectedLabelColor: Colors.grey.shade700,
+  tabs: const [
   Tab(text: 'Popular',), 
-  Tab(text: 'New'), 
-  Tab(text: 'Classic'), 
-  Tab(text: 'Sylish',), 
+   Tab(text: 'New'), 
+   Tab(text: 'Classic'), 
+   Tab(text: 'Sylish',), 
   
 
 
