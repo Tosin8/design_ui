@@ -22,7 +22,10 @@ SliverToBoxAdapter(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
       const SizedBox(height: 60), 
-      Text("Discover \nToday's Post", style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600, color: Colors.grey.shade800),), 
+      Text("Discover \nToday's Post", 
+      style: TextStyle(fontSize: 30,
+       fontWeight: FontWeight.w600, 
+       color: Colors.grey.shade800),), 
       const SizedBox(height: 10), 
       Container(
         
@@ -31,11 +34,16 @@ SliverToBoxAdapter(
           color: Colors.grey.shade200, borderRadius: BorderRadius.circular(12), 
         ),
         
-         child: const TextField(
+         child: TextField(
+          cursorColor: Colors.black,
+          keyboardType: TextInputType.name,
+          textInputAction: TextInputAction.done,
           decoration: InputDecoration(
             border: InputBorder.none,
-            prefixIcon: Icon(Icons.search), 
+            
+            prefixIcon: Icon(Icons.search, color: Colors.grey.shade700), 
             hintText: 'Make your search', 
+            
         ),
         
       )), 
