@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_grid_view.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_tile.dart';
@@ -29,16 +30,19 @@ class _DiscoverState extends State<Discover> {
       SliverToBoxAdapter(
         child: Padding(
       padding: 
-        const EdgeInsets.all(20), 
+        const EdgeInsets.all(10), 
         child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const SizedBox(height: 60), 
-        Text("Discover \nToday's Post", 
-        style: TextStyle(fontSize: 30,
-         fontWeight: FontWeight.w600, 
-         color: Colors.grey.shade800),), 
-        const SizedBox(height: 10), 
+        const SizedBox(height: 15), 
+        FadeInDown(
+          duration: const Duration(milliseconds: 500),
+          child: Text("Discover \nToday's Post", 
+          style: TextStyle(fontSize: 30,
+           fontWeight: FontWeight.w600, 
+           color: Colors.grey.shade800),),
+        ), 
+        const SizedBox(height: 15), 
         Container(
           
           height: 50,
@@ -87,25 +91,27 @@ class _DiscoverState extends State<Discover> {
               Expanded(child: 
               TabBarView(
                 children: [
-                // Container(color: Colors.blue,),
-                // Container(color: Colors.red,),
-                // Container(color: Colors.yellow,),
-                // Container(color: Colors.green,),
-      StaggeredGridView.countBuilder(
-        crossAxisCount: 4, 
-        itemCount: _image.length,
-        itemBuilder: (context, index) {
-        return Container(
-      color: Colors.black, child: Image.asset(_image[index], fit: BoxFit.cover)
-        );
-      },
-      staggeredTileBuilder: (index) => StaggeredTile.count(2, index.isEven ? 4:2),
+               
+      FadeInLeft(
+        delay: Duration(milliseconds: 500),
+        duration: Duration(seconds: 1),
+        child: StaggeredGridView.countBuilder(
+          padding: const EdgeInsets.all(0),
+          crossAxisCount: 4, 
+          itemCount: _image.length,
+          itemBuilder: (context, index) {
+          return Container(
+        color: Colors.black, child: Image.asset(_image[index], fit: BoxFit.cover)
+          );
+        },
+        staggeredTileBuilder: (index) => StaggeredTile.count(2, index.isEven ? 4:2),
+        ),
       ),
        Container(color: Colors.blue,), 
-       Center(
+       const Center(
         child: Text('Hello'),
        ),
-       Center(child: Text('Hello'),)
+       const Center(child: Text('Hello'),)
            ])),
           
          ] )
