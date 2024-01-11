@@ -100,7 +100,8 @@ class _DiscoverState extends State<Discover> {
             delay: Duration(milliseconds: index * 50),
             duration: Duration(milliseconds: (index * 50) + 200),
             child: Container(
-                    color: Colors.black, child: Image.asset(_image[index], fit: BoxFit.cover)
+                    color: Colors.black, child: Image.asset(_image[index], 
+                    fit: BoxFit.cover)
             ),
           );
         },
