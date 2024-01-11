@@ -43,6 +43,7 @@ SliverToBoxAdapter(
             
             prefixIcon: Icon(Icons.search, color: Colors.grey.shade700), 
             hintText: 'Make your search', 
+            hintStyle: TextStyle(color: Colors.grey.shade500)
             
         ),
         
@@ -52,7 +53,11 @@ SliverToBoxAdapter(
 )
 
           ];
-        }, body: const Center(child: Text('hello'),))
-    );
+        }, body: const DefaultTabController(
+          length: 4,
+         child: Column([])),
+        )
+        );
+    
   }
 }
