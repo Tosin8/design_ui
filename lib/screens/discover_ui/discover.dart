@@ -35,6 +35,7 @@ SliverToBoxAdapter(
           decoration: InputDecoration(
             border: InputBorder.none,
             prefixIcon: Icon(Icons.search), 
+            hintText: 'Make your search', 
         ),
         
       )), 
