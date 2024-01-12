@@ -71,7 +71,7 @@ class SignInForm extends StatelessWidget {
             ),
           ),
         ), 
-        SizedBox(height: 20), 
+        const SizedBox(height: 20), 
         Container(
            height: 55,
           decoration:  BoxDecoration(
@@ -93,6 +93,16 @@ class SignInForm extends StatelessWidget {
               )
             ),
           ),
+        ), 
+        const SizedBox(height: 20), 
+        Row(
+          children: [
+            Checkbox(value: false, onChanged: (value) {}, checkColor: Colors.white,),
+            const Text('Remember me', 
+            style: TextStyle(color: Colors.white, fontSize: 16),),
+            const SizedBox(width: 70), 
+            const Expanded(child: Text('Forgot Password', style: TextStyle(color: Colors.white, fontSize: 15),))
+          ],
         )
       ],
     ));
