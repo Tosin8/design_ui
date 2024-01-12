@@ -1,6 +1,7 @@
 import 'dart:ffi';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'dart:async';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart'; 
@@ -158,15 +159,35 @@ class _Home_FormState extends State<Home_Form> with TickerProviderStateMixin{
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             
-
-                          ],))
+component1(Icons.account_circle_outlined, 'User Name...', false, false), component1(Icons.email_outlined, 'Email..', false, true), 
+Row(
+  mainAxisAlignment: MainAxisAlignment.center, 
+  children: [
+    component2('Login', 2.58, () {HapticFeedback.lightImpact(); Fluttertoast.showToast(msg: 'Login Button Pressed'); 
+    }), 
+    SizedBox(width: size.width / 20), 
+    component2('Forgotten password!', 2.58, (){HapticFeedback.lightImpact(); Fluttertoast.showToast(msg: 'Forgotten password pressed'); 
+    })
+  ],
+)
+                          ],
+                          )), 
+                          Expanded(
+                            flex: 6,
+                            child: Column(
+                              children: [
+                                component2('Create a new account', 2, () {
+                                  HapticFeedback.lightImpact(); Fluttertoast.showToast(msg: 'Create a new account '); 
+                                }), 
+                                SizedBox(height: size.height * .05,), 
+                                ],))
                 ],
             )
           ],
         ),)),
     );
   }
-}
+
 
 
 class MyBehavior extends ScrollBehavior {
