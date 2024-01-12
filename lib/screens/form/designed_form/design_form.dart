@@ -74,7 +74,7 @@ class _DesignFormState extends State<DesignForm> {
          const SizedBox(height: 30), 
       
         const Center(child: Text('Create Account', style: TextStyle(color: Colors.white, fontSize: 18),),), 
-SizedBox(height: 80), 
+const SizedBox(height: 80), 
             ],
           ),
         ),
@@ -138,9 +138,9 @@ class SignInForm extends StatelessWidget {
         child:  Align(
           child: TextFormField(
             textInputAction: TextInputAction.next,
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               border: InputBorder.none,
-              labelText: 'Email',
+              //labelText: 'Email',
               floatingLabelBehavior: FloatingLabelBehavior.always,
              hintText: 'Enter Email', hintStyle: TextStyle(color: Colors.black),
               prefixIcon: Icon(Icons.email_outlined,)
