@@ -109,6 +109,11 @@ flutter:
     #form
     - assets/form/1.jpg
     - assets/form/2.jpg
+
+    #social network
+    - assets/social_net/1.png
+    - assets/social_net/2.png
+    - assets/social_net/3.png
     #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

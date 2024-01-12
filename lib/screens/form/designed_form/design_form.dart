@@ -118,7 +118,12 @@ class SignInForm extends StatelessWidget {
         ), 
         const SizedBox(height: 30),
         SignInBtn(btntitle: 'Sign In',), 
-        const SizedBox(height: 30), 
+        const SizedBox(height: 20), 
+        Text('- OR - ', style: TextStyle(color: Colors.white, fontSize: 16),), 
+        SizedBox(height: 10), 
+        Row(
+
+        ), 
         const Center(child: Text('Create Account', style: TextStyle(color: Colors.white, fontSize: 18),),)
 
       ],
