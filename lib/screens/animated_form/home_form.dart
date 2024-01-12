@@ -14,7 +14,16 @@ class _Home_FormState extends State<Home_Form> {
         (context).size;
     return Scaffold(
       backgroundColor: Color(0xff192028), 
-      body: ScrollConfiguration(child: SizedBox(height: size.height,)),
+      body: ScrollConfiguration(
+        behavior: MyBehavior(),
+        child: SizedBox(height: size.height,
+        child: Stack(
+          children: [
+            Positioned(
+              top: size.height * (animated2.value + .58), 
+            )
+          ],
+        ),)),
     );
   }
 }
