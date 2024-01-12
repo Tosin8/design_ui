@@ -1,12 +1,11 @@
 import 'dart:ffi';
-import 'dart:js';
+
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'dart:async';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:get/get.dart'; 
 
 class Home_Form extends StatefulWidget {
   const Home_Form({super.key});
@@ -90,6 +89,12 @@ class _Home_FormState extends State<Home_Form> with TickerProviderStateMixin{
       controller2.dispose(); 
     // TODO: implement dispose
     super.dispose();
+  }
+  
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    throw UnimplementedError();
   }
   }
   @override
@@ -235,9 +240,18 @@ Widget component1(IconData icon, String hintText, bool isPassword, bool isEmail)
     child: Container(
       height: size.width / 8, 
       width: size.width / 1.2, 
-      alignment: Alignment.center, padding: const EdgeInsets.only(right: size.width / 30), decoration: BoxDecoration(color: Colors.white.withOpacity(.05), borderRadius: BorderRadius.circular(15), ), child: TextField(style: TextStyle(color: Colors.white.withOpacity(.8)),
+      alignment: Alignment.center,
+       padding: const EdgeInsets.only(
+        right: size.width / 30), 
+        decoration: BoxDecoration(color: Colors.white.withOpacity(.05), 
+        borderRadius: BorderRadius.circular(15),
+         ), 
+         child: TextField(
+          style: TextStyle(color: Colors.white.withOpacity(.8)),
       cursorColor: Colors.white, obscureText: isPassword, keyboardType: isEmail ? TextInputType.emailAddress: TextInputType.text, 
-      decoration: InputDecoration(prefixIcon: Icon(icon, color: Colors.white.withOpacity(.7),
+      decoration: InputDecoration(
+        prefixIcon: Icon(icon, 
+        color: Colors.white.withOpacity(.7),
       ), 
       border: InputBorder.none, 
       hintText: hintText,
@@ -250,8 +264,20 @@ Widget component1(IconData icon, String hintText, bool isPassword, bool isEmail)
 Widget component2(String string, double Width, VoidCallback voidCallback) {
   Size size = MediaQuery.of(context).size; 
   return ClipRRect(
-    borderRadius: BorderRadius.circular(15), child: BackdropFilter(filter: ImageFilter.blur(sigmaX: 15, sigmaY: 15),child: InkWell(highlightColor: Colors.transparent, splashColor: Colors.transparent, onTap: voidCallback, 
-    child: Container(height: size.width / 8, width: size.width / width, alignment: Alignment.center, decoration: BoxDecoration(color: Colors.white.withOpacity(0.05), borderRadius: BorderRadius.circular(15), ), child: Text(string, style: TextStyle(color: Colors.white.withOpacity(.8)),
+    borderRadius: BorderRadius.circular(15), child: BackdropFilter(filter: ImageFilter.blur(sigmaX: 15, sigmaY: 15),
+    child: InkWell(
+      highlightColor: Colors.transparent, 
+      splashColor: Colors.transparent, onTap: voidCallback, 
+    child: Container(
+      height: size.width / 8,
+       width: size.width / width, 
+       alignment: Alignment.center, 
+       decoration: BoxDecoration(
+        color: Colors.white.withOpacity(0.05), borderRadius: BorderRadius.circular(15),
+         ),
+          child: Text(string,
+           style: TextStyle(
+            color: Colors.white.withOpacity(.8)),
     ),),),),
   );
 }
