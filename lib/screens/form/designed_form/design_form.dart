@@ -117,20 +117,37 @@ class SignInForm extends StatelessWidget {
           ],
         ), 
         const SizedBox(height: 30),
-        GestureDetector(
-          onTap: () {},
-          child: Container(
-            height: 60,
-            width: 180,
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(15),
-              
-              color: Colors.blueAccent.shade200),
-              child: const Align(child: Text('Sign In', style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w500),)),),
-        ), 
+        SignInBtn(btntitle: 'Sign In',), 
         const SizedBox(height: 30), 
         const Center(child: Text('Create Account', style: TextStyle(color: Colors.white, fontSize: 18),),)
 
       ],
     ));
+  }
+}
+
+class SignInBtn extends StatelessWidget {
+
+  
+  SignInBtn({required this.btntitle, 
+    super.key,
+  });
+
+ String  btntitle; 
+
+  @override
+  
+  Widget build(BuildContext context) {
+    
+    return GestureDetector(
+      onTap: () {},
+      child: Container(
+        height: 60,
+        width: 180,
+        decoration: BoxDecoration(borderRadius: BorderRadius.circular(15),
+          
+          color: Colors.blueAccent.shade200),
+          child:  Align(child: Text(btntitle, style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w500),)),),
+    );
   }
 }
