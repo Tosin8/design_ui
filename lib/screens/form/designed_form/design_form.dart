@@ -101,9 +101,35 @@ class SignInForm extends StatelessWidget {
             const Text('Remember me', 
             style: TextStyle(color: Colors.white, fontSize: 16),),
             const SizedBox(width: 70), 
-            const Expanded(child: Text('Forgot Password', style: TextStyle(color: Colors.white, fontSize: 15),))
+             Expanded(
+              child: GestureDetector(
+                onTap: () {
+                  
+                },
+                child: const Text('Forgot Password', 
+                style: TextStyle(
+                  color: Colors.white, fontSize: 15, 
+                
+                decorationStyle: TextDecorationStyle.double,
+                 decoration: TextDecoration.underline,),
+                            ),
+              ))
           ],
-        )
+        ), 
+        const SizedBox(height: 30),
+        GestureDetector(
+          onTap: () {},
+          child: Container(
+            height: 60,
+            width: 180,
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(15),
+              
+              color: Colors.blueAccent.shade200),
+              child: const Align(child: Text('Sign In', style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w500),)),),
+        ), 
+        const SizedBox(height: 30), 
+        const Center(child: Text('Create Account', style: TextStyle(color: Colors.white, fontSize: 18),),)
+
       ],
     ));
   }

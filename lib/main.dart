@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ui_design/screens/form/animated_form/home_form.dart';
 import 'package:ui_design/screens/form/designed_form/design_form.dart';
-import 'package:ui_design/screens/furniture_gridview/gridview.dart';
-import 'package:ui_design/screens/furniture_ui/onboarding.dart';
 
-import 'screens/discover_ui/discover.dart';
-import 'screens/shoe_app/shoe_ui.dart';
 
 
 
