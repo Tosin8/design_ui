@@ -135,12 +135,14 @@ class SignInForm extends StatelessWidget {
         ),
        
        
-        child: const Align(
-          child: TextField(
+        child:  Align(
+          child: TextFormField(
             textInputAction: TextInputAction.next,
             decoration: InputDecoration(
               border: InputBorder.none,
-              hintText: 'Enter Email', hintStyle: TextStyle(color: Colors.black),
+              labelText: 'Email',
+              floatingLabelBehavior: FloatingLabelBehavior.always,
+             hintText: 'Enter Email', hintStyle: TextStyle(color: Colors.black),
               prefixIcon: Icon(Icons.email_outlined,)
             )
           ),
