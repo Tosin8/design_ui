@@ -20,67 +20,72 @@ class _DesignFormState extends State<DesignForm> {
         ),
         child: Container(
           
-        child: Padding( 
-          padding: const EdgeInsets.only(left: 20, right: 20),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              
-              const Text("PLANT'D", 
-              style: TextStyle(fontSize: 28, fontWeight: FontWeight.w600, color: Colors.white, letterSpacing: 1, ),),
-              const SizedBox(height: 20), 
-          const Text('Let\'s get your plant wet',style: TextStyle(color: Colors.white, fontSize: 20),
-          ), 
-          const SizedBox(height: 20), 
-          const SignInForm(), 
-          const SizedBox(height: 20), 
-        Row(
-          children: [
-            Checkbox(value: false, onChanged: (value) {}, checkColor: Colors.white,),
-            const Text('Remember me', 
-            style: TextStyle(color: Colors.white, fontSize: 16),),
-            const SizedBox(width: 70), 
-             Expanded(
-              child: GestureDetector(
-                onTap: () {
+        // child: Padding( 
+        //   padding: const EdgeInsets.only(left: 20, right: 20),
+          child: SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 100, horizontal: 50),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
                   
-                },
-                child: const Text('Forgot Password', 
-                style: TextStyle(
-                  color: Colors.white, fontSize: 15, 
+                  const Text("PLANT'D", 
+                  style: TextStyle(fontSize: 28, fontWeight: FontWeight.w600, color: Colors.white, letterSpacing: 1, ),),
+                  const SizedBox(height: 20), 
+              const Text('Let\'s get your plant wet',style: TextStyle(color: Colors.white, fontSize: 20),
+              ), 
+              const SizedBox(height: 20), 
+              const SignInForm(), 
+              const SizedBox(height: 20), 
+                      Row(
+              children: [
+                Checkbox(value: false, onChanged: (value) {}, checkColor: Colors.white,),
+                const Text('Remember me', 
+                style: TextStyle(color: Colors.white, fontSize: 16),),
+                const SizedBox(width: 70), 
+                 Expanded(
+                  child: GestureDetector(
+                    onTap: () {
+                      
+                    },
+                    child: const Text('Forgot Password', 
+                    style: TextStyle(
+                      color: Colors.white, fontSize: 15, 
+                    
+                    decorationStyle: TextDecorationStyle.double,
+                     decoration: TextDecoration.underline,),
+                                ),
+                  ))
+              ],
+                      ), 
+                      const SizedBox(height: 30),
+                      Center(child: SignInBtn(btntitle: 'Sign In',)), 
+                      const SizedBox(height: 20), 
+                      const Center(child: Text('- OR - ', style: TextStyle(color: Colors.white, fontSize: 16),)), 
+                       const SizedBox(height: 10), 
+                       Padding(
+               padding: const EdgeInsets.symmetric(horizontal: 100.0),
+               child: Row(
                 
-                decorationStyle: TextDecorationStyle.double,
-                 decoration: TextDecoration.underline,),
-                            ),
-              ))
-          ],
-        ), 
-        const SizedBox(height: 30),
-        Center(child: SignInBtn(btntitle: 'Sign In',)), 
-        const SizedBox(height: 20), 
-        const Center(child: Text('- OR - ', style: TextStyle(color: Colors.white, fontSize: 16),)), 
-         const SizedBox(height: 10), 
-         Padding(
-           padding: const EdgeInsets.symmetric(horizontal: 100.0),
-           child: Row(
-            
-            children: [
-              Image.asset('assets/social_net/1.png'), 
-              Image.asset('assets/social_net/2.png'), Image.asset('assets/social_net/3.png'), 
-            ],
+                children: [
+                  Image.asset('assets/social_net/1.png'), 
+                  Image.asset('assets/social_net/2.png'), Image.asset('assets/social_net/3.png'), 
+                ],
+                ),
+                       ),
+                       const SizedBox(height: 30), 
+                    
+                      const Center(child: Text('Create Account', style: TextStyle(color: Colors.white, fontSize: 18),),), 
+              const SizedBox(height: 80), 
+                ],
+              ),
             ),
-         ),
-         const SizedBox(height: 30), 
-      
-        const Center(child: Text('Create Account', style: TextStyle(color: Colors.white, fontSize: 18),),), 
-const SizedBox(height: 80), 
-            ],
           ),
         ),
         ),
-      )
-    );
+      );
+    
   }
 }
 
