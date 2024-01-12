@@ -155,7 +155,11 @@ class _Home_FormState extends State<Home_Form> with TickerProviderStateMixin{
                       Expanded(
                         flex: 7,
                         child: Column(
-                          children: [],))
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            
+
+                          ],))
                 ],
             )
           ],
