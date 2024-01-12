@@ -13,7 +13,7 @@ class _Home_FormState extends State<Home_Form> {
     Size size = MediaQuery.of
         (context).size;
     return Scaffold(
-      backgroundColor: Color(0xff192028), 
+      backgroundColor: const Color(0xff192028), 
       body: ScrollConfiguration(
         behavior: MyBehavior(),
         child: SizedBox(height: size.height,
@@ -47,10 +47,18 @@ class MyPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     Paint paint = Paint()
-    ..shader = LinearGradient(
+    ..shader = const LinearGradient(
       colors: [Color(0xffFD5E3D), 
     Color(0xffC43990)],
     begin: Alignment.topLeft, 
     end: Alignment.bottomLeft)
+    .createShader(Rect.fromCircle(center: Offset(0, 0), radius: radius));
+
+    canvas.drawCircle(Offset.zero, radius, paint); 
+  }
+  @override 
+  bool shouldRepaint(covariant CustomPainter oldDelegate) 
+  {
+    return true; 
   }
 }
