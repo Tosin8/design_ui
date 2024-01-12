@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ui_design/screens/animated_form/home_form.dart';
+import 'package:ui_design/screens/form/animated_form/home_form.dart';
+import 'package:ui_design/screens/form/designed_form/design_form.dart';
 import 'package:ui_design/screens/furniture_gridview/gridview.dart';
 import 'package:ui_design/screens/furniture_ui/onboarding.dart';
 
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
     theme: ThemeData(
       primarySwatch: Colors.blue,
     ),
-    home: const Home_Form(), 
+    home: const DesignForm(), 
 
     ); 
   }
