@@ -8,7 +8,7 @@ import 'screens/shoe_app/shoe_ui.dart';
 
 
 
-void main() {
+void main() async {
   runApp( const MyApp()); 
 }
 
