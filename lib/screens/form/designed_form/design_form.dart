@@ -12,31 +12,33 @@ class _DesignFormState extends State<DesignForm> {
   @override
   Widget build(BuildContext context) {
     return Scaffold( 
-      body: Container(
-        width: double.infinity, 
-        height: double.infinity,
-        decoration: BoxDecoration(
-          image: DecorationImage(image: bkg, fit: BoxFit.cover)
-        ),
+      body: SingleChildScrollView(
         child: Container(
-          
-        child:  const Padding( 
-          padding: EdgeInsets.only(left: 20, right: 20),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              
-              Text("PLANT'D", 
-              style: TextStyle(fontSize: 28, fontWeight: FontWeight.w600, color: Colors.white, letterSpacing: 1, ),),
-              SizedBox(height: 20), 
-          Text('Let\'s get your plant wet',style: TextStyle(color: Colors.white, fontSize: 20),
-          ), 
-          SizedBox(height: 20), 
-          SignInForm()
-            ],
+          width: double.infinity, 
+          height: double.infinity,
+          decoration: BoxDecoration(
+            image: DecorationImage(image: bkg, fit: BoxFit.cover)
           ),
-        ),
+          child: Container(
+            
+          child:  const Padding( 
+            padding: EdgeInsets.only(left: 20, right: 20),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                
+                Text("PLANT'D", 
+                style: TextStyle(fontSize: 28, fontWeight: FontWeight.w600, color: Colors.white, letterSpacing: 1, ),),
+                SizedBox(height: 20), 
+            Text('Let\'s get your plant wet',style: TextStyle(color: Colors.white, fontSize: 20),
+            ), 
+            SizedBox(height: 20), 
+            SignInForm()
+              ],
+            ),
+          ),
+          ),
         ),
       )
     );
@@ -119,11 +121,20 @@ class SignInForm extends StatelessWidget {
         const SizedBox(height: 30),
         SignInBtn(btntitle: 'Sign In',), 
         const SizedBox(height: 20), 
-        Text('- OR - ', style: TextStyle(color: Colors.white, fontSize: 16),), 
-        SizedBox(height: 10), 
-        Row(
-
-        ), 
+        const Text('- OR - ', style: TextStyle(color: Colors.white, fontSize: 16),), 
+        const SizedBox(height: 10), 
+         Padding(
+           padding: const EdgeInsets.symmetric(horizontal: 100.0),
+           child: Row(
+            
+            children: [
+              Image.asset('assets/social_net/1.png'), 
+              Image.asset('assets/social_net/2.png'), Image.asset('assets/social_net/3.png'), 
+            ],
+            ),
+         ),
+         SizedBox(height: 20), 
+      
         const Center(child: Text('Create Account', style: TextStyle(color: Colors.white, fontSize: 18),),)
 
       ],
@@ -152,7 +163,7 @@ class SignInBtn extends StatelessWidget {
         decoration: BoxDecoration(borderRadius: BorderRadius.circular(15),
           
           color: Colors.blueAccent.shade200),
-          child:  Align(child: Text(btntitle, style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w500),)),),
+          child:  Align(child: Text(btntitle, style: const TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w500),)),),
     );
   }
 }
