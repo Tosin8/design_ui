@@ -1,4 +1,6 @@
 import 'dart:ffi';
+import 'dart:js';
+import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -222,4 +224,25 @@ class MyPainter extends CustomPainter {
   {
     return true; 
   }
+}
+
+Widget component1(IconData icon, String hintText, bool isPassword, bool isEmail){
+  Size size = MediaQuery.of(context).size; 
+  return ClipRRect(borderRadius: BorderRadius.circular(15),
+  child: BackdropFilter(
+    filter: ImageFilter.blur(sigmaY: 15, sigmaX: 15, 
+    ), 
+    child: Container(
+      height: size.width / 8, 
+      width: size.width / 1.2, 
+      alignment: Alignment.center, padding: const EdgeInsets.only(right: size.width / 30), decoration: BoxDecoration(color: Colors.white.withOpacity(.05), borderRadius: BorderRadius.circular(15), ), child: TextField(style: TextStyle(color: Colors.white.withOpacity(.8)),
+      cursorColor: Colors.white, obscureText: isPassword, keyboardType: isEmail ? TextInputType.emailAddress: TextInputType.text, 
+      decoration: InputDecoration(prefixIcon: Icon(icon, color: Colors.white.withOpacity(.7),
+      ), 
+      border: InputBorder.none, 
+      hintText: hintText,
+       hintStyle: TextStyle(
+        color: Colors.white.withOpacity(.5),
+       fontSize: 14),
+    ),),)));
 }
