@@ -14,7 +14,14 @@ class _DesignFormState extends State<DesignForm> {
     return Scaffold( 
       body: Container(
         decoration: BoxDecoration(
-          image: DecorationImage(image: bkg)
+          image: DecorationImage(image: bkg, fit: BoxFit.cover)
+        ),
+        child: Container(
+        child: Column(
+          children: [
+            Text("PLANT'D"), 
+          ],
+        ),
         ),
       )
     );
