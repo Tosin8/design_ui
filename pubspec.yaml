@@ -35,6 +35,7 @@ dependencies:
     sdk: flutter
   flutter_fadein: ^2.0.0
   flutter_svg: ^2.0.9
+  fluttertoast: ^8.2.4
   font_awesome_flutter: ^10.6.0
   get: ^4.6.6
   google_fonts: ^6.1.0
