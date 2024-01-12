@@ -27,3 +27,30 @@ class _Home_FormState extends State<Home_Form> {
     );
   }
 }
+
+
+class MyBehavior extends ScrollBehavior {
+  @override 
+  Widget buildViewportChrome(
+    BuildContext context, 
+    Widget child,
+     AxisDirection axisDirection) {
+    return child;
+  }
+}
+
+class MyPainter extends CustomPainter {
+  final double radius; 
+
+  MyPainter(this.radius); 
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    Paint paint = Paint()
+    ..shader = LinearGradient(
+      colors: [Color(0xffFD5E3D), 
+    Color(0xffC43990)],
+    begin: Alignment.topLeft, 
+    end: Alignment.bottomLeft)
+  }
+}
