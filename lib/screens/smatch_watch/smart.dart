@@ -18,10 +18,10 @@ class _SmartState extends State<Smart> {
 // ]; 
 
 final images = [
-  Container(color: Colors.red,), 
-  Container(color: Colors.yellow,), 
-  Container(color: Colors.amber,), 
-  Container(color: Colors.green,)
+  Container(color: Colors.red, width: double.infinity, height: double.infinity,), 
+  Container(color: Colors.yellow,width: double.infinity,height: double.infinity,), 
+  Container(color: Colors.amber,width: double.infinity, height: double.infinity,), 
+  Container(color: Colors.green,width: double.infinity, height: double.infinity,)
 ];
 final titles = [
   'Music', 'Alarm', 'Calendar', 'Settings'
@@ -43,6 +43,10 @@ final titles = [
 
               onPageChanged: (page){print(page);
                },
+               onSelectedItem: (index) {
+                 
+               },
+               initialPage: 0,
               ), 
               )
           ],
