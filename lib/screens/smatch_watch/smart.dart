@@ -28,30 +28,32 @@ final titles = [
 ]; 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body:Padding(
-        padding: EdgeInsets.all(30), 
-        child: Column(
-          children: [
-            Expanded(
-              child: VerticalCardPager(
-                titles: titles, 
-                images: images, 
-              // images: images.map((image) => Image.asset(images as String)).toList(),
-
-
-              onPageChanged: (page){print(page);
-               },
-               onSelectedItem: (index) {
-                 
-               },
-               initialPage: 0,
-              ), 
-              )
-          ],
-        ),
-        ),
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(),
+        body:Padding(
+          padding: EdgeInsets.all(30), 
+          child: Column(
+            children: [
+              Expanded(
+                child: VerticalCardPager(
+                  titles: titles, 
+                  images: images, 
+                // images: images.map((image) => Image.asset(images as String)).toList(),
+      
+      
+                onPageChanged: (page){print(page);
+                 },
+                 onSelectedItem: (index) {
+                   
+                 },
+                 initialPage: 0,
+                ), 
+                )
+            ],
+          ),
+          ),
+      ),
     );
   }
 }
