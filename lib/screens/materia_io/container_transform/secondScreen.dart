@@ -13,7 +13,13 @@ class SecondScreen extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: ListView(
           children:const  [
-            mailField(), 
+            TextField(
+      decoration: InputDecoration(
+        hintText: 'Mail Sender',
+        labelText: 'From'
+    
+      ),
+    ), 
             TextField(
               decoration: InputDecoration(
                 hintText: 'Receipent',
@@ -28,32 +34,16 @@ class SecondScreen extends StatelessWidget {
         
               ),
             ), 
+            TextField(
+              decoration: InputDecoration(
+                hintText: 'Compose',
+                labelText: 'Compose'
+      
+              ),
+            ), 
           ]),
       ),
     );
   }
 }
 
-class mailField extends StatefulWidget {
-   const mailField({
-    super.key,
-  });
-
-  @override
-  State<mailField> createState() => _mailFieldState();
-}
-
-class _mailFieldState extends State<mailField> {
-String Text1, Text2; 
-
-  @override
-  Widget build(BuildContext context) {
-    return TextField(
-      decoration: InputDecoration(
-        hintText: 'Mail Sender',
-        labelText: 'From'
-    
-      ),
-    );
-  }
-}
