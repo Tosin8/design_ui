@@ -21,7 +21,30 @@ class SecondScreen extends StatelessWidget {
                     child: GestureDetector(
                       onTap: (){}, 
                     
-                    child: Text('Schedule Send')))
+                    child: const Text('Schedule Send'))), 
+                    PopupMenuItem(
+                    child: GestureDetector(
+                      onTap: (){}, 
+                    
+                    child: const Text('Add from Contacts'))),
+                    PopupMenuItem(
+                    child: GestureDetector(
+                      onTap: (){}, 
+                    
+                    child: const Text('Save drafts'))), 
+                    PopupMenuItem(
+                    child: GestureDetector(
+                      onTap: (){}, 
+                    
+                    child: const Text('Discard'))), PopupMenuItem(
+                    child: GestureDetector(
+                      onTap: (){}, 
+                    
+                    child: const Text('Settings'))), PopupMenuItem(
+                    child: GestureDetector(
+                      onTap: (){}, 
+                    
+                    child: const Text('Help and Feedback')))
                 ], 
             
               

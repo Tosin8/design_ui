@@ -15,17 +15,53 @@ class OpenContainerTransform extends StatelessWidget {
         backgroundColor: Colors.blueAccent,
         leading: IconButton(
           onPressed: (){}, 
-          icon: Icon(Icons.menu, 
+          icon: const Icon(Icons.menu, 
           color: Colors.white,)),
         title: const Text('Inbox', style: TextStyle(color: Colors.white),), 
         actions: [
-          IconButton(onPressed: (){}, icon: Icon(Icons.search, color: Colors.white,)), 
-           IconButton(onPressed: (){}, icon: Icon(Icons.menu, color: Colors.white,)),
+          IconButton(onPressed: (){}, icon: const Icon(Icons.search, color: Colors.white,)), 
+           PopupMenuButton(
+            color: Colors.white,
+              itemBuilder: (BuildContext context) =>
+                [
+                  PopupMenuItem(
+                    child: GestureDetector(
+                      onTap: (){}, 
+                    
+                    child: const Text('Schedule Send'))), 
+                    PopupMenuItem(
+                    child: GestureDetector(
+                      onTap: (){}, 
+                    
+                    child: const Text('Add from Contacts'))),
+                    PopupMenuItem(
+                    child: GestureDetector(
+                      onTap: (){}, 
+                    
+                    child: const Text('Save drafts'))), 
+                    PopupMenuItem(
+                    child: GestureDetector(
+                      onTap: (){}, 
+                    
+                    child: const Text('Discard'))), PopupMenuItem(
+                    child: GestureDetector(
+                      onTap: (){}, 
+                    
+                    child: const Text('Settings'))), PopupMenuItem(
+                    child: GestureDetector(
+                      onTap: (){}, 
+                    
+                    child: const Text('Help and Feedback')))
+                ], 
+            
+              
+               
+             ) 
         ],
       ),
       floatingActionButton: OpenContainer(
       
-        openBuilder: (_, __) => SecondScreen(),
+        openBuilder: (_, __) => const SecondScreen(),
         closedElevation: 6.0,
         closedShape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(_fabDimension / 2)), 
         ),
