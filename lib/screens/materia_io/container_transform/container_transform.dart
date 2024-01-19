@@ -14,7 +14,11 @@ class OpenContainerTransform extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.blueAccent,
         leading: IconButton(onPressed: (){}, icon: Icon(Icons.menu, color: Colors.white,)),
-        title: const Text('Inbox', style: TextStyle(color: Colors.white),)
+        title: const Text('Inbox', style: TextStyle(color: Colors.white),), 
+        actions: [
+          IconButton(onPressed: (){}, icon: Icon(Icons.search, color: Colors.white,)), 
+           IconButton(onPressed: (){}, icon: Icon(Icons.menu, color: Colors.white,)),
+        ],
       ),
       floatingActionButton: OpenContainer(
       
