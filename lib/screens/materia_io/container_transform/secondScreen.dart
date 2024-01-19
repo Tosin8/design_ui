@@ -7,9 +7,53 @@ class SecondScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold( 
       appBar: AppBar(
-        title: Text('Secondary Screen'),
+       
       ),
-      body: Center(child: Text('The Secondary Screen'),),
+      body: Padding( 
+        padding: const EdgeInsets.all(8.0),
+        child: ListView(
+          children:const  [
+            mailField(), 
+            TextField(
+              decoration: InputDecoration(
+                hintText: 'Receipent',
+                labelText: 'Receipent'
+        
+              ),
+            ), 
+             TextField(
+              decoration: InputDecoration(
+                hintText: 'Subject',
+                labelText: 'Subject'
+        
+              ),
+            ), 
+          ]),
+      ),
+    );
+  }
+}
+
+class mailField extends StatefulWidget {
+   const mailField({
+    super.key,
+  });
+
+  @override
+  State<mailField> createState() => _mailFieldState();
+}
+
+class _mailFieldState extends State<mailField> {
+String Text1, Text2; 
+
+  @override
+  Widget build(BuildContext context) {
+    return TextField(
+      decoration: InputDecoration(
+        hintText: 'Mail Sender',
+        labelText: 'From'
+    
+      ),
     );
   }
 }
