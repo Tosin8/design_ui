@@ -12,7 +12,9 @@ class OpenContainerTransform extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Primary Screen')
+        backgroundColor: Colors.blueAccent,
+        leading: IconButton(onPressed: (){}, icon: Icon(Icons.menu, color: Colors.white,)),
+        title: const Text('Inbox', style: TextStyle(color: Colors.white),)
       ),
       floatingActionButton: OpenContainer(
       
