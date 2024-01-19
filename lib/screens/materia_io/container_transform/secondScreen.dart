@@ -36,10 +36,13 @@ class SecondScreen extends StatelessWidget {
             ), 
             TextField(
               decoration: InputDecoration(
+                border: InputBorder.none,
                 hintText: 'Compose',
-                labelText: 'Compose'
+                labelText: 'Compose', 
+                
       
               ),
+              
             ), 
           ]),
       ),
