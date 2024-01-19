@@ -7,8 +7,30 @@ class SecondScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold( 
       appBar: AppBar(
+        actions: [
+          IconButton(
+            onPressed: (){},
+             icon: const Icon(Icons.attach_file)), 
+              IconButton(
+            onPressed: (){},
+             icon: const Icon(Icons.send)),
+             PopupMenuButton(
+              itemBuilder: (BuildContext context) =>
+                [
+                  PopupMenuItem(
+                    child: GestureDetector(
+                      onTap: (){}, 
+                    
+                    child: Text('Schedule Send')))
+                ], 
+            
+              
+               
+             )
+        ],
+      ), 
        
-      ),
+      
       body: Padding( 
         padding: const EdgeInsets.all(8.0),
         child: ListView(
@@ -16,32 +38,36 @@ class SecondScreen extends StatelessWidget {
             TextField(
       decoration: InputDecoration(
         hintText: 'Mail Sender',
-        labelText: 'From'
+        labelText: 'From',
     
       ),
+      maxLines: 1, maxLength: 30,
     ), 
             TextField(
               decoration: InputDecoration(
                 hintText: 'Receipent',
                 labelText: 'Receipent'
-        
               ),
+              textInputAction: TextInputAction.next,
+              maxLines: 1, maxLength: 30,
             ), 
              TextField(
               decoration: InputDecoration(
                 hintText: 'Subject',
                 labelText: 'Subject'
-        
-              ),
+              ), maxLines: 1, maxLength: 30,textInputAction: TextInputAction.next,
             ), 
             TextField(
               decoration: InputDecoration(
-                border: InputBorder.none,
+               // border: InputBorder.none,
                 hintText: 'Compose',
                 labelText: 'Compose', 
-                
-      
               ),
+              textInputAction: TextInputAction.done,
+              keyboardType: TextInputType.multiline,
+              maxLines: null,
+             
+                
               
             ), 
           ]),
