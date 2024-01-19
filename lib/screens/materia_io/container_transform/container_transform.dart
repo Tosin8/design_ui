@@ -24,6 +24,7 @@ class OpenContainerTransform extends StatelessWidget {
         closedBuilder: (BuildContext context, _) => 
         SizedBox(height: _fabDimension, width: _fabDimension, child: Center(child: Icon(Icons.add, color: Theme.of(context).colorScheme.onSecondary),),)
         ),
+        body: ListView(),
          
     );
   }
