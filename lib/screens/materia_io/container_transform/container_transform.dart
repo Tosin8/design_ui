@@ -70,10 +70,24 @@ class OpenContainerTransform extends StatelessWidget {
         closedBuilder: (BuildContext context, _) => 
         SizedBox(height: _fabDimension, width: _fabDimension, child: Center(child: Icon(Icons.create, color: Theme.of(context).colorScheme.onSecondary),),)
         ),
-        body: ListView(
-          children:const [
-            Text('Today', style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18),)
-          ],
+        body: Padding(
+          padding: const EdgeInsets.only(left:16.0),
+          child: ListView(
+            children:[
+              const SizedBox(height: 10), 
+              Text('Today', style: TextStyle(
+                fontWeight: FontWeight.w600,
+                 fontSize: 18, 
+                 color: Colors.grey.shade600),), 
+                 const SizedBox(height: 12), 
+                 const ListTile(
+                   leading: CircleAvatar(
+                     backgroundImage: NetworkImage('https://unsplash.com/photos/closeup-photography-of-woman-smiling-mEZ3PoFGs_k'),
+                     radius: 30,
+                   )
+                 )
+            ],
+          ),
         ),
          
     );
