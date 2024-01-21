@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 
@@ -84,8 +85,11 @@ class OpenContainerTransform extends StatelessWidget {
                    leading: CircleAvatar(
                      backgroundImage: NetworkImage('https://unsplash.com/photos/closeup-photography-of-woman-smiling-mEZ3PoFGs_k'),
                      radius: 30,
-                   )
-                 )
+                   ), 
+                   title: Text('Bruch this weekend?', style: TextStyle(fontWeight: FontWeight.w600),),
+                   subtitle: Text('Ali Connors'),
+                 ),
+                 const Divider(),
             ],
           ),
         ),
@@ -93,3 +97,27 @@ class OpenContainerTransform extends StatelessWidget {
     );
   }
 }
+
+
+class Mails {
+  String  image; 
+  String title; 
+  String subtitle;
+  Mails({
+    required this.image,
+    required this.title,
+    required this.subtitle,
+  });
+}
+
+List<Mails> mails = <Mails>[
+
+  Mails(image: 'assets/mails/1.jpg', title: 'Bruch this weekend?', subtitle: 'Ali Connors'),
+  Mails(image: 'assets/mails/2.jpg', title: 'Bruch this weekend?', subtitle: 'Trevor Hansen'),
+  Mails(image: 'assets/mails/3.jpg', title: 'Bruch this weekend?', subtitle: 'Trevor Hansen'),
+  Mails(image: 'assets/mails/4.jpg', title: 'Bruch this weekend?', subtitle: 'Trevor Hansen'),
+  Mails(image: 'assets/mails/5.jpg', title: 'Bruch this weekend?', subtitle: 'Trevor Hansen'),
+  Mails(image: 'assets/mails/6.jpg', title: 'Bruch this weekend?', subtitle: 'Trevor Hansen'),
+  Mails(image: 'assets/mails/7.jpg', title: 'Bruch this weekend?', subtitle: 'Trevor Hansen'),
+  
+];
