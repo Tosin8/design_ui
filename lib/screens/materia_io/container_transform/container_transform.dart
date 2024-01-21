@@ -22,6 +22,7 @@ class OpenContainerTransform extends StatelessWidget {
           IconButton(onPressed: (){}, icon: const Icon(Icons.search, color: Colors.white,)), 
            PopupMenuButton(
             color: Colors.white,
+            surfaceTintColor: Colors.white,
               itemBuilder: (BuildContext context) =>
                 [
                   PopupMenuItem(
