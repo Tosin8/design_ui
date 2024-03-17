@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ui_design/screens/materia_io/container_transform/container_transform.dart';
+import 'package:ui_design/screens/travel_onboard/swipe_home.dart';
 
 
 
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
     theme: ThemeData(
       primarySwatch: Colors.blue,
     ),
-    home: const OpenContainerTransform(), 
+    home: const HomeSwipe(), 
 
     ); 
   }
