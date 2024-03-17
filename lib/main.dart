@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ui_design/screens/smatch_watch/smart.dart';
+
+import 'screens/furniture_ui/onboarding.dart';
 
 
 
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
     theme: ThemeData(
       primarySwatch: Colors.blue,
     ),
-    home: const Smart(), 
+    home: const FurnitureOnboarding(), 
 
     ); 
   }
