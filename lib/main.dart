@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'screens/discover_ui/discover.dart';
 import 'screens/furniture_gridview/gridview.dart';
 import 'screens/furniture_ui/onboarding.dart';
+import 'screens/shoe_app/home.dart';
 
 
 
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
     theme: ThemeData(
       primarySwatch: Colors.blue,
     ),
-    home: const Discover (), 
+    home: const ShoeHome (), 
 
     ); 
   }
