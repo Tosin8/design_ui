@@ -36,22 +36,22 @@ class _FurnitureGridState extends State<FurnitureGrid> {
         leading: const Icon(Icons.menu), 
         title: const Text('Furniture'),
         centerTitle: true,
-        actions: [
-badges.Badge(
-  badgeContent: const Text('0', style: TextStyle(color: Colors.white),), 
-  position: badges.BadgePosition.topEnd(top: -5, end: -4 ),
-  badgeStyle: const badges.BadgeStyle(
-    badgeColor: Colors.black, 
-  ),
+//         actions: [
+// badges.Badge(
+//   badgeContent: const Text('0', style: TextStyle(color: Colors.white),), 
+//   position: badges.BadgePosition.topEnd(top: -5, end: -4 ),
+//   badgeStyle: const badges.BadgeStyle(
+//     badgeColor: Colors.black, 
+//   ),
   
-  //backgroundColor: Colors.blue,
-  child: IconButton(onPressed: (){}, 
-  icon: const Icon(FontAwesomeIcons.basketShopping),
-         ),
+//   //backgroundColor: Colors.blue,
+//   child: IconButton(onPressed: (){}, 
+//   icon: const Icon(FontAwesomeIcons.basketShopping),
+//          ),
          
-), 
-const SizedBox(width: 10), 
- ],
+// ), 
+//const SizedBox(width: 10), 
+ //],
  
       ),
 
