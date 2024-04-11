@@ -24,25 +24,31 @@ Product(
  ), 
  Product(
   title: 'Product 3',
- image: 'assets/furniture_grid/3.jpg', price: 680
+ image: 'assets/furniture_grid/3.jpg', 
+ price: 680
  ), 
  Product(
   title: 'Product 1',
- image: 'assets/furniture_grid/4.jpg', price: 400
+ image: 'assets/furniture_grid/4.jpg', 
+ price: 400
  ), 
  Product(
   title: 'Product 1',
- image: 'assets/furniture_grid/5.jpg', price: 450
+ image: 'assets/furniture_grid/5.jpg', 
+ price: 450
  ), 
  Product(
   title: 'Product 1',
- image: 'assets/furniture_grid/6.jpg', price: 820
+ image: 'assets/furniture_grid/6.jpg', 
+ price: 820
  ), 
  Product(
   title: 'Product 1',
- image: 'assets/furniture_grid/7.jpg', price: 460
+ image: 'assets/furniture_grid/7.jpg', 
+ price: 460
  ), Product(
   title: 'Product 1',
- image: 'assets/furniture_grid/8.jpg', price: 800
+ image: 'assets/furniture_grid/8.jpg', 
+ price: 800
  ), 
 ]; 

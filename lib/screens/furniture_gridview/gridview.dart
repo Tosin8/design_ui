@@ -113,40 +113,40 @@ class _FurnitureGridState extends State<FurnitureGrid> {
                 crossAxisCount: 2,
                  padding: const EdgeInsets.all(8), crossAxisSpacing: 20,
                   mainAxisSpacing: 20,
-                 children: _listItem.map((item) => Card(
-                  elevation: 0, 
-                  color: Colors.transparent,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      image: DecorationImage(
-                        image: AssetImage(item), 
-                        fit: BoxFit.cover
-                        )
-                    ),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        gradient: LinearGradient(colors: [
-                          Colors.black.withOpacity(.4), 
-                          Colors.black.withOpacity(.1), 
+                //  children: _listItem.map((item) => Card(
+                //   elevation: 0, 
+                //   color: Colors.transparent,
+                //   child: Container(
+                //     decoration: BoxDecoration(
+                //       borderRadius: BorderRadius.circular(10),
+                //       image: DecorationImage(
+                //         image: AssetImage(item), 
+                //         fit: BoxFit.cover
+                //         )
+                //     ),
+                //     child: Container(
+                //       decoration: BoxDecoration(
+                //         borderRadius: BorderRadius.circular(10),
+                //         gradient: LinearGradient(colors: [
+                //           Colors.black.withOpacity(.4), 
+                //           Colors.black.withOpacity(.1), 
               
-                        ], begin: Alignment.bottomRight)
-                      ), 
-                      child: Transform.translate(
-                        offset: const Offset(60, -50),
-                        child: Container(
-                          child: IconButton(
+                //         ], begin: Alignment.bottomRight)
+                //       ), 
+                //       child: Transform.translate(
+                //         offset: const Offset(60, -50),
+                //         child: Container(
+                //           child: IconButton(
                             
-                            onPressed: _changeFavs, 
-                            icon: _favs ? 
-                            const Icon(Icons.favorite_border_outlined, color: Colors.white) : const Icon(Icons.favorite, color: Colors.black,
-                            )
-                            ),
-                        ),
-                      ),
-                    ),
-                  ))).toList()
+                //             onPressed: _changeFavs, 
+                //             icon: _favs ? 
+                //             const Icon(Icons.favorite_border_outlined, color: Colors.white) : const Icon(Icons.favorite, color: Colors.black,
+                //             )
+                //             ),
+                //         ),
+                //       ),
+                //     ),
+                //   ))).toList()
                   ),
             ))
           ],
