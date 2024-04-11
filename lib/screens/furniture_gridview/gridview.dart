@@ -34,7 +34,7 @@ class _FurnitureGridState extends State<FurnitureGrid> {
     return Scaffold( 
       appBar: AppBar(
         leading: const Icon(Icons.menu), 
-        title: const Text('Furniture'),
+        title: const Text('Home Interior'),
         centerTitle: true,
 //         actions: [
 // badges.Badge(
@@ -60,7 +60,7 @@ class _FurnitureGridState extends State<FurnitureGrid> {
         child: Column(
           children: [
             FadeIn(
-              duration: Duration(milliseconds: 1000),
+              duration: const Duration(milliseconds: 1000),
               child: Container(
                 height: 200,
                 width: double.infinity,
@@ -77,7 +77,8 @@ class _FurnitureGridState extends State<FurnitureGrid> {
                       Colors.black.withOpacity(.4), 
                       Colors.black.withOpacity(.1),
                        
-                    ], begin: Alignment.bottomCenter)
+                    ], 
+                    begin: Alignment.bottomCenter)
                   ),
                   child:  Column(
                     mainAxisAlignment: MainAxisAlignment.end,
@@ -90,7 +91,7 @@ class _FurnitureGridState extends State<FurnitureGrid> {
                       const SizedBox(height: 10), 
                       const Text('Elegant furnitures of varieties made to\n last longer at the differences of the making ', style: TextStyle(color: Colors.white), 
                       textAlign: TextAlign.center,), 
-                      const SizedBox(height: 10), 
+                      const SizedBox(height: 15), 
                       Container(
               
                         height: 50,
@@ -98,7 +99,7 @@ class _FurnitureGridState extends State<FurnitureGrid> {
                         decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(10)),
                         child: Center(child: Text('Shop Here', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: Colors.grey[700]),)),
                       ), 
-                      const SizedBox(height: 20), 
+                      const SizedBox(height: 18), 
               
                     ],
                   ),
@@ -108,8 +109,8 @@ class _FurnitureGridState extends State<FurnitureGrid> {
             const SizedBox(height: 30), 
             Expanded(child: 
             FadeInLeft(
-              delay: Duration(milliseconds: 1000),
-              duration: Duration(milliseconds: 1000),
+              delay: const Duration(milliseconds: 1000),
+              duration: const Duration(milliseconds: 1000),
               child: GridView.count(
                 crossAxisCount: 2,
                  padding: const EdgeInsets.all(8), crossAxisSpacing: 20,
