@@ -97,35 +97,34 @@ class _FurnitureGridState extends State<FurnitureGrid> {
               ),
             ),
             const SizedBox(height: 5), 
-            SingleChildScrollView(
-              scrollDirection: Axis.vertical,
-
-              child: Expanded(child: 
-              FadeInLeft(
-                delay: const Duration(milliseconds: 1000),
-                duration: const Duration(milliseconds: 1000),
-                // child: GridView.count(
-                //   crossAxisCount: 2,
-                //    padding: const EdgeInsets.all(8), crossAxisSpacing: 20,
-                //     mainAxisSpacing: 20,
-                child:   GridView.builder(
-                         physics: const NeverScrollableScrollPhysics(),
+            Expanded(child: 
+            FadeInLeft(
+              delay: const Duration(milliseconds: 1000),
+              duration: const Duration(milliseconds: 1000),
+              // child: GridView.count(
+              //   crossAxisCount: 2,
+              //    padding: const EdgeInsets.all(8), crossAxisSpacing: 20,
+              //     mainAxisSpacing: 20,
+              child:   SingleChildScrollView(
+                scrollDirection: Axis.vertical,
+                child: GridView.builder(
+                           physics: const NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
                     crossAxisSpacing: 10.0,
                     mainAxisSpacing: 6.0,
                   ),
-                      
-                        itemCount: products.length,
-                        itemBuilder: (_, index){
-              return productcard(
+                        
+                          itemCount: products.length,
+                          itemBuilder: (_, index){
+                            return productcard(
                 products: products[index],
-              );
-                        }
-                      )),
-                    ),
-            ), 
+                            );
+                          }
+                        ),
+              )),
+      ), 
                 //  children: _listItem.map((item) => Card(
                 //   elevation: 0, 
                 //   color: Colors.transparent,

@@ -19,28 +19,28 @@ Product(
  description: 'This chair is an elegant and functional piece of furniture. It is suitable for family visits and parties with friends and perfect for relaxing in front of the TV after hard work.',
  ), 
  Product(
-  title: 'Product 2',
+  title: 'Cascade Club Chair',
  image: 'assets/furniture_grid/2.jpg', 
  price: 800, 
  description: ''
  ), 
  Product(
-  title: 'Product 3',
+  title: 'Haven Hammock Chair',
  image: 'assets/furniture_grid/3.jpg', 
  price: 680, description: ''
  ), 
  Product(
-  title: 'Product 1',
+  title: 'Royal Crest Chair',
  image: 'assets/furniture_grid/4.jpg', 
  price: 400, description: ''
  ), 
  Product(
-  title: 'Product 1',
+  title: 'Serene Sway Rocking Chair',
  image: 'assets/furniture_grid/5.jpg', 
  price: 450, description: ''
  ), 
  Product(
-  title: 'Product 1',
+  title: 'Zenith Zero Gravity Chair',
  image: 'assets/furniture_grid/6.jpg', 
  price: 820, description: ''
  ), 

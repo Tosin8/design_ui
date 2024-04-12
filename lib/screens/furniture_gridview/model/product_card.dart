@@ -53,7 +53,11 @@ final Product products;
                   ), 
                   Padding(
                     padding: const EdgeInsets.only(left: 10),
-                    child: Text( products.title, style: const TextStyle(color: Colors.white,fontWeight: FontWeight.w600, fontSize: 14),
+                    child: Text( products.title,
+                    softWrap: true,
+                    maxLines: 1,
+                     overflow: TextOverflow.ellipsis,
+                     style: const TextStyle(color: Colors.white,fontWeight: FontWeight.w600, fontSize: 14),
                     ),
                   ), 
                   Padding(
