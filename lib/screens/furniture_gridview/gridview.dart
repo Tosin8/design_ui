@@ -147,6 +147,16 @@ class _FurnitureGridState extends State<FurnitureGrid> {
                 //       ),
                 //     ),
                 //   ))).toList()
+                 
+                 children: [
+                  Card(
+                    elevation: 0, 
+                    color: Colors.transparent, 
+                    child: Container(
+                      
+                    ),
+                  )
+                 ]
                   ),
             ))
           ],
