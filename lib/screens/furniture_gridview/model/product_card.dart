@@ -42,16 +42,7 @@ final Product products;
                 mainAxisAlignment: MainAxisAlignment.end,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Transform.translate(
-                    offset: const Offset(120, -40), 
-                    child: Container(
-                      child: IconButton(icon: const Icon(Iconsax.heart, color: Colors.white,),
-                      onPressed: () {
-                        
-                      },),
-                    
-                    ),
-                  ), 
+                 
                   Padding(
                     padding: const EdgeInsets.only(left: 10),
                     child: AutoSizeText(
@@ -64,7 +55,18 @@ final Product products;
                   ), 
                   Padding(
                     padding: const EdgeInsets.only(left: 10),
-                    child: Text('\$${products.price.toString()}', style: const TextStyle(color: Colors.white),)), 
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text('\$${products.price.toString()}', style: const TextStyle(color: Colors.white),
+                        ),
+                         Container(
+                   child: IconButton(icon: const Icon(Iconsax.heart, color: Colors.white,),
+                     onPressed: () {
+                        
+                     },),), 
+                      ],
+                    )), 
                   const SizedBox(height: 10,), 
                 ],
               ),
@@ -75,3 +77,15 @@ final Product products;
     );
   }
 }
+
+
+ // Transform.translate(
+                  //   offset: const Offset(120, -40), 
+                  //   child: Container(
+                  //     child: IconButton(icon: const Icon(Iconsax.heart, color: Colors.white,),
+                  //     onPressed: () {
+                        
+                  //     },),
+                    
+                  //   ),
+                  // ), 
