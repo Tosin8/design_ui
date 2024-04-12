@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:ui_design/screens/furniture_gridview/detail_screen/product_detail.dart';
 
 import 'model/product.dart';
 
@@ -156,10 +157,10 @@ class _FurnitureGridState extends State<FurnitureGrid> {
                  children: [
                   GestureDetector(
                     onTap:() {
-                      
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const ProductDetails()));
                     },
                     child: Hero(
-                      tag: '',
+                      tag: products[0].image,
                       child: Card(
                         elevation: 0, 
                         color: Colors.transparent, 
