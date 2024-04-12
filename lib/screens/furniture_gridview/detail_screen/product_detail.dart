@@ -134,12 +134,12 @@ class ProductDetails extends StatelessWidget {
          ),
          
          Positioned(
-          bottom: 10,
-          left: 120, 
+          bottom: 15,
+          left: 50, 
            child: Container(
             decoration: BoxDecoration(color: Colors.blue, 
-            borderRadius: BorderRadius.circular(5), ),
-            height: 45, width: 180,
+            borderRadius: BorderRadius.circular(10), ),
+            height: 45, width: 300,
             child: const Center(child: Text('Add to Cart', style: TextStyle(fontSize: 16, color: Colors.white),)),
            ),
          )

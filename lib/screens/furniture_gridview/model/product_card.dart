@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
@@ -53,11 +54,12 @@ final Product products;
                   ), 
                   Padding(
                     padding: const EdgeInsets.only(left: 10),
-                    child: Text( products.title,
+                    child: AutoSizeText(
+                       products.title,
                     softWrap: true,
                     maxLines: 2,
                      overflow: TextOverflow.ellipsis,
-                     style: const TextStyle(color: Colors.white,fontWeight: FontWeight.w600, fontSize: 14),
+                     style: const TextStyle(color: Colors.white,fontWeight: FontWeight.w600, fontSize: 16),
                     ),
                   ), 
                   Padding(

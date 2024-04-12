@@ -14,42 +14,42 @@ List<Product> products = [
 Product(
   
   price: 1200,
-  title: 'Nova Nordic \nDining Chair',
+  title: 'Nova Nordic Dining Chair',
  image: 'assets/furniture_grid/1.jpg', 
  description: 'This chair is an elegant and functional piece of furniture. It is suitable for family visits and parties with friends and perfect for relaxing in front of the TV after hard work.',
  ), 
  Product(
-  title: 'Cascade \nClub Chair',
+  title: 'Cascade Club Chair',
  image: 'assets/furniture_grid/2.jpg', 
  price: 800, 
  description: ''
  ), 
  Product(
-  title: 'Haven \nHammock Chair',
+  title: 'Haven Hammock Chair',
  image: 'assets/furniture_grid/3.jpg', 
  price: 680, description: ''
  ), 
  Product(
-  title: 'Royal \nCrest Chair',
+  title: 'Royal Crest Chair',
  image: 'assets/furniture_grid/4.jpg', 
  price: 400, description: ''
  ), 
  Product(
-  title: 'Serene Sway \nRocking Chair',
+  title: 'Serene Sway Rocking Chair',
  image: 'assets/furniture_grid/5.jpg', 
  price: 450, description: ''
  ), 
  Product(
-  title: 'Zenith Zero \nGravity Chair',
+  title: 'Zenith Zero Gravity Chair',
  image: 'assets/furniture_grid/6.jpg', 
  price: 820, description: ''
  ), 
  Product(
-  title: 'Aurora \nAdirondack Chair',
+  title: 'Aurora Adirondack Chair',
  image: 'assets/furniture_grid/7.jpg', 
  price: 460, description: ''
  ), Product(
-  title: 'Radiance \nRocker Recliner',
+  title: 'Radiance Rocker Recliner',
  image: 'assets/furniture_grid/8.jpg', 
  price: 800, description: ''
  ), 

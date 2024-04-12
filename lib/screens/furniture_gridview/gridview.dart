@@ -1,10 +1,9 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 import 'model/product.dart';
 import 'model/product_card.dart';
+import 'widgets/home_header.dart';
 
 
 class FurnitureGrid extends StatefulWidget {
@@ -45,53 +44,16 @@ class _FurnitureGridState extends State<FurnitureGrid> {
 
       body: Container(
         padding: const EdgeInsets.all(8.0), 
-        child: Column(
+        color: const Color(0xffeaeaea),
+        child: Stack(
           children: [
+
+            // header
             FadeIn(
               duration: const Duration(milliseconds: 1000),
-              child: Container(
-                height: 200,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  
-                  image: const DecorationImage(image: AssetImage('assets/furniture_grid/9.jpg',), fit: BoxFit.cover 
-                
-                )),
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    gradient: LinearGradient(colors: [
-                      Colors.black.withOpacity(.4), 
-                      Colors.black.withOpacity(.1),
-                       
-                    ], 
-                    begin: Alignment.bottomCenter)
-                  ),
-                  child:  Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      const Text(
-                        'Lifestyle Sales', 
-                        style: TextStyle(color: Colors.white, 
-                        fontWeight: FontWeight.w600, fontSize: 30),
-                      ), 
-                      const SizedBox(height: 10), 
-                      const Text('Elegant furnitures of varieties made to\n last longer at the differences of the making ', style: TextStyle(color: Colors.white), 
-                      textAlign: TextAlign.center,), 
-                      const SizedBox(height: 15), 
-                      Container(
-              
-                        height: 50,
-                        margin: const EdgeInsets.symmetric(horizontal: 50),
-                        decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(10)),
-                        child: Center(child: Text('Shop Here', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: Colors.grey[700]),)),
-                      ), 
-                      const SizedBox(height: 18), 
-              
-                    ],
-                  ),
-                ),
+              child: const Positioned( 
+                top: 0, right: 0, left: 0, 
+                child: HomeHeader(),
               ),
             ),
             const SizedBox(height: 5), 
@@ -159,9 +121,10 @@ class _FurnitureGridState extends State<FurnitureGrid> {
                 //   ))).toList()
                  
                  
-                 ] ),
-            ));
+                 ], 
+                  ),
+            ), 
+            );
           
   }
 }
-
