@@ -2,8 +2,6 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:iconsax/iconsax.dart';
-import 'package:ui_design/screens/furniture_gridview/detail_screen/product_detail.dart';
 
 import 'model/product.dart';
 import 'model/product_card.dart';

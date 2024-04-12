@@ -45,11 +45,11 @@ Product(
  price: 820, description: ''
  ), 
  Product(
-  title: 'Product 1',
+  title: 'Aurora Adirondack Chair',
  image: 'assets/furniture_grid/7.jpg', 
  price: 460, description: ''
  ), Product(
-  title: 'Product 1',
+  title: 'Radiance Rocker Recliner',
  image: 'assets/furniture_grid/8.jpg', 
  price: 800, description: ''
  ), 
