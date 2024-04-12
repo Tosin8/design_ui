@@ -6,9 +6,10 @@ import 'product.dart';
 
 class productcard extends StatelessWidget {
   const productcard({
-    super.key,
+    super.key, required this.products,
   });
 
+final Product products; 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -16,14 +17,14 @@ class productcard extends StatelessWidget {
         Navigator.push(context, MaterialPageRoute(builder: (context) => const ProductDetails()));
       },
       child: Hero(
-        tag: products[0].image,
+        tag: products.image,
         child: Card(
           elevation: 0, 
           color: Colors.transparent, 
           child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10), 
-              image: DecorationImage(image: AssetImage(products[0].image), 
+              image: DecorationImage(image: AssetImage(products.image), 
               fit: BoxFit.cover
               )
             ),
@@ -51,13 +52,13 @@ class productcard extends StatelessWidget {
                     ),
                   ), 
                   Padding(
-                    padding: EdgeInsets.only(left: 10),
-                    child: Text( products[0].title, style: const TextStyle(color: Colors.white,fontWeight: FontWeight.w600, fontSize: 14),
+                    padding: const EdgeInsets.only(left: 10),
+                    child: Text( products.title, style: const TextStyle(color: Colors.white,fontWeight: FontWeight.w600, fontSize: 14),
                     ),
                   ), 
                   Padding(
-                    padding: EdgeInsets.only(left: 10),
-                    child: Text('\$${products[0].price.toString()}', style: const TextStyle(color: Colors.white),)), 
+                    padding: const EdgeInsets.only(left: 10),
+                    child: Text('\$${products.price.toString()}', style: const TextStyle(color: Colors.white),)), 
                   const SizedBox(height: 10,), 
                 ],
               ),
