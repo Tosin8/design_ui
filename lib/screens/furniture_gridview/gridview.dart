@@ -41,22 +41,7 @@ class _FurnitureGridState extends State<FurnitureGrid> {
         leading: const Icon(Icons.menu), 
         title: const Text('Home Interior'),
         centerTitle: true,
-//         actions: [
-// badges.Badge(
-//   badgeContent: const Text('0', style: TextStyle(color: Colors.white),), 
-//   position: badges.BadgePosition.topEnd(top: -5, end: -4 ),
-//   badgeStyle: const badges.BadgeStyle(
-//     badgeColor: Colors.black, 
-//   ),
-  
-//   //backgroundColor: Colors.blue,
-//   child: IconButton(onPressed: (){}, 
-//   icon: const Icon(FontAwesomeIcons.basketShopping),
-//          ),
-         
-// ), 
-//const SizedBox(width: 10), 
- //],
+
  
       ),
 
@@ -70,14 +55,14 @@ class _FurnitureGridState extends State<FurnitureGrid> {
                 height: 200,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30),
+                  borderRadius: BorderRadius.circular(10),
                   
                   image: const DecorationImage(image: AssetImage('assets/furniture_grid/9.jpg',), fit: BoxFit.cover 
                 
                 )),
                 child: Container(
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30),
+                    borderRadius: BorderRadius.circular(10),
                     gradient: LinearGradient(colors: [
                       Colors.black.withOpacity(.4), 
                       Colors.black.withOpacity(.1),
@@ -112,31 +97,35 @@ class _FurnitureGridState extends State<FurnitureGrid> {
               ),
             ),
             const SizedBox(height: 5), 
-            Expanded(child: 
-            FadeInLeft(
-              delay: const Duration(milliseconds: 1000),
-              duration: const Duration(milliseconds: 1000),
-              // child: GridView.count(
-              //   crossAxisCount: 2,
-              //    padding: const EdgeInsets.all(8), crossAxisSpacing: 20,
-              //     mainAxisSpacing: 20,
-              child:   GridView.builder(
-           physics: const NeverScrollableScrollPhysics(),
-                shrinkWrap: true,
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  crossAxisSpacing: 20.0,
-                  mainAxisSpacing: 70.0,
-                ),
-        
-          itemCount: products.length,
-          itemBuilder: (_, index){
-            return productcard(
-              products: products[index],
-            );
-          }
-        )),
-      ), 
+            SingleChildScrollView(
+              scrollDirection: Axis.vertical,
+
+              child: Expanded(child: 
+              FadeInLeft(
+                delay: const Duration(milliseconds: 1000),
+                duration: const Duration(milliseconds: 1000),
+                // child: GridView.count(
+                //   crossAxisCount: 2,
+                //    padding: const EdgeInsets.all(8), crossAxisSpacing: 20,
+                //     mainAxisSpacing: 20,
+                child:   GridView.builder(
+                         physics: const NeverScrollableScrollPhysics(),
+                  shrinkWrap: true,
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 10.0,
+                    mainAxisSpacing: 6.0,
+                  ),
+                      
+                        itemCount: products.length,
+                        itemBuilder: (_, index){
+              return productcard(
+                products: products[index],
+              );
+                        }
+                      )),
+                    ),
+            ), 
                 //  children: _listItem.map((item) => Card(
                 //   elevation: 0, 
                 //   color: Colors.transparent,
