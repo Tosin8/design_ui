@@ -1,5 +1,10 @@
 import 'package:animate_do/animate_do.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:iconsax/iconsax.dart';
+
+import 'model/product.dart';
 
 
 class FurnitureGrid extends StatefulWidget {
@@ -104,7 +109,7 @@ class _FurnitureGridState extends State<FurnitureGrid> {
                 ),
               ),
             ),
-            const SizedBox(height: 30), 
+            const SizedBox(height: 5), 
             Expanded(child: 
             FadeInLeft(
               delay: const Duration(milliseconds: 1000),
@@ -149,11 +154,59 @@ class _FurnitureGridState extends State<FurnitureGrid> {
                 //   ))).toList()
                  
                  children: [
-                  Card(
-                    elevation: 0, 
-                    color: Colors.transparent, 
-                    child: Container(
+                  GestureDetector(
+                    onTap:() {
                       
+                    },
+                    child: Hero(
+                      tag: '',
+                      child: Card(
+                        elevation: 0, 
+                        color: Colors.transparent, 
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10), 
+                            image: DecorationImage(image: AssetImage(products[0].image), 
+                            fit: BoxFit.cover
+                            )
+                          ),
+                          child: Container(
+                            decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), 
+                            gradient: LinearGradient(colors: [
+                              Colors.black.withOpacity(.4),
+                              Colors.black.withOpacity(.1), 
+                            ], 
+                            begin: Alignment.bottomRight
+                            ), 
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Transform.translate(
+                                  offset: const Offset(120, -60), 
+                                  child: Container(
+                                    child: IconButton(icon: const Icon(Iconsax.heart, color: Colors.white,),
+                                    onPressed: () {
+                                      
+                                    },),
+                                  
+                                  ),
+                                ), 
+                                Padding(
+                                  padding: EdgeInsets.only(left: 10),
+                                  child: Text( products[0].title, style: const TextStyle(color: Colors.white,fontWeight: FontWeight.w600, fontSize: 14),
+                                  ),
+                                ), 
+                                Padding(
+                                  padding: EdgeInsets.only(left: 10),
+                                  child: Text('\$${products[0].price.toString()}', style: const TextStyle(color: Colors.white),)), 
+                                const SizedBox(height: 10,), 
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
                     ),
                   )
                  ]
