@@ -7,15 +7,17 @@ import 'product.dart';
 
 class productcard extends StatelessWidget {
   const productcard({
-    super.key, required this.products,
+    super.key, required this.products, required this.press
   });
 
 final Product products; 
+final GestureTapCallback press;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap:() {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => const ProductDetails()));
+        press; 
+        // Navigator.push(context, MaterialPageRoute(builder: (context) => const ProductDetails()));
       },
       child: Hero(
         tag: products.image,

@@ -39,20 +39,14 @@ class ProductDetails extends StatelessWidget {
     body: Stack(
       children: [
          SingleChildScrollView(
-           child: ListView.builder(
-            itemBuilder: (_, index){
-              return
-            Positioned( 
-              top: 0, 
-              child: productViewContent(
-                products: products[index],
-              ),
-            );
-            }, 
-                itemCount: products.length, 
-                shrinkWrap: true,
-                 physics: const NeverScrollableScrollPhysics(),
-                 ), 
+           child: 
+           List.generate(
+            products.length, 
+            (index) =>
+           
+           
+            products: products[index], 
+            ), 
     ), 
             
          

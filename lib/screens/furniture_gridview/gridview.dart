@@ -1,7 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:ui_design/screens/furniture_gridview/constants.dart';
+import 'package:ui_design/screens/furniture_gridview/detail_screen/product_detail.dart';
 import 'package:ui_design/screens/furniture_gridview/widgets/home_header.dart';
 
 import 'model/product.dart';
@@ -29,24 +29,24 @@ class _FurnitureGridState extends State<FurnitureGrid> {
  
       ),
 
-      body: Stack(
+      body: const Stack(
         children : [
-           const HomeBody(),
-           Positioned( 
-            bottom: 0, left: 0, right: 0,
-             child: Container(
-               height: cartBarHeight, 
-              decoration: const BoxDecoration(
+            HomeBody(),
+          //  Positioned( 
+          //   bottom: 0, left: 0, right: 0,
+          //    child: Container(
+          //      height: cartBarHeight, 
+          //     decoration: const BoxDecoration(
                
-              color: lemonwhite,
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(10), 
-                  topRight: Radius.circular(10), 
-                )
-              ),
+          //     color: lemonwhite,
+          //       borderRadius: BorderRadius.only(
+          //         topLeft: Radius.circular(10), 
+          //         topRight: Radius.circular(10), 
+          //       )
+          //     ),
               
-             ),
-           )
+          //    ),
+          //  )
     ]  ), 
             );
           
@@ -99,8 +99,10 @@ class HomeBody extends StatelessWidget {
                          itemCount: products.length,
                          itemBuilder: (_, index){
                            return productcard(
-               products: products[index],
-                           );
+               products: products[index], press: () {
+                Navigator.push(context, 
+                MaterialPageRoute(builder: (context) => const ProductDetails())); 
+                            }   );
                          }
                        ),
            ),
