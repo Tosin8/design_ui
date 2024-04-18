@@ -40,14 +40,14 @@ class ProductDetails extends StatelessWidget {
       children: [
          SingleChildScrollView(
            child: 
-          //  List.generate(
-          //   products.length, 
-          //   (index) =>
+           List.generate(
+            products.length, 
+            (index) =>
            
            
-          //   products: products[index], 
-          //   ), 
-    ), 
+            products: products[index], 
+            ), 
+    ) , 
             
          
          
