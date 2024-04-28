@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_design/screens/sneek/shop/home.dart';
 
 import 'screens/furniture_gridview/gridview.dart';
 
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
     theme: ThemeData(
       primarySwatch: Colors.blue,
     ),
-    home: const FurnitureGrid (), 
+    home: const SneekHome(), 
 
     ); 
   }
