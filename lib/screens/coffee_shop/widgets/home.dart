@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ui_design/screens/coffee_shop/screen/cart.dart';
+import 'package:ui_design/screens/coffee_shop/screen/shop.dart';
 import 'package:ui_design/screens/coffee_shop/widgets/bottom_nav.dart';
 
 class CoffeeHome extends StatefulWidget {
@@ -20,9 +22,12 @@ class _CoffeeHomeState extends State<CoffeeHome> {
   }
 
   // pages
-  final List<Widget> _pages = [
-    
+  final List<Widget> _pages = const [
+    CoffeeShop(), 
+    CoffeeCart(),
   ]; 
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold( 
@@ -30,6 +35,7 @@ class _CoffeeHomeState extends State<CoffeeHome> {
       bottomNavigationBar:  CoffeeBottomNav(
         onTabChange: (index) => navigateBottomBar(index),
       ),
+      body: _pages[_selectedIndex],
     );
   }
 }

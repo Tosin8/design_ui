@@ -26,6 +26,7 @@ class CoffeeBottomNav extends StatelessWidget {
            GButton(
         
             icon: Iconsax.home, 
+            gap: 2,
             text: 'Shop',), 
              GButton(
             icon: Iconsax.shopping_bag, 
