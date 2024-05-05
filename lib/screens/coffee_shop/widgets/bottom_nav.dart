@@ -13,8 +13,11 @@ class CoffeeBottomNav extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+
       margin: const EdgeInsets.all(25),
       child: GNav(
+        rippleColor: Colors.transparent,
+        backgroundColor: Colors.transparent, 
         onTabChange: (value) => onTabChange!(value),
         color: Colors.grey[400], 
         mainAxisAlignment: MainAxisAlignment.center,
@@ -31,6 +34,9 @@ class CoffeeBottomNav extends StatelessWidget {
              GButton(
             icon: Iconsax.shopping_bag, 
             text: 'Cart',), 
+             GButton(
+            icon: Iconsax.save_2, 
+            text: 'Saved',),
         ]
         ,
       ),

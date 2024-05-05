@@ -2,7 +2,6 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
-import '../detail_screen/product_detail.dart';
 import 'product.dart';
 
 class productcard extends StatelessWidget {
