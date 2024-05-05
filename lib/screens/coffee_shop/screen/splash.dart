@@ -42,14 +42,15 @@ class CoffeeSplash extends StatelessWidget {
                 delay: const Duration(seconds: 5),
                 duration: const Duration( milliseconds: 1500),
                 child: const Text('Ready to serve you \nyour coffee', 
-                style: TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.bold ),
+                style: TextStyle(color: Colors.white, 
+                fontSize: 24, fontWeight: FontWeight.bold ),
                 textAlign: TextAlign.center, ),
               ), 
-              const SizedBox(height: 30,), 
+              const SizedBox(height: 50,), 
 
               // Button
               const SplashButton(), 
-              const SizedBox(height: 30,), 
+              const SizedBox(height: 80,), 
             ],
           ),
         ),
