@@ -38,7 +38,7 @@ class CoffeeSplash extends StatelessWidget {
                 style: TextStyle(color: Color(0xffFFE5B4),  fontSize: 18, ),),
               ), 
               const SizedBox(height: 20,), 
-              FadeInUp(
+              FadeIn(
                 delay: const Duration(seconds: 5),
                 duration: const Duration( milliseconds: 500),
                 child: const Text('Ready to serve you \nyour coffee', 

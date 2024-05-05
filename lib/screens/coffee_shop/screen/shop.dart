@@ -15,9 +15,10 @@ class CoffeeShop extends StatelessWidget {
           child: const Icon(Iconsax.message)),
           actions: const [
              CircleAvatar(
-              radius: 10,
+              radius: 15,
               backgroundImage: AssetImage('assets/coffee_shop/2.jpg'),
-            )
+            ), 
+            SizedBox(width: 10,), 
           ],
       ),
     );
