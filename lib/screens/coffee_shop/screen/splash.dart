@@ -1,4 +1,7 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:ui_design/screens/coffee_shop/widgets/splash_button.dart';
 
 class CoffeeSplash extends StatelessWidget {
   const CoffeeSplash({super.key});
@@ -30,22 +33,22 @@ class CoffeeSplash extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               
-              const Text('Get Started', 
-              style: TextStyle(color: Color(0xffECFFDC),  fontSize: 18, ),), 
-              const SizedBox(height: 20,), 
-              const Text('Ready to serve you \nyour coffee', 
-              style: TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.bold ),
-              textAlign: TextAlign.center, ), 
-              const SizedBox(height: 30,), 
-              Container(
-                height: 60, width: 260,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: const Color(0xffFFE5B4)
-                ),
-                child: const Align(child: Text('Enter Shop',
-                style: TextStyle(fontSize: 16),)),
+              FadeInUp(
+                child: const Text('Get Started', 
+                style: TextStyle(color: Color(0xffFFE5B4),  fontSize: 18, ),),
               ), 
+              const SizedBox(height: 20,), 
+              FadeInUp(
+                delay: const Duration(seconds: 5),
+                duration: const Duration( milliseconds: 1500),
+                child: const Text('Ready to serve you \nyour coffee', 
+                style: TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.bold ),
+                textAlign: TextAlign.center, ),
+              ), 
+              const SizedBox(height: 30,), 
+
+              // Button
+              const SplashButton(), 
               const SizedBox(height: 30,), 
             ],
           ),
