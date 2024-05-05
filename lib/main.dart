@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ui_design/screens/coffee_shop/screen/splash.dart';
 import 'package:ui_design/screens/sneek/shop/home.dart';
 
 import 'screens/furniture_gridview/gridview.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
     theme: ThemeData(
       primarySwatch: Colors.blue,
     ),
-    home: const SneekHome(), 
+    home: const CoffeeSplash(), 
 
     ); 
   }
