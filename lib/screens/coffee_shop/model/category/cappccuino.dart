@@ -1,4 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:flutter/material.dart';
+
 class Cappccuino {
    String image;
    String title; 
@@ -18,6 +20,7 @@ class Cappccuino {
   get length => null;
 }
 
+class CoffeeShop extends ChangeNotifier{
 
 List<Cappccuino> cappccuinos = [
   
@@ -62,3 +65,4 @@ Cappccuino(
      description: 'Embrace the summer vibes with the Teva Hurricane XLT2 Sandals. Designed for outdoor adventures, these sandals feature a water-ready polyester webbing upper with a quick-drying midsole. The rust-free zinc-alloy hardware and durable rubber outsole provide lasting wear, while the EVA foam footbed offers cushioned comfort. With adjustable straps and a secure fit, these sandals are ideal for hiking, water sports, or simply enjoying the great outdoors.',
   ), 
 ];
+} 

@@ -20,8 +20,20 @@ final Cappccuino cappccuinos;
   State<CappccuinoExpanded> createState() => _CappccuinoExpandedState();
 }
 
-class _CappccuinoExpandedState extends State<CappccuinoExpanded> with TickerProviderStateMixin {
-  late final AnimationController _controller = AnimationController(vsync: this, duration: Duration(seconds: 1)); 
+class _CappccuinoExpandedState extends State<CappccuinoExpanded> with SingleTickerProviderStateMixin {
+  late final AnimationController _controller = AnimationController(
+    vsync: this,
+     duration: const Duration(seconds: 1)); 
+  late final Animation<double> _animation = CurvedAnimation(parent: _controller, 
+  curve: Curves.bounceIn);
+
+   @override
+  void dispose() {
+    _controller.dispose(); 
+    
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +44,7 @@ class _CappccuinoExpandedState extends State<CappccuinoExpanded> with TickerProv
           Positioned( 
             top: 330, 
             child: FadeInLeft(
-              duration: Duration(milliseconds: 1000),
+              duration: const Duration(milliseconds: 1000),
               child: Container(
                 child: Padding(
                   padding: const EdgeInsets.only(left:20.0),
@@ -100,16 +112,16 @@ class _CappccuinoExpandedState extends State<CappccuinoExpanded> with TickerProv
                         shape: BoxShape.circle, 
                         
                         border: Border.all(
-                          color:Color.fromARGB(255, 107, 85, 39).withOpacity(0.9, ) ,    width: 2)
+                          color:const Color.fromARGB(255, 107, 85, 39).withOpacity(0.9, ) ,    width: 2)
                       ),
-                      child: Icon(Iconsax.bag, color: Color.fromARGB(255, 107, 85, 39).withOpacity(0.9, )  ),  
+                      child: Icon(Iconsax.bag, color: const Color.fromARGB(255, 107, 85, 39).withOpacity(0.9, )  ),  
                     ), 
-                    SizedBox(width: 30,),
+                    const SizedBox(width: 30,),
                     Container(
                       height: 60, width: 230,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30), 
-                        color: Color.fromARGB(255, 107, 85, 39).withOpacity(0.9, )   , 
+                        color: const Color.fromARGB(255, 107, 85, 39).withOpacity(0.9, )   , 
                       ),
                       child: const Align(child: Text('Buy now', style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w500),)),
                     )
@@ -132,9 +144,9 @@ class _CappccuinoExpandedState extends State<CappccuinoExpanded> with TickerProv
                
                           const Color(0xffffe5b4), 
                           
-                          Color.fromARGB(255, 86, 66, 20).withOpacity(0.9, )   
+                          const Color.fromARGB(255, 86, 66, 20).withOpacity(0.9, )   
                  ], begin: Alignment.topLeft, end: Alignment.bottomRight),
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                   bottomLeft: Radius.circular(50),
                   bottomRight: Radius.circular(50),
                 )
@@ -160,20 +172,20 @@ class _CappccuinoExpandedState extends State<CappccuinoExpanded> with TickerProv
                           shape: BoxShape.circle, 
                           border: Border.all(width: 2, color: Colors.white), 
                         ),
-                        child: Align(
+                        child: const Align(
                           child: Icon(Icons.arrow_back_ios_outlined, color: Colors.white,
                           ),
                         ),
                       ),
                     ), 
-                    SizedBox(width:280,), 
+                    const SizedBox(width:280,), 
                      Container(
                       height: 40, width: 40,
                       decoration: BoxDecoration(
                         shape: BoxShape.circle, 
                         border: Border.all(width: 2, color: Colors.white), 
                       ),
-                      child:  Align(child: Icon(Icons.favorite, color: Colors.white,)),),
+                      child:  const Align(child: Icon(Icons.favorite, color: Colors.white,)),),
                     
                   ],
                 ),
@@ -183,16 +195,22 @@ class _CappccuinoExpandedState extends State<CappccuinoExpanded> with TickerProv
 
           // Product Image
           Positioned( 
-            top: 80, 
+            top: 80,
+            left: 40, 
             child: FadeIn(
+              delay: const Duration(milliseconds: 1200),
               child: Container(
-                height: 280, width: 400,
-                decoration: BoxDecoration(
-                  image: DecorationImage(image: AssetImage(widget.cappccuinos.image)),
+                  height: 280, width: 400,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(image: AssetImage(widget.cappccuinos.image)),
+                  ),
                 ),
-              ),
             ),
-          )
+            ),
+            // child: Image.asset(
+            //   cappccuinos.image,
+            // ),
+          
         ]
       
       ),
