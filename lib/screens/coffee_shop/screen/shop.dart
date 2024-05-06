@@ -1,6 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:iconsax/iconsax.dart';
+
+import 'category/cappccuino.dart';
 
 class CoffeeShop extends StatefulWidget {
   const CoffeeShop({super.key});
@@ -65,38 +68,51 @@ class _CoffeeShopState extends State<CoffeeShop> with TickerProviderStateMixin {
               child: Text('Categories',
                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),),
             ),
-            const SizedBox(height: 10,), 
-            Expanded(
-              child: Container(
-                child: TabBar(
-                  controller: _tabController,
-                  tabs: const [
-                  Tab(
-                    text: 'Cappccuino',
-                  ), 
-                  Tab(
-                    text: 'Espresso',
-                  ), 
-                   Tab(
-                    text: 'Latte'
+        
+            Container(
+                child: Align( 
+                  alignment: Alignment.centerLeft,
+                  child: TabBar(
+                    labelPadding: const EdgeInsets.only(left: 1),
+                    controller: _tabController,
+                    labelColor: Color.fromARGB(255, 237, 155, 3),  
+                    unselectedLabelColor: Colors.grey[400],
+                    indicatorSize: TabBarIndicatorSize.label,
+                    indicator: CircleTabIndicator(
+                      color: Color.fromARGB(255, 38, 30, 3), 
+                      radius: 4, 
+                    ),
+                                
+                    tabs: const [
+                    Tab(
+                      text: 'Cappccuino',
+                    ), 
+                    Tab(
+                      text: 'Espresso',
+                    ), 
+                     Tab(
+                      text: 'Latte'
+                    ),
+                    Tab(
+                      text: 'Mocha'
+                    ),
+                    ], 
                   ),
-                  Tab(
-                    text: 'Mocha'
-                  ),
-                  ], 
                 )
               ),
               
-            ),
-            Container(
-              child: TabBarView(
-                controller: _tabController,
-                children: [
-                  Text('Hi'), 
-                  Text('Hello'), 
-                  Text('Bye'), 
-                   Text('Bye')
-                ]),
+            
+            Expanded(
+              child: Container(
+                child: TabBarView(
+                  controller: _tabController,
+                  children: [
+                    CappcuinoScreen(), 
+                    Text('Hello'), 
+                    Text('Bye'), 
+                     Text('Bye')
+                  ]),
+              ),
             ) 
 
 
@@ -106,4 +122,31 @@ class _CoffeeShopState extends State<CoffeeShop> with TickerProviderStateMixin {
       
     );
   }
+}
+
+
+class CircleTabIndicator extends Decoration{
+  final Color color; 
+  double radius; 
+  CircleTabIndicator({required this.color, required this.radius}); 
+  @override
+
+  
+BoxPainter createBoxPainter([VoidCallback? onChanged]) {
+return _CirclePainter(color: color, radius:radius); 
+}
+}
+
+class _CirclePainter extends BoxPainter{
+  final Color color; 
+  double radius;
+  _CirclePainter({required this.color, required this.radius}); 
+@override
+void paint(Canvas canvas, Offset offset, ImageConfiguration configuration) {
+  Paint _paint = Paint();  
+_paint.color = color; 
+_paint.isAntiAlias = true; 
+final Offset circleOffset = Offset(configuration.size!.width/2  - radius/2, configuration.size!.height - radius); 
+canvas.drawCircle(offset+circleOffset, radius, _paint);
+}
 }
