@@ -1,4 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:iconsax/iconsax.dart';
@@ -52,7 +53,10 @@ final Cappccuino cappccuinos;
                      fontWeight: FontWeight.bold),),
 
                      const SizedBox(height: 8),
+
+                     // Rating
                      Container(
+                      height: 20, width: 20,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30), 
                       ),
@@ -63,23 +67,27 @@ final Cappccuino cappccuinos;
                         ],
                        ),
                      ), 
-                     Text(
-                      //productSliders.category,
-                      style: TextStyle(
-                        fontSize: 16,
-                       color: Colors.black.withOpacity(0.7)),
-                       ),  
-            //const SizedBox(height: 3),
-                     Text(
-                      //productSliders.price.toString(),
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold, 
-                        fontSize: 16),),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            Container(
-                              height: 40, width: 40,
+
+                     
+                     Row(
+                       children: [
+                         Column(
+                           children: [
+                             Text(
+                                                 cappccuinos.volume,
+                              style: TextStyle(
+                                fontSize: 16,
+                               color: Colors.black.withOpacity(0.7)),
+                               ),
+                               Text('${cappccuinos.price}', style: TextStyle(
+                                 
+                               )), 
+                           ],
+                         ),
+                         Expanded(
+                          child: Container(
+                            height: 40, 
+                            width: 40,
                               decoration: const BoxDecoration(
                                 borderRadius: BorderRadius.only(
                                   topLeft: Radius.circular(10),
@@ -88,18 +96,22 @@ final Cappccuino cappccuinos;
                                 color: Colors.black,
                               ),
                               child: const Icon(Icons.add, color: Colors.white,
-                              size: 20,),
-                            ), 
+                              size: 20,),)),
+                       ],
+                     ),  
+            //const SizedBox(height: 3),
+                     
+                      
                             const SizedBox(width: 5,), 
                         
                           ],
-                        ) 
+                        ) , 
+                        Positioned(
+                          child: Image.asset(cappccuinos.image, height: 200, width: 200,)),
                  ],
                ),
-               Positioned(
-                
-                child: Image.asset('')), 
-          ]),
+              
+          
         ),
       ),
      ) );
