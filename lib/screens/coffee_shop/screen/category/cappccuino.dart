@@ -1,20 +1,11 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
-final List<Map<String, dynamic>> cappccuinoProduct = [
-   
+import 'package:ui_design/screens/coffee_shop/screen/category/cappccuino_card.dart';
+
+import '../../model/category/cappccuino.dart';
 
 
-  {
-    'title': '', 
-    'image': '',
-    'price': '',
-    'description': '',
-    'volume': '',
-  }, 
-  {}
-];
 class CappcuinoScreen extends StatelessWidget {
   const CappcuinoScreen({super.key});
 
@@ -28,7 +19,7 @@ class CappcuinoScreen extends StatelessWidget {
           options: CarouselOptions(height: 200, 
           viewportFraction: 0.70, enlargeCenterPage: true),
           
-          items: _cappccuinoProduct.map((cappcc))
+          items:List.generate(cappccuinos.length, (index) => CappccuinoCard(cappccuinos: cappccuinos[index]))
          ),
       ),
     );

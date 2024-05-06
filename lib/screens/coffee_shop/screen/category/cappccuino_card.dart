@@ -39,77 +39,96 @@ final Cappccuino cappccuinos;
       SingleChildScrollView(
         child: Hero(
           tag: '',
-          child: Stack(
-            children: [
-            Column(
+          child: Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topLeft, end: Alignment.bottomRight, colors: [
+
+         
+                  Color(0xffffe5b4), 
+                  
+                  Color.fromARGB(255, 107, 85, 39).withOpacity(0.9, )                ]),
+      
+            ),
+            child: Stack(
+              alignment: Alignment.topCenter,
+              fit: StackFit.loose, 
+              clipBehavior: Clip.none,
+              
+              children: [
+              Column(
+              
+                   children: [
+              
+                    const SizedBox(height: 40,), 
+                     Text(
+                      cappccuinos.title, 
+                     style: const TextStyle(
+                      fontSize: 30,
+                       fontWeight: FontWeight.bold),),
             
-                 children: [
-  
-                  const SizedBox(height: 40,), 
-                   Text(
-                    cappccuinos.title, 
-                   style: const TextStyle(
-                    fontSize: 30,
-                     fontWeight: FontWeight.bold),),
-
-                     const SizedBox(height: 8),
-
-                     // Rating
-                     Container(
-                      height: 20, width: 20,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30), 
-                      ),
-                       child: Row(
-                        children: [
-                          Icon(Iconsax.star, color: Colors.white, size: 12,),
-                          Text(cappccuinos.rating.toString(), style: TextStyle(color: Colors.white),),
-                        ],
-                       ),
-                     ), 
-
-                     
-                     Row(
-                       children: [
-                         Column(
-                           children: [
-                             Text(
-                                                 cappccuinos.volume,
-                              style: TextStyle(
-                                fontSize: 16,
-                               color: Colors.black.withOpacity(0.7)),
-                               ),
-                               Text('${cappccuinos.price}', style: TextStyle(
-                                 
-                               )), 
-                           ],
-                         ),
-                         Expanded(
-                          child: Container(
-                            height: 40, 
-                            width: 40,
-                              decoration: const BoxDecoration(
-                                borderRadius: BorderRadius.only(
-                                  topLeft: Radius.circular(10),
-                                  topRight: Radius.circular(10), 
-                                ),
-                                color: Colors.black,
-                              ),
-                              child: const Icon(Icons.add, color: Colors.white,
-                              size: 20,),)),
-                       ],
-                     ),  
-            //const SizedBox(height: 3),
-                     
-                      
-                            const SizedBox(width: 5,), 
-                        
+                       const SizedBox(height: 8),
+            
+                       // Rating
+                       Container(
+                        height: 20, width: 20,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(30), 
+                        ),
+                         child: Row(
+                          children: [
+                            Icon(Iconsax.star, color: Colors.white, size: 12,),
+                            Text(cappccuinos.rating.toString(), style: TextStyle(color: Colors.white),),
                           ],
-                        ) , 
-                        Positioned(
-                          child: Image.asset(cappccuinos.image, height: 200, width: 200,)),
-                 ],
-               ),
+                         ),
+                       ), 
+            
+                       
+                       Row(
+                         children: [
+                           Column(
+                             children: [
+                               Text(
+                                                   cappccuinos.volume,
+                                style: TextStyle(
+                                  fontSize: 16,
+                                 color: Colors.black.withOpacity(0.7)),
+                                 ),
+                                 Text('${cappccuinos.price}', style: TextStyle(
+                                   
+                                 )), 
+                             ],
+                           ),
+                           Expanded(
+                            child: Container(
+                              height: 40, 
+                              width: 40,
+                                decoration: const BoxDecoration(
+                                  borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(10),
+                                    topRight: Radius.circular(10), 
+                                  ),
+                                  color: Colors.black,
+                                ),
+                                child: const Icon(Icons.add, color: Colors.white,
+                                size: 20,),)),
+                         ],
+                       ),  
+              //const SizedBox(height: 3),
+                       
+                        
+                              const SizedBox(width: 5,), 
+                          
+                            ],
+                          ) , 
+                          Positioned(
+                            top: -100, right: 0,
+                            bottom:0,
+                            child: Image.asset(cappccuinos.image, height: 200,
+                             width: 200,)),
+                   ],
+                 ),
+          ),
               
           
         ),
