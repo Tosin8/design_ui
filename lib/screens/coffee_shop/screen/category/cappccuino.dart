@@ -25,6 +25,9 @@ class CappcuinoScreen extends StatelessWidget {
         width: MediaQuery.of(context).size.width,
          height: MediaQuery.of(context).size.height,
          child: CarouselSlider(
+          options: CarouselOptions(height: 200, 
+          viewportFraction: 0.70, enlargeCenterPage: true),
+          
           items: _cappccuinoProduct.map((cappcc))
          ),
       ),
