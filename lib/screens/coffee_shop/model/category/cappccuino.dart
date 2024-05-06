@@ -54,7 +54,7 @@ Cappccuino(
      description: 'Elevate your street style with the adidas Originals Stan Smith Sneakers. These iconic low-tops feature a clean, minimalist design with a full leather upper and perforated 3-Stripes. The Ortholite® sockliner delivers cushioned comfort, while the rubber cupsole ensures durability and grip. With a classic look that never goes out of style, these sneakers seamlessly transition from casual outings to trendy ensembles.', volume: '120ml', rating: '3.8',
   ), 
   Cappccuino(
-    image: "assets/coffee_shop/products/png/5.png",
+    image: "assets/coffee_shop/products/png/3.png",
     title: "Hazelnut Cappuccino",
     volume: '110ml',
     price: 240,

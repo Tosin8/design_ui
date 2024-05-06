@@ -11,17 +11,44 @@ class CappcuinoScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        width: MediaQuery.of(context).size.width,
-         height: MediaQuery.of(context).size.height,
-         child: CarouselSlider(
-          options: CarouselOptions(height: 200, 
-          viewportFraction: 0.70, enlargeCenterPage: true),
-          
-          items:List.generate(cappccuinos.length, (index) => CappccuinoCard(cappccuinos: cappccuinos[index]))
-         ),
-      ),
+    return SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const SizedBox(height: 80,), 
+            // Container(
+            //   width: MediaQuery.of(context).size.width,
+            //    height: MediaQuery.of(context).size.height,
+            //    child: 
+            CarouselSlider(
+                options: CarouselOptions(height: 200, 
+                viewportFraction: 0.60, enlargeCenterPage: true),
+                
+                items:List.generate(cappccuinos.length, (index) => CappccuinoCard(cappccuinos: cappccuinos[index]))
+               ),
+            const SizedBox(height: 30,), 
+            Center(
+              child: Container(
+                height: 40, 
+                width: 180,
+                decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                    color: Colors.black12.withOpacity(.6), 
+                    spreadRadius: 0.2, 
+                    blurRadius: 3, 
+                  )],
+                  color: Colors.white, borderRadius: BorderRadius.circular(15)), 
+                child: const Align(
+                  child: Text(
+                    'Make your own coffee', 
+                    style: TextStyle(fontSize: 13),),
+                ),
+              ))
+          ],
+        ),
+      
     );
   }
 }

@@ -39,7 +39,7 @@ class _CoffeeShopState extends State<CoffeeShop> with TickerProviderStateMixin {
         crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Padding(
-              padding: EdgeInsets.all(15.0),
+              padding: EdgeInsets.only(left:15.0),
               child: Text('Find the best \ncoffee for you', 
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.w600),),
             ),

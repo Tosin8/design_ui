@@ -20,8 +20,12 @@ final Cappccuino cappccuinos;
         
       },
       child: AnimatedContainer(
-        duration: Duration(
-          milliseconds: 300
+        curve: Curves.easeInOut,
+          height: 100, 
+              width: 230,
+        duration: const Duration(
+          milliseconds: 300, 
+          
           ),
            decoration:  BoxDecoration(
         color: Colors.white, 
@@ -39,100 +43,139 @@ final Cappccuino cappccuinos;
       SingleChildScrollView(
         child: Hero(
           tag: '',
-          child: Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topLeft, end: Alignment.bottomRight, colors: [
-
-         
-                  Color(0xffffe5b4), 
+          child: Stack(
+          
+          
+                fit: StackFit.loose, 
+                clipBehavior: Clip.none,
+            children:[
+               Container(
+              height: 200, 
+              width: 230,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                gradient: LinearGradient(
+                  begin: Alignment.topLeft, end: Alignment.bottomRight,
+                   colors: [
+            
+                     
+                    const Color(0xffffe5b4), 
+                    
+                    const Color.fromARGB(255, 107, 85, 39).withOpacity(0.9, )                ]),
                   
-                  Color.fromARGB(255, 107, 85, 39).withOpacity(0.9, )                ]),
-      
-            ),
-            child: Stack(
-              alignment: Alignment.topCenter,
-              fit: StackFit.loose, 
-              clipBehavior: Clip.none,
+              ),
+              child: 
+                Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                     children: [
+                
+                      const SizedBox(height: 60,), 
+
+                      // title
+                       Padding(
+                         padding: const EdgeInsets.only(left: 20.0),
+                         child: Text(
+                          cappccuinos.title, 
+                         style: const TextStyle(
+                          fontSize: 18,color: Colors.white,
+                           fontWeight: FontWeight.bold),),
+                       ),
               
-              children: [
-              Column(
+                         const SizedBox(height: 8),
               
-                   children: [
+                         // Rating
+                         Padding(
+                           padding: const EdgeInsets.only(left: 20.0),
+                           child: Container(
+                            height: 30,
+                             width: 50,
+                            decoration: BoxDecoration(
+                              color: const Color.fromARGB(255, 127, 106, 106).withOpacity(0.3),
+                              borderRadius: BorderRadius.circular(50), 
+                            ),
+                             child: Row(
+                          
+                              children: [
+                                const SizedBox(width: 3,), 
+                                const Icon(Iconsax.star1, color: Colors.white, size: 20,),
+                                Text(cappccuinos.rating.toString(), style: const TextStyle(color: Colors.white),
+                                ),
+                                const SizedBox(width: 3,),
+                              ],
+                             ),
+                           ),
+                         ), 
               
-                    const SizedBox(height: 40,), 
-                     Text(
-                      cappccuinos.title, 
-                     style: const TextStyle(
-                      fontSize: 30,
-                       fontWeight: FontWeight.bold),),
-            
-                       const SizedBox(height: 8),
-            
-                       // Rating
-                       Container(
-                        height: 20, width: 20,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(30), 
-                        ),
-                         child: Row(
-                          children: [
-                            Icon(Iconsax.star, color: Colors.white, size: 12,),
-                            Text(cappccuinos.rating.toString(), style: TextStyle(color: Colors.white),),
-                          ],
-                         ),
-                       ), 
-            
-                       
-                       Row(
-                         children: [
-                           Column(
+                         const SizedBox(height: 10,), 
+
+                      // Volume, price and button
+                                                 Padding(
+                           padding: const EdgeInsets.only(left: 20.0),
+                           child: Row(
                              children: [
-                               Text(
-                                                   cappccuinos.volume,
-                                style: TextStyle(
-                                  fontSize: 16,
-                                 color: Colors.black.withOpacity(0.7)),
-                                 ),
-                                 Text('${cappccuinos.price}', style: TextStyle(
-                                   
-                                 )), 
+                               Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                 children: [
+                                   Row(
+                                     children: [
+                                       Text(
+                                        'Volume ',
+                                        style: TextStyle(
+                                          fontSize: 16,
+                                         color: Colors.white.withOpacity(0.7)),
+                                         ),
+                                         Text(cappccuinos.volume, style: const TextStyle(
+                                           fontWeight: FontWeight.bold, color: Colors.white
+                                         )), 
+                                     ],
+                                   ),
+                                     const SizedBox(height: 7,), 
+                                     Text('${cappccuinos.price}', style: const TextStyle(
+                                       color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16
+                                     )), 
+                                 ],
+                               ),
+                               Expanded(
+                                child: Container(
+                                  height: 50, 
+                                  width: 20,
+                                    decoration: const BoxDecoration(
+                                      shape: BoxShape.circle,
+                                       
+                                      color: Colors.white,
+                                    ),
+                                    child: const Icon(Icons.add, color:    
+                    Color.fromARGB(255, 137, 93, 11), 
+                                    size: 30,
+                                    ),
+                                    )
+                                    ),
                              ],
                            ),
-                           Expanded(
-                            child: Container(
-                              height: 40, 
-                              width: 40,
-                                decoration: const BoxDecoration(
-                                  borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(10),
-                                    topRight: Radius.circular(10), 
-                                  ),
-                                  color: Colors.black,
-                                ),
-                                child: const Icon(Icons.add, color: Colors.white,
-                                size: 20,),)),
-                         ],
-                       ),  
-              //const SizedBox(height: 3),
-                       
-                        
-                              const SizedBox(width: 5,), 
+                         ),  
+                
+                         
                           
-                            ],
-                          ) , 
-                          Positioned(
-                            top: -100, right: 0,
-                            bottom:0,
-                            child: Image.asset(cappccuinos.image, height: 200,
-                             width: 200,)),
-                   ],
-                 ),
+                                const SizedBox(width: 5,), 
+                            
+                              ],
+                            ) , 
+               ), 
+                            Positioned(
+                              top: -250, right: 25,
+                            
+                              bottom:0,
+                              child: Image.asset(cappccuinos.image, height: 260,
+                               width: 200,), 
+                               ),
+                     ],
+                   
+            ),
           ),
               
           
         ),
-      ),
-     ) );
+      )  );
+     
   }
 }
