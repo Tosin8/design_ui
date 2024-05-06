@@ -1,11 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:iconsax/iconsax.dart';
 
-class CoffeeShop extends StatelessWidget {
+class CoffeeShop extends StatefulWidget {
   const CoffeeShop({super.key});
 
   @override
+  State<CoffeeShop> createState() => _CoffeeShopState();
+}
+
+class _CoffeeShopState extends State<CoffeeShop> with TickerProviderStateMixin {
+  
+  @override
   Widget build(BuildContext context) {
+    TabController _tabController = TabController(
+    length: 4, 
+    vsync: this);
     return Scaffold(
       appBar: AppBar(
         leading: GestureDetector(
@@ -25,8 +35,8 @@ class CoffeeShop extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start, 
         crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
-              padding: const EdgeInsets.all(15.0),
+            const Padding(
+              padding: EdgeInsets.all(15.0),
               child: Text('Find the best \ncoffee for you', 
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.w600),),
             ),
@@ -49,12 +59,48 @@ class CoffeeShop extends StatelessWidget {
                   ),
                 ),
             ), 
-            SizedBox(height: 10,), 
-            Text('Categories', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),),
-                  
-                
-          ] 
-          
+            const SizedBox(height: 10,), 
+            const Padding(
+              padding: EdgeInsets.only(left: 12.0, right: 12.0),
+              child: Text('Categories',
+               style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),),
+            ),
+            const SizedBox(height: 10,), 
+            Expanded(
+              child: Container(
+                child: TabBar(
+                  controller: _tabController,
+                  tabs: const [
+                  Tab(
+                    text: 'Cappccuino',
+                  ), 
+                  Tab(
+                    text: 'Espresso',
+                  ), 
+                   Tab(
+                    text: 'Latte'
+                  ),
+                  Tab(
+                    text: 'Mocha'
+                  ),
+                  ], 
+                )
+              ),
+              
+            ),
+            Container(
+              child: TabBarView(
+                controller: _tabController,
+                children: [
+                  Text('Hi'), 
+                  Text('Hello'), 
+                  Text('Bye'), 
+                   Text('Bye')
+                ]),
+            ) 
+
+
+    ]        
           
         ),
       
