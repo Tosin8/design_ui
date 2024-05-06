@@ -8,13 +8,20 @@ import 'package:iconsax/iconsax.dart';
 
 import 'package:ui_design/screens/coffee_shop/model/category/cappccuino.dart';
 
-class CappccuinoExpanded extends StatelessWidget {
+class CappccuinoExpanded extends StatefulWidget {
   const CappccuinoExpanded({
     Key? key,
     required this.cappccuinos,
   }) : super(key: key);
 
 final Cappccuino cappccuinos;
+
+  @override
+  State<CappccuinoExpanded> createState() => _CappccuinoExpandedState();
+}
+
+class _CappccuinoExpandedState extends State<CappccuinoExpanded> with TickerProviderStateMixin {
+  late final AnimationController _controller = AnimationController(vsync: this, duration: Duration(seconds: 1)); 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,7 +55,7 @@ final Cappccuino cappccuinos;
                                           children: [
                                             const SizedBox(width: 3,), 
                                             const Icon(Iconsax.star1, color: Colors.white, size: 20,),
-                                            Text(cappccuinos.rating.toString(), style: const TextStyle(color: Colors.white),
+                                            Text(widget.cappccuinos.rating.toString(), style: const TextStyle(color: Colors.white),
                                             ),
                                             const SizedBox(width: 3,),
                                           ],
@@ -58,11 +65,11 @@ final Cappccuino cappccuinos;
                     const SizedBox(height: 10,),           
                                      // Title and Price
                                      
-                                        Text(cappccuinos.title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                                        Text(widget.cappccuinos.title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                                         ),
                                         const SizedBox(height: 10,), 
                   
-                                        Text('\$${cappccuinos.price.toString()}',
+                                        Text('\$${widget.cappccuinos.price.toString()}',
                                          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                                         ), 
                                         
@@ -181,7 +188,7 @@ final Cappccuino cappccuinos;
               child: Container(
                 height: 280, width: 400,
                 decoration: BoxDecoration(
-                  image: DecorationImage(image: AssetImage(cappccuinos.image)),
+                  image: DecorationImage(image: AssetImage(widget.cappccuinos.image)),
                 ),
               ),
             ),
