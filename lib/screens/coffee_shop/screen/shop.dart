@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:iconsax/iconsax.dart';
 
-import 'category/cappccuino.dart';
+import 'category/cappccuino/cappccuino.dart';
 
 class CoffeeShop extends StatefulWidget {
   const CoffeeShop({super.key});
