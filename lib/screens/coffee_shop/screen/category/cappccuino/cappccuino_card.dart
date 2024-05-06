@@ -2,9 +2,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 import 'package:ui_design/screens/coffee_shop/model/category/cappccuino.dart';
+
+import 'cappccuino_details.dart';
 
 class CappccuinoCard extends StatelessWidget {
   const CappccuinoCard({
@@ -17,7 +20,7 @@ final Cappccuino cappccuinos;
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap:() {
-        
+        Get.to(() => CappccuinoExpanded(cappccuinos: cappccuinos));
       },
       child: AnimatedContainer(
         curve: Curves.easeInOut,
@@ -42,7 +45,7 @@ final Cappccuino cappccuinos;
           child: 
       SingleChildScrollView(
         child: Hero(
-          tag: '',
+          tag: 'cupertinos.image',
           child: Stack(
           
           
