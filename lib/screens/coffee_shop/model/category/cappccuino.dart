@@ -20,35 +20,35 @@ class Cappccuino {
 List<Cappccuino> cappccuinos = [
   
   Cappccuino(
-    image: "assets/products/slider/2.jpg",
+    image: "assets/coffee_shop/products/png/1.png",
     title: "Adidas Ultraboost 21",
     category: "Adidas",
     price: 200,
      description: 'The New Balance Fresh Foam 1080v12 is a premium neutral running shoe designed for long-distance training. Featuring Fresh Foam X midsole technology, it delivers superior cushioning and energy return to propel you through every stride. The engineered mesh upper offers breathable comfort, while the blown rubber outsole provides durability and grip on various surfaces. Experience a smooth, responsive ride that keeps you going mile after mile.',
   ), 
   Cappccuino(
-    image: "assets/products/slider/3.jpg",
+    image: "assets/coffee_shop/products/png/2.png",
     title: "Adidas CrazyTrain",
     category: "Adidas",
     price:140, 
     description: 'Conquer the trails with the Merrell Moab 3 Mid Waterproof Hiking Boots. Crafted with a waterproof membrane and durable leather and mesh uppers, these boots keep your feet dry and protected. The Vibram® outsole ensures excellent traction on rugged terrain, while the molded nylon arch shank and air cushion heel absorb shock for all-day comfort. With a supportive fit and versatile style, these boots are your reliable companions for outdoor adventures.',
   ), 
 Cappccuino(
-    image: "assets/products/slider/4.jpg",
+    image: "assets/coffee_shop/products/png/3.png",
     title: "Puma Dame",
     category: "Puma",
     price: 420,
      description: 'Step into sophistication with the Cole Haan Grand Ambition Wingtip Oxford. Handcrafted from full-grain leather, these classic wingtips exude timeless elegance. The lightweight EVA outsole with rubber pods provides flexibility and traction, while the fully padded leather sock lining ensures all-day comfort. The burnished toe and brogue detailing add a touch of distinction, making these shoes perfect for the office or formal occasions.',
   ), 
   Cappccuino(
-    image: "assets/products/slider/5.jpg",
+    image: "assets/coffee_shop/products/png/4.png",
     title: "Jordan Gamecourt",
     category: "Jordan",
     price: 310,
      description: 'Elevate your street style with the adidas Originals Stan Smith Sneakers. These iconic low-tops feature a clean, minimalist design with a full leather upper and perforated 3-Stripes. The Ortholite® sockliner delivers cushioned comfort, while the rubber cupsole ensures durability and grip. With a classic look that never goes out of style, these sneakers seamlessly transition from casual outings to trendy ensembles.',
   ), 
   Cappccuino(
-    image: "assets/products/slider/6.jpg",
+    image: "assets/coffee_shop/products/png/5.png",
     title: "Nike Yeezy Boost",
     category: "Nike",
     price: 240,
