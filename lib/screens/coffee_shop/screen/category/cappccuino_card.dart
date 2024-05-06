@@ -52,10 +52,16 @@ final Cappccuino cappccuinos;
                      fontWeight: FontWeight.bold),),
 
                      const SizedBox(height: 8),
-                     Row(
-                      children: [
-                        Icon(Iconsax.star, color: Colors.white, size: 12,),
-                      ],
+                     Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(30), 
+                      ),
+                       child: Row(
+                        children: [
+                          Icon(Iconsax.star, color: Colors.white, size: 12,),
+                          Text(cappccuinos.rating.toString(), style: TextStyle(color: Colors.white),),
+                        ],
+                       ),
                      ), 
                      Text(
                       //productSliders.category,
