@@ -2,7 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-final List<Map<String, dynamic>> coffeeProduct = [
+final List<Map<String, dynamic>> cappccuinoProduct = [
    
 
 
@@ -25,7 +25,7 @@ class CappcuinoScreen extends StatelessWidget {
         width: MediaQuery.of(context).size.width,
          height: MediaQuery.of(context).size.height,
          child: CarouselSlider(
-          items: []
+          items: _cappccuinoProduct.map((cappcc))
          ),
       ),
     );
