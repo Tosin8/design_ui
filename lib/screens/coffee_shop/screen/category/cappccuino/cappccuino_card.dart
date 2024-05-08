@@ -70,7 +70,7 @@ final Cappccuino cappccuinos;
                         const Color.fromARGB(255, 107, 85, 39).withOpacity(0.9, )                ]),
                       
                                  ),
-                                 child: 
+                                 child:  
                     Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                          children: [
