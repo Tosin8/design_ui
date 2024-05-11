@@ -10,39 +10,46 @@ class MinimalSplash extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
-      body: Center(
-        child: Column(
-
-          mainAxisAlignment: MainAxisAlignment.center, 
-          children: [
-
-            // logo
-            Icon(Icons.shopping_bag, size: 80, color: Theme.of(context).colorScheme.inversePrimary,) , 
-
-            const SizedBox(height: 25,), 
-            const Text('Minimal Shop', style: TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.bold),), 
-
-             const SizedBox(height: 5,), 
-            const Text('Premium Quality Products', style: TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.w300),), 
-
-            const SizedBox(height: 180,), 
-            GestureDetector( 
-              onTap: () {
-                Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const MinimalShop()),
-            );
-              },
-              child: Container(
-                height: 50, width: 200,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Theme.of(context).colorScheme.primary,
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            opacity: 0.5,
+            image: AssetImage("assets/minimal_shop/1.jpg"), fit: BoxFit.cover),
+        ),
+        child: Center(
+          child: Column(
+        
+            mainAxisAlignment: MainAxisAlignment.center, 
+            children: [
+        
+              // logo
+              Icon(Icons.shopping_bag, size: 80, color: Theme.of(context).colorScheme.inversePrimary,) , 
+        
+              const SizedBox(height: 25,), 
+              const Text('Minimal Shop', style: TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.bold),), 
+        
+               const SizedBox(height: 5,), 
+              const Text('Premium Quality Products', style: TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.w300),), 
+        
+              const SizedBox(height: 180,), 
+              GestureDetector( 
+                onTap: () {
+                  Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const MinimalShop()),
+              );
+                },
+                child: Container(
+                  height: 50, width: 200,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Theme.of(context).colorScheme.primary,
+                  ),
+                  child: Align(child: Text('Enter Shop', style: TextStyle(color: Theme.of(context).colorScheme.onPrimary),)),
                 ),
-                child: Align(child: Text('Enter Shop', style: TextStyle(color: Theme.of(context).colorScheme.onPrimary),)),
-              ),
-            )
-          ],
+              )
+            ],
+          ),
         ),
       )
     );
