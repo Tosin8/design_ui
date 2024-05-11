@@ -7,7 +7,17 @@ class MinimalShop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold( 
-      drawer: Drawer(),
+      drawer: Drawer(
+        backgroundColor: Theme.of(context).colorScheme.background,
+        child: Column(
+          children: [
+
+            DrawerHeader(child: Center(
+              child: Icon(Icons.shopping_bag, size: 72),
+            ))
+          ],
+        )
+      ),
       appBar: AppBar(
       
       ),
