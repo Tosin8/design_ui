@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ui_design/screens/minimal_shop/screens/shop.dart';
+import 'package:ui_design/screens/minimal_shop/screens/splash.dart';
 
 
 
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
     theme: ThemeData(
       primarySwatch: Colors.blue,
     ),
-    home: const MinimalShop (), 
+    home: const MinimalSplash (), 
 
     ); 
   }
