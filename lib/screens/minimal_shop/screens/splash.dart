@@ -25,7 +25,7 @@ class MinimalSplash extends StatelessWidget {
              const SizedBox(height: 5,), 
             const Text('Premium Quality Products', style: TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.w300),), 
 
-            const SizedBox(height: 200,), 
+            const SizedBox(height: 180,), 
             GestureDetector( 
               onTap: () {
                 Navigator.push(

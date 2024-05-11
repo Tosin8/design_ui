@@ -138,6 +138,9 @@ flutter:
     - assets/coffee_shop/
     - assets/coffee_shop/animation/
     - assets/coffee_shop/products/png/
+
+    #minimal
+    - assets/minimal_shop/
     #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
