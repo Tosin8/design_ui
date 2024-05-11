@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:iconsax/iconsax.dart';
 
 class MinimalShop extends StatelessWidget {
   const MinimalShop({super.key});
@@ -9,12 +11,26 @@ class MinimalShop extends StatelessWidget {
     return Scaffold( 
       drawer: Drawer(
         backgroundColor: Theme.of(context).colorScheme.background,
-        child: Column(
+        child:  Column(
           children: [
 
-            DrawerHeader(child: Center(
+            DrawerHeader(
+              child: Center(
               child: Icon(Icons.shopping_bag, size: 72),
-            ))
+            )), 
+
+            // ListTile 
+            GestureDetector( 
+              onTap: (){}, 
+              child: ListTile(
+                title: Text('Home', 
+                style: TextStyle(
+                  color: Colors.black,),
+                  
+                  
+              ), leading: Icon(Iconsax.home),
+              ),
+            ), 
           ],
         )
       ),
