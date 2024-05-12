@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:ui_design/screens/minimal_shop/components/menu_drawer.dart';
+import 'package:ui_design/screens/minimal_shop/screens/cart.dart';
 
 import 'splash.dart';
 
@@ -35,7 +36,7 @@ class MinimalShop extends StatelessWidget {
               title: 'Cart',
               icon: Iconsax.shopping_bag, 
               onTap: () {
-                
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const MinimalCartScreen()));
               },
             ),  
              MenuDrawer(
