@@ -4,6 +4,8 @@ import 'package:flutter/widgets.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:ui_design/screens/minimal_shop/components/menu_drawer.dart';
 
+import 'splash.dart';
+
 class MinimalShop extends StatelessWidget {
   const MinimalShop({super.key});
 
@@ -48,7 +50,7 @@ class MinimalShop extends StatelessWidget {
               title: 'Exit',
               icon: Iconsax.logout, 
               onTap: () {
-                
+            Navigator.push(context, MaterialPageRoute(builder: (context) => const MinimalSplash()));
               },
             ),  
           ],
