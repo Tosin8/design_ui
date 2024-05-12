@@ -12,7 +12,8 @@ class MinimalShop extends StatelessWidget {
     return Scaffold( 
       drawer: MinimalDrawer(),
       appBar: AppBar(
-      
+      title: Text('Minimal Shop', style: TextStyle(color: Colors.black, fontSize: 16),), 
+      centerTitle: true,
       ),
     
     );

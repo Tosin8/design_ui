@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../screens/cart.dart';
+import '../screens/shop.dart';
 import '../screens/splash.dart';
 import 'menu_drawer.dart';
 
@@ -27,7 +28,8 @@ class MinimalDrawer extends StatelessWidget {
             title: 'Home',
             icon: Iconsax.home, 
             onTap: () {
-              
+            Navigator.push(context,
+             MaterialPageRoute(builder: (context) => const MinimalShop()));
             },
           ),
     
