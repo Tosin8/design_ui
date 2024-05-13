@@ -27,23 +27,31 @@ class MinimalShop extends StatelessWidget {
       centerTitle: true,
       ),
     
-    body: SizedBox(
-      height: 500, 
-      width: 500,
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemCount: minimalProduct.length,
-        padding: const EdgeInsets.all(15), 
-        itemBuilder: (context, index){
-          // get each individual product from shop
-      //final product = minimalProduct[index]; 
-      
-      // return as a product title UI
-      return ProductTile( minimalProduct: minimalProduct[index],); 
-      
-      
-        }),
-    ), 
+    body: ListView(
+      children: [
+        const SizedBox(height: 10,), 
+        const Center(
+          child: Text(
+            'Browse through our selected \npremium NIKE products', 
+            textAlign: TextAlign.center,)), 
+      SizedBox(
+        height: 550, 
+        width: 500,
+        child: ListView.builder(
+          scrollDirection: Axis.horizontal,
+          itemCount: minimalProduct.length,
+          padding: const EdgeInsets.all(15), 
+          itemBuilder: (context, index){
+            // get each individual product from shop
+        //final product = minimalProduct[index]; 
+        
+        // return as a product title UI
+        return ProductTile( minimalProduct: minimalProduct[index],); 
+        
+        
+          }),
+      ),
+   ] ), 
     );
   }
 }
