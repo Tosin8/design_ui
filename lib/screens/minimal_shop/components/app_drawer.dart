@@ -14,7 +14,7 @@ class MinimalDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Colors.grey[300], 
       child:  Column(
         children: [
     
