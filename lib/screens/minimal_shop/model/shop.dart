@@ -4,5 +4,12 @@ class Shop{
   // products for sale
 
 
-final List<MinimalProduct> _shop = []; 
+final List<MinimalProduct> _shop = [
+
+  MinimalProduct(
+    name: name,
+     description: description, 
+     price: price, 
+     image: image);
+]; 
 }
