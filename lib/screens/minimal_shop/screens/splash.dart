@@ -11,7 +11,7 @@ class MinimalSplash extends StatelessWidget {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
             opacity: 0.5,
             image: AssetImage("assets/minimal_shop/1.jpg"), fit: BoxFit.cover),
