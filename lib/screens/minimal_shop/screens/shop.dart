@@ -17,8 +17,9 @@ class MinimalShop extends StatelessWidget {
     final minimalProduct = context.watch<Shop>().shop; 
     return Scaffold( 
       drawer: const MinimalDrawer(),
-      backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+      backgroundColor: Colors.grey[300],
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
       title: const Text('Minimal Shop',
        style: TextStyle(
         color: Colors.black,
@@ -26,17 +27,23 @@ class MinimalShop extends StatelessWidget {
       centerTitle: true,
       ),
     
-    body: ListView.builder(
-      itemCount: minimalProduct.length,
-      itemBuilder: (context, index){
-        // get each individual product from shop
-//final product = minimalProduct[index]; 
-
-// return as a product title UI
-return ProductTile( minimalProduct: minimalProduct[index],); 
-
-
-      }), 
+    body: SizedBox(
+      height: 500, 
+      width: 500,
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemCount: minimalProduct.length,
+        padding: const EdgeInsets.all(15), 
+        itemBuilder: (context, index){
+          // get each individual product from shop
+      //final product = minimalProduct[index]; 
+      
+      // return as a product title UI
+      return ProductTile( minimalProduct: minimalProduct[index],); 
+      
+      
+        }),
+    ), 
     );
   }
 }

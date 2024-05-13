@@ -13,17 +13,41 @@ final MinimalProduct minimalProduct;
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(color: Theme.of(context).colorScheme.primary),
+
+      decoration: BoxDecoration(
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.5),
+             spreadRadius: 1, blurRadius: 5, 
+            offset: const Offset(0, 1),
+            ), 
+        ],
+        
+          borderRadius: BorderRadius.circular(12), 
+          color: Colors.white.withOpacity(0.7)),
       margin: const EdgeInsets.all(10),
-      padding: const EdgeInsets.all(25), 
+      padding: const EdgeInsets.all(15), 
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
 
           // Product Image. 
-          Image.asset(minimalProduct.image), 
-
+          Container(
+            height: 300,
+            width: 300,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(12),
+              image: DecorationImage(image: AssetImage(minimalProduct.image), fit: BoxFit.cover),
+            ),
+            //child: Image.asset(minimalProduct.image)
+            ), 
+const SizedBox(height: 20,), 
           // product nname 
-          Text(minimalProduct.name), 
+          Text(minimalProduct.name, 
+          style: const TextStyle(
+            fontSize: 16.0, 
+          color: Colors.black, 
+          fontWeight: FontWeight.bold),), 
 
           // product description 
           Text(minimalProduct.description), 
