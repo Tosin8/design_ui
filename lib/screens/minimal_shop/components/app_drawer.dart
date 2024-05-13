@@ -47,7 +47,30 @@ class MinimalDrawer extends StatelessWidget {
               
             },
           ),
-          SizedBox(height: 300,), 
+          MenuDrawer(
+            title: 'Profile',
+            icon: Iconsax.user, 
+            onTap: () {
+              
+            },
+          ),
+           MenuDrawer(
+            title: 'Notifications',
+            icon: Iconsax.notification, 
+            onTap: () {
+              
+            },
+          ),
+          MenuDrawer(
+            title: 'Customer Service',
+            icon: Iconsax.message, 
+            onTap: () {
+              
+            },
+            
+          ),
+         
+          SizedBox(height: 70,), 
            MenuDrawer(
             title: 'Exit',
             icon: Iconsax.logout, 

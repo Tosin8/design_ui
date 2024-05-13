@@ -44,7 +44,7 @@ void removeItemFromCart(BuildContext context, MinimalProduct minimalProduct) {
 // User pressed pay button 
 void payButtonPressed(BuildContext context){
   showDialog(context: context,
-   builder: (context) => AlertDialog(
+   builder: (context) => const AlertDialog(
      content: Text('Proceed to checkout?'),
    ));
 }
@@ -66,13 +66,13 @@ void payButtonPressed(BuildContext context){
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           
-        Padding(
-          padding: const EdgeInsets.only(left: 18.0),
+        const Padding(
+          padding: EdgeInsets.only(left: 18.0),
           child: Text('My Cart', style: TextStyle(fontSize: 26,),)), 
-             Padding(
-          padding: const EdgeInsets.only(left: 18.0),
+             const Padding(
+          padding: EdgeInsets.only(left: 18.0),
           child: Text('Check your cart before paying!', style: TextStyle(fontSize: 12,),)), 
-          SizedBox(height: 20,), 
+          const SizedBox(height: 20,), 
           Expanded(
             child: cart.isEmpty ? const Center(child: Text('Your cart is empty')) : ListView.builder(
               itemBuilder: (context, index) {
@@ -90,17 +90,30 @@ void payButtonPressed(BuildContext context){
                       borderRadius: BorderRadius.circular(10),
                       boxShadow: [BoxShadow(color: Colors.white.withOpacity(0.7),  spreadRadius: 1, offset: const Offset(0, 1),)],
                     ),
-                    child: ListTile(
-                      leading: Image.asset(item.image),
-                      title: Text(item.name, 
-                      style: TextStyle(
-                        color: Colors.black, 
-                        fontWeight: FontWeight.bold),), 
-                      subtitle: Text("\$" + item.price.toString(), 
+                    child: Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: ListTile(
+                        contentPadding: EdgeInsets.all(1),
+                        leading: Container(
+                          
+                            width: 60, height: 60, 
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8),
+                              image: DecorationImage(image: AssetImage(item.image), fit: BoxFit.cover),
+                            ),
+                        ), 
+                           // child: Image.asset(item.image)),
+                        title: Text(item.name, 
+                        style: const TextStyle(
+                          color: Colors.black, 
+                          fontWeight: FontWeight.bold),), 
+                        subtitle: Text("\$${item.price}", 
+                        ),
+                        
+                        trailing: IconButton(
+                          onPressed: () => removeItemFromCart(
+                            context, item), icon: const Icon(Icons.cancel_outlined)),
                       ),
-                      trailing: IconButton(
-                        onPressed: () => removeItemFromCart(
-                          context, item), icon: const Icon(Icons.cancel_outlined)),
                     ),
                   ),
                 ); 
@@ -111,7 +124,7 @@ void payButtonPressed(BuildContext context){
              Center(
                 child: PaymentButton(onTap: () => payButtonPressed(context), text: 'CHECKOUT'),
               ), 
-              SizedBox(height: 5,), 
+              const SizedBox(height: 5,), 
         ],
       )
     );
