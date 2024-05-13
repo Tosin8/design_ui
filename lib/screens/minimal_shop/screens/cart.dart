@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 import 'package:ui_design/screens/minimal_shop/model/product.dart';
 
@@ -58,11 +59,20 @@ void payButtonPressed(BuildContext context){
       drawer: const MinimalDrawer(),
       appBar: AppBar(
         backgroundColor: Colors.transparent,  
-       title: const Text('Minimal Cart', style: TextStyle(color: Colors.black, fontSize: 16),), 
+       
       centerTitle: true,
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          
+        Padding(
+          padding: const EdgeInsets.only(left: 18.0),
+          child: Text('My Cart', style: TextStyle(fontSize: 26,),)), 
+             Padding(
+          padding: const EdgeInsets.only(left: 18.0),
+          child: Text('Check your cart before paying!', style: TextStyle(fontSize: 12,),)), 
+          SizedBox(height: 20,), 
           Expanded(
             child: cart.isEmpty ? const Center(child: Text('Your cart is empty')) : ListView.builder(
               itemBuilder: (context, index) {
@@ -71,20 +81,34 @@ void payButtonPressed(BuildContext context){
                 final item = cart[index];
 
                 // return as a cart title UI. 
-                return ListTile(
-                  title: Text(item.name), 
-                  subtitle: Text(item.price.toString(), 
+                return Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Container(
+                    width: 250,
+                    height: 80,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [BoxShadow(color: Colors.white.withOpacity(0.7),  spreadRadius: 1, offset: const Offset(0, 1),)],
+                    ),
+                    child: ListTile(
+                      leading: Image.asset(item.image),
+                      title: Text(item.name, 
+                      style: TextStyle(
+                        color: Colors.black, 
+                        fontWeight: FontWeight.bold),), 
+                      subtitle: Text("\$" + item.price.toString(), 
+                      ),
+                      trailing: IconButton(
+                        onPressed: () => removeItemFromCart(
+                          context, item), icon: const Icon(Icons.cancel_outlined)),
+                    ),
                   ),
-                  trailing: IconButton(
-                    onPressed: () => removeItemFromCart(
-                      context, item), icon: const Icon(Icons.remove)),
                 ); 
               }, 
               itemCount: cart.length)),
 
               // pay button
-              Padding(
-                padding: const EdgeInsets.all(20.0),
+             Center(
                 child: PaymentButton(onTap: () => payButtonPressed(context), text: 'CHECKOUT'),
               ), 
               SizedBox(height: 5,), 

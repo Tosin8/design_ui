@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:iconsax/iconsax.dart';
 import 'package:provider/provider.dart';
 import 'package:ui_design/screens/minimal_shop/components/product_tile.dart';
 import 'package:ui_design/screens/minimal_shop/model/shop.dart';
+import 'package:ui_design/screens/minimal_shop/screens/cart.dart';
 
 import '../components/app_drawer.dart';
 
@@ -25,6 +27,10 @@ class MinimalShop extends StatelessWidget {
         color: Colors.black,
          fontSize: 16),), 
       centerTitle: true,
+      actions: [
+        IconButton(onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder:  (context) => const MinimalCartScreen())), icon: const Icon(Iconsax.shopping_bag,
+         color: Colors.black,))
+      ],
       ),
     
     body: ListView(

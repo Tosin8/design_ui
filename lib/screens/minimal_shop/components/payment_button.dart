@@ -16,8 +16,8 @@ final Function()? onTap;
       onTap: onTap,
       child: Container( 
         padding: const EdgeInsets.all(8.0),
-        height: 50,
-        width: 150,
+        height: 60,
+        width: 300,
         decoration: BoxDecoration( 
           borderRadius: BorderRadius.circular(8),
           color: Colors.black, 
