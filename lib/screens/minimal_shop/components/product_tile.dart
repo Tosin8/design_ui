@@ -12,6 +12,25 @@ class ProductTile extends StatelessWidget {
 final MinimalProduct minimalProduct; 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      decoration: BoxDecoration(color: Theme.of(context).colorScheme.primary),
+      margin: const EdgeInsets.all(10),
+      padding: const EdgeInsets.all(25), 
+      child: Column(
+        children: [
+
+          // Product Image. 
+          Image.asset(minimalProduct.image), 
+
+          // product nname 
+          Text(minimalProduct.name), 
+
+          // product description 
+          Text(minimalProduct.description), 
+
+          Text(minimalProduct.price.toString()), 
+        ],
+      ),
+    );
   }
 }
