@@ -1,6 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:ui_design/screens/minimal_shop/model/product.dart';
 
-class Shop{
+class Shop extends ChangeNotifier{
   // products for sale
 
 
@@ -54,11 +55,13 @@ List<MinimalProduct> get cart => _cart;
 // Add item to cart
 void addToCart(MinimalProduct item) {
   _cart.add(item);
+  notifyListeners(); 
 }
 
 // remove item from cart 
 void removeFromCart(MinimalProduct item){
   _cart.remove(item); 
+  notifyListeners(); 
 }
 
 
