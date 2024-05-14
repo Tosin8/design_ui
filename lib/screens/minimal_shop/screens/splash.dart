@@ -17,18 +17,20 @@ class MinimalSplash extends StatelessWidget {
         
           child: Column(
         
-            mainAxisAlignment: MainAxisAlignment.center, 
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly, 
+
             children: [
         
           Container(
       
             child: Padding(
-              padding: const EdgeInsets.only(left:8.0),
+              padding: const EdgeInsets.all(20.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  const SizedBox(height: 30,), 
                   Container(
-                    height: 250,width: 200,
+                    height: 250,width: 180,
                     decoration: const BoxDecoration(
                       borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(20),
@@ -39,11 +41,11 @@ class MinimalSplash extends StatelessWidget {
                       image: DecorationImage(image: AssetImage('assets/minimal_shop/1.jpg',), fit: BoxFit.cover)
                     ),
                   ), 
-                  SizedBox(width: 6,), 
+                  const SizedBox(width: 10,), 
                    Expanded(
                     child: Column(
                     children: [
-                      SizedBox(height:10,), 
+                      const SizedBox(height:10,), 
                        Container(
                     height: 200,width: 160,
                     decoration: const BoxDecoration(
@@ -55,7 +57,7 @@ class MinimalSplash extends StatelessWidget {
                       image: DecorationImage(image: AssetImage('assets/minimal_shop/2.jpg',), fit: BoxFit.cover)
                     ),
                   ), 
-                  SizedBox(height: 10,),
+                  const SizedBox(height: 10,),
               
                    Container(
                     height:160,width: 170,
@@ -71,10 +73,11 @@ class MinimalSplash extends StatelessWidget {
                   ))
                 ]
               ),
-            ),), 
+            ),
+            ), 
            
         
-              const SizedBox(height: 50,), 
+              const SizedBox(height: 30,), 
               const Text('Minimal Shop', style: TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.bold),), 
         
                const SizedBox(height: 5,), 
@@ -83,6 +86,8 @@ class MinimalSplash extends StatelessWidget {
               const Text('Premium Quality Products', style: TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.w300),), 
         
               const SizedBox(height: 180,), 
+
+              // button. 
               GestureDetector( 
                 onTap: () {
                   Navigator.push(
@@ -91,14 +96,15 @@ class MinimalSplash extends StatelessWidget {
               );
                 },
                 child: Container(
-                  height: 50, width: 200,
+                  height: 50, width: 300,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     color: Theme.of(context).colorScheme.primary,
                   ),
                   child: Align(child: Text('Enter Shop', style: TextStyle(color: Theme.of(context).colorScheme.onPrimary),)),
                 ),
-              )
+              ), 
+              SizedBox(height: 10,), 
             ],
           ),
         ),
