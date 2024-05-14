@@ -32,14 +32,16 @@ class MinimalDrawer extends StatelessWidget {
              MaterialPageRoute(builder: (context) => const MinimalShop()));
             },
           ),
-    
           MenuDrawer(
-            title: 'Cart',
-            icon: Iconsax.shopping_bag, 
+            title: 'Categories',
+            icon: Iconsax.message, 
             onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const MinimalCartScreen()));
+              
             },
-          ),  
+            
+          ),
+    
+          
            MenuDrawer(
             title: 'WishList',
             icon: Iconsax.lovely, 
@@ -70,7 +72,7 @@ class MinimalDrawer extends StatelessWidget {
             
           ),
          
-          SizedBox(height: 70,), 
+          SizedBox(height: 50,), 
            MenuDrawer(
             title: 'Exit',
             icon: Iconsax.logout, 

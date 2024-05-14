@@ -56,8 +56,10 @@ void payButtonPressed(BuildContext context){
     final cart = context.watch<Shop>().cart;
     return Scaffold(
       backgroundColor: Colors.grey[300],
-      drawer: const MinimalDrawer(),
+
+     // drawer: const MinimalDrawer(),
       appBar: AppBar(
+        leading: IconButton(icon: const Icon(Icons.arrow_back_ios, color: Colors.black,), onPressed: () => Navigator.pop(context),),
         backgroundColor: Colors.transparent,  
        
       centerTitle: true,
@@ -93,7 +95,7 @@ void payButtonPressed(BuildContext context){
                     child: Padding(
                       padding: const EdgeInsets.all(2.0),
                       child: ListTile(
-                        contentPadding: EdgeInsets.all(1),
+                        contentPadding: const EdgeInsets.all(1),
                         leading: Container(
                           
                             width: 60, height: 60, 

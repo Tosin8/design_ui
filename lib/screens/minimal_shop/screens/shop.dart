@@ -35,11 +35,13 @@ class MinimalShop extends StatelessWidget {
     
     body: ListView(
       children: [
-        const SizedBox(height: 10,), 
-        const Center(
-          child: Text(
+        const SizedBox(height: 5,), 
+        const Padding(
+          padding: EdgeInsets.only(left: 20.0), child: Text('Sneakers', style: TextStyle(color: Colors.black, fontSize: 22, fontWeight: FontWeight.bold),)),
+          SizedBox(height: 10,), 
+        const Text(
             'Browse through our selected \npremium NIKE products', 
-            textAlign: TextAlign.center,)), 
+            textAlign: TextAlign.center,),  
       SizedBox(
         height: 550, 
         width: 500,
