@@ -14,20 +14,50 @@ class MinimalSplash extends StatelessWidget {
         decoration: const BoxDecoration(
          
         ),
-        child: Center(
+        
           child: Column(
         
             mainAxisAlignment: MainAxisAlignment.center, 
             children: [
         
-          
+          Container(
+            height: 200, width: 200,
+            child: Row(
+              children: [
+                Container(
+                  height: 200,width: 100,
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(image: AssetImage('assets/minimal_shop/1.jpg',), fit: BoxFit.cover)
+                  ),
+                ), 
+                SizedBox(width: 10,), 
+                 Expanded(child: Column(
+                  children: [
+                     Container(
+                  height: 100,width: 100,
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(image: AssetImage('assets/minimal_shop/2.jpg',), fit: BoxFit.cover)
+                  ),
+                ), 
+                SizedBox(height: 10,), 
+
+                 Container(
+                  height: 100,width: 100,
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(image: AssetImage('assets/minimal_shop/3.jpg',), fit: BoxFit.cover)
+                  ),
+                ),
+                  ],
+                ))
+              ]
+            ),), 
            
         
               const SizedBox(height: 25,), 
               const Text('Minimal Shop', style: TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.bold),), 
         
                const SizedBox(height: 5,), 
-               Text('Seamless Shopping Experience', 
+               const Text('Seamless Shopping Experience', 
                style: TextStyle(fontSize: 18),), 
               const Text('Premium Quality Products', style: TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.w300),), 
         
@@ -51,7 +81,7 @@ class MinimalSplash extends StatelessWidget {
             ],
           ),
         ),
-      )
+    
     );
   }
 }
