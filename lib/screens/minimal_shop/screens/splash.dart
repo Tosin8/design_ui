@@ -12,9 +12,7 @@ class MinimalSplash extends StatelessWidget {
       backgroundColor: Theme.of(context).colorScheme.background,
       body: Container(
         decoration: const BoxDecoration(
-          image: DecorationImage(
-            opacity: 0.5,
-            image: AssetImage("assets/minimal_shop/1.jpg"), fit: BoxFit.cover),
+         
         ),
         child: Center(
           child: Column(
@@ -22,13 +20,15 @@ class MinimalSplash extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center, 
             children: [
         
-              // logo
-              Icon(Icons.shopping_bag, size: 80, color: Theme.of(context).colorScheme.inversePrimary,) , 
+          
+           
         
               const SizedBox(height: 25,), 
               const Text('Minimal Shop', style: TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.bold),), 
         
                const SizedBox(height: 5,), 
+               Text('Seamless Shopping Experience', 
+               style: TextStyle(fontSize: 18),), 
               const Text('Premium Quality Products', style: TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.w300),), 
         
               const SizedBox(height: 180,), 
