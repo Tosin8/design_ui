@@ -96,11 +96,16 @@ class MinimalSplash extends StatelessWidget {
            
         
               const SizedBox(height: 30,), 
-              const Text('Minimal Shop', style: TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.bold),), 
+              FadeIn(
+                delay: const Duration(milliseconds: 2500),
+                duration: const Duration(milliseconds: 1000),
+                child: const Text('Minimal Shop', style: TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.bold),)), 
         
                const SizedBox(height: 5,), 
-               const Text('Seamless Shopping Experience', 
-               style: TextStyle(fontSize: 18),), 
+               FadeIn(
+                 child: const Text('Seamless Shopping Experience', 
+                 style: TextStyle(fontSize: 18),),
+               ), 
               const Text('Premium Quality Products', style: TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.w300),), 
         
               const SizedBox(height: 180,), 
