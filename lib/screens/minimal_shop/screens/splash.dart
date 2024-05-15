@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -29,16 +30,19 @@ class MinimalSplash extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const SizedBox(height: 30,), 
-                  Container(
-                    height: 250,width: 180,
-                    decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(20),
-                        topRight: Radius.circular(40), 
-                        bottomRight: Radius.circular(80), 
-                        topLeft: Radius.circular(60), 
+                  SlideInUp(
+                    duration: const Duration(seconds: 500),
+                    child: Container(
+                      height: 250,width: 180,
+                      decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(20),
+                          topRight: Radius.circular(40), 
+                          bottomRight: Radius.circular(80), 
+                          topLeft: Radius.circular(60), 
+                        ),
+                        image: DecorationImage(image: AssetImage('assets/minimal_shop/1.jpg',), fit: BoxFit.cover)
                       ),
-                      image: DecorationImage(image: AssetImage('assets/minimal_shop/1.jpg',), fit: BoxFit.cover)
                     ),
                   ), 
                   const SizedBox(width: 10,), 
@@ -99,9 +103,9 @@ class MinimalSplash extends StatelessWidget {
                   height: 50, width: 300,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Theme.of(context).colorScheme.primary,
+                    color: Colors.black, 
                   ),
-                  child: Align(child: Text('Enter Shop', style: TextStyle(color: Theme.of(context).colorScheme.onPrimary),)),
+                  child: Align(child: Text('Enter Shop', style: TextStyle(color: Colors.white),)),
                 ),
               ), 
               SizedBox(height: 10,), 
