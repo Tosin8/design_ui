@@ -30,49 +30,63 @@ class MinimalSplash extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const SizedBox(height: 30,), 
-                  SlideInUp(
-                    duration: const Duration(seconds: 500),
-                    child: Container(
-                      height: 250,width: 180,
-                      decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(20),
-                          topRight: Radius.circular(40), 
-                          bottomRight: Radius.circular(80), 
-                          topLeft: Radius.circular(60), 
+                  // Image `1
+
+                   SlideInLeft(
+                    duration: const Duration(milliseconds: 1000),
+                     child: Container(
+                        height: 250,width: 180,
+                        decoration: const BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(20),
+                            topRight: Radius.circular(40), 
+                            bottomRight: Radius.circular(80), 
+                            topLeft: Radius.circular(60), 
+                          ),
+                          image: DecorationImage(image: AssetImage('assets/minimal_shop/1.jpg',), fit: BoxFit.cover)
                         ),
-                        image: DecorationImage(image: AssetImage('assets/minimal_shop/1.jpg',), fit: BoxFit.cover)
                       ),
-                    ),
-                  ), 
+                   ),
+                   
                   const SizedBox(width: 10,), 
                    Expanded(
                     child: Column(
                     children: [
                       const SizedBox(height:10,), 
-                       Container(
-                    height: 200,width: 160,
-                    decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(40), 
-                        topRight: Radius.circular(40),
-                        bottomRight: Radius.circular(18),
-                      ),
-                      image: DecorationImage(image: AssetImage('assets/minimal_shop/2.jpg',), fit: BoxFit.cover)
-                    ),
-                  ), 
+
+                      // Image `2 
+                       SlideInDown(
+                        delay: const Duration(milliseconds: 1000),
+                        duration: const Duration(milliseconds: 1000),
+                         child: Container(
+                                             height: 200,width: 160,
+                                             decoration: const BoxDecoration(
+                                               borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(40), 
+                          topRight: Radius.circular(40),
+                          bottomRight: Radius.circular(18),
+                                               ),
+                                               image: DecorationImage(image: AssetImage('assets/minimal_shop/2.jpg',), fit: BoxFit.cover)
+                                             ),
+                                           ),
+                       ), 
                   const SizedBox(height: 10,),
               
-                   Container(
-                    height:160,width: 170,
-                    decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                        bottomRight: Radius.circular(60), 
-                        topLeft: Radius.circular(30),
+              // Image `3
+                   SlideInRight(
+                    duration: const Duration(seconds: 2),
+                    curve: Curves.easeIn,
+                     child: Container(
+                      height:160,width: 170,
+                      decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.only(
+                          bottomRight: Radius.circular(60), 
+                          topLeft: Radius.circular(30),
+                        ),
+                        image: DecorationImage(image: AssetImage('assets/minimal_shop/3.jpg',), fit: BoxFit.cover)
                       ),
-                      image: DecorationImage(image: AssetImage('assets/minimal_shop/3.jpg',), fit: BoxFit.cover)
-                    ),
-                  ),
+                                       ),
+                   ),
                     ],
                   ))
                 ]
@@ -105,10 +119,10 @@ class MinimalSplash extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                     color: Colors.black, 
                   ),
-                  child: Align(child: Text('Enter Shop', style: TextStyle(color: Colors.white),)),
+                  child: const Align(child: Text('Enter Shop', style: TextStyle(color: Colors.white),)),
                 ),
               ), 
-              SizedBox(height: 10,), 
+              const SizedBox(height: 10,), 
             ],
           ),
         ),
