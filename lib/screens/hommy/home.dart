@@ -41,48 +41,8 @@ class Hommy1 extends StatelessWidget {
                 ),
 
                 const SizedBox(height: 80,), 
-                SizedBox(
-                  width: 200,
-                  child: AspectRatio(
-                    aspectRatio: 1.0,
-                    child: Stack(
-                      children: [
-                      
-                        Container(
-                          height: 160, width: 180,
-                          decoration:  BoxDecoration(
-                            //color:  kSecondaryColor, 
-                            color: Colors.grey.withOpacity(0.09), 
-                          borderRadius: const BorderRadius.only(
-                            topLeft: Radius.circular(45), 
-                          topRight: Radius.circular(30),
-                          bottomRight: Radius.circular(60),
-                          bottomLeft: Radius.circular(10),   
-                          ), 
-                          ), 
-                          child: const Column(
-                            children: [
-                               Text('Arm Chair', style: TextStyle(fontWeight: FontWeight.w500),), 
-                            SizedBox(height: 10,), 
-                            Text(
-                              '100+ products'
-                            )
-                            ],
-                          ),
-                        ), 
-                        Column(
-                          children: [
-                            Container(
-                              height: 100, width: 300, 
-                              child: Image.asset('assets/furniture_grid/categories/slide_chair.png')), 
-                             const SizedBox(height: 10,), 
-                           
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-                )
+                categoryCard(),
+              
               ],
             ),
           ),
