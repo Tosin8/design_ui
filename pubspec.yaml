@@ -47,9 +47,9 @@ dependencies:
   get_storage: ^2.1.1
   glass: ^2.0.0+1
   glossy: ^0.0.4
-  google_fonts: ^6.1.0
+  google_fonts: ^6.2.1
   google_nav_bar: ^5.0.6
-  http: ^1.1.2
+  http: ^1.2.1
   iconsax: ^0.0.8
   liquid_swipe: ^3.1.0
   page_transition: ^2.1.0
@@ -120,6 +120,7 @@ flutter:
     - assets/furniture_grid/7.jpg
     - assets/furniture_grid/8.jpg
     - assets/furniture_grid/9.jpg
+    - assets/furniture_grid/animation/
 
     #form
     - assets/form/1.jpg
