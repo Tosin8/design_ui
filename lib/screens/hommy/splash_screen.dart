@@ -71,7 +71,7 @@ class Hommy extends StatelessWidget {
                       children: [
                         Text('Get Started',
                         style: TextStyle(color: Colors.white, fontSize: 15),),
-                        SizedBox(width: 8), 
+                        SizedBox(width: 16), 
                         ShimmerArrows(), 
                       ],
                     ),
@@ -116,14 +116,15 @@ with SingleTickerProviderStateMixin
   Widget build(BuildContext context) {
     return AnimatedBuilder( 
       animation: _animationController,
-      builder: (context,child) {
+      builder: (_,child) {
         
       
       return ShaderMask( 
         shaderCallback: (bounds) =>  LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter, 
-          transform: _SlideGradientTransform(),
+          begin: Alignment.topLeft,
+          end: Alignment.bottomLeft, 
+          transform: _SlideGradientTransform(
+            percent: _animationController.value),
           colors: const  [
             Colors.white10,
              Colors.white, 
@@ -134,12 +135,12 @@ with SingleTickerProviderStateMixin
         children: [
         Align(
           heightFactor: .4,
-          child: Icon(Icons.arrow_forward_ios,)),
+          child: Icon(Icons.arrow_forward_ios,size: 13, color: Colors.white,)),
              Align(
           heightFactor: .4,
-          child: Icon(Icons.arrow_forward_ios,)),   Align(
+          child: Icon(Icons.arrow_forward_ios,color: Colors.white,  size: 13,)),   Align(
           heightFactor: .4,
-          child: Icon(Icons.arrow_forward_ios,)),
+          child: Icon(Icons.arrow_forward_ios, size: 13, color: Colors.white,)),
         ],),
       ); 
       }
@@ -150,9 +151,13 @@ with SingleTickerProviderStateMixin
 }
 
 class _SlideGradientTransform extends GradientTransform {
+
+  final double percent;
+
+  _SlideGradientTransform({required this.percent}); 
   @override
   Matrix4? transform(Rect bounds, {TextDirection? textDirection}) {
-   return Matrix4.translationValues(0, bounds.height * 0.8, 0); 
+   return Matrix4.translationValues(0, -bounds.height * percent, 0); 
   }
   
 }
