@@ -97,26 +97,40 @@ class ShimmerArrows extends StatefulWidget {
   State<ShimmerArrows> createState() => _ShimmerArrowsState();
 }
 
-class _ShimmerArrowsState extends State<ShimmerArrows> {
+class _ShimmerArrowsState extends State<ShimmerArrows>
+with SingleTickerProviderStateMixin
+ {
+  late final AnimationController _animationController; 
+
+  @override
+  void initState() {
+    _animationController = AnimationController(
+      
+    )
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return ShaderMask( 
-      shaderCallback: (bounds) => const LinearGradient(
+      shaderCallback: (bounds) =>  LinearGradient(
         begin: Alignment.topCenter,
         end: Alignment.bottomCenter, 
-        colors: [
-          Colors.white10, Colors.white, Colors.white10, 
+        transform: _SlideGradientTransform(),
+        colors: const  [
+          Colors.white10,
+           Colors.white, 
+           Colors.white10, 
         ]).createShader(bounds), 
       child: const Row( 
         mainAxisSize: MainAxisSize.min,
       children: [
       Align(
-        heightFactor: .2,
+        heightFactor: .4,
         child: Icon(Icons.arrow_forward_ios,)),
            Align(
-        heightFactor: .2,
+        heightFactor: .4,
         child: Icon(Icons.arrow_forward_ios,)),   Align(
-        heightFactor: .2,
+        heightFactor: .4,
         child: Icon(Icons.arrow_forward_ios,)),
       ],),
     );
@@ -126,8 +140,7 @@ class _ShimmerArrowsState extends State<ShimmerArrows> {
 class _SlideGradientTransform extends GradientTransform {
   @override
   Matrix4? transform(Rect bounds, {TextDirection? textDirection}) {
-    // TODO: implement transform
-    throw UnimplementedError();
+   return Matrix4.translationValues(0, bounds.height * 0.8, 0); 
   }
   
 }
