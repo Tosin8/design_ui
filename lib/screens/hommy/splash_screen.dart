@@ -121,14 +121,14 @@ with SingleTickerProviderStateMixin
       
       return ShaderMask( 
         shaderCallback: (bounds) =>  LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomLeft, 
+          begin: Alignment.centerLeft,
+          end: Alignment.centerRight, 
           transform: _SlideGradientTransform(
             percent: _animationController.value),
-          colors: const  [
-            Colors.white10,
-             Colors.white, 
+          colors:  [
+            Colors.white, 
              Colors.white10, 
+             Colors.white.withOpacity(0.1), 
           ]).createShader(bounds), 
         child: const Row( 
           mainAxisSize: MainAxisSize.min,
@@ -157,7 +157,7 @@ class _SlideGradientTransform extends GradientTransform {
   _SlideGradientTransform({required this.percent}); 
   @override
   Matrix4? transform(Rect bounds, {TextDirection? textDirection}) {
-   return Matrix4.translationValues(0, -bounds.height * percent, 0); 
+   return Matrix4.translationValues(-bounds.height* percent, 0, 0); 
   }
   
 }
