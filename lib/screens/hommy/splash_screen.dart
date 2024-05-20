@@ -59,25 +59,19 @@ class Hommy extends StatelessWidget {
               filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
                 child: Container(
                   height: 60, width: 250,
-                  decoration: BoxDecoration(
-                  // gradient: LinearGradient(
-                  // begin: Alignment.topLeft,
-                  // end: Alignment.bottomCenter, 
-
-                  // colors: [
-                  // Colors.white60, Colors.white10, 
-                  
-                  // ]),
-                    
+                  decoration: BoxDecoration(    
                     borderRadius: BorderRadius.circular(20), 
                 color: Colors.white.withOpacity(0.3), 
                   ),
                 
-                  child: const Center(
+                  child: const Align(
+                    alignment: Alignment.center,
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text('Get Started',
                         style: TextStyle(color: Colors.white, fontSize: 15),),
+                        SizedBox(width: 8), 
                         ShimmerArrows(), 
                       ],
                     ),
@@ -114,9 +108,26 @@ class _ShimmerArrowsState extends State<ShimmerArrows> {
           Colors.white10, Colors.white, Colors.white10, 
         ]).createShader(bounds), 
       child: const Row( 
+        mainAxisSize: MainAxisSize.min,
       children: [
-      Icon(Icons.arrow_forward_ios,),
+      Align(
+        heightFactor: .2,
+        child: Icon(Icons.arrow_forward_ios,)),
+           Align(
+        heightFactor: .2,
+        child: Icon(Icons.arrow_forward_ios,)),   Align(
+        heightFactor: .2,
+        child: Icon(Icons.arrow_forward_ios,)),
       ],),
     );
   }
+}
+
+class _SlideGradientTransform extends GradientTransform {
+  @override
+  Matrix4? transform(Rect bounds, {TextDirection? textDirection}) {
+    // TODO: implement transform
+    throw UnimplementedError();
+  }
+  
 }
