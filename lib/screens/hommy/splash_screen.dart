@@ -1,6 +1,10 @@
 
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:glass/glass.dart';
+import 'package:iconsax/iconsax.dart';
 
 
 class Hommy extends StatelessWidget {
@@ -48,26 +52,39 @@ class Hommy extends StatelessWidget {
 
           const SizedBox(height: 320,), 
           Center(
-            child: Container(
-              height: 60, width: 250,
-              decoration: BoxDecoration(
+          
+              child: ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+                child: BackdropFilter(
+              filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+                child: Container(
+                  height: 60, width: 250,
+                  decoration: BoxDecoration(
+                  // gradient: LinearGradient(
+                  // begin: Alignment.topLeft,
+                  // end: Alignment.bottomCenter, 
+
+                  // colors: [
+                  // Colors.white60, Colors.white10, 
+                  
+                  // ]),
+                    
+                    borderRadius: BorderRadius.circular(20), 
+                color: Colors.white.withOpacity(0.3), 
+                  ),
                 
-                borderRadius: BorderRadius.circular(25), 
-            color: Colors.white
-              ),
-            
-              child: const Align(
-                child: Row(
-                  children: [
-                    Text('Get Started',),
-                  ],
+                  child: const Center(
+                    child: Row(
+                      children: [
+                        Text('Get Started',
+                        style: TextStyle(color: Colors.white, fontSize: 15),),
+                        ShimmerArrows(), 
+                      ],
+                    ),
+                  )
+                
                 ),
-              )
-            ).asGlass(
-              enabled: true,
-              frosted: true,
-                    tintColor: Colors.transparent,
-                    clipBorderRadius: BorderRadius.circular(15.0),
+              ),
             ),
           )
           
@@ -75,6 +92,31 @@ class Hommy extends StatelessWidget {
       ),
     ),
     )
+    );
+  }
+}
+
+class ShimmerArrows extends StatefulWidget {
+  const ShimmerArrows({super.key});
+
+  @override
+  State<ShimmerArrows> createState() => _ShimmerArrowsState();
+}
+
+class _ShimmerArrowsState extends State<ShimmerArrows> {
+  @override
+  Widget build(BuildContext context) {
+    return ShaderMask( 
+      shaderCallback: (bounds) => const LinearGradient(
+        begin: Alignment.topCenter,
+        end: Alignment.bottomCenter, 
+        colors: [
+          Colors.white10, Colors.white, Colors.white10, 
+        ]).createShader(bounds), 
+      child: const Row( 
+      children: [
+      Icon(Icons.arrow_forward_ios,),
+      ],),
     );
   }
 }
