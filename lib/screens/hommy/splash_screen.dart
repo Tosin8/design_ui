@@ -56,7 +56,9 @@ class Hommy extends StatelessWidget {
           // buttton
           GestureDetector( 
             onTap: () {
-              
+               Get.to(() => 
+                      const Hommy1(),
+                    ); 
             },
             child: Center(
             
@@ -99,9 +101,7 @@ class Hommy extends StatelessWidget {
                 const SizedBox(width:2,), 
                 TextButton(
                   onPressed: () {
-                    Get.to(
-                      const Hommy1(),
-                    ); 
+                   
                   },
                   child: const Text('Sign In', style: TextStyle(color: Colors.blue),)), 
               ],
