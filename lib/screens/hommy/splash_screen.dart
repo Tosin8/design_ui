@@ -104,36 +104,48 @@ with SingleTickerProviderStateMixin
 
   @override
   void initState() {
-    _animationController = AnimationController(
-      
-    )
+    _animationController = AnimationController.unbounded(
+      vsync: this
+    )..repeat(
+      min: -0.5, max: 1.5, 
+      period: const Duration(seconds: 1), 
+    ); 
     super.initState();
   }
   @override
   Widget build(BuildContext context) {
-    return ShaderMask( 
-      shaderCallback: (bounds) =>  LinearGradient(
-        begin: Alignment.topCenter,
-        end: Alignment.bottomCenter, 
-        transform: _SlideGradientTransform(),
-        colors: const  [
-          Colors.white10,
-           Colors.white, 
-           Colors.white10, 
-        ]).createShader(bounds), 
-      child: const Row( 
-        mainAxisSize: MainAxisSize.min,
-      children: [
-      Align(
-        heightFactor: .4,
-        child: Icon(Icons.arrow_forward_ios,)),
-           Align(
-        heightFactor: .4,
-        child: Icon(Icons.arrow_forward_ios,)),   Align(
-        heightFactor: .4,
-        child: Icon(Icons.arrow_forward_ios,)),
-      ],),
-    );
+    return AnimatedBuilder( 
+      animation: _animationController,
+      builder: (context,child) {
+        
+      
+      return ShaderMask( 
+        shaderCallback: (bounds) =>  LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter, 
+          transform: _SlideGradientTransform(),
+          colors: const  [
+            Colors.white10,
+             Colors.white, 
+             Colors.white10, 
+          ]).createShader(bounds), 
+        child: const Row( 
+          mainAxisSize: MainAxisSize.min,
+        children: [
+        Align(
+          heightFactor: .4,
+          child: Icon(Icons.arrow_forward_ios,)),
+             Align(
+          heightFactor: .4,
+          child: Icon(Icons.arrow_forward_ios,)),   Align(
+          heightFactor: .4,
+          child: Icon(Icons.arrow_forward_ios,)),
+        ],),
+      ); 
+      }
+
+    ); 
+    
   }
 }
 
