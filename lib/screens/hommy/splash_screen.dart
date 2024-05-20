@@ -3,8 +3,9 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:glass/glass.dart';
-import 'package:iconsax/iconsax.dart';
+import 'package:get/get.dart';
+import 'package:ui_design/screens/hommy/home.dart';
+
 
 
 class Hommy extends StatelessWidget {
@@ -39,48 +40,73 @@ class Hommy extends StatelessWidget {
             child: Text('Everything\nyour home\ndeserves',
              style: TextStyle(
                fontWeight: FontWeight.bold,   
-               color: Colors.white, 
+               color: Colors.black, 
                fontSize: 30,
-               letterSpacing: 2.0)),
+               letterSpacing: 3.0)),
           ),
           const SizedBox(height: 20,), 
           const Padding(
             padding: EdgeInsets.only(left: 18.0),
             child: Text('Total Furniture Solutions for Hotels\nApartments, Residence and Commercial\nOffice Residence. ', 
-            style: TextStyle(color: Colors.white),),
+            style: TextStyle(color: Colors.black),),
           ), 
 
-          const SizedBox(height: 320,), 
-          Center(
-          
-              child: ClipRRect(
-              borderRadius: BorderRadius.circular(20),
-                child: BackdropFilter(
-              filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-                child: Container(
-                  height: 60, width: 250,
-                  decoration: BoxDecoration(    
-                    borderRadius: BorderRadius.circular(20), 
-                color: Colors.white.withOpacity(0.3), 
-                  ),
-                
-                  child: const Align(
-                    alignment: Alignment.center,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text('Get Started',
-                        style: TextStyle(color: Colors.white, fontSize: 15),),
-                        SizedBox(width: 16), 
-                        ShimmerArrows(), 
-                      ],
+          const SizedBox(height: 300,), 
+
+          // buttton
+          GestureDetector( 
+            onTap: () {
+              
+            },
+            child: Center(
+            
+                child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                  child: BackdropFilter(
+                filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+                  child: Container(
+                    height: 60, width: 250,
+                    decoration: BoxDecoration(    
+                      borderRadius: BorderRadius.circular(20), 
+                  color: Colors.white.withOpacity(0.3), 
                     ),
-                  )
-                
+                  
+                    child: const Align(
+                      alignment: Alignment.center,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text('Get Started',
+                          style: TextStyle(color: Colors.white, fontSize: 15),),
+                          SizedBox(width: 16), 
+                          ShimmerArrows(), 
+                        ],
+                      ),
+                    )
+                  
+                  ),
                 ),
               ),
             ),
-          )
+          ), 
+
+          const SizedBox(height: 20,), 
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+              children:  [
+                const Text('Already have an account?', style: TextStyle(color: Colors.white),
+                ), 
+                const SizedBox(width:2,), 
+                TextButton(
+                  onPressed: () {
+                    Get.to(
+                      const Hommy1(),
+                    ); 
+                  },
+                  child: const Text('Sign In', style: TextStyle(color: Colors.blue),)), 
+              ],
+            ),
+          const SizedBox(height: 20,), 
           
         ],
       ),
@@ -107,7 +133,7 @@ with SingleTickerProviderStateMixin
     _animationController = AnimationController.unbounded(
       vsync: this
     )..repeat(
-      min: -0.5, max: 1.5, 
+      min: -0.3, max: 1.4, 
       period: const Duration(seconds: 1), 
     ); 
     super.initState();
@@ -130,20 +156,21 @@ with SingleTickerProviderStateMixin
              Colors.white10, 
              Colors.white.withOpacity(0.1), 
           ]).createShader(bounds), 
-        child: const Row( 
+        child: child, 
+      ); 
+      }, 
+      child: const Row( 
           mainAxisSize: MainAxisSize.min,
         children: [
         Align(
-          heightFactor: .4,
+      
           child: Icon(Icons.arrow_forward_ios,size: 13, color: Colors.white,)),
              Align(
-          heightFactor: .4,
+          
           child: Icon(Icons.arrow_forward_ios,color: Colors.white,  size: 13,)),   Align(
-          heightFactor: .4,
+      
           child: Icon(Icons.arrow_forward_ios, size: 13, color: Colors.white,)),
         ],),
-      ); 
-      }
 
     ); 
     
@@ -157,7 +184,7 @@ class _SlideGradientTransform extends GradientTransform {
   _SlideGradientTransform({required this.percent}); 
   @override
   Matrix4? transform(Rect bounds, {TextDirection? textDirection}) {
-   return Matrix4.translationValues(-bounds.height* percent, 0, 0); 
+   return Matrix4.translationValues(bounds.height* percent, 0, 0); 
   }
   
 }
