@@ -121,6 +121,7 @@ flutter:
     - assets/furniture_grid/8.jpg
     - assets/furniture_grid/9.jpg
     - assets/furniture_grid/animation/
+    - assets/furniture_grid/categories/
 
     #form
     - assets/form/1.jpg

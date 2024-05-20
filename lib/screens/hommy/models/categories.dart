@@ -16,30 +16,38 @@ class Category {
   }
 }
 
-// List of categories
-// List<Category> categories = [
-//   Category(
-//     id: "1",
-//     title: "Chair",
-//     image: "https://i.imgur.com/sI4GvE6.png",
-//     numOfProducts: 100,
-//   ),
-//   Category(
-//     id: "2",
-//     title: "Sofa",
-//     image: "https://i.imgur.com/sI4GvE6.png",
-//     numOfProducts: 100,
-//   ),
-//   Category(
-//     id: "3",
-//     title: "Table",
-//     image: "https://i.imgur.com/sI4GvE6.png",
-//     numOfProducts: 100,
-//   ),
+//List of categories
+List<Category> categories = [
+  Category(
+    id: "1",
+    title: "Arm Chair",
+    image: "assets/furniture_grid/categories/arm_chair.jpg",
+    numOfProducts: 100,
+  ),
+  Category(
+    id: "2",
+    title: "Sofa",
+    image: "https://i.imgur.com/sI4GvE6.png",
+    numOfProducts: 100,
+  ),
+  Category(
+    id: "3",
+    title: "Stool",
+    image: "https://i.imgur.com/sI4GvE6.png",
+    numOfProducts: 100,
+  ),
+   Category(
+    id: "4",
+    title: "Cushion",
+    image: "https://i.imgur.com/sI4GvE6.png",
+    numOfProducts: 80,
+  )
+]; 
+
 
 // category
-Category category = Category(id: '1',
- title: 'Arm Chair', 
- image: '',
-  numOfProducts: 100
-  ); 
+// Category category = Category(id: '1',
+//  title: 'Arm Chair', 
+//  image: '',
+//   numOfProducts: 100
+//   ); 
