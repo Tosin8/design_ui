@@ -5,6 +5,8 @@ import 'package:iconsax/iconsax.dart';
 import 'package:ui_design/screens/hommy/widgets/constants.dart';
 import 'package:ui_design/screens/hommy/widgets/titleText.dart';
 
+import 'categorycard.dart';
+
 
 
 class Hommy1 extends StatelessWidget {

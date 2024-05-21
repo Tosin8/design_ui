@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 class categoryCard extends StatelessWidget {
   const categoryCard({
     super.key,
