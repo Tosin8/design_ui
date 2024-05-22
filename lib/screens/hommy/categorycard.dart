@@ -36,11 +36,11 @@ class categoryCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                      Text(categories.title, 
-                     style: TextStyle(fontWeight: FontWeight.w500, ),), 
+                     style: const TextStyle(fontWeight: FontWeight.w500, ),), 
                   const SizedBox(height: 6,), 
                   Text(
-                    '${categories.numOfProducts} Products', 
-                    style: TextStyle(fontWeight: FontWeight.w400, color: Colors.black.withOpacity(0.6)),
+                    '${categories.numOfProducts}+ Products', 
+                    style: TextStyle(fontWeight: FontWeight.w400, color: Colors.black.withOpacity(0.3)),
                   ), 
                   const SizedBox(height: 20,),
                   ],
@@ -56,7 +56,7 @@ class categoryCard extends StatelessWidget {
                       height: 150, width: 300, 
                       child: Image.asset(categories.image)),
                   ), 
-                   const SizedBox(height: 10,), 
+                 //  const SizedBox(height: 2,), 
                  
                 
               
