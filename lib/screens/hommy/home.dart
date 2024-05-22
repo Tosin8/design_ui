@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:ui_design/screens/hommy/models/categories.dart';
-import 'package:ui_design/screens/hommy/widgets/constants.dart';
 import 'package:ui_design/screens/hommy/widgets/titleText.dart';
 
 import 'categorycard.dart';
@@ -65,12 +64,22 @@ class Hommy1 extends StatelessWidget {
                 ),
                 const SizedBox(height: 5,),
                 Container(
-                  decoration:  BoxDecoration(
-                    color: kSecondaryColor, 
-                    borderRadius: BorderRadius.circular(30), 
-                  ),
-                  child: const Column(
-                    children: [], 
+                  height: 300, width: 180,
+                 
+                  child:  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        height: 200, width: 180,
+                        decoration: BoxDecoration(image: const DecorationImage(image: AssetImage('assets/furniture_grid/1.jpg',), fit: BoxFit.cover), borderRadius: BorderRadius.circular(15)),
+                      ), 
+                      const SizedBox(height: 5,), 
+                      const Text('White Sofa', style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),), 
+                      Text('\$700', 
+                      style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16, 
+                      color: Colors.black.withOpacity(0.5)),
+                      ), 
+                    ], 
                   ),
                 )
 
