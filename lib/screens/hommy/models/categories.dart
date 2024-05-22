@@ -21,19 +21,19 @@ List<Category> categories = [
   Category(
     id: "1",
     title: "Arm Chair",
-    image: "assets/furniture_grid/categories/arm_chair.jpg",
+    image: "assets/furniture_grid/categories/arm_chair.png",
     numOfProducts: 100,
   ),
   Category(
     id: "2",
-    title: "Sofa",
-    image: "https://i.imgur.com/sI4GvE6.png",
+    title: "Stool",
+    image: "assets/furniture_grid/categories/stool.png",
     numOfProducts: 100,
   ),
   Category(
     id: "3",
     title: "Stool",
-    image: "https://i.imgur.com/sI4GvE6.png",
+    image: "assets/furniture_grid/categories/stool.png",
     numOfProducts: 100,
   ),
    Category(

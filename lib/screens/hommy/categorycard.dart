@@ -29,13 +29,13 @@ class categoryCard extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                   Text('Arm Chair', style: TextStyle(fontWeight: FontWeight.w500, ),), 
-                SizedBox(height: 6,), 
+                   const Text('Arm Chair', style: TextStyle(fontWeight: FontWeight.w500, ),), 
+                const SizedBox(height: 6,), 
                 Text(
                   '100+ products', 
                   style: TextStyle(fontWeight: FontWeight.w400, color: Colors.black.withOpacity(0.6)),
                 ), 
-                SizedBox(height: 20,),
+                const SizedBox(height: 20,),
                 ],
               ),
             ), 

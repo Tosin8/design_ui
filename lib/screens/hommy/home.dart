@@ -32,17 +32,17 @@ class Hommy1 extends StatelessWidget {
         ],
       ),
       body: Container(
-        child:  SingleChildScrollView(
+        child:  const SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.only(left: 18.0),
+            padding: EdgeInsets.only(left: 18.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                 const titleText(
+                 titleText(
                   title: 'Browse by Categories',
                 ),
 
-                const SizedBox(height: 80,), 
+                SizedBox(height: 80,), 
                 categoryCard(),
               
               ],
