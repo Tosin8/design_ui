@@ -33,4 +33,6 @@ Product product = Product(
   description: "This armchair is an elegant and functional piece of furniture. It is suitable for family visits and parties with friends and perfect for relaxing in front of the TV after hard work.",
 ); 
 
-List <Product> recommendProducts = []; 
+List <Product> recommendProducts = [
+  Product(price: price, id: id, title: title, image: image, category: category, subTitle: subTitle, description: description)
+]; 
