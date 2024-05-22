@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:ui_design/screens/hommy/models/categories.dart';
 import 'package:ui_design/screens/hommy/widgets/constants.dart';
 import 'package:ui_design/screens/hommy/widgets/titleText.dart';
 
@@ -31,26 +32,35 @@ class Hommy1 extends StatelessWidget {
         SizedBox(width: 10),
         ],
       ),
-      body: Container(
-        child:  const SingleChildScrollView(
+      body: 
+         SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.only(left: 18.0),
+            padding: const EdgeInsets.only(left: 18.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                 titleText(
+                 const titleText(
                   title: 'Browse by Categories',
                 ),
 
-                SizedBox(height: 80,), 
-                categoryCard(),
-              
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
+                const SizedBox(height: 40,), 
+                SingleChildScrollView( 
+                  scrollDirection: Axis.horizontal,
+                  child: Row(children: [
+                                ...List.generate( 
+                   categories.length,
+                   (index) => 
+                         categoryCard(categories: categories[index]),
+                       
+                     ),
+                  ] ),
+                )  
+              ]
+                 ),
+
+
+    
+           ) )); 
   }
 }
 

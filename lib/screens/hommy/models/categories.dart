@@ -22,7 +22,7 @@ List<Category> categories = [
     id: "1",
     title: "Arm Chair",
     image: "assets/furniture_grid/categories/arm_chair.png",
-    numOfProducts: 100,
+    numOfProducts: 80,
   ),
   Category(
     id: "2",
@@ -34,14 +34,20 @@ List<Category> categories = [
     id: "3",
     title: "Stool",
     image: "assets/furniture_grid/categories/stool.png",
-    numOfProducts: 100,
+    numOfProducts: 50,
   ),
    Category(
     id: "4",
-    title: "Cushion",
-    image: "https://i.imgur.com/sI4GvE6.png",
-    numOfProducts: 80,
-  )
+    title: "Hawwock",
+    image: "assets/furniture_grid/categories/slide_chair.png",
+    numOfProducts: 47,
+  ),
+  //  Category(
+  //   id: "4",
+  //   title: "Cushion",
+  //   image: "https://i.imgur.com/sI4GvE6.png",
+  //   numOfProducts: 80,
+  // )
 ]; 
 
 
