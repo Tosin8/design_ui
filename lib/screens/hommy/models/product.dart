@@ -35,13 +35,13 @@ Product product = Product(
 
 List <Product> recommendProducts = [
   Product(
-    price: price, 
-    id: id, 
+    price: 1100, 
+    id: "2", 
     title:
-     title, 
-     image: image, 
-     category: category, 
-     subTitle: subTitle,
-      description: description
+     '', 
+     image: "", 
+     category: "", 
+     subTitle: "",
+      description: ""
       ), 
 ]; 
