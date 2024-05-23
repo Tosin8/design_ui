@@ -6,20 +6,25 @@ class Product {
   final String category;
   final String subTitle;
   final String description;
-  Product({required this.price, required this.id, required this.title, required this.image, required this.category, required this.subTitle, required this.description});
+  final String rating; 
+  final String textReviews; 
+
+
+  Product( 
+    {required this.price, required this.id, required this.title, required this.image, required this.category, required this.subTitle, required this.description,  required this.rating, required this.textReviews, });
 
   // it create a category from JSON. 
-  factory Product.fromJson(Map<String, dynamic> json) {
-    return Product(
-      price: json['price'],
-      id: json['id'],
-      title: json['title'],
-      image: json['image'],
-      category: json['category'],
-      subTitle: json['subTitle'],
-      description: json['description'],
-    );
-  }
+  // factory Product.fromJson(Map<String, dynamic> json) {
+  //   return Product(
+  //     price: json['price'],
+  //     id: json['id'],
+  //     title: json['title'],
+  //     image: json['image'],
+  //     category: json['category'],
+  //     subTitle: json['subTitle'],
+  //     description: json['description'],
+  //   );
+  // }
 }
 
 // Demo Products
@@ -35,6 +40,8 @@ class Product {
 
 List <Product> recommendProducts = [
   Product(
+    rating: '4.3', 
+    textReviews: '12' ,
     price: 700, 
     id: "2", 
     title:
@@ -46,6 +53,8 @@ List <Product> recommendProducts = [
       ), 
 
        Product(
+         rating: '3.1', 
+    textReviews: '8' ,
     price: 1000, 
     id: "2", 
     title:
@@ -57,6 +66,8 @@ List <Product> recommendProducts = [
       ), 
       
        Product(
+         rating: '1.3', 
+    textReviews: '16' ,
     price: 1200, 
     id: "2", 
     title:
@@ -68,6 +79,8 @@ List <Product> recommendProducts = [
       ), 
       
        Product(
+         rating: '4.3', 
+    textReviews: '12' ,
     price: 700, 
     id: "2", 
     title:
@@ -79,6 +92,8 @@ List <Product> recommendProducts = [
       ),
       
         Product(
+           rating: '4.3', 
+    textReviews: '15' ,
     price: 700, 
     id: "2", 
     title:

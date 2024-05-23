@@ -1,12 +1,19 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:animated_read_more_text/animated_read_more_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+
 import 'package:ui_design/screens/hommy/home.dart';
+import 'package:ui_design/screens/hommy/models/product.dart';
 
 class DetailScreen extends StatelessWidget {
-  const DetailScreen({super.key});
+  const DetailScreen({
+    Key? key,
+    required this.recommendProducts,
+  }) : super(key: key);
 
+final Product recommendProducts; 
   @override
   Widget build(BuildContext context) {
     return Scaffold( 
@@ -22,7 +29,7 @@ class DetailScreen extends StatelessWidget {
             bottomRight: Radius.circular(35), 
           ),
           image: DecorationImage(
-            image: AssetImage('assets/furniture_grid/1.jpg'),
+            image: AssetImage('recommendProducts.image'),
             fit: BoxFit.cover,
           ),
         ),
@@ -77,16 +84,16 @@ Container(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text('White Sofa', style: TextStyle(
+          const Text('recommendProducts.title', style: TextStyle(
             fontSize: 20,
              fontWeight: FontWeight.bold,
              wordSpacing: 1.3 ),
              ), 
               const SizedBox(height: 6,), 
-             Text('Marrio Furniture' , style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700, 
+             Text('recommendProducts.category' , style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700, 
              color: Colors.black.withOpacity(0.5)),), 
              const SizedBox(height: 6,), 
-             const Text('\$300' , style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: Colors.black),), 
+             const Text('\$recommendProducts.price' , style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: Colors.black),), 
     const SizedBox(height: 10,), 
              // Reviews Section. 
              Row(

@@ -1,7 +1,9 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:ui_design/screens/hommy/detail_screen.dart';
 import 'package:ui_design/screens/hommy/models/categories.dart';
 import 'package:ui_design/screens/hommy/models/product.dart';
 import 'package:ui_design/screens/hommy/widgets/titleText.dart';
@@ -76,7 +78,11 @@ class Hommy1 extends StatelessWidget {
                     childAspectRatio: 0.7, 
                     mainAxisSpacing: 10.0, 
                     crossAxisSpacing: 2.0),
-                  itemBuilder: (context, index) =>  productCard(recommendProducts: recommendProducts[index],)), 
+                  itemBuilder: (context, index) =>  productCard(recommendProducts: recommendProducts[index],
+                  press: () {
+                    Get.to(() => DetailScreen(recommendProducts: recommendProducts[index]));
+                  },
+                  )), 
                
 
               ]
