@@ -6,8 +6,8 @@ import 'package:ui_design/screens/hommy/models/categories.dart';
 import 'package:ui_design/screens/hommy/models/product.dart';
 import 'package:ui_design/screens/hommy/widgets/titleText.dart';
 
-import 'categorycard.dart';
-import 'productcard.dart';
+import 'cards/categorycard.dart';
+import 'cards/productcard.dart';
 
 
 
