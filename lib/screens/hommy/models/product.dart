@@ -44,48 +44,46 @@ List <Product> recommendProducts = [
      subTitle: "",
       description: ""
       ), 
+
+       Product(
+    price: 1000, 
+    id: "2", 
+    title:
+     'Brown Sofa', 
+     image: "assets/furniture_grid/2.jpg", 
+     category: "", 
+     subTitle: "",
+      description: ""
+      ), 
+      
+       Product(
+    price: 1200, 
+    id: "2", 
+    title:
+     'Dark Grey ', 
+     image: "assets/furniture_grid/3.jpg", 
+     category: "", 
+     subTitle: "",
+      description: ""
+      ), 
+      
        Product(
     price: 700, 
     id: "2", 
     title:
-     'White Sofa', 
-     image: "assets/furniture_grid/1.jpg", 
+     'Office Sofa', 
+     image: "assets/furniture_grid/5.jpg", 
      category: "", 
      subTitle: "",
       description: ""
-      ),  Product(
+      ),
+      
+        Product(
     price: 700, 
     id: "2", 
     title:
-     'White Sofa', 
-     image: "assets/furniture_grid/1.jpg", 
-     category: "", 
-     subTitle: "",
-      description: ""
-      ),  Product(
-    price: 700, 
-    id: "2", 
-    title:
-     'White Sofa', 
-     image: "assets/furniture_grid/1.jpg", 
-     category: "", 
-     subTitle: "",
-      description: ""
-      ),  Product(
-    price: 700, 
-    id: "2", 
-    title:
-     'White Sofa', 
-     image: "assets/furniture_grid/1.jpg", 
-     category: "", 
-     subTitle: "",
-      description: ""
-      ),  Product(
-    price: 700, 
-    id: "2", 
-    title:
-     'White Sofa', 
-     image: "assets/furniture_grid/1.jpg", 
+     'Sofa Stool', 
+     image: "assets/furniture_grid/7.jpg", 
      category: "", 
      subTitle: "",
       description: ""
