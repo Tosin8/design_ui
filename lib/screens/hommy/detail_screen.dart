@@ -6,7 +6,21 @@ class DetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold( 
-      body: Container(),
+      backgroundColor: Colors.grey[100],
+      body: Container(
+        width: double.infinity,
+        height: 630,
+decoration: const BoxDecoration(
+  borderRadius: BorderRadius.only(
+    bottomLeft: Radius.circular(35), 
+    bottomRight: Radius.circular(35), 
+  ),
+  image: DecorationImage(
+    image: AssetImage('assets/furniture_grid/1.jpg'),
+    fit: BoxFit.cover,
+  ),
+),
+      ),
     );
   }
 }
