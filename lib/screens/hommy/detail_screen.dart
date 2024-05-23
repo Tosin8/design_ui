@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
 
 class DetailScreen extends StatelessWidget {
   const DetailScreen({super.key});
@@ -23,6 +24,27 @@ class DetailScreen extends StatelessWidget {
           ),
         ),
         ),
+
+        // Product Stack Widgets. 
+        Column(
+          children: [
+            const SizedBox(height: 30,),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  IconButton(onPressed: (){}, icon: const Icon(Icons.arrow_back_ios, color: Colors.white,), 
+                  ),
+                  IconButton(
+                    onPressed: (){},
+                     icon: const Icon(Iconsax.heart, color: Colors.white,
+                     ),), 
+                ] 
+              )), 
+
+          ],
+        )
      ] ),
 
     );
