@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:ui_design/screens/hommy/models/categories.dart';
+import 'package:ui_design/screens/hommy/models/product.dart';
 import 'package:ui_design/screens/hommy/widgets/titleText.dart';
 
 import 'categorycard.dart';
@@ -64,7 +65,19 @@ class Hommy1 extends StatelessWidget {
                   title: 'Recommends for you',
                 ),
                 const SizedBox(height: 5,),
-                productCard()
+
+                // GridView
+                GridView.builder(
+                  shrinkWrap: true, 
+                  physics: const NeverScrollableScrollPhysics(),
+                  itemCount: recommendProducts.length,
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2, 
+                    childAspectRatio: 0.7, 
+                    mainAxisSpacing: 10.0, 
+                    crossAxisSpacing: 2.0),
+                  itemBuilder: (context, index) =>  productCard(recommendProducts: recommendProducts[index],)), 
+               
 
               ]
                  ),
