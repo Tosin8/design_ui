@@ -23,13 +23,13 @@ final Product recommendProducts;
           Container(
           width: double.infinity,
           height: 630,
-        decoration: const BoxDecoration(
-          borderRadius: BorderRadius.only(
+        decoration:  BoxDecoration(
+          borderRadius: const BorderRadius.only(
             bottomLeft: Radius.circular(35), 
             bottomRight: Radius.circular(35), 
           ),
           image: DecorationImage(
-            image: AssetImage('recommendProducts.image'),
+            image: AssetImage(recommendProducts.image),
             fit: BoxFit.cover,
           ),
         ),
@@ -84,16 +84,16 @@ Container(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text('recommendProducts.title', style: TextStyle(
+           Text(recommendProducts.title, style: const TextStyle(
             fontSize: 20,
              fontWeight: FontWeight.bold,
              wordSpacing: 1.3 ),
              ), 
               const SizedBox(height: 6,), 
-             Text('recommendProducts.category' , style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700, 
+             Text(recommendProducts.category , style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700, 
              color: Colors.black.withOpacity(0.5)),), 
              const SizedBox(height: 6,), 
-             const Text('\$recommendProducts.price' , style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: Colors.black),), 
+              Text('\$${recommendProducts.price}' , style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: Colors.black),), 
     const SizedBox(height: 10,), 
              // Reviews Section. 
              Row(
@@ -102,20 +102,25 @@ Container(
                const Icon(Icons.star, 
                color: Colors.yellow, size: 20,), 
                const SizedBox(width: 4,), 
-               const Text('4.5', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),),
+                Text(recommendProducts.rating, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w500),),
                const SizedBox(width: 4,),
-               Text('(12 Reviews)', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: Colors.black.withOpacity(0.5)),),
+               Text('(${recommendProducts.textReviews} Reviews)', style: TextStyle(
+                fontSize: 14,
+                 fontWeight: FontWeight.w500, 
+                 color: Colors.black.withOpacity(0.5)
+                 ),
+               ),
              ],), 
     const SizedBox(height: 10,), 
              // Descriptions . 
-             const AnimatedReadMoreText(
+              AnimatedReadMoreText(
               
-              'Here is a short product description for a furniture chair . Elevate your living space with the timeless elegance of our Vintage Leather Accent Chair. Meticulously handcrafted with top-grain leather upholstery, this chair exudes a warm, inviting appeal. The button-tufted backrest and rolled arms offer exceptional comfort, while the sturdy kiln-dried hardwood frame ensures lasting durability. ', 
+              recommendProducts.description, 
               maxLines: 3, 
-              animationCurve: Curves.easeInOut, animationDuration: Duration(seconds: 2),
+              animationCurve: Curves.easeInOut, animationDuration: const Duration(seconds: 2),
               readMoreText: 'Expand',
               readLessText: 'Collapse',
-              buttonTextStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: Colors.blue),),  
+              buttonTextStyle: const TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: Colors.blue),),  
               const SizedBox(height: 20,),
               Container( 
                 height: 50, width: 400,
