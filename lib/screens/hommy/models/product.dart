@@ -35,11 +35,57 @@ Product product = Product(
 
 List <Product> recommendProducts = [
   Product(
-    price: 1100, 
+    price: 700, 
     id: "2", 
     title:
-     '', 
-     image: "", 
+     'White Sofa', 
+     image: "assets/furniture_grid/1.jpg", 
+     category: "", 
+     subTitle: "",
+      description: ""
+      ), 
+       Product(
+    price: 700, 
+    id: "2", 
+    title:
+     'White Sofa', 
+     image: "assets/furniture_grid/1.jpg", 
+     category: "", 
+     subTitle: "",
+      description: ""
+      ),  Product(
+    price: 700, 
+    id: "2", 
+    title:
+     'White Sofa', 
+     image: "assets/furniture_grid/1.jpg", 
+     category: "", 
+     subTitle: "",
+      description: ""
+      ),  Product(
+    price: 700, 
+    id: "2", 
+    title:
+     'White Sofa', 
+     image: "assets/furniture_grid/1.jpg", 
+     category: "", 
+     subTitle: "",
+      description: ""
+      ),  Product(
+    price: 700, 
+    id: "2", 
+    title:
+     'White Sofa', 
+     image: "assets/furniture_grid/1.jpg", 
+     category: "", 
+     subTitle: "",
+      description: ""
+      ),  Product(
+    price: 700, 
+    id: "2", 
+    title:
+     'White Sofa', 
+     image: "assets/furniture_grid/1.jpg", 
      category: "", 
      subTitle: "",
       description: ""
