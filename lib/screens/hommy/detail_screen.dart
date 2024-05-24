@@ -20,20 +20,23 @@ final Product recommendProducts;
       backgroundColor: Colors.grey[100],
       body: Stack(
         children: [
-          Container(
-          width: double.infinity,
-          height: 630,
-        decoration:  BoxDecoration(
-          borderRadius: const BorderRadius.only(
-            bottomLeft: Radius.circular(35), 
-            bottomRight: Radius.circular(35), 
+          Hero(
+            tag: recommendProducts.image, 
+            child: Container(
+            width: double.infinity,
+            height: 630,
+                    decoration:  BoxDecoration(
+            borderRadius: const BorderRadius.only(
+              bottomLeft: Radius.circular(35), 
+              bottomRight: Radius.circular(35), 
+            ),
+            image: DecorationImage(
+              image: AssetImage(recommendProducts.image),
+              fit: BoxFit.cover,
+            ),
+                    ),
+                    ),
           ),
-          image: DecorationImage(
-            image: AssetImage(recommendProducts.image),
-            fit: BoxFit.cover,
-          ),
-        ),
-        ),
 
         // Product Stack Widgets. 
         Column(

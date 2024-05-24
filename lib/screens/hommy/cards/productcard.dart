@@ -25,13 +25,16 @@ GestureTapCallback  press;
         child:  Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              height: 200, width: 180,
-              decoration: BoxDecoration(image: DecorationImage(
-                image: AssetImage(
-                  recommendProducts.image,
-                  ), fit: BoxFit.cover),
-                   borderRadius: BorderRadius.circular(15)),
+            Hero(
+              tag: recommendProducts.image,
+              child: Container(
+                height: 200, width: 180,
+                decoration: BoxDecoration(image: DecorationImage(
+                  image: AssetImage(
+                    recommendProducts.image,
+                    ), fit: BoxFit.cover),
+                     borderRadius: BorderRadius.circular(15)),
+              ),
             ), 
             const SizedBox(height: 5,), 
 
