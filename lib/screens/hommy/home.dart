@@ -61,12 +61,12 @@ class Hommy1 extends StatelessWidget {
                      ),
                   ] ),
                 ) , 
-
+SizedBox(height: 20,), 
                 //  Recommends for you. 
                 const titleText(
                   title: 'Recommends for you',
                 ),
-                const SizedBox(height: 5,),
+                const SizedBox(height: 10,),
 
                 // GridView
                 GridView.builder(

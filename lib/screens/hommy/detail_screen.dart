@@ -47,7 +47,7 @@ final Product recommendProducts;
 
             // appbar.             
             FadeIn(
-              duration: Duration(milliseconds: 1000),
+              duration: const Duration(milliseconds: 1000),
               curve: Curves.easeIn,
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -82,8 +82,8 @@ const Spacer( flex: 1,),
 
 // Card Details. 
 FadeIn(
-  duration: Duration(milliseconds: 1000), 
-  delay: Duration(milliseconds: 500),
+  duration: const Duration(milliseconds: 1000), 
+  delay: const Duration(milliseconds: 500),
   curve: Curves.easeOutQuad, 
   child: Container(
     height: 330, width: 360,
@@ -108,7 +108,7 @@ FadeIn(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
              FadeInLeft(
-              duration: Duration(milliseconds: 1200),
+              duration: const Duration(milliseconds: 1200),
               curve: Curves.easeInCubic, 
                child: Text(recommendProducts.title, 
                style: const TextStyle(
@@ -120,8 +120,8 @@ FadeIn(
                 const SizedBox(height: 6,), 
 
                FadeInLeft(
-                duration: Duration(milliseconds: 1200), 
-                delay: Duration(milliseconds: 500),
+                duration: const Duration(milliseconds: 1200), 
+                delay: const Duration(milliseconds: 500),
                 curve: Curves.easeInCubic,
                  child: Text(recommendProducts.category , style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700, 
                  color: Colors.black.withOpacity(0.5)),),
@@ -129,8 +129,8 @@ FadeIn(
                const SizedBox(height: 6,), 
 
                 FadeInLeft(
-                  delay: Duration(milliseconds: 500), 
-                  duration: Duration(milliseconds: 1000),
+                  delay: const Duration(milliseconds: 500), 
+                  duration: const Duration(milliseconds: 1000),
                   curve: Curves.easeInCubic,
                   child: Text('\$${recommendProducts.price}' , style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: Colors.black),)), 
       const SizedBox(height: 10,), 
@@ -138,8 +138,8 @@ FadeIn(
 
                // Reviews Section. 
                FadeIn(
-                delay: Duration(milliseconds: 500),
-                duration: Duration(milliseconds: 2000),
+                delay: const Duration(milliseconds: 500),
+                duration: const Duration(milliseconds: 2000),
                 curve: Curves.easeInCubic,
                  child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -150,8 +150,8 @@ FadeIn(
                     Text(recommendProducts.rating, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w500),),
                    const SizedBox(width: 4,),
                    FadeIn( 
-                    delay: Duration(milliseconds: 500), 
-                    duration: Duration(milliseconds: 2000), 
+                    delay: const Duration(milliseconds: 500), 
+                    duration: const Duration(milliseconds: 2000), 
                     curve: Curves.easeInCubic, 
                      child: Text('(${recommendProducts.textReviews} Reviews)', style: TextStyle(
                       fontSize: 14,
@@ -165,8 +165,8 @@ FadeIn(
       const SizedBox(height: 10,), 
                // Descriptions . 
                 FadeIn( 
-                  delay: Duration(milliseconds: 1000), 
-                  duration: Duration(milliseconds: 2000),
+                  delay: const Duration(milliseconds: 1000), 
+                  duration: const Duration(milliseconds: 2000),
                   child: AnimatedReadMoreText(
                   
                   recommendProducts.description, 
@@ -177,13 +177,20 @@ FadeIn(
                   buttonTextStyle: const TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: Colors.blue),),
                 ),  
                 const SizedBox(height: 20,),
-                Container( 
-                  height: 50, width: 400,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20), 
-                    color: Colors.black
+
+                // Button Section.
+                FadeInUp(
+                  delay: const Duration(milliseconds: 300), 
+                  duration: const Duration(milliseconds: 1200),
+                  curve: Curves.easeInCubic,
+                  child: Container( 
+                    height: 50, width: 400,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20), 
+                      color: Colors.black
+                    ),
+                    child: const Align(child: Text('Add to cart', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: Colors.white),)),
                   ),
-                  child: const Align(child: Text('Add to cart', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: Colors.white),)),
                 )
           ],
         ),

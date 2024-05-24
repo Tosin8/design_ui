@@ -13,15 +13,16 @@ class categoryCard extends StatelessWidget {
     return SizedBox(
       width: 200,
      
-        child: AspectRatio(
-          aspectRatio: 0.83,
+        // child: AspectRatio(
+        //   aspectRatio: 0.83,
           child: Stack(
+            
             fit: StackFit.loose, 
-            clipBehavior: Clip.none,
+            clipBehavior: Clip.none, 
             children: [
             
               Container(
-                height: 160, width: 180,
+               height: 160, width: 180,
                 decoration:  BoxDecoration(
                   //color:  kSecondaryColor, 
                   color: Colors.grey.withOpacity(0.09), 
@@ -48,21 +49,22 @@ class categoryCard extends StatelessWidget {
               ), 
               
                   Positioned( 
-                    top: -50, 
+                    top: -10, 
                     left: -80, 
                     right: -60, 
                 
-                    child: Container(
-                      height: 150, width: 300, 
+                    child:
+                    Container(
+                      height: 110, width: 280, 
                       child: Image.asset(categories.image)),
-                  ), 
-                 //  const SizedBox(height: 2,), 
+                 ), 
+
                  
                 
               
             ],
           ),
-        ),
+       // ),
       );
   }
 }
