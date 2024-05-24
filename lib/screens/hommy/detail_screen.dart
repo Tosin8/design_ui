@@ -74,6 +74,15 @@ const Spacer( flex: 1,),
 Container(
   height: 330, width: 360,
   decoration: BoxDecoration(
+    boxShadow: [
+      BoxShadow(
+        color: Colors.grey.shade200, 
+        blurRadius: 1.0,
+        spreadRadius: 1.0, 
+        offset: Offset.zero
+      
+      )
+    ],
     color: Colors.white,
     borderRadius: BorderRadius.circular(20),
   ),
