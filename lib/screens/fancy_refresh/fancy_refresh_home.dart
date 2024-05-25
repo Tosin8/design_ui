@@ -17,7 +17,7 @@ class FancyRefreshPage extends StatelessWidget {
         color: Colors.deepPurple, 
         backgroundColor: Colors.deepPurple[200],
         showChildOpacityTransition: false,
-        animSpeedFactor: 3,
+        animSpeedFactor: 2,
         height: 300,
         child: ListView(
           children: [
