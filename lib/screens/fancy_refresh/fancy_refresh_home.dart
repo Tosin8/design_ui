@@ -5,6 +5,36 @@ class FancyRefreshPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      backgroundColor: Colors.deepPurple[200],
+      body: ListView(
+        children: [
+          Padding(padding: 
+            const EdgeInsets.all(20), 
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(20), 
+              child: Container( 
+                height: 300, color: Colors.deepPurple,
+              ),
+            ),), 
+             Padding(padding: 
+            const EdgeInsets.all(20), 
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(20), 
+              child: Container( 
+                height: 300, color: Colors.deepPurple,
+              ),
+            ),), 
+             Padding(padding: 
+            const EdgeInsets.all(20), 
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(20), 
+              child: Container( 
+                height: 300, color: Colors.deepPurple,
+              ),
+            ),)
+        ],
+      )
+    );
   }
 }
