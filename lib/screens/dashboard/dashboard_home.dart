@@ -18,20 +18,20 @@ final isMobile = MediaQuery.of(context).size.shortestSide < 600;
 
 return Scaffold(
   appBar: AppBar(
-    title: Text(
+    title: const Text(
       'Orientation'), 
       ),
       drawer: isMobile ? Drawer(
         child: Container(
           color: Colors.blue,
-      width: 300, child: Center(child: Text('Sidebar'),),)): null, 
+      width: 300, child: const Center(child: Text('Sidebar'),),)): null, 
       body: Row(
         children: [
           if(!isMobile) 
           Container(
             color: Colors.blue, 
             width: 300,
-            child: Center(child: Text('Sidebar'),),
+            child: const Center(child: Text('Sidebar'),),
           ), 
           Expanded(
             child: GridView.count(
