@@ -21,10 +21,26 @@ return Scaffold(
     title: Text(
       'Orientation'), 
       ),
-      body: GridView.count(
-        crossAxisCount: isPortrait ? 2: 3, 
-      children: 
-        List.generate(40, (index) => Card(color: Colors.orange, child: Center(child: Text('Item $index'),),))
+      drawer: isMobile ? Drawer(
+        child: Container(
+          color: Colors.blue,
+      width: 300, child: Center(child: Text('Sidebar'),),)): null, 
+      body: Row(
+        children: [
+          if(!isMobile) 
+          Container(
+            color: Colors.blue, 
+            width: 300,
+            child: Center(child: Text('Sidebar'),),
+          ), 
+          Expanded(
+            child: GridView.count(
+              crossAxisCount: isPortrait ? 2: 3, 
+            children: 
+              List.generate(40, (index) => Card(color: Colors.orange, child: Center(child: Text('Item $index'),),))
+            ),
+          ),
+        ],
       )
 ); 
 
