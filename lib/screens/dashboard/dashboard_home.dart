@@ -13,6 +13,20 @@ class _DashboardHomeState extends State<DashboardHome> {
 
 //BREAKPOINT:
      return OrientationBuilder(builder: (context, orientation) {
+final isPortrait = orientation == Orientation.portrait; 
+final isMobile = MediaQuery.of(context).size.shortestSide < 600; 
+
+return Scaffold(
+  appBar: AppBar(
+    title: Text(
+      'Orientation'), 
+      ),
+      body: GridView.count(
+        crossAxisCount: isPortrait ? 2: 3, 
+      children: 
+        List.generate(40, (index) => Card(color: Colors.orange, child: Center(child: Text('Item $index'),),))
+      )
+); 
 
      }); 
     
