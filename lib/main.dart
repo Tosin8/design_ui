@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
+import 'package:ui_design/screens/dashboard/dashboard_home.dart';
 import 'package:ui_design/screens/fancy_refresh/fancy_refresh_home.dart';
 import 'package:ui_design/screens/hommy/splash_screen.dart';
 import 'package:ui_design/screens/minimal_shop/model/shop.dart';
@@ -52,7 +53,7 @@ class MyApp extends StatelessWidget {
     theme: ThemeData(
       primarySwatch: Colors.blue,
     ),
-    home: const FancyRefreshPage(), 
+    home: const DashboardHome(), 
 
     ); 
   }
