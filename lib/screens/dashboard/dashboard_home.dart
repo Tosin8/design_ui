@@ -10,10 +10,14 @@ class DashboardHome extends StatefulWidget {
 class _DashboardHomeState extends State<DashboardHome> {
   @override
   Widget build(BuildContext context) {
-
+    
+//BREAKPOINT:
+      bool isDesktop(BuildContext context) => MediaQuery.of(context).size.width >= 600;
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
     return  Scaffold( 
+
+      
 
       // KNOWING THE NUMBER SIZE: 
       // body: Center(
