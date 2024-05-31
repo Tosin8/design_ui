@@ -7,6 +7,30 @@ class StudentDashHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body:Container(
+        child: Row(
+          children: [
+            Expanded(
+              flex: 1,
+              child: Container(
+                
+                decoration: const BoxDecoration(color: Colors.blue),
+              ),
+            ), 
+            Expanded(
+              flex: 3,
+              child: Container(
+                decoration: const BoxDecoration(color: Colors.green),
+              )), 
+            Expanded(flex: 2,
+              child: Container(
+                decoration: const BoxDecoration(color: Colors.yellow),
+              ),
+            ), 
+          ],
+        ),
+      ) ,
+    );
   }
 }
