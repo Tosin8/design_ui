@@ -12,18 +12,18 @@ class StudentDashHome extends StatelessWidget {
         child: Row(
           children: [
             Expanded(
-              flex: 1,
+              flex: 2,
               child: Container(
                 
                 decoration: const BoxDecoration(color: Colors.blue),
               ),
             ), 
             Expanded(
-              flex: 3,
+              flex: 5,
               child: Container(
                 decoration: const BoxDecoration(color: Colors.green),
               )), 
-            Expanded(flex: 2,
+            Expanded(flex: 3,
               child: Container(
                 decoration: const BoxDecoration(color: Colors.yellow),
               ),
