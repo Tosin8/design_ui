@@ -19,14 +19,21 @@ class MiddleScreen extends StatelessWidget {
             const SizedBox(height: 20,),
 
             // 
-            const titleHeader( title: 'New Courses'), 
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                titleHeader( title: 'New Courses'),
+                Text('View All')
+              ],
+            ), 
             const SizedBox(height: 20,),
 
             // Subject Card
             Row(
               children: [
                 Container(
-                  width: 230,
+                  width: 260,
                   height: 160, 
                   decoration: BoxDecoration(
                     color: Colors.grey[300], 
@@ -34,15 +41,15 @@ class MiddleScreen extends StatelessWidget {
                     boxShadow: [
                       BoxShadow(
                         color: Colors.grey.shade500,
-                        offset: const Offset(3.0, 3.0), 
-                        blurRadius: 15.0,
+                        offset: const Offset(1.0, 1.0), 
+                        blurRadius: 12.0,
                         spreadRadius: 1.0,  
                       ), 
                       const BoxShadow(
                         color: Colors.white, 
-                        offset: Offset(-3.0, -3.0), 
+                        offset: Offset(-1.0, -1.0), 
                         spreadRadius: 1.0,  
-                        blurRadius: 15.0, 
+                        blurRadius: 12.0, 
                       ),
                     ],
                         
@@ -102,10 +109,10 @@ class MiddleScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(width: 16,), 
+                const SizedBox(width: 35,), 
 
                 Container(
-                  width: 230,
+                  width: 260,
                   height: 160, 
                   decoration: BoxDecoration(
                     color: Colors.grey[300], 
@@ -113,15 +120,15 @@ class MiddleScreen extends StatelessWidget {
                     boxShadow: [
                       BoxShadow(
                         color: Colors.grey.shade500,
-                        offset: const Offset(3.0, 3.0), 
-                        blurRadius: 15.0,
+                        offset: const Offset(1.0, 1.0), 
+                        blurRadius: 12.0,
                         spreadRadius: 1.0,  
                       ), 
                       const BoxShadow(
                         color: Colors.white, 
-                        offset: Offset(-3.0, -3.0), 
+                        offset: Offset(-1.0, -1.0), 
                         spreadRadius: 1.0,  
-                        blurRadius: 15.0, 
+                        blurRadius: 12.0, 
                       ),
                     ],
                         
@@ -142,12 +149,12 @@ class MiddleScreen extends StatelessWidget {
                               width: 46,
                                height: 46,
                               decoration: const BoxDecoration(
-                                color: Colors.pinkAccent, 
+                                color: Colors.greenAccent, 
                               shape: BoxShape.circle, 
                               ),
                               child: Padding( 
                                 padding: const EdgeInsets.all(10),
-                                child: Image.asset('assets/dashboard/icons/copy-writing.png', 
+                                child: Image.asset('assets/dashboard/icons/photography.png', 
                               ),
                               ),
                     
@@ -156,12 +163,12 @@ class MiddleScreen extends StatelessWidget {
                             const Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text('Content Writing',
+                                Text('Photography',
                                  style: TextStyle(color: Colors.black, 
                                  fontWeight: FontWeight.bold,
                                  wordSpacing: 2.0 ),), 
                                 SizedBox(height: 2,), 
-                                Text('12 Lessons', style: TextStyle(color: Colors.grey, fontWeight: FontWeight.w100),)
+                                Text('8 Lessons', style: TextStyle(color: Colors.grey, fontWeight: FontWeight.w100),)
                               ],
                             )
                           ],
@@ -173,7 +180,7 @@ class MiddleScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text('Type', style: TextStyle(color: Colors.grey),), 
-                            Text('Data Research', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),)
+                            Text('Arts and Design', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),)
                           ],
                         )
                       ],
@@ -181,9 +188,9 @@ class MiddleScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(width: 16,), 
+                const SizedBox(width: 35,), 
                 Container(
-                  width: 230,
+                  width: 260,
                   height: 160, 
                   decoration: BoxDecoration(
                     color: Colors.grey[300], 
@@ -191,15 +198,15 @@ class MiddleScreen extends StatelessWidget {
                     boxShadow: [
                       BoxShadow(
                         color: Colors.grey.shade500,
-                        offset: const Offset(3.0, 3.0), 
-                        blurRadius: 15.0,
+                        offset: const Offset(1.0, 1.0), 
+                        blurRadius: 12.0,
                         spreadRadius: 1.0,  
                       ), 
                       const BoxShadow(
                         color: Colors.white, 
-                        offset: Offset(-3.0, -3.0), 
+                        offset: Offset(-1.0, -1.0), 
                         spreadRadius: 1.0,  
-                        blurRadius: 15.0, 
+                        blurRadius: 12.0, 
                       ),
                     ],
                         
@@ -220,12 +227,12 @@ class MiddleScreen extends StatelessWidget {
                               width: 46,
                                height: 46,
                               decoration: const BoxDecoration(
-                                color: Colors.pinkAccent, 
+                                color: Colors.yellowAccent, 
                               shape: BoxShape.circle, 
                               ),
                               child: Padding( 
                                 padding: const EdgeInsets.all(10),
-                                child: Image.asset('assets/dashboard/icons/copy-writing.png', 
+                                child: Image.asset('assets/dashboard/icons/app.png', 
                               ),
                               ),
                     
@@ -234,12 +241,12 @@ class MiddleScreen extends StatelessWidget {
                             const Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text('Content Writing',
+                                Text('Mobile App Dev',
                                  style: TextStyle(color: Colors.black, 
                                  fontWeight: FontWeight.bold,
                                  wordSpacing: 2.0 ),), 
                                 SizedBox(height: 2,), 
-                                Text('12 Lessons', style: TextStyle(color: Colors.grey, fontWeight: FontWeight.w100),)
+                                Text('23 Lessons', style: TextStyle(color: Colors.grey, fontWeight: FontWeight.w100),)
                               ],
                             )
                           ],
@@ -251,7 +258,7 @@ class MiddleScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text('Type', style: TextStyle(color: Colors.grey),), 
-                            Text('Data Research', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),)
+                            Text('Softwared Dev', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),)
                           ],
                         )
                       ],
@@ -259,84 +266,8 @@ class MiddleScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(width: 16,), 
-                Container(
-                  width: 230,
-                  height: 160, 
-                  decoration: BoxDecoration(
-                    color: Colors.grey[300], 
-                    borderRadius: BorderRadius.circular(30), 
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.shade500,
-                        offset: const Offset(3.0, 3.0), 
-                        blurRadius: 15.0,
-                        spreadRadius: 1.0,  
-                      ), 
-                      const BoxShadow(
-                        color: Colors.white, 
-                        offset: Offset(-3.0, -3.0), 
-                        spreadRadius: 1.0,  
-                        blurRadius: 15.0, 
-                      ),
-                    ],
-                        
-                   
-                  ),
-                  child:  Padding(
-                    padding: const EdgeInsets.all(22.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                    
-                        // Top layer. 
-                        Row(
-                          children: [
-                
-                            // Course Image
-                            Container(
-                              width: 46,
-                               height: 46,
-                              decoration: const BoxDecoration(
-                                color: Colors.pinkAccent, 
-                              shape: BoxShape.circle, 
-                              ),
-                              child: Padding( 
-                                padding: const EdgeInsets.all(10),
-                                child: Image.asset('assets/dashboard/icons/copy-writing.png', 
-                              ),
-                              ),
-                    
-                            ), 
-                            const SizedBox(width: 16,), 
-                            const Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text('Content Writing',
-                                 style: TextStyle(color: Colors.black, 
-                                 fontWeight: FontWeight.bold,
-                                 wordSpacing: 2.0 ),), 
-                                SizedBox(height: 2,), 
-                                Text('12 Lessons', style: TextStyle(color: Colors.grey, fontWeight: FontWeight.w100),)
-                              ],
-                            )
-                          ],
-                        ), 
-                
-                const SizedBox(height: 20,), 
-                        // Bottom Layer
-                        const Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text('Type', style: TextStyle(color: Colors.grey),), 
-                            Text('Data Research', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),)
-                          ],
-                        )
-                      ],
-                      
-                    ),
-                  ),
-                ),
+            
+               
               ],
               
               
