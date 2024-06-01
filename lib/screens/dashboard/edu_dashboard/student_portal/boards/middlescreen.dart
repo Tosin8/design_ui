@@ -16,7 +16,7 @@ class MiddleScreen extends StatelessWidget {
           // mainAxisAlignment: MainAxisAlignment.end,
           children: [
             const UserCard(), 
-            const SizedBox(height: 20,),
+            const SizedBox(height: 15,),
 
             // 
             const Row(
@@ -24,10 +24,10 @@ class MiddleScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 titleHeader( title: 'New Courses'),
-                Text('View All')
+                Text('View All', style: TextStyle(color: Colors.grey, fontWeight: FontWeight.w100),)
               ],
             ), 
-            const SizedBox(height: 20,),
+            const SizedBox(height: 10,),
 
             // Subject Card
             Row(
@@ -36,8 +36,8 @@ class MiddleScreen extends StatelessWidget {
                   width: 260,
                   height: 160, 
                   decoration: BoxDecoration(
-                    color: Colors.grey[300], 
-                    borderRadius: BorderRadius.circular(30), 
+                    color: Colors.white, 
+                    borderRadius: BorderRadius.circular(15), 
                     boxShadow: [
                       BoxShadow(
                         color: Colors.grey.shade500,
@@ -115,8 +115,8 @@ class MiddleScreen extends StatelessWidget {
                   width: 260,
                   height: 160, 
                   decoration: BoxDecoration(
-                    color: Colors.grey[300], 
-                    borderRadius: BorderRadius.circular(30), 
+                    color: Colors.white, 
+                    borderRadius: BorderRadius.circular(15), 
                     boxShadow: [
                       BoxShadow(
                         color: Colors.grey.shade500,
@@ -193,8 +193,8 @@ class MiddleScreen extends StatelessWidget {
                   width: 260,
                   height: 160, 
                   decoration: BoxDecoration(
-                    color: Colors.grey[300], 
-                    borderRadius: BorderRadius.circular(30), 
+                    color: Colors.white, 
+                    borderRadius: BorderRadius.circular(15), 
                     boxShadow: [
                       BoxShadow(
                         color: Colors.grey.shade500,

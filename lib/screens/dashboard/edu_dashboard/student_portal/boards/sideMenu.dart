@@ -2,8 +2,15 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
-class SideMenu extends StatelessWidget {
+class SideMenu extends StatefulWidget {
   const SideMenu({super.key});
+
+  @override
+  State<SideMenu> createState() => _SideMenuState();
+}
+
+class _SideMenuState extends State<SideMenu> {
+  int selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -130,7 +137,7 @@ class SideMenu extends StatelessWidget {
   }
 }
 
-class NavMenu extends StatelessWidget {
+class NavMenu extends StatefulWidget {
   NavMenu({
     Key? key,
     //required this.index,
@@ -141,34 +148,44 @@ class NavMenu extends StatelessWidget {
   }) :  super(key: key);
 //final int index; 
 
-//int selectedIndex = 0; 
 final String title; 
 GestureTapCallback onTap; 
 final IconData iconLeading; 
 
+  @override
+  State<NavMenu> createState() => _NavMenuState();
+}
 
-//bool  isSelected = selectedIndex == index; 
+class _NavMenuState extends State<NavMenu> {
 
+  bool  _selectedIndex = false;
   @override
   Widget build(BuildContext context) {
+    
+
     return Padding(
       padding: const EdgeInsets.only(left: 2.0),
-      child: InkWell(
-      hoverColor: Colors.yellow,
-      
-        onTap: onTap, 
-      
-        child: ListTile(
-          onTap: () {
-            
-          },
-          splashColor: Colors.blue,
-          hoverColor: Colors.yellow,
-          selectedColor: Colors.yellow,
-          leading: Icon(iconLeading, color: Colors.white,),
-          title: Text(title,style: const TextStyle(color: Colors.white),),
-       
+      child: Container( 
+        decoration: BoxDecoration(borderRadius: BorderRadius.circular(8), 
+        color: _selectedIndex ? Colors.white : Colors.transparent),
+        child: InkWell(
+        hoverColor: Colors.yellow,
         
+          //onTap: widget.onTap, 
+        
+          child: ListTile(
+            onTap: () {
+              _selectedIndex =!_selectedIndex; 
+            },
+            splashColor: Colors.blue,
+            hoverColor: Colors.yellow,
+            selectedColor: Colors.yellow,
+            leading: Icon(widget.iconLeading, 
+            color: _selectedIndex ?  Colors.white: Colors.yellow),
+            title: Text(widget.title,style: const TextStyle(color: Colors.white),),
+         
+          
+          ),
         ),
       ),
     );

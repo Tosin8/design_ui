@@ -8,6 +8,7 @@ class StudentDashHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey.shade100,
       body:SafeArea(
         child: Row(
           children: [
