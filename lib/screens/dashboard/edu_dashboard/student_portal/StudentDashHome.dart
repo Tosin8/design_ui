@@ -18,11 +18,9 @@ class StudentDashHome extends StatelessWidget {
               child: SizedBox(child: SideMenu())
               ),
             
-            Expanded(
+            const Expanded(
               flex: 7,
-              child: Container(
-                child: SizedBox(child: MiddleScreen(),),
-              )), 
+              child: SizedBox(child: MiddleScreen(),)), 
             Expanded(flex: 3,
               child: Container(
                 decoration: const BoxDecoration(color: Colors.yellow),
