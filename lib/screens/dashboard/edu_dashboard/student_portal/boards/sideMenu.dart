@@ -72,23 +72,41 @@ class SideMenu extends StatelessWidget {
               ),
 
               SizedBox(height: 100,),
-              Container(
-                width: 200, height: 150,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10), color: Colors.yellowAccent, 
-                ), 
-                child: Padding(
-                  padding: const EdgeInsets.all(12.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
+             
+             // Ai Corner. 
+              Stack(
+                clipBehavior: Clip.none,
+                children:[ 
                   
-                      Text('Ask', style: TextStyle(fontSize: 18),), 
-                        Text('Samyie AI', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),), 
-                    ],
+                  Container(
+                  width: 200, height: 150,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10), color: Colors.yellowAccent, 
+                  ), 
+                  child: Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                    
+                        Text('Ask', style: TextStyle(fontSize: 18),), 
+                        SizedBox(height: 10,),
+                          Text('Samyie AI', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                          ),
+                         //  SizedBox(height: 12,), 
+                            Text('Your Academic Personal Assistant', style: TextStyle(fontSize: 12),), 
+                           
+                      ],
+                    ),
                   ),
                 ),
-              ), 
+                 Positioned(
+                  right: 0, bottom: 100,
+                   child: Container(
+                      width: 120, height: 120,
+                      child: Image.asset('assets/dashboard/bot.png', )),
+                 ),
+              ]  ), 
             ],
           ),
         ),
