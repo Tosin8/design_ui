@@ -59,6 +59,7 @@ dependencies:
   provider: ^6.1.2
   read_more_text: ^0.0.5
   readmore: ^3.0.0
+  shadow: ^1.5.0
   simple_shadow: ^0.3.1
   staggered_grid_view_flutter: ^0.0.4
   uuid: ^4.2.2
@@ -153,7 +154,6 @@ flutter:
     #dashboard
     - assets/dashboard/icons/
     - assets/dashboard/users/
-
     #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

@@ -1,8 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:iconsax/iconsax.dart';
 
 class SideMenu extends StatelessWidget {
@@ -82,6 +79,23 @@ class SideMenu extends StatelessWidget {
                   width: 200, height: 150,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10), color: Colors.yellowAccent, 
+                  boxShadow: [
+                  BoxShadow(
+                    //color: Colors.grey.shade500,
+                    color: Colors.yellowAccent.shade400,
+                    offset: const Offset(2.0, 2.0), 
+                    blurRadius: 15.0,
+                    spreadRadius: 1.0,  
+                  ), 
+                  const BoxShadow(
+                    color: Colors.white,
+                    //color: Colors.yellowAccent, 
+                    offset: Offset(-2.0, -2.0), 
+                    spreadRadius: 1.0,  
+                    blurRadius: 15.0, 
+                  ),
+                ],
+               
                   ), 
                   child: const Padding(
                     padding: EdgeInsets.all(12.0),
@@ -104,7 +118,8 @@ class SideMenu extends StatelessWidget {
                   right: 0, bottom: 100,
                    child: Container(
                       width: 120, height: 120,
-                      child: Image.asset('assets/dashboard/icons/bot.png', )),
+                      child: Image.asset('assets/dashboard/icons/bot.png',
+                       )),
                  ),
               ]  ), 
             ],

@@ -1,6 +1,4 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:ui_design/screens/dashboard/edu_dashboard/student_portal/boards/middlescreen.dart';
 import 'package:ui_design/screens/dashboard/edu_dashboard/student_portal/boards/sideMenu.dart';
 
