@@ -1,4 +1,6 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+
 import 'package:ui_design/screens/dashboard/edu_dashboard/student_portal/boards/middle_cards/user_card.dart';
 
 class MiddleScreen extends StatelessWidget {
@@ -9,19 +11,19 @@ class MiddleScreen extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
      child: Container(
-        child: ListView(
-          // crossAxisAlignment: CrossAxisAlignment.start,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           // mainAxisAlignment: MainAxisAlignment.end,
           children: [
             const UserCard(), 
             const SizedBox(height: 20,),
 
             // 
-            const Text('New Courses', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: Colors.grey),), 
+            const titleHeader( title: 'New Courses'), 
             const SizedBox(height: 20,),
 
             // Subject Card
-            ListView(
+            Row(
               children: [
                 Container(
                   width: 230,
@@ -344,5 +346,18 @@ class MiddleScreen extends StatelessWidget {
         ),
       ),
    );
+  }
+}
+
+class titleHeader extends StatelessWidget {
+  const titleHeader({
+    Key? key,
+    required this.title,
+  }) : super(key: key);
+
+final String title; 
+  @override
+  Widget build(BuildContext context) {
+    return  Text(title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: Colors.grey),);
   }
 }
