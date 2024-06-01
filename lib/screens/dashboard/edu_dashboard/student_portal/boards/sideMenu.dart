@@ -104,7 +104,7 @@ class SideMenu extends StatelessWidget {
                   right: 0, bottom: 100,
                    child: Container(
                       width: 120, height: 120,
-                      child: Image.asset('assets/dashboard/bot.png', )),
+                      child: Image.asset('assets/dashboard/icons/bot.png', )),
                  ),
               ]  ), 
             ],

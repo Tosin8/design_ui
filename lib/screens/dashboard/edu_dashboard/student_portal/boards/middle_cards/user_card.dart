@@ -23,7 +23,7 @@ class UserCard extends StatelessWidget {
               backgroundImage: AssetImage('assets/dashboard/users/1.jpg'),
             
             ), 
-            SizedBox(width: 20,), 
+            SizedBox(width: 30,), 
 
             // the student Info
           Column(
@@ -41,31 +41,46 @@ SizedBox(height: 10,),
                   children: [
                     CircleAvatar(
               radius: 10,
-              backgroundImage: AssetImage('assets/dashboard/users/.2jpg'),
+              backgroundImage: AssetImage('assets/dashboard/users/2.jpg'),
             
             ), 
                Positioned(
-                right: 4, 
+                right: -16, 
                  child: CircleAvatar(
                                radius: 10,
                                backgroundImage: AssetImage('assets/dashboard/users/3.jpg'),
                              
                              ),
                ),
-               CircleAvatar(
-              radius: 10,
-              backgroundImage: AssetImage('assets/dashboard/users/4.jpg'),
-            
-            ),
+                Positioned(
+                right: -30, 
+                 child: CircleAvatar(
+                               radius: 10,
+                               backgroundImage: AssetImage('assets/dashboard/users/4.jpg'),
+                             
+                             ),
+               ),
+              
                   ],
                 ), 
-                SizedBox(width: 10,), 
+                SizedBox(width: 40,), 
                 Text('+24 Classmates', style: TextStyle(color: Colors.white, fontSize: 10, ),)
               ],
             )
               ],
             ), 
 
+SizedBox(width: 60,), 
+// average score. 
+Column(
+  crossAxisAlignment: CrossAxisAlignment.start,
+  children: [
+    Text('72.6', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: Colors.white,),), 
+   // SizedBox(height: 10,), 
+    Text('Average Score', style: TextStyle(color: Colors.white),),
+    SizedBox(height: 5,), 
+  ],
+)
            
           ],
         ),
