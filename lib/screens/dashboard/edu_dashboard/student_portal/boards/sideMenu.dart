@@ -71,7 +71,7 @@ class SideMenu extends StatelessWidget {
               
               ),
 
-              SizedBox(height: 100,),
+              const SizedBox(height: 100,),
              
              // Ai Corner. 
               Stack(
@@ -83,8 +83,8 @@ class SideMenu extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10), color: Colors.yellowAccent, 
                   ), 
-                  child: Padding(
-                    padding: const EdgeInsets.all(12.0),
+                  child: const Padding(
+                    padding: EdgeInsets.all(12.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
