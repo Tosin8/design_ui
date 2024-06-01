@@ -151,7 +151,9 @@ flutter:
     - assets/minimal_shop/products/
 
     #dashboard
-    - assets/dashboard/
+    - assets/dashboard/icons/
+    - asssets/dashboard/users/
+
     #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
