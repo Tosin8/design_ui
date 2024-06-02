@@ -1,6 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 import 'package:ui_design/screens/dashboard/edu_dashboard/student_portal/boards/middle_cards/user_card.dart';
 
@@ -14,7 +13,7 @@ class MiddleScreen extends StatefulWidget {
 class _MiddleScreenState extends State<MiddleScreen> {
 
   String _dropdownvalue = 'Weekly'; 
-  var _items = [
+  final _items = [
     'Weekly', 
     'Monthly', 
     'Yearly'
@@ -25,7 +24,8 @@ class _MiddleScreenState extends State<MiddleScreen> {
       padding: const EdgeInsets.all(8.0),
      child: ListView(
       scrollDirection: Axis.vertical,
-       children:[ Container(
+       children:[
+         Container(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             // mainAxisAlignment: MainAxisAlignment.end,
@@ -34,265 +34,20 @@ class _MiddleScreenState extends State<MiddleScreen> {
               const SizedBox(height: 15,),
        
               // 
-              const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  titleHeader( title: 'New Courses'),
-                  Text('View All', style: TextStyle(color: Colors.grey, fontWeight: FontWeight.w100),)
-                ],
-              ), 
+              const NewCourseTitle(), 
               const SizedBox(height: 10,),
        
               // Subject Card
-              Row(
+              const Row(
                 children: [
-                  Container(
-                    width: 260,
-                    height: 160, 
-                    decoration: BoxDecoration(
-                      color: Colors.white, 
-                      borderRadius: BorderRadius.circular(15), 
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.shade500,
-                          offset: const Offset(1.0, 1.0), 
-                          blurRadius: 12.0,
-                          spreadRadius: 1.0,  
-                        ), 
-                        const BoxShadow(
-                          color: Colors.white, 
-                          offset: Offset(-1.0, -1.0), 
-                          spreadRadius: 1.0,  
-                          blurRadius: 12.0, 
-                        ),
-                      ],
-                          
-                     
-                    ),
-                    child:  Padding(
-                      padding: const EdgeInsets.all(22.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                      
-                          // Top layer. 
-                          Row(
-                            children: [
-                  
-                              // Course Image
-                              Container(
-                                width: 46,
-                                 height: 46,
-                                decoration: const BoxDecoration(
-                                  color: Colors.pinkAccent, 
-                                shape: BoxShape.circle, 
-                                ),
-                                child: Padding( 
-                                  padding: const EdgeInsets.all(10),
-                                  child: Image.asset('assets/dashboard/icons/copy-writing.png', 
-                                ),
-                                ),
-                      
-                              ), 
-                              const SizedBox(width: 16,), 
-                              const Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text('Content Writing',
-                                   style: TextStyle(color: Colors.black, 
-                                   fontWeight: FontWeight.bold,
-                                   wordSpacing: 2.0 ),), 
-                                  SizedBox(height: 2,), 
-                                  Text('12 Lessons', style: TextStyle(color: Colors.grey, fontWeight: FontWeight.w100),)
-                                ],
-                              )
-                            ],
-                          ), 
-                  
-                  const SizedBox(height: 20,), 
-                          // Bottom Layer
-                          const Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('Type', style: TextStyle(color: Colors.grey),), 
-                              Text('Data Research', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),)
-                            ],
-                          )
-                        ],
-                        
-                      ),
-                    ),
-                  ),
-                  const SizedBox(width: 35,), 
-       
-                  Container(
-                    width: 260,
-                    height: 160, 
-                    decoration: BoxDecoration(
-                      color: Colors.white, 
-                      borderRadius: BorderRadius.circular(15), 
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.shade500,
-                          offset: const Offset(1.0, 1.0), 
-                          blurRadius: 12.0,
-                          spreadRadius: 1.0,  
-                        ), 
-                        const BoxShadow(
-                          color: Colors.white, 
-                          offset: Offset(-1.0, -1.0), 
-                          spreadRadius: 1.0,  
-                          blurRadius: 12.0, 
-                        ),
-                      ],
-                          
-                     
-                    ),
-                    child:  Padding(
-                      padding: const EdgeInsets.all(22.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                      
-                          // Top layer. 
-                          Row(
-                            children: [
-                  
-                              // Course Image
-                              Container(
-                                width: 46,
-                                 height: 46,
-                                decoration: const BoxDecoration(
-                                  color: Colors.greenAccent, 
-                                shape: BoxShape.circle, 
-                                ),
-                                child: Padding( 
-                                  padding: const EdgeInsets.all(10),
-                                  child: Image.asset('assets/dashboard/icons/photography.png', 
-                                ),
-                                ),
-                      
-                              ), 
-                              const SizedBox(width: 16,), 
-                              const Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text('Photography',
-                                   style: TextStyle(color: Colors.black, 
-                                   fontWeight: FontWeight.bold,
-                                   wordSpacing: 2.0 ),), 
-                                  SizedBox(height: 2,), 
-                                  Text('8 Lessons', style: TextStyle(color: Colors.grey, fontWeight: FontWeight.w100),)
-                                ],
-                              )
-                            ],
-                          ), 
-                  
-                  const SizedBox(height: 20,), 
-                          // Bottom Layer
-                          const Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('Type', style: TextStyle(color: Colors.grey),), 
-                              Text('Arts and Design', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),)
-                            ],
-                          )
-                        ],
-                        
-                      ),
-                    ),
-                  ),
-                  const SizedBox(width: 35,), 
-                  Container(
-                    width: 260,
-                    height: 160, 
-                    decoration: BoxDecoration(
-                      color: Colors.white, 
-                      borderRadius: BorderRadius.circular(15), 
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.shade500,
-                          offset: const Offset(1.0, 1.0), 
-                          blurRadius: 12.0,
-                          spreadRadius: 1.0,  
-                        ), 
-                        const BoxShadow(
-                          color: Colors.white, 
-                          offset: Offset(-1.0, -1.0), 
-                          spreadRadius: 1.0,  
-                          blurRadius: 12.0, 
-                        ),
-                      ],
-                          
-                     
-                    ),
-                    child:  Padding(
-                      padding: const EdgeInsets.all(22.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                      
-                          // Top layer. 
-                          Row(
-                            children: [
-                  
-                              // Course Image
-                              Container(
-                                width: 46,
-                                 height: 46,
-                                decoration: const BoxDecoration(
-                                  color: Colors.yellowAccent, 
-                                shape: BoxShape.circle, 
-                                ),
-                                child: Padding( 
-                                  padding: const EdgeInsets.all(10),
-                                  child: Image.asset('assets/dashboard/icons/app.png', 
-                                ),
-                                ),
-                      
-                              ), 
-                              const SizedBox(width: 16,), 
-                              const Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text('Mobile App Dev',
-                                   style: TextStyle(color: Colors.black, 
-                                   fontWeight: FontWeight.bold,
-                                   wordSpacing: 2.0 ),), 
-                                  SizedBox(height: 2,), 
-                                  Text('23 Lessons', style: TextStyle(color: Colors.grey, fontWeight: FontWeight.w100),)
-                                ],
-                              )
-                            ],
-                          ), 
-                  
-                  const SizedBox(height: 20,), 
-                          // Bottom Layer
-                          const Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('Type', style: TextStyle(color: Colors.grey),), 
-                              Text('Softwared Dev', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),)
-                            ],
-                          )
-                        ],
-                        
-                      ),
-                    ),
-                  ),
-              
-                 
+                  SubjectCard1(),
+                  SizedBox(width: 35,), 
+                  SubjectCard2(),
+                  SizedBox(width: 35,), 
+                  SubjectCard3(),
                 ],
-                
-                
-                
               ), 
-       
-       
-       
-              // Second layer - hours activity and daily schedule. 
-       
+              // Second layer - hours activity and daily schedule.  
        const SizedBox(height: 12,), 
        
               Row(
@@ -384,41 +139,339 @@ class _MiddleScreenState extends State<MiddleScreen> {
        
                        // flchart. 
                     // BarChartSample1 
-                        ]
-                    )))]), 
-
-        Container(
-           width: 380,
-                    height: 400, 
-                      decoration: BoxDecoration(
-                      color: Colors.white, 
-                      borderRadius: BorderRadius.circular(15), 
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.shade500,
-                          offset: const Offset(1.0, 1.0), 
-                          blurRadius: 12.0,
-                          spreadRadius: 1.0,  
-                        ), 
-                        const BoxShadow(
-                          color: Colors.white, 
-                          offset: Offset(-1.0, -1.0), 
-                          spreadRadius: 1.0,  
-                          blurRadius: 12.0, 
-                        ),
-                      ],
-                          
+                        ], 
+                    ), 
+                    ), 
+                    ), 
+                    
                      
-                    ),
-                    child: const Column(
-                      children: [
-                      titleHeader(title: 'Daily Schedule')
-                      ],
-                    ),
-        ),            
-            ])),
-     ])); 
+
+        const DailyScheduleCard(),            
+            ]
+              ), 
+     
+     ], 
+     ),) 
+     ]));
  
+  }
+}
+
+class DailyScheduleCard extends StatelessWidget {
+  const DailyScheduleCard({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+       width: 380,
+                height: 400, 
+                  decoration: BoxDecoration(
+                  color: Colors.white, 
+                  borderRadius: BorderRadius.circular(15), 
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.shade500,
+                      offset: const Offset(1.0, 1.0), 
+                      blurRadius: 12.0,
+                      spreadRadius: 1.0,  
+                    ), 
+                    const BoxShadow(
+                      color: Colors.white, 
+                      offset: Offset(-1.0, -1.0), 
+                      spreadRadius: 1.0,  
+                      blurRadius: 12.0, 
+                    ),
+                  ],
+                      
+                 
+                ),
+                child: const Column(
+                  children: [
+                  titleHeader(title: 'Daily Schedule')
+                  ],
+                ),
+    );
+  }
+}
+
+class NewCourseTitle extends StatelessWidget {
+  const NewCourseTitle({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return const Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        titleHeader( title: 'New Courses'),
+        Text('View All', style: TextStyle(color: Colors.grey, fontWeight: FontWeight.w100),)
+      ],
+    );
+  }
+}
+
+class SubjectCard3 extends StatelessWidget {
+  const SubjectCard3({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 260,
+      height: 160, 
+      decoration: BoxDecoration(
+        color: Colors.white, 
+        borderRadius: BorderRadius.circular(15), 
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.shade500,
+            offset: const Offset(1.0, 1.0), 
+            blurRadius: 12.0,
+            spreadRadius: 1.0,  
+          ), 
+          const BoxShadow(
+            color: Colors.white, 
+            offset: Offset(-1.0, -1.0), 
+            spreadRadius: 1.0,  
+            blurRadius: 12.0, 
+          ),
+        ],
+            
+       
+      ),
+      child:  Padding(
+        padding: const EdgeInsets.all(22.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+        
+            // Top layer. 
+            Row(
+              children: [
+    
+                // Course Image
+                Container(
+                  width: 46,
+                   height: 46,
+                  decoration: const BoxDecoration(
+                    color: Colors.yellowAccent, 
+                  shape: BoxShape.circle, 
+                  ),
+                  child: Padding( 
+                    padding: const EdgeInsets.all(10),
+                    child: Image.asset('assets/dashboard/icons/app.png', 
+                  ),
+                  ),
+        
+                ), 
+                const SizedBox(width: 16,), 
+                const Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('Mobile App Dev',
+                     style: TextStyle(color: Colors.black, 
+                     fontWeight: FontWeight.bold,
+                     wordSpacing: 2.0 ),), 
+                    SizedBox(height: 2,), 
+                    Text('23 Lessons', style: TextStyle(color: Colors.grey, fontWeight: FontWeight.w100),)
+                  ],
+                )
+              ],
+            ), 
+    
+    const SizedBox(height: 20,), 
+            // Bottom Layer
+            const Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('Type', style: TextStyle(color: Colors.grey),), 
+                Text('Softwared Dev', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),)
+              ],
+            )
+          ],
+          
+        ),
+      ),
+    );
+  }
+}
+
+class SubjectCard2 extends StatelessWidget {
+  const SubjectCard2({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 260,
+      height: 160, 
+      decoration: BoxDecoration(
+        color: Colors.white, 
+        borderRadius: BorderRadius.circular(15), 
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.shade500,
+            offset: const Offset(1.0, 1.0), 
+            blurRadius: 12.0,
+            spreadRadius: 1.0,  
+          ), 
+          const BoxShadow(
+            color: Colors.white, 
+            offset: Offset(-1.0, -1.0), 
+            spreadRadius: 1.0,  
+            blurRadius: 12.0, 
+          ),
+        ],
+            
+       
+      ),
+      child:  Padding(
+        padding: const EdgeInsets.all(22.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+        
+            // Top layer. 
+            Row(
+              children: [
+    
+                // Course Image
+                Container(
+                  width: 46,
+                   height: 46,
+                  decoration: const BoxDecoration(
+                    color: Colors.greenAccent, 
+                  shape: BoxShape.circle, 
+                  ),
+                  child: Padding( 
+                    padding: const EdgeInsets.all(10),
+                    child: Image.asset('assets/dashboard/icons/photography.png', 
+                  ),
+                  ),
+        
+                ), 
+                const SizedBox(width: 16,), 
+                const Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('Photography',
+                     style: TextStyle(color: Colors.black, 
+                     fontWeight: FontWeight.bold,
+                     wordSpacing: 2.0 ),), 
+                    SizedBox(height: 2,), 
+                    Text('8 Lessons', style: TextStyle(color: Colors.grey, fontWeight: FontWeight.w100),)
+                  ],
+                )
+              ],
+            ), 
+    
+    const SizedBox(height: 20,), 
+            // Bottom Layer
+            const Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('Type', style: TextStyle(color: Colors.grey),), 
+                Text('Arts and Design', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),)
+              ],
+            )
+          ],
+          
+        ),
+      ),
+    );
+  }
+}
+
+class SubjectCard1 extends StatelessWidget {
+  const SubjectCard1({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 260,
+      height: 160, 
+      decoration: BoxDecoration(
+        color: Colors.white, 
+        borderRadius: BorderRadius.circular(15), 
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.shade500,
+            offset: const Offset(1.0, 1.0), 
+            blurRadius: 12.0,
+            spreadRadius: 1.0,  
+          ), 
+          const BoxShadow(
+            color: Colors.white, 
+            offset: Offset(-1.0, -1.0), 
+            spreadRadius: 1.0,  
+            blurRadius: 12.0, 
+          ),
+        ],
+            
+       
+      ),
+      child:  Padding(
+        padding: const EdgeInsets.all(22.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+        
+            // Top layer. 
+            Row(
+              children: [
+    
+                // Course Image
+                Container(
+                  width: 46,
+                   height: 46,
+                  decoration: const BoxDecoration(
+                    color: Colors.pinkAccent, 
+                  shape: BoxShape.circle, 
+                  ),
+                  child: Padding( 
+                    padding: const EdgeInsets.all(10),
+                    child: Image.asset('assets/dashboard/icons/copy-writing.png', 
+                  ),
+                  ),
+        
+                ), 
+                const SizedBox(width: 16,), 
+                const Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('Content Writing',
+                     style: TextStyle(color: Colors.black, 
+                     fontWeight: FontWeight.bold,
+                     wordSpacing: 2.0 ),), 
+                    SizedBox(height: 2,), 
+                    Text('12 Lessons', style: TextStyle(color: Colors.grey, fontWeight: FontWeight.w100),)
+                  ],
+                )
+              ],
+            ), 
+    
+    const SizedBox(height: 20,), 
+            // Bottom Layer
+            const Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('Type', style: TextStyle(color: Colors.grey),), 
+                Text('Data Research', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),)
+              ],
+            )
+          ],
+          
+        ),
+      ),
+    );
   }
 }
 
