@@ -273,6 +273,16 @@ class MiddleScreen extends StatelessWidget {
               
               
             ), 
+
+            // Second layer - hours activity and daily schedule. 
+            Row(
+              children: [
+                Expanded(
+                  child: Container(
+                  child: Column(),
+                ))
+              ],
+            )
           ],
         ),
       ),

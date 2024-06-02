@@ -2,25 +2,25 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
-class SideMenu extends StatefulWidget {
-  const SideMenu({super.key});
+class SideMenuMobile extends StatefulWidget {
+  const SideMenuMobile({super.key});
 
   @override
-  State<SideMenu> createState() => _SideMenuState();
+  State<SideMenuMobile> createState() => _SideMenuMobileState();
 }
 
-class _SideMenuState extends State<SideMenu> {
+class _SideMenuMobileState extends State<SideMenuMobile> {
   int selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Container(
-        // width: MediaQuery.of(context).size.width, 
-        // height: MediaQuery.of(context).size.height,
+     return 
+    // Padding(
+    //   padding: const EdgeInsets.all(1.0),
+    //   child: 
+    Container(
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
+          //borderRadius: BorderRadius.circular(20),
            color: const Color(0xff000000),
         ),
         child: Padding(
@@ -134,7 +134,7 @@ class _SideMenuState extends State<SideMenu> {
             ],
           ),
         ),
-        ),
+        
     );
   }
 }
