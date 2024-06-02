@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:provider/provider.dart';
-import 'package:ui_design/screens/dashboard/dashboard_home.dart';
-import 'package:ui_design/screens/dashboard/edu_dashboard/student_portal/StudentDashHome.dart';
-import 'package:ui_design/screens/minimal_shop/model/shop.dart';
+import 'package:ui_design/screens/dashboard/edu_dashboard/student_portal/responsive_layout/devices/tablet_scaffold.dart';
+
+import 'screens/dashboard/edu_dashboard/student_portal/responsive_layout/devices/desktop_scaffold.dart';
+import 'screens/dashboard/edu_dashboard/student_portal/responsive_layout/devices/mobile_scaffold.dart';
+import 'screens/dashboard/edu_dashboard/student_portal/responsive_layout/responsivelayout.dart';
 
 
 
@@ -75,7 +76,11 @@ class MyApp extends StatelessWidget {
     theme: ThemeData(
       primarySwatch: Colors.blue,
     ),
-    home: const StudentDashHome(), 
+    home: const Responsivelayout(
+      mobileScaffold: MobileView(),
+      tabletScaffold: TabletView(),
+      desktopScaffold: DesktopView(),
+      ), 
 
     ); 
   }
