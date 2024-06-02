@@ -189,19 +189,23 @@ class DailyScheduleCard extends StatelessWidget {
                  
                 ),
                 child:  Padding(
-                  padding: EdgeInsets.all(15.0),
+                  padding: const EdgeInsets.all(15.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                    titleHeader(title: 'Daily Schedule'), 
+                    const titleHeader(title: 'Daily Schedule'), 
                     ListTile(
                       leading: Container(
                         height: 40, width: 40, 
                         decoration: BoxDecoration(color: Colors.blueGrey.shade100, borderRadius: BorderRadius.circular(10)),
                         child: Image.asset('assets/dashboard/icons/design_system.png'),
                       ), 
-                      title: Text('Design System', style: TextStyle(color: Colors.black),),
-                      subtitle: Text('Lecture - Class 1', style: TextStyle(color: Colors.grey, fontSize: 10, fontWeight: FontWeight.w100,),),
+                      title: const Text('Design System', style: TextStyle(color: Colors.black),),
+                      subtitle: const Text('Lecture - Class 1', style: TextStyle(color: Colors.grey, fontSize: 10, fontWeight: FontWeight.w100,),),
+                      trailing: Container(
+                        width: 40, height: 40, 
+                        child: const Icon(Icons.arrow_forward_ios, color: Colors.black,),
+                      )
                     )
                     ],
                   ),
