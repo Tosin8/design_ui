@@ -386,7 +386,36 @@ class _MiddleScreenState extends State<MiddleScreen> {
                     // BarChartSample1 
                         ]
                     )))]), 
-                   
+
+        Container(
+           width: 380,
+                    height: 400, 
+                      decoration: BoxDecoration(
+                      color: Colors.white, 
+                      borderRadius: BorderRadius.circular(15), 
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.shade500,
+                          offset: const Offset(1.0, 1.0), 
+                          blurRadius: 12.0,
+                          spreadRadius: 1.0,  
+                        ), 
+                        const BoxShadow(
+                          color: Colors.white, 
+                          offset: Offset(-1.0, -1.0), 
+                          spreadRadius: 1.0,  
+                          blurRadius: 12.0, 
+                        ),
+                      ],
+                          
+                     
+                    ),
+                    child: const Column(
+                      children: [
+                      titleHeader(title: 'Daily Schedule')
+                      ],
+                    ),
+        ),            
             ])),
      ])); 
  
