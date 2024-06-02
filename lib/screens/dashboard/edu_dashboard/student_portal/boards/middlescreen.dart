@@ -275,18 +275,46 @@ class MiddleScreen extends StatelessWidget {
             ), 
 
             // Second layer - hours activity and daily schedule. 
+
+SizedBox(height: 12,), 
             Row(
               children: [
                 Expanded(
-                  child: Container(
-                  child: Column(),
-                ))
-              ],
-            )
-          ],
-        ),
-      ),
-   );
+
+child: Container(
+                  width: 260,
+                  height: 160, 
+                    decoration: BoxDecoration(
+                    color: Colors.white, 
+                    borderRadius: BorderRadius.circular(15), 
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.shade500,
+                        offset: const Offset(1.0, 1.0), 
+                        blurRadius: 12.0,
+                        spreadRadius: 1.0,  
+                      ), 
+                      const BoxShadow(
+                        color: Colors.white, 
+                        offset: Offset(-1.0, -1.0), 
+                        spreadRadius: 1.0,  
+                        blurRadius: 12.0, 
+                      ),
+                    ],
+                        
+                   
+                  ),
+                  child:  const Padding(
+                    padding: EdgeInsets.all(20.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        titleHeader(title: 'Hours Activity')
+                      ]
+                  ))))]), 
+                 
+          ]))); 
+ 
   }
 }
 
