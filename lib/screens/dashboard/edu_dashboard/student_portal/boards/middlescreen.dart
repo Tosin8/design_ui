@@ -1,5 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 import 'package:ui_design/screens/dashboard/edu_dashboard/student_portal/boards/middle_cards/user_card.dart';
 
@@ -187,12 +188,21 @@ class DailyScheduleCard extends StatelessWidget {
                       
                  
                 ),
-                child: const Padding(
+                child:  Padding(
                   padding: EdgeInsets.all(15.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                    titleHeader(title: 'Daily Schedule')
+                    titleHeader(title: 'Daily Schedule'), 
+                    ListTile(
+                      leading: Container(
+                        height: 40, width: 40, 
+                        decoration: BoxDecoration(color: Colors.blueGrey.shade100, borderRadius: BorderRadius.circular(10)),
+                        child: Image.asset('assets/dashboard/icons/design_system.png'),
+                      ), 
+                      title: Text('Design System', style: TextStyle(color: Colors.black),),
+                      subtitle: Text('Lecture - Class 1', style: TextStyle(color: Colors.grey, fontSize: 10, fontWeight: FontWeight.w100,),),
+                    )
                     ],
                   ),
                 ),
