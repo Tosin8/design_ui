@@ -1,4 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -150,6 +151,44 @@ class _MiddleScreenState extends State<MiddleScreen> {
         const DailyScheduleCard(),            
             ]
               ), 
+
+              // 
+              const SizedBox(height: 18,),
+              Row(
+                children: [
+                  const titleHeader(title: 'Course You\'re taking'),
+                  Expanded(child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      // active button. 
+                      Container(
+                       height: 30,
+                        decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(10)),
+                        child: const Padding(
+                          padding: EdgeInsets.all(3.0),
+                          child: Row(
+                            children: [
+                              Text('Active'), 
+                              Icon(Icons.keyboard_arrow_down_rounded),
+                            ],
+                          ),
+                        ),
+                      )
+                  , 
+                  const SizedBox(width: 10,), 
+                  Container(
+                    decoration: const BoxDecoration(
+                      shape: BoxShape.circle, 
+                      color: Colors.greenAccent
+                    ),
+                    child: const Icon(Icons.add, color: Colors.black,),
+                  )
+                    ],
+                  ),)
+                ],
+              )
+
+              // third layer - course being taken. 
      
      ], 
      ),) 
@@ -194,22 +233,98 @@ class DailyScheduleCard extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                     const titleHeader(title: 'Daily Schedule'), 
+
                     ListTile(
                       leading: Container(
                         height: 40, width: 40, 
                         decoration: BoxDecoration(color: Colors.blueGrey.shade100, borderRadius: BorderRadius.circular(10)),
-                        child: Image.asset('assets/dashboard/icons/design_system.png'),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8),
+                          child: Image.asset('assets/dashboard/icons/design_system.png')),
                       ), 
                       title: const Text('Design System', style: TextStyle(color: Colors.black),),
                       subtitle: const Text('Lecture - Class 1', style: TextStyle(color: Colors.grey, fontSize: 10, fontWeight: FontWeight.w100,),),
-                      trailing: Container(
-                        width: 40, height: 40, 
-                        child: const Icon(Icons.arrow_forward_ios, color: Colors.black,),
-                      )
+                      trailing: const DailyScheduleTrailing()
+                    ), 
+                    const SizedBox(height: 3,), 
+                     ListTile(
+                      leading: Container(
+                        height: 40, width: 40, 
+                        decoration: BoxDecoration(color: Colors.yellow, borderRadius: BorderRadius.circular(10)),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8),
+                          child: Image.asset('assets/dashboard/icons/typography.png')),
+                      ), 
+                      title: const Text('Typography', style: TextStyle(color: Colors.black),),
+                      subtitle: const Text('Group - Test', style: TextStyle(color: Colors.grey, fontSize: 10, fontWeight: FontWeight.w100,),),
+                      trailing: const DailyScheduleTrailing()
+                    ), 
+                    const SizedBox(width: 5,), 
+
+                     ListTile(
+                      leading: Container(
+                        height: 40, width: 40, 
+                        decoration: BoxDecoration(color: Colors.purple.shade100, borderRadius: BorderRadius.circular(10)),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8),
+                          child: Image.asset('assets/dashboard/icons/design_system.png')),
+                      ), 
+                      title: const Text('Color Style', style: TextStyle(color: Colors.black),),
+                      subtitle: const Text('Group - Test', style: TextStyle(color: Colors.grey, fontSize: 10, fontWeight: FontWeight.w100,),),
+                      trailing: const DailyScheduleTrailing()
+                    ), 
+                    const SizedBox(height: 5,), 
+                     ListTile(
+                      leading: Container(
+                        height: 40, width: 40, 
+                        decoration: BoxDecoration(color: Colors.pink.shade100, borderRadius: BorderRadius.circular(10)),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8),
+                          child: Image.asset('assets/dashboard/icons/visual-design.png')),
+                      ), 
+                      title: const Text('Visual Design', style: TextStyle(color: Colors.black),),
+                      subtitle: const Text('Lecture - Class 3', style: TextStyle(color: Colors.grey, fontSize: 10, fontWeight: FontWeight.w100,),),
+                      trailing: const DailyScheduleTrailing()
+                    ),
+                    const SizedBox(height: 5,), 
+                     ListTile(
+                      leading: Container(
+                        height: 40, width: 40, 
+                        decoration: BoxDecoration(color: Colors.orange.shade100, borderRadius: BorderRadius.circular(10)),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8),
+                          child: Image.asset('assets/dashboard/icons/security-testing.png')),
+                      ), 
+                      title: const Text('System Security', style: TextStyle(color: Colors.black),),
+                      subtitle: const Text('Lecture - Class 1', style: TextStyle(color: Colors.grey, fontSize: 10, fontWeight: FontWeight.w100,),),
+                      trailing: const DailyScheduleTrailing()
                     )
+          
                     ],
                   ),
                 ),
+    );
+  }
+}
+
+class DailyScheduleTrailing extends StatelessWidget {
+  const DailyScheduleTrailing({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        
+      },
+      child: Container(
+        width: 30, height: 30, 
+        decoration: BoxDecoration(color: Colors.grey[300], borderRadius: BorderRadius.circular(8)),
+        child: const Icon(Icons.arrow_forward_ios, 
+        size: 15,
+        color: Colors.black,),
+      ),
     );
   }
 }
