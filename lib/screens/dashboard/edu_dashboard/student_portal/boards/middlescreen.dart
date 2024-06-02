@@ -305,7 +305,7 @@ child: Container(
                    
                   ),
                   child:  const Padding(
-                    padding: EdgeInsets.all(20.0),
+                    padding: EdgeInsets.all(15.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
