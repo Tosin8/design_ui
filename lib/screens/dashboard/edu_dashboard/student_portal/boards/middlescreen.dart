@@ -57,7 +57,7 @@ class _MiddleScreenState extends State<MiddleScreen> {
        
                   // For activity and bar chart. 
           Container(
-                    width: 380,
+                    width: 440,
                     height: 400, 
                       decoration: BoxDecoration(
                       color: Colors.white, 
@@ -144,7 +144,7 @@ class _MiddleScreenState extends State<MiddleScreen> {
                     ), 
                     ), 
                     
-                     
+               const SizedBox(width: 20,),       
 
         const DailyScheduleCard(),            
             ]
@@ -187,10 +187,14 @@ class DailyScheduleCard extends StatelessWidget {
                       
                  
                 ),
-                child: const Column(
-                  children: [
-                  titleHeader(title: 'Daily Schedule')
-                  ],
+                child: const Padding(
+                  padding: EdgeInsets.all(15.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                    titleHeader(title: 'Daily Schedule')
+                    ],
+                  ),
                 ),
     );
   }
@@ -208,7 +212,7 @@ class NewCourseTitle extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         titleHeader( title: 'New Courses'),
-        Text('View All', style: TextStyle(color: Colors.grey, fontWeight: FontWeight.w100),)
+        Text('View All', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w100),)
       ],
     );
   }
@@ -484,6 +488,6 @@ class titleHeader extends StatelessWidget {
 final String title; 
   @override
   Widget build(BuildContext context) {
-    return  Text(title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: Colors.grey),);
+    return  Text(title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: Colors.black),);
   }
 }
