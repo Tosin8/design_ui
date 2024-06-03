@@ -7,7 +7,7 @@ class Rightscreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container( 
        
-color: Colors.yellow,
+color: Colors.grey[300], 
     );
   }
 }
