@@ -19,12 +19,17 @@ class Rightscreen extends StatelessWidget {
                 // Premium Card
                 PremiumCard(), 
                 SizedBox(height: 10,), 
+
+                // Assignments title. 
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     titleHeader(title: 'Assignments',),
-                    SizedBox(width: 10,), 
+              
+                    AddIcon (), 
                   ],
-                ), 
+                ),
+                SizedBox(height: 20,),  
               ],
             ),
           )
