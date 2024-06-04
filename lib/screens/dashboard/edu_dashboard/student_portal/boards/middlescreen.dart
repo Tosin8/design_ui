@@ -175,13 +175,7 @@ class _MiddleScreenState extends State<MiddleScreen> {
                       )
                   , 
                   const SizedBox(width: 10,), 
-                  Container(
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle, 
-                      color: Colors.greenAccent
-                    ),
-                    child: const Icon(Icons.add, color: Colors.black,),
-                  )
+                  AddIcon()
                     ],
                   ),)
                 ],
@@ -193,6 +187,23 @@ class _MiddleScreenState extends State<MiddleScreen> {
      ),) 
      ]));
  
+  }
+}
+
+class AddIcon extends StatelessWidget {
+  const AddIcon({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: const BoxDecoration(
+        shape: BoxShape.circle, 
+        color: Colors.greenAccent
+      ),
+      child: const Icon(Icons.add, color: Colors.black,),
+    );
   }
 }
 
