@@ -40,12 +40,43 @@ class Rightscreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(15), 
                     color: Colors.white
                   ),
-                  child:  const Column(
-                    children: [
-                      AssignmentCard()
-                    ],
+                  child:  const AssignmentCard(
+                        color: Colors.purple, 
+                        title: 'Methods of data', 
+                        subtitle: '07 July, 10:00 AM', 
+                        progressText: 'In Progress',
+                      ), 
+                ), 
+
+                const SizedBox(height: 20,), 
+                 Container(
+                  width: 360, height: 80, 
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15), 
+                    color: Colors.white
                   ),
-                ),  
+                  child:  const AssignmentCard(
+                        color: Colors.green, 
+                        title: 'Market Research', 
+                        subtitle: '03 July, 4:00 PM', 
+                        progressText: 'Completed',
+                      ), 
+                ), 
+                const SizedBox(height: 20,), 
+                 Container(
+                  width: 360, height: 80, 
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15), 
+                    color: Colors.white
+                  ),
+                  child:  const AssignmentCard(
+                        color: Colors.purple, 
+                        title: 'Data Collection', 
+                        subtitle: '12 July, 5:00 AM', 
+                        progressText: 'Upcoming',
+                      ), 
+                ), 
+
               ],
             ),
           )
