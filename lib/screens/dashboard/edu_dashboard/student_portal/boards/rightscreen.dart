@@ -19,7 +19,12 @@ class Rightscreen extends StatelessWidget {
                 // Premium Card
                 PremiumCard(), 
                 SizedBox(height: 10,), 
-                titleHeader(title: 'Assignments',), 
+                Row(
+                  children: [
+                    titleHeader(title: 'Assignments',),
+                    SizedBox(width: 10,), 
+                  ],
+                ), 
               ],
             ),
           )
