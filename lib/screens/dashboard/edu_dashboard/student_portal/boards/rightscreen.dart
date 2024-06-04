@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class Rightscreen extends StatelessWidget {
   const Rightscreen({super.key});
@@ -26,19 +24,19 @@ class Rightscreen extends StatelessWidget {
                     color: Colors.black
                   ),
                   child:  Padding(
-                    padding: EdgeInsets.all(20.0),
+                    padding: const EdgeInsets.all(20.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
 
                         // title 
-                        Text('Samyie', style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
+                        const Text('Samyie', style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
                         ),
                         
-                        SizedBox(height: 20,), 
+                        const SizedBox(height: 20,), 
                         Row(
                           children: [
-                            Column(
+                            const Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text('Go Premium', style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w500),
@@ -49,7 +47,7 @@ class Rightscreen extends StatelessWidget {
                                 ), 
                               ],
                             ), 
-                            SizedBox(width: 30,), 
+                            const SizedBox(width: 30,), 
                             Expanded(
                               child: Container(
                                 width: 80, 
@@ -58,7 +56,7 @@ class Rightscreen extends StatelessWidget {
                           ],
                         )
 , 
-SizedBox(height: 20,), 
+const SizedBox(height: 20,), 
 
 
 GestureDetector( 
@@ -69,7 +67,7 @@ GestureDetector(
       borderRadius: BorderRadius.circular(8),
       color: Colors.yellowAccent
     ),
-    child: Align(child: Text('Get Access')),
+    child: const Align(child: Text('Get Access')),
   ),
 )
 
