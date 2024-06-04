@@ -85,8 +85,8 @@ class Rightscreen extends StatelessWidget {
                   ),
                   child:  AssignmentCard(
                         color: Colors.purple, 
-                        title: 'Methods of data', 
-                        subtitle: '07 July, 10:00 AM', 
+                        title: 'Analysis of data', 
+                        subtitle: '06 July, 10:00 AM', 
                         progressText: 'In Progress',
                       ), 
                 ), 
