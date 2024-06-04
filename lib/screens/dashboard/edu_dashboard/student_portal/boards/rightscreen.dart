@@ -33,7 +33,7 @@ class Rightscreen extends StatelessWidget {
                     AddIcon (), 
                   ],
                 ),
-                const SizedBox(height: 20,), 
+                const SizedBox(height: 16,), 
                 Container(
                   width: 360, height: 80, 
                   decoration: BoxDecoration(
@@ -48,7 +48,7 @@ class Rightscreen extends StatelessWidget {
                       ), 
                 ), 
 
-                const SizedBox(height: 20,), 
+                const SizedBox(height: 16,), 
                  Container(
                   width: 360, height: 80, 
                   decoration: BoxDecoration(
@@ -62,7 +62,7 @@ class Rightscreen extends StatelessWidget {
                         progressText: 'Completed',
                       ), 
                 ), 
-                const SizedBox(height: 20,), 
+                const SizedBox(height: 16,), 
                  Container(
                   width: 360, height: 80, 
                   decoration: BoxDecoration(
@@ -74,6 +74,20 @@ class Rightscreen extends StatelessWidget {
                         title: 'Data Collection', 
                         subtitle: '12 July, 5:00 AM', 
                         progressText: 'Upcoming',
+                      ), 
+                ), 
+                SizedBox(height: 16,), 
+                 Container(
+                  width: 360, height: 80, 
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15), 
+                    color: Colors.white
+                  ),
+                  child:  AssignmentCard(
+                        color: Colors.purple, 
+                        title: 'Methods of data', 
+                        subtitle: '07 July, 10:00 AM', 
+                        progressText: 'In Progress',
                       ), 
                 ), 
 
