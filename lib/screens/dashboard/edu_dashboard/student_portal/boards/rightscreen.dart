@@ -1,4 +1,8 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+
 import 'package:ui_design/screens/dashboard/edu_dashboard/student_portal/boards/middlescreen.dart';
 
 class Rightscreen extends StatelessWidget {
@@ -12,16 +16,16 @@ class Rightscreen extends StatelessWidget {
          scrollDirection: Axis.vertical, 
          children: [
           Container(
-            child:  const Column(
+            child:  Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
       
                 // Premium Card
-                PremiumCard(), 
-                SizedBox(height: 10,), 
+                const PremiumCard(), 
+                const SizedBox(height: 10,), 
 
                 // Assignments title. 
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     titleHeader(title: 'Assignments',),
@@ -29,12 +33,71 @@ class Rightscreen extends StatelessWidget {
                     AddIcon (), 
                   ],
                 ),
-                SizedBox(height: 20,),  
+                const SizedBox(height: 20,), 
+                Container(
+                  width: 360, height: 80, 
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15), 
+                    color: Colors.white
+                  ),
+                  child:  const Column(
+                    children: [
+                      AssignmentCard()
+                    ],
+                  ),
+                ),  
               ],
             ),
           )
          ],
       
+      ),
+    );
+  }
+}
+
+class AssignmentCard extends StatelessWidget {
+  const AssignmentCard({
+    Key? key,
+    required this.color,
+    required this.subtitle,
+    required this.progressText, required this.title,
+  }) : super(key: key);
+
+final String title; 
+final Color color; 
+final String subtitle;
+final String progressText;
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(14.0),
+      child: Row(
+        children: [
+          const SizedBox(width: 10,), 
+           Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+               
+              Text(title, 
+              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),), 
+              const SizedBox(height: 7,), 
+              Text(subtitle,
+               style: const TextStyle(color: Colors.grey, fontSize: 12, fontWeight: FontWeight.w200),),
+            ],
+          ), 
+          const SizedBox(width: 60,), 
+          Container(
+            height: 30, width: 100,
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(16),
+      color: color,  
+    ),
+    child:  Align(child: Text(progressText, style: const TextStyle(color: Colors.white, fontSize: 12, fontWeight: FontWeight.bold),)),
+          ),
+        ],
       ),
     );
   }
