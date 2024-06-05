@@ -24,13 +24,13 @@ class _MiddleScreenState extends State<MiddleScreen> {
   @override
   Widget build(BuildContext context) {
     List<double> hourlyWorking = [
-    1, 
-    2, 
-    4, 
-    6, 
-    10, 
-    12, 
-    16, 
+    22, 
+    67.7, 
+    55.9, 
+    78, 
+    78, 
+    34.9, 
+    28.8, 
   ];
     return Padding(
       padding: const EdgeInsets.all(8.0),
