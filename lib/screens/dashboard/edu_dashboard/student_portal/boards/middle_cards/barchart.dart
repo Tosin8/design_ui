@@ -11,11 +11,11 @@ class _BarChartState extends State<BarChart> {
 
   // Hourly Reading: 
   List<double> hourlyWorking = [
-    1, 
-    2, 
-    4, 
-    6, 
-    10
+    22, 
+    67.5, 
+    55.9, 
+    78, 
+    34.9
   ]; 
   @override
   Widget build(BuildContext context) {
