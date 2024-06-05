@@ -139,7 +139,7 @@ class _MiddleScreenState extends State<MiddleScreen> {
                        ,
        
                        // flchart. 
-                    // BarChartSample1 
+                     BarChart
                         ], 
                     ), 
                     ), 
