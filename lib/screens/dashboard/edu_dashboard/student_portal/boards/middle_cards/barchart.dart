@@ -8,6 +8,15 @@ class BarChart extends StatefulWidget {
 }
 
 class _BarChartState extends State<BarChart> {
+
+  // Hourly Reading: 
+  List<double> hourlyWorking = [
+    1, 
+    2, 
+    4, 
+    6, 
+    10
+  ]; 
   @override
   Widget build(BuildContext context) {
     return const Placeholder();

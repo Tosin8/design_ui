@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 
 import 'package:ui_design/screens/dashboard/edu_dashboard/student_portal/boards/middle_cards/user_card.dart';
 
+import 'middle_cards/barchart.dart';
+
 class MiddleScreen extends StatefulWidget {
   const MiddleScreen({super.key});
 
@@ -139,7 +141,7 @@ class _MiddleScreenState extends State<MiddleScreen> {
                        ,
        
                        // flchart. 
-                     BarChart
+                     BarChart(), 
                         ], 
                     ), 
                     ), 
