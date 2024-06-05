@@ -9,7 +9,14 @@ class BarData {
   final double friActivity; 
   final double satActivity;
 
-  BarData({required this.sunActivity, required this.monActivity, required this.tueActivity, required this.wedActivity, required this.thurActivity, required this.friActivity, required this.satActivity}); 
+  BarData({
+    required this.sunActivity, 
+  required this.monActivity,
+   required this.tueActivity,
+    required this.wedActivity,
+     required this.thurActivity,
+      required this.friActivity,
+       required this.satActivity}); 
 
   List<IndividualBar> barData = []; 
 
@@ -17,12 +24,12 @@ class BarData {
   void initializeBarData() {
     barData = [
     IndividualBar(x: 0 , y: sunActivity), 
-     IndividualBar(x: 0 , y: monActivity),  
-     IndividualBar(x: 0 , y: tueActivity),  
-     IndividualBar(x: 0 , y: wedActivity), 
-      IndividualBar(x: 0 , y: thurActivity),  
-      IndividualBar(x: 0 , y: friActivity), 
-       IndividualBar(x: 0 , y: satActivity), 
+     IndividualBar(x: 1 , y: monActivity),  
+     IndividualBar(x: 2 , y: tueActivity),  
+     IndividualBar(x: 3 , y: wedActivity), 
+      IndividualBar(x: 4 , y: thurActivity),  
+      IndividualBar(x: 5 , y: friActivity), 
+       IndividualBar(x: 6 , y: satActivity), 
     ]; 
   }
 }

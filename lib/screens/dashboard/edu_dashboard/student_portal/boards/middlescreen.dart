@@ -1,9 +1,9 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+import 'package:ui_design/screens/dashboard/edu_dashboard/student_portal/boards/middle_cards/graph/bar_graph.dart';
 
 import 'package:ui_design/screens/dashboard/edu_dashboard/student_portal/boards/middle_cards/user_card.dart';
 
-import 'middle_cards/barchart.dart';
 
 class MiddleScreen extends StatefulWidget {
   const MiddleScreen({super.key});
@@ -23,6 +23,15 @@ class _MiddleScreenState extends State<MiddleScreen> {
   
   @override
   Widget build(BuildContext context) {
+    List<double> hourlyWorking = [
+    1, 
+    2, 
+    4, 
+    6, 
+    10, 
+    12, 
+    16, 
+  ];
     return Padding(
       padding: const EdgeInsets.all(8.0),
      child: ListView(
@@ -137,11 +146,16 @@ class _MiddleScreenState extends State<MiddleScreen> {
                               ))
        
                              ))   ],
-                          )
-                       ,
+                          ), 
+                       
+                       SizedBox(height: 60,), 
        
                        // flchart. 
-                     BarChart(), 
+                     SizedBox(
+                      height: 230,
+                      child: MyBarGraph(
+                        hourlyWorking: hourlyWorking,
+                        )), 
                         ], 
                     ), 
                     ), 
@@ -177,7 +191,7 @@ class _MiddleScreenState extends State<MiddleScreen> {
                       )
                   , 
                   const SizedBox(width: 10,), 
-                  AddIcon()
+                  const AddIcon()
                     ],
                   ),)
                 ],

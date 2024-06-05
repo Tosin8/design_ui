@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class BarChart extends StatefulWidget {
-  const BarChart({super.key});
+  const BarChart(barChatData, {super.key});
 
   @override
   State<BarChart> createState() => _BarChartState();
