@@ -195,13 +195,13 @@ class _MiddleScreenState extends State<MiddleScreen> {
                     ],
                   ),)
                 ],
-              )
+              ), 
 
               // third layer - course being taken. 
 
      Container(
-       width: 380,
-                height: 400, 
+       width:   1000,
+                height: 80, 
                   decoration: BoxDecoration(
                   color: Colors.white, 
                   borderRadius: BorderRadius.circular(15), 
