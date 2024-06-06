@@ -1,9 +1,9 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+import 'package:percent_indicator/circular_percent_indicator.dart';
+
 import 'package:ui_design/screens/dashboard/edu_dashboard/student_portal/boards/middle_cards/graph/bar_graph.dart';
-
 import 'package:ui_design/screens/dashboard/edu_dashboard/student_portal/boards/middle_cards/user_card.dart';
-
 
 class MiddleScreen extends StatefulWidget {
   const MiddleScreen({super.key});
@@ -148,7 +148,7 @@ class _MiddleScreenState extends State<MiddleScreen> {
                              ))   ],
                           ), 
                        
-                       SizedBox(height: 60,), 
+                       const SizedBox(height: 60,), 
        
                        // flchart. 
                      SizedBox(
@@ -199,36 +199,122 @@ class _MiddleScreenState extends State<MiddleScreen> {
 
               // third layer - course being taken. 
 
-     Container(
-       width:   1000,
-                height: 80, 
-                  decoration: BoxDecoration(
-                  color: Colors.white, 
-                  borderRadius: BorderRadius.circular(15), 
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.shade500,
-                      offset: const Offset(1.0, 1.0), 
-                      blurRadius: 12.0,
-                      spreadRadius: 1.0,  
-                    ), 
-                    const BoxShadow(
-                      color: Colors.white, 
-                      offset: Offset(-1.0, -1.0), 
-                      spreadRadius: 1.0,  
-                      blurRadius: 12.0, 
-                    ),
-                  ],
-                      
+     const CourseTakeCard(
+      courseCount: 0.4,
+      courseName: '3D Design Course',
+      courseTutor: 'Dr.Yen Ben',
+      courseTime: '6hr 50mins',
+      courseProgress: 15,
+      courseProgressNum: '40%',), 
+
+      SizedBox(height: 10,), 
+
+      const CourseTakeCard(
+      courseCount: 0.8,
+      courseName: 'Polymetric and Polygon',
+      courseTutor: 'Prof.Sara',
+      courseTime: '46mins',
+      courseProgress: 15,
+      courseProgressNum: '80%',), 
                  
-                ),
-                child: Text('Helllo'), 
-                ), 
                 
      ], 
      ),) 
      ]));
  
+  }
+}
+
+class CourseTakeCard extends StatelessWidget {
+  const CourseTakeCard({
+    Key? key,
+    required this.courseName,
+    required this.courseTutor,
+    required this.courseTime,
+    required this.courseProgress,
+    required this.courseProgressNum,
+    required this.courseCount,
+  }) : super(key: key);
+final String courseName; 
+final String courseTutor; 
+final String courseTime; 
+final double courseProgress;
+final String courseProgressNum; 
+final double courseCount; 
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width:   840,
+               height: 80, 
+                 decoration: BoxDecoration(
+                 color: Colors.white, 
+                 borderRadius: BorderRadius.circular(15), 
+                 boxShadow: [
+                   BoxShadow(
+                     color: Colors.grey.shade500,
+                     offset: const Offset(1.0, 1.0), 
+                     blurRadius: 12.0,
+                     spreadRadius: 1.0,  
+                   ), 
+                   const BoxShadow(
+                     color: Colors.white, 
+                     offset: Offset(-1.0, -1.0), 
+                     spreadRadius: 1.0,  
+                     blurRadius: 12.0, 
+                   ),
+                 ],
+                     
+                
+               ),
+               child: 
+                       Padding(
+                         padding: const EdgeInsets.all(18.0),
+                         child: Row(
+                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                           children: [
+                              Column(
+                               crossAxisAlignment: CrossAxisAlignment.start,
+                               children: [
+                                 Text(courseName, 
+                                 style: const TextStyle(fontWeight: FontWeight.bold),),
+                                 Text(courseTutor, style: const TextStyle(color: Colors.grey),),
+                               ],
+                             ), 
+                              Column(
+                               children: [
+                                 const Text('Remaining'),
+                                 Text(courseTime, 
+                                 style: const TextStyle(fontWeight: FontWeight.bold),)
+                               
+                               ],
+                             ), 
+                            Row(
+                              children: [
+                                CircularPercentIndicator(
+                                 circularStrokeCap: CircularStrokeCap.round,
+                                 lineWidth: 4,
+                                 animation: true, 
+                                 animationDuration: Duration.secondsPerHour,
+                                 radius: courseProgress, 
+                                 percent: courseCount, progressColor: Colors.blue,
+                                                            //   center: const Text('40%', style: TextStyle(fontSize: 8),
+                                 
+                                 ),
+                                 const SizedBox(width: 8,), 
+                                  Text(courseProgressNum,style: const TextStyle(fontSize: 16),)
+                              ],
+                            ),
+                         
+                             
+                           ],
+                         ),
+                       ),
+                      
+                     
+                   
+                 
+               );
   }
 }
 
@@ -389,11 +475,14 @@ class NewCourseTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+     //  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         titleHeader( title: 'New Courses'),
-        Text('View All', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w100),)
+       // SizedBox(width: 100,), 
+       Spacer(flex: 1,),
+        Text('View All', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w100),), 
+        SizedBox(width: 2,), 
       ],
     );
   }
