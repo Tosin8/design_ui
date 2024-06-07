@@ -14,13 +14,11 @@ class _SideMenuTState extends State<SideMenuT> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Container(
-        // width: MediaQuery.of(context).size.width, 
-        // height: MediaQuery.of(context).size.height,
+    return  Container(
+         width: 40,  
+         height: MediaQuery.of(context).size.height, 
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
+//borderRadius: BorderRadius.circular(20),
            color: const Color(0xff000000),
         ),
         child: Padding(
@@ -28,8 +26,9 @@ class _SideMenuTState extends State<SideMenuT> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              SizedBox(height: 10,), 
               const Text('Samyie', style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold, wordSpacing: 3.0),), 
-              const SizedBox(height: 30,), 
+              const SizedBox(height: 20,), 
 
               // nav. bar menu 
               NavMenu(
@@ -77,7 +76,7 @@ class _SideMenuTState extends State<SideMenuT> {
               
               ),
 
-              const SizedBox(height: 100,),
+              const SizedBox(height: 50,),
              
              // Ai Corner. 
               Stack(
@@ -134,7 +133,7 @@ class _SideMenuTState extends State<SideMenuT> {
             ],
           ),
         ),
-        ),
+        
     );
   }
 }
