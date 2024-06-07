@@ -9,10 +9,10 @@ class UserCardM extends StatelessWidget {
       
       decoration: BoxDecoration(
         color: Colors.black, 
-        borderRadius: BorderRadius.circular(16), 
+        borderRadius: BorderRadius.circular(3), 
       ),
       height: 110,
-      width: 300, 
+      width: 450, 
       child: const Padding( 
         padding: EdgeInsets.all(18),
         child: Row(
@@ -30,7 +30,7 @@ class UserCardM extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text('Hannah Hill', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
-                Text('Computer Science Student', style: TextStyle(color: Colors.grey, fontSize: 12, fontWeight: FontWeight.w200),), 
+                Text('Computer Science Student', style: TextStyle(color: Colors.grey, fontSize: 15, fontWeight: FontWeight.w200),), 
 
 SizedBox(height: 10,), 
                  // Users Info
@@ -70,17 +70,7 @@ SizedBox(height: 10,),
               ],
             ), 
 
-SizedBox(width: 60,), 
-// average score. 
-Column(
-  crossAxisAlignment: CrossAxisAlignment.start,
-  children: [
-    Text('72.6', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: Colors.white,),), 
-   // SizedBox(height: 10,), 
-    Text('Average Score', style: TextStyle(color: Colors.white),),
-    SizedBox(height: 5,), 
-  ],
-)
+
            
           ],
         ),
