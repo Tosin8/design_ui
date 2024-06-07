@@ -5,6 +5,8 @@ import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:ui_design/screens/dashboard/edu_dashboard/student_portal/boards/middle_cards/graph/bar_graph.dart';
 import 'package:ui_design/screens/dashboard/edu_dashboard/student_portal/boards/middle_cards/user_card.dart';
 
+import '../../../boards/rightscreen.dart';
+
 class MiddleScreenT extends StatefulWidget {
   const MiddleScreenT({super.key});
 
@@ -33,7 +35,7 @@ class _MiddleScreenTState extends State<MiddleScreenT> {
     28.8, 
   ];
     return Padding(
-      padding: const EdgeInsets.all(10.0),
+      padding: const EdgeInsets.all(14.0),
      child: ListView(
       scrollDirection: Axis.vertical,
        children:[
@@ -207,7 +209,7 @@ class _MiddleScreenTState extends State<MiddleScreenT> {
       courseProgress: 15,
       courseProgressNum: '40%',), 
 
-      SizedBox(height: 10,), 
+      const SizedBox(height: 10,), 
 
       const CourseTakeCard(
       courseCount: 0.8,
@@ -216,12 +218,166 @@ class _MiddleScreenTState extends State<MiddleScreenT> {
       courseTime: '46mins',
       courseProgress: 15,
       courseProgressNum: '80%',), 
+      const SizedBox(height: 10,), 
+      const PremiumCardT(), 
+       const SizedBox(height: 10,), 
+
+                // Assignments title. 
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    titleHeader(title: 'Assignments',),
+              
+                    AddIcon (), 
+                  ],
+                ),
+                const SizedBox(height: 16,), 
+          Row(
+            children: [
+              Container(
+                      width: 360, height: 80, 
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15), 
+                        color: Colors.white
+                      ),
+                      child:  const AssignmentCard(
+                            color: Colors.purple, 
+                            title: 'Methods of data', 
+                            subtitle: '07 July, 10:00 AM', 
+                            progressText: 'In Progress',
+                          ), 
+                    ),
+                    const SizedBox(width: 20,), 
+                      Container(
+                  width: 360, height: 80, 
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15), 
+                    color: Colors.white
+                  ),
+                  child:  const AssignmentCard(
+                        color: Colors.green, 
+                        title: 'Market Research', 
+                        subtitle: '03 July, 4:00 PM', 
+                        progressText: 'Completed',
+                      ), 
+                ), 
+            ],
+          ), 
+
+             
+               
+                const SizedBox(height: 16,), 
+                 Row(
+                   children: [
+                     Container(
+                      width: 360, height: 80, 
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15), 
+                        color: Colors.white
+                      ),
+                      child:  const AssignmentCard(
+                            color: Colors.purple, 
+                            title: 'Data Collection', 
+                            subtitle: '12 July, 5:00 AM', 
+                            progressText: 'Upcoming',
+                          ), 
+                                     ),
+
+                                     const SizedBox(width: 20,), 
+
+                                     Container(
+                  width: 360, height: 80, 
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15), 
+                    color: Colors.white
+                  ),
+                  child:  const AssignmentCard(
+                        color: Colors.purple, 
+                        title: 'Analysis of data', 
+                        subtitle: '06 July, 10:00 AM', 
+                        progressText: 'In Progress',
+                      ), 
+                ),        
+      
+                   ],
+                 ), 
+               
+                 
                  
                 
      ], 
      ),) 
      ]));
  
+  }
+}
+
+class PremiumCardT extends StatelessWidget {
+  const PremiumCardT({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 220, 
+      width: 380, 
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20), 
+        color: Colors.black
+      ),
+      child:  Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+    
+            // title 
+            const Text('Samyie', style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            
+            const SizedBox(height: 1,), 
+            Row(
+              children: [
+                const Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('Go Premium', style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w500),
+                    ), 
+    
+                    SizedBox(height: 3,),
+                    Text('Explore 200+ Courses with \nPremium Membership', style: TextStyle(color: Colors.grey, fontSize: 12, fontWeight: FontWeight.w200),
+                    ), 
+                  ],
+                ), 
+                const SizedBox(width: 30,), 
+                Expanded(
+                  child: Container(
+                    width: 100, 
+                    height: 120,
+                    child: Image.asset('assets/dashboard/icons/model.png')))
+              ],
+            )
+    , 
+    const SizedBox(height: 1,), 
+    
+    
+    GestureDetector( 
+      onTap: () {}, 
+      child: Container(
+        height: 32, width: 120,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(8),
+          color: Colors.yellowAccent
+        ),
+        child: const Align(child: Text('Get Access')),
+      ),
+    )
+    
+          ],
+        ),
+      ),
+    );
   }
 }
 
@@ -344,7 +500,7 @@ class DailyScheduleCardT extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
        width: 380,
-                height: 400, 
+                height: 420, 
                   decoration: BoxDecoration(
                   color: Colors.white, 
                   borderRadius: BorderRadius.circular(15), 
