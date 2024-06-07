@@ -564,7 +564,7 @@ class SubjectCard3 extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text('Type', style: TextStyle(color: Colors.grey),), 
-                Text('Softwared Dev', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),)
+                Text('Software Dev', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),)
               ],
             )
           ],
