@@ -147,6 +147,55 @@ String _dropdownvalue = 'Weekly';
 
 const SizedBox(height: 10,), 
 const DailyScheduleCardM(), 
+const SizedBox(height: 10,), 
+Row(
+                children: [
+                  const titleHeader(title: 'Course You\'re taking'),
+                  Expanded(child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      // active button. 
+                      Container(
+                       height: 30,
+                        decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(10)),
+                        child: const Padding(
+                          padding: EdgeInsets.all(3.0),
+                          child: Row(
+                            children: [
+                              Text('Active'), 
+                              Icon(Icons.keyboard_arrow_down_rounded),
+                            ],
+                          ),
+                        ),
+                      )
+                  , 
+                  const SizedBox(width: 10,), 
+                  const AddIcon()
+                    ],
+                  ),)
+                ],
+              ), 
+    
+    const SizedBox(height: 10,), 
+
+    // third layer - course being taken. 
+    const CourseTakeCard(
+      courseCount: 0.4,
+      courseName: '3D Design Course',
+      courseTutor: 'Dr.Yen Ben',
+      courseTime: '6hr 50mins',
+      courseProgress: 15,
+      courseProgressNum: '40%',),
+       const SizedBox(height: 10,), 
+
+      const CourseTakeCard(
+      courseCount: 0.8,
+      courseName: 'Polymetric and Polygon',
+      courseTutor: 'Prof.Sara',
+      courseTime: '46mins',
+      courseProgress: 15,
+      courseProgressNum: '80%',), 
+                 
         ],
       ),
     );
