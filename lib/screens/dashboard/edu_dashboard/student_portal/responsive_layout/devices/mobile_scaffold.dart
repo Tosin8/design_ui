@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ui_design/screens/dashboard/edu_dashboard/student_portal/boards/sideMenuMobile.dart';
+import 'package:ui_design/screens/dashboard/edu_dashboard/student_portal/boards/middlescreen.dart';
+import 'package:ui_design/screens/dashboard/edu_dashboard/student_portal/responsive_layout/devices/mobileLayout/middleScreenMobile.dart';
+import 'package:ui_design/screens/dashboard/edu_dashboard/student_portal/responsive_layout/devices/mobileLayout/sideMenuMobile.dart';
 
 class MobileView extends StatelessWidget {
   const MobileView({super.key});
@@ -15,6 +17,11 @@ class MobileView extends StatelessWidget {
 
           child: SideMenuMobile(),
         ),
+        body: ListView(
+          children: [
+            MiddleScreenMobile()
+            ]), 
+        
       ),
     );
   }
