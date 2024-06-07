@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ui_design/screens/dashboard/edu_dashboard/student_portal/boards/middle_cards/user_card.dart';
+import 'package:ui_design/screens/dashboard/edu_dashboard/student_portal/responsive_layout/devices/mobileLayout/userCardMobile.dart';
 
 class MiddleScreenMobile extends StatefulWidget {
   const MiddleScreenMobile({super.key});
@@ -27,6 +29,21 @@ String _dropdownvalue = 'Weekly';
     34.9, 
     28.8, 
   ];
-    return const Placeholder();
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: ListView(
+        scrollDirection: Axis.vertical,
+        children: [
+          Container(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                UserCardM(), 
+              ],
+            ),
+          )
+        ],
+      ),
+    );
   }
 }
