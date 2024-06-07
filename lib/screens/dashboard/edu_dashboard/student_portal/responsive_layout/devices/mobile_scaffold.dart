@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ui_design/screens/dashboard/edu_dashboard/student_portal/boards/middlescreen.dart';
-import 'package:ui_design/screens/dashboard/edu_dashboard/student_portal/boards/rightscreen.dart';
 import 'package:ui_design/screens/dashboard/edu_dashboard/student_portal/responsive_layout/devices/mobileLayout/middleScreenMobile.dart';
 import 'package:ui_design/screens/dashboard/edu_dashboard/student_portal/responsive_layout/devices/mobileLayout/sideMenuMobile.dart';
 
@@ -14,7 +12,7 @@ class MobileView extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Samyie'),
+          title: const Text('Samyie'),
       
           backgroundColor: Colors.transparent,
         ),
@@ -24,10 +22,10 @@ class MobileView extends StatelessWidget {
           child: SideMenuMobile(),
         ),
         body: ListView(
-          children: [
-            const MiddleScreenMobile(),
-            const SizedBox(height: 5,), 
-            const RightScreenM()
+          children: const [
+            MiddleScreenMobile(),
+            SizedBox(height: 5,), 
+            RightScreenM()
             ]), 
         
       ),

@@ -76,14 +76,14 @@ class Rightscreen extends StatelessWidget {
                         progressText: 'Upcoming',
                       ), 
                 ), 
-                SizedBox(height: 16,), 
+                const SizedBox(height: 16,), 
                  Container(
                   width: 360, height: 80, 
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15), 
                     color: Colors.white
                   ),
-                  child:  AssignmentCard(
+                  child:  const AssignmentCard(
                         color: Colors.purple, 
                         title: 'Analysis of data', 
                         subtitle: '06 July, 10:00 AM', 
@@ -156,7 +156,7 @@ class PremiumCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 260, 
+      height: 220, 
       width: 380, 
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20), 
@@ -172,7 +172,7 @@ class PremiumCard extends StatelessWidget {
             const Text('Samyie', style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
             ),
             
-            const SizedBox(height: 20,), 
+            const SizedBox(height: 1,), 
             Row(
               children: [
                 const Column(
@@ -181,7 +181,7 @@ class PremiumCard extends StatelessWidget {
                     Text('Go Premium', style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w500),
                     ), 
     
-                    SizedBox(height: 10,),
+                    SizedBox(height: 3,),
                     Text('Explore 200+ Courses with \nPremium Membership', style: TextStyle(color: Colors.grey, fontSize: 12, fontWeight: FontWeight.w200),
                     ), 
                   ],
@@ -189,13 +189,13 @@ class PremiumCard extends StatelessWidget {
                 const SizedBox(width: 30,), 
                 Expanded(
                   child: Container(
-                    width: 80, 
+                    width: 100, 
                     height: 120,
                     child: Image.asset('assets/dashboard/icons/model.png')))
               ],
             )
     , 
-    const SizedBox(height: 20,), 
+    const SizedBox(height: 1,), 
     
     
     GestureDetector( 

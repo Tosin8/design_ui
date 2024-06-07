@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ui_design/screens/dashboard/edu_dashboard/student_portal/boards/middlescreen.dart';
 
 import '../../boards/sideMenu.dart';
+import 'tabletLayout/sideMenuT.dart';
 
 class TabletView extends StatelessWidget {
   const TabletView({super.key});
@@ -14,13 +15,9 @@ class TabletView extends StatelessWidget {
         child: Row(
           children: [
             
-              Expanded(
+              SizedBox(child: SideMenuT()), 
 
-                child: SizedBox(child: SideMenu())), 
-
-                Expanded(child: SizedBox(
-                  child: MiddleScreen(),
-                  ))
+               
           ]),
     ));
   }
