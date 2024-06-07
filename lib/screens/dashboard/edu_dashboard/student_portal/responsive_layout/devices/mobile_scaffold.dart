@@ -14,16 +14,20 @@ class MobileView extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          //backgroundColor: Colors.grey[900],
-        ), backgroundColor: Colors.grey[300],
+          title: Text('Samyie'),
+      
+          backgroundColor: Colors.transparent,
+        ),
+         backgroundColor: Colors.grey[300],
         drawer: const Drawer(
 
           child: SideMenuMobile(),
         ),
         body: ListView(
           children: [
-            MiddleScreenMobile(),
-            RightScreenM()
+            const MiddleScreenMobile(),
+            const SizedBox(height: 5,), 
+            const RightScreenM()
             ]), 
         
       ),
