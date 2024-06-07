@@ -18,7 +18,7 @@ final Widget desktopScaffold;
       builder: (context, constraints){
         if (constraints.maxWidth < 500) {
           return mobileScaffold;
-        } else if (constraints.maxWidth < 1100) { return tabletScaffold; 
+        } else if (constraints.maxWidth < 1500) { return tabletScaffold; 
         } else { return desktopScaffold; }
       }); 
   }

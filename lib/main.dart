@@ -78,7 +78,7 @@ class MyApp extends StatelessWidget {
     ),
     home: const Responsivelayout(
       mobileScaffold: MobileView(),
-      tabletScaffold: TabletView(),
+      tabletScaffold: TabletViewL(),
       desktopScaffold: DesktopView(),
       ), 
 
