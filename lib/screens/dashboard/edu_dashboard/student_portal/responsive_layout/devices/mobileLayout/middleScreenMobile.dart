@@ -41,11 +41,11 @@ String _dropdownvalue = 'Weekly';
         children: [
             FadeIn(child: const UserCardM()), 
             const SizedBox(height: 10,), 
-            const NewCourseTitleM(), 
+            FadeIn(child: const NewCourseTitleM()), 
             const SizedBox(height: 10,), 
 
             // Subject Card
-            const SubjectCard1M(), 
+            FadeInLeft(child: const SubjectCard1M()), 
             const SizedBox(height: 10,), 
             const SubjectCard2M(), 
             const SizedBox(height: 10,), 
