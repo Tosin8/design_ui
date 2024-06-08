@@ -148,6 +148,7 @@ String _dropdownvalue = 'Weekly';
 const SizedBox(height: 10,), 
 const DailyScheduleCardM(), 
 const SizedBox(height: 10,), 
+
 Row(
                 children: [
                   const titleHeader(title: 'Course You\'re taking'),
