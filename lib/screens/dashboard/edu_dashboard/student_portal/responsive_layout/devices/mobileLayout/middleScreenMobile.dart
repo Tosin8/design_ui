@@ -47,9 +47,9 @@ String _dropdownvalue = 'Weekly';
             // Subject Card
             FadeInLeft(child: const SubjectCard1M()), 
             const SizedBox(height: 10,), 
-            const SubjectCard2M(), 
+            FadeInLeft(child: const SubjectCard2M()), 
             const SizedBox(height: 10,), 
-            const SubjectCard3M(), 
+            FadeInLeft(child: const SubjectCard3M()), 
             const SizedBox(height: 10,), 
 
             // 2nd layer
