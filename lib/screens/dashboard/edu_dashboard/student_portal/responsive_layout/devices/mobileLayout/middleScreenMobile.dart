@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:ui_design/screens/dashboard/edu_dashboard/student_portal/responsive_layout/devices/mobileLayout/newcoursetitlem.dart';
 import 'package:ui_design/screens/dashboard/edu_dashboard/student_portal/responsive_layout/devices/mobileLayout/subjectCard1m.dart';
@@ -38,7 +39,7 @@ String _dropdownvalue = 'Weekly';
       padding: const EdgeInsets.all(8),
       child: Column(
         children: [
-            const UserCardM(), 
+            FadeIn(child: const UserCardM()), 
             const SizedBox(height: 10,), 
             const NewCourseTitleM(), 
             const SizedBox(height: 10,), 
