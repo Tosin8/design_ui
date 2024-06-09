@@ -39,7 +39,7 @@ String _dropdownvalue = 'Weekly';
       padding: const EdgeInsets.all(8),
       child: Column(
         children: [
-            FadeIn(
+            FadeInDown(
               duration: const Duration(milliseconds: 1000),
             child: const UserCardM()), 
             const SizedBox(height: 10,), 
@@ -68,7 +68,8 @@ String _dropdownvalue = 'Weekly';
 
             // 2nd layer
              FadeInLeft( 
-              
+              duration: const Duration(milliseconds: 1000), 
+              delay: const Duration(milliseconds: 2000),
                child: Container(
                       width: 440,
                       height: 400, 
