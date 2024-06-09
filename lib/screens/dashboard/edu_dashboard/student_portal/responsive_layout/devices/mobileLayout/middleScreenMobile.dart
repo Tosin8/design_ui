@@ -39,7 +39,9 @@ String _dropdownvalue = 'Weekly';
       padding: const EdgeInsets.all(8),
       child: Column(
         children: [
-            FadeIn(child: const UserCardM()), 
+            FadeIn(
+              duration: Duration(milliseconds: 1000),
+            child: const UserCardM()), 
             const SizedBox(height: 10,), 
             FadeIn(child: const NewCourseTitleM()), 
             const SizedBox(height: 10,), 
