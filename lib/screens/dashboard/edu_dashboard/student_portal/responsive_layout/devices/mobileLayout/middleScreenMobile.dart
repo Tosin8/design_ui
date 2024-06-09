@@ -40,113 +40,128 @@ String _dropdownvalue = 'Weekly';
       child: Column(
         children: [
             FadeIn(
-              duration: Duration(milliseconds: 1000),
+              duration: const Duration(milliseconds: 1000),
             child: const UserCardM()), 
             const SizedBox(height: 10,), 
-            FadeIn(child: const NewCourseTitleM()), 
+            FadeIn(
+              duration: const Duration(milliseconds: 1000),
+              delay: const Duration(milliseconds: 500),
+              child: const NewCourseTitleM()), 
             const SizedBox(height: 10,), 
 
             // Subject Card
-            FadeInLeft(child: const SubjectCard1M()), 
+            FadeInLeft(
+              duration: const Duration(milliseconds: 1000), 
+              delay: const Duration(milliseconds: 500),
+              child: const SubjectCard1M()), 
             const SizedBox(height: 10,), 
-            FadeInLeft(child: const SubjectCard2M()), 
+            FadeInLeft(
+              duration: const Duration(milliseconds: 1000), 
+              delay: const Duration(milliseconds: 1000),
+              child: const SubjectCard2M()), 
             const SizedBox(height: 10,), 
-            FadeInLeft(child: const SubjectCard3M()), 
+            FadeInLeft(
+              duration: const Duration(milliseconds: 1000), 
+              delay: const Duration(milliseconds: 1500),
+              child: const SubjectCard3M()), 
             const SizedBox(height: 10,), 
 
             // 2nd layer
-             Container(
-                    width: 440,
-                    height: 400, 
-                      decoration: BoxDecoration(
-                      color: Colors.white, 
-                      borderRadius: BorderRadius.circular(15), 
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.shade500,
-                          offset: const Offset(1.0, 1.0), 
-                          blurRadius: 12.0,
-                          spreadRadius: 1.0,  
-                        ), 
-                        const BoxShadow(
-                          color: Colors.white, 
-                          offset: Offset(-1.0, -1.0), 
-                          spreadRadius: 1.0,  
-                          blurRadius: 12.0, 
-                        ),
-                      ],
-                          
-                     
-                    ),
-                    child:   Padding(
-                      padding: const EdgeInsets.all(15.0),
-       
-                      // layer 1: hours activity and weekly. 
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-       
-                              // Hours rate and weekly activity.
-                              const Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  titleHeader(title: 'Hours Activity'),
-                                  SizedBox(height: 3,),
-                                  Row(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Text('+30%' , style: TextStyle(color: Colors.greenAccent, fontWeight: FontWeight.bold),), 
-                                      SizedBox(width: 10,), 
-                                      Text('Increase than last week'), 
-                                    ],
-                                  )
-                                ],
-                              ),
-                           
-                          const SizedBox(width: 30,), 
-                           Expanded(
-                            child: Container( 
-                              height: 30, width: 20,
-                            decoration:  BoxDecoration(
-                              borderRadius: const BorderRadius.all(Radius.circular(30)), 
-                              border: Border.all(
-                                color: const Color.fromRGBO(224, 224, 224, 1), ), 
-                            ),
-                            child: Align(child: DropdownButton<String>(
-                              items: _items.map((String item){
-       return DropdownMenuItem(value: item,child: Text(item, style: const TextStyle(fontSize: 12),),);
-                              }).toList(),
-                              onChanged: (String? newValue) {
-                                setState(() {
-                                  _dropdownvalue = newValue!;
-                                });
-                              },
-                              value: _dropdownvalue,
-                              borderRadius: BorderRadius.circular(10), 
-                              icon: const Icon(Icons.keyboard_arrow_down), 
-                              iconSize: 20,
-                              style: const TextStyle(fontSize:16, color: Colors.black),
-                              underline: Container(),
-                              ))
-       
-                             ))   ],
+             FadeInLeft( 
+              
+               child: Container(
+                      width: 440,
+                      height: 400, 
+                        decoration: BoxDecoration(
+                        color: Colors.white, 
+                        borderRadius: BorderRadius.circular(15), 
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.shade500,
+                            offset: const Offset(1.0, 1.0), 
+                            blurRadius: 12.0,
+                            spreadRadius: 1.0,  
                           ), 
+                          const BoxShadow(
+                            color: Colors.white, 
+                            offset: Offset(-1.0, -1.0), 
+                            spreadRadius: 1.0,  
+                            blurRadius: 12.0, 
+                          ),
+                        ],
+                            
                        
-                       const SizedBox(height: 60,), 
-       
-                       // flchart. 
-                     SizedBox(
-                      height: 230,
-                      child: MyBarGraph(
-                        hourlyWorking: hourlyWorking,
-                        )), 
-                        ], 
-                    ), 
-                    ), 
-                    ), 
+                      ),
+                      child:   Padding(
+                        padding: const EdgeInsets.all(15.0),
+                      
+                        // layer 1: hours activity and weekly. 
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                      
+                                // Hours rate and weekly activity.
+                                const Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    titleHeader(title: 'Hours Activity'),
+                                    SizedBox(height: 3,),
+                                    Row(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text('+30%' , style: TextStyle(color: Colors.greenAccent, fontWeight: FontWeight.bold),), 
+                                        SizedBox(width: 10,), 
+                                        Text('Increase than last week'), 
+                                      ],
+                                    )
+                                  ],
+                                ),
+                             
+                            const SizedBox(width: 30,), 
+                             Expanded(
+                              child: Container( 
+                                height: 30, width: 20,
+                              decoration:  BoxDecoration(
+                                borderRadius: const BorderRadius.all(Radius.circular(30)), 
+                                border: Border.all(
+                                  color: const Color.fromRGBO(224, 224, 224, 1), ), 
+                              ),
+                              child: Align(child: DropdownButton<String>(
+                                items: _items.map((String item){
+                      return DropdownMenuItem(value: item,child: Text(item, style: const TextStyle(fontSize: 12),),);
+                                }).toList(),
+                                onChanged: (String? newValue) {
+                                  setState(() {
+                                    _dropdownvalue = newValue!;
+                                  });
+                                },
+                                value: _dropdownvalue,
+                                borderRadius: BorderRadius.circular(10), 
+                                icon: const Icon(Icons.keyboard_arrow_down), 
+                                iconSize: 20,
+                                style: const TextStyle(fontSize:16, color: Colors.black),
+                                underline: Container(),
+                                ))
+                      
+                               ))   ],
+                            ), 
+                         
+                         const SizedBox(height: 60,), 
+                      
+                         // flchart. 
+                       SizedBox(
+                        height: 230,
+                        child: MyBarGraph(
+                          hourlyWorking: hourlyWorking,
+                          )), 
+                          ], 
+                      ), 
+                      ), 
+                      ),
+             ), 
 
 const SizedBox(height: 10,), 
 const DailyScheduleCardM(), 
