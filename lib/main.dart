@@ -5,6 +5,7 @@ import 'package:ui_design/screens/dashboard/edu_dashboard/student_portal/respons
 import 'screens/dashboard/edu_dashboard/student_portal/responsive_layout/devices/desktop_scaffold.dart';
 import 'screens/dashboard/edu_dashboard/student_portal/responsive_layout/devices/mobile_scaffold.dart';
 import 'screens/dashboard/edu_dashboard/student_portal/responsive_layout/responsivelayout.dart';
+import 'shots/direct_phonecall.dart';
 
 
 
@@ -71,17 +72,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp( debugShowCheckedModeBanner: false, 
+    return MaterialApp( debugShowCheckedModeBanner: false, 
     title: 'Flutter Demo',
     theme: ThemeData(
       primarySwatch: Colors.blue,
     ),
-    home: const Responsivelayout(
-      mobileScaffold: MobileView(),
-      tabletScaffold: TabletViewL(),
-      desktopScaffold: DesktopView(),
-      ), 
-
+    // home: const Responsivelayout(
+    //   mobileScaffold: MobileView(),
+    //   tabletScaffold: TabletViewL(),
+    //   desktopScaffold: DesktopView(),
+    //   ), 
+home: phonecall()
     ); 
   }
 }
