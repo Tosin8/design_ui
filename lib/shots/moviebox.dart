@@ -20,7 +20,9 @@ void _playVideo({int index = 0, bool init = false}){
     videos[_currentIndex].url as Uri
   ) ..addListener(()=> setState(() {
     
-  }));
+  }))
+  ..setLooping(true) 
+  ..initialize().then((value) => _controller.play());
 }
 
 
