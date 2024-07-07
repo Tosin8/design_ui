@@ -174,7 +174,11 @@ ValueListenableBuilder(
                 Expanded(child: SizedBox(height: 20, child: VideoProgressIndicator(
                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 0),
                    _controller,
-                    allowScrubbing: true),))
+                    allowScrubbing: true),
+                    ), 
+                    ), 
+                    Text(_videoDuration(_controller.value.duration), 
+                    style: TextStyle(color: Colors.white, fontSize: 20),)
               ],
             )
         ],
