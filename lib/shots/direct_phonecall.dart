@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:url_launcher/url_launcher.dart';
 
 class phonecall extends StatelessWidget {
@@ -34,7 +34,13 @@ child: Padding(
         child:IconButton(
           onPressed: () async {
             final uri = Uri.parse('tel:$number');
-            await launchUrl(uri);
+
+            // indirect phone call
+          //  await launchUrl(uri);
+
+            // direct phone call
+            await FlutterPhoneDirectCaller.callNumber(number); 
+           // await launchUrl(Uri(scheme: 'tel', path: number));
           },
           icon: const Icon(Icons.phone, color: Colors.blue, size: 40),
       ), 
