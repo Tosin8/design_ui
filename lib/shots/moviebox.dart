@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_design/shots/data/moviebox.dart';
+import 'package:video_player/video_player.dart';
 
 class Moviebox extends StatefulWidget {
   const Moviebox({super.key});
@@ -9,14 +10,18 @@ class Moviebox extends StatefulWidget {
 }
 
 class _MovieboxState extends State<Moviebox> {
-late PlayerController _controller; 
+late VideoPlayerController _controller; 
 
-void _playVideo({int index = 0, bool init = false}){}
+void _playVideo({int index = 0, bool init = false}){
+  if(index <0 || index >= videos.length) return; 
+
+  _controller = VideoPlayerController.network(); 
+}
 
 
   @override
   void initState() {
-    _playVideo(); 
+    _playVideo(init: true); 
     super.initState();
   }
   @override
@@ -28,9 +33,7 @@ void _playVideo({int index = 0, bool init = false}){}
         title: const Text('Movie Box', style: TextStyle(color: Colors.white),),
         centerTitle: true,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: ListView(
+      body:ListView(
           children:   [
              const Text('Hi, Mikky', style: TextStyle(fontSize: 18, color: Colors.white),), 
              const SizedBox(height: 10,), 
@@ -71,10 +74,8 @@ void _playVideo({int index = 0, bool init = false}){}
              )
           ],
         ),
-      )
-    );
+      ); 
+    
   }
 }
 
-class PlayerController {
-}

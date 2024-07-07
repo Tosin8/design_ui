@@ -69,6 +69,7 @@ dependencies:
   url_launcher: ^6.3.0
   uuid: ^4.2.2
   vertical_card_pager: ^1.5.0
+  video_player: ^2.9.1
 
 dev_dependencies:
   flutter_lints: ^2.0.0
