@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_design/shots/data/moviebox.dart';
 
 class Moviebox extends StatefulWidget {
   const Moviebox({super.key});
@@ -8,6 +9,16 @@ class Moviebox extends StatefulWidget {
 }
 
 class _MovieboxState extends State<Moviebox> {
+late PlayerController _controller; 
+
+void _playVideo({int index = 0, bool init = false}){}
+
+
+  @override
+  void initState() {
+    _playVideo(); 
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold( 
@@ -20,10 +31,10 @@ class _MovieboxState extends State<Moviebox> {
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: ListView(
-          children:   const [
-             Text('Hi, Mikky', style: TextStyle(fontSize: 18, color: Colors.white),), 
-             SizedBox(height: 10,), 
-          TextField(
+          children:   [
+             const Text('Hi, Mikky', style: TextStyle(fontSize: 18, color: Colors.white),), 
+             const SizedBox(height: 10,), 
+          const TextField(
             textInputAction: TextInputAction.done,
             keyboardType: TextInputType.name,
   decoration: InputDecoration(
@@ -38,12 +49,32 @@ class _MovieboxState extends State<Moviebox> {
   ),
 
              ), 
-             SizedBox(height: 10,), 
-             Text('Trending Movies', style: TextStyle(fontSize: 18, color: Colors.white),),
-             
+             const SizedBox(height: 10,), 
+             const Text('Trending Movies', style: TextStyle(fontSize: 18, color: Colors.white),),
+             const SizedBox(height: 10,), 
+             Expanded(
+               child: GridView.builder(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2) ,
+                itemCount: videos.length,
+                 itemBuilder: (context, index) => 
+                  Container(
+                    decoration: BoxDecoration(
+                      image: DecorationImage(image: AssetImage(videos[index].thumbnail))
+                    ),
+                    child: Column(
+                      children: [
+                        Text(videos[index].name),
+                      ],
+                    ),
+                   ), 
+                 ),
+             )
           ],
         ),
       )
     );
   }
+}
+
+class PlayerController {
 }

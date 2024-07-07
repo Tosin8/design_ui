@@ -7,7 +7,7 @@ class Video {
 }
 
 
-final Videos = [
+final videos = [
 
   Video(
     name:'',
