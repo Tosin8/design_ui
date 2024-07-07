@@ -7,7 +7,10 @@ class Video {
 }
 
 
-const Videos = [
+final Videos = [
 
-  Video(name: name, url: url, thumbnail: thumbnail)
+  Video(
+    name:'',
+   url: '', 
+   thumbnail: '')
 ]; 
