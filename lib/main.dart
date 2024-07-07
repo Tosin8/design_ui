@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_design/shots/list_slidable.dart';
+import 'package:ui_design/shots/moviebox.dart';
 
 import 'shots/direct_phonecall.dart';
 
@@ -78,7 +79,7 @@ class MyApp extends StatelessWidget {
     //   tabletScaffold: TabletViewL(),
     //   desktopScaffold: DesktopView(),
     //   ), 
-home: const UISlidable()
+home: const Moviebox()
     ); 
   }
 }
