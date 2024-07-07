@@ -155,8 +155,16 @@ class _PlayMyVideoState extends State<PlayMyVideo> {
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+ValueListenableBuilder(
+  valueListenable: _controller,
+   builder: (context, value, child) {
+  return Text(
+    _videoDuration(value.position), 
+    style: const TextStyle(color: Colors.white, fontSize: 20),);
+}), 
+
                 Expanded(child: SizedBox(height: 20, child: VideoProgressIndicator(
-                  padding: const EdgeInsets.symmetric(horizontal: 8),
+                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 0),
                    _controller,
                     allowScrubbing: true),))
               ],
