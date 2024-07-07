@@ -78,7 +78,7 @@ class MyApp extends StatelessWidget {
     //   tabletScaffold: TabletViewL(),
     //   desktopScaffold: DesktopView(),
     //   ), 
-home: UISlidable()
+home: const UISlidable()
     ); 
   }
 }
