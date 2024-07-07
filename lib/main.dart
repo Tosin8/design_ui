@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:ui_design/screens/dashboard/edu_dashboard/student_portal/responsive_layout/devices/tablet_scaffold.dart';
+import 'package:ui_design/shots/list_slidable.dart';
 
-import 'screens/dashboard/edu_dashboard/student_portal/responsive_layout/devices/desktop_scaffold.dart';
-import 'screens/dashboard/edu_dashboard/student_portal/responsive_layout/devices/mobile_scaffold.dart';
-import 'screens/dashboard/edu_dashboard/student_portal/responsive_layout/responsivelayout.dart';
 import 'shots/direct_phonecall.dart';
 
 
@@ -82,7 +78,7 @@ class MyApp extends StatelessWidget {
     //   tabletScaffold: TabletViewL(),
     //   desktopScaffold: DesktopView(),
     //   ), 
-home: phonecall()
+home: UISlidable()
     ); 
   }
 }
