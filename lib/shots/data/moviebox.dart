@@ -5,3 +5,9 @@ class Video {
 
   Video({required this.name, required this.url, required this.thumbnail}); 
 }
+
+
+const Videos = [
+
+  Video(name: name, url: url, thumbnail: thumbnail)
+]; 
