@@ -77,8 +77,9 @@ class _MovieboxState extends State<Moviebox> {
                 itemCount: videos.length,
                  itemBuilder: (context, index) => 
                   GestureDetector( 
-                    onTap: () {
+                    onTap: () async {
                       const PlayMyVideo(); 
+                  
                     },
                     child: Container(
                       decoration: BoxDecoration(
@@ -115,6 +116,14 @@ class _PlayMyVideoState extends State<PlayMyVideo> {
 
  void _playVideo({int index = 0, bool init = false}){
    if(index <0 || index >= videos.length) return; 
+
+   if(!init) {
+    _controller.pause(); 
+   }
+
+   setState(() {
+    _currentIndex = index;
+   });
 
    _controller = VideoPlayerController.networkUrl(
      videos[_currentIndex].url as Uri
@@ -178,11 +187,16 @@ ValueListenableBuilder(
                     ), 
                     ), 
                     Text(_videoDuration(_controller.value.duration), 
-                    style: TextStyle(color: Colors.white, fontSize: 20),)
+                    style: const TextStyle(color: Colors.white, fontSize: 20),
+                    ), 
               ],
-            )
+            ), 
+            IconButton(onPressed: ()=> _controller.value.isPlaying ? _controller.pause() : _controller.play(), 
+            icon: Icon(_controller.value.isPlaying ? Icons.pause : Icons.play_arrow)), 
+
+            ElevatedButton(onPressed: ()=> _playVideo(index: _currentIndex + 1), child: Text('Play Movie'))
         ],
-      ) : Center( 
+      ) : const Center( 
         child: CircularProgressIndicator(color: Colors.white,),
       ),
     );
