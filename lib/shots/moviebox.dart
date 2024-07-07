@@ -11,11 +11,16 @@ class Moviebox extends StatefulWidget {
 
 class _MovieboxState extends State<Moviebox> {
 late VideoPlayerController _controller; 
+int _currentIndex = 0;
 
 void _playVideo({int index = 0, bool init = false}){
   if(index <0 || index >= videos.length) return; 
 
-  _controller = VideoPlayerController.network(); 
+  _controller = VideoPlayerController.networkUrl(
+    videos[_currentIndex].url as Uri
+  ) ..addListener(()=> setState(() {
+    
+  }));
 }
 
 
