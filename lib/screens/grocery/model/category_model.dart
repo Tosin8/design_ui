@@ -1,15 +1,18 @@
+import 'package:flutter/material.dart';
+
 class Category {
   final String title; 
   final String image;
+  final VoidCallback onTap; 
 
-  Category({required this.title, required this.image}); 
+  Category({required this.onTap, required this.title, required this.image}); 
 }
 
 final categories = [
-  Category(title: 'Beaf', image: 'assets/grocery/category/beef.jpg'),
-  Category(title: 'Bakery', image: 'assets/grocery/category/bread.jpg'),
-  Category(title: 'Coffee & Tea', image: 'assets/grocery/category/coffee.jpg'),
-  Category(title: 'Dairy & Eggs', image: 'assets/grocery/category/egg.jpg'),
-  Category(title: 'Juice & Drinks', image: 'assets/grocery/category/juice.jpg'),
-  Category(title: 'Fruits & Veggies', image: 'assets/grocery/category/veggie.jpg'),
+  Category(title: 'Beaf', image: 'assets/grocery/category/beef.jpg', onTap: (){}),
+  Category(title: 'Bakery', image: 'assets/grocery/category/bread.jpg', onTap: () {  }),
+  Category(title: 'Coffee & Tea', image: 'assets/grocery/category/coffee.jpg', onTap: () {  }),
+  Category(title: 'Dairy & Eggs', image: 'assets/grocery/category/egg.jpg', onTap: () {  }),
+  Category(title: 'Juice & Drinks', image: 'assets/grocery/category/juice.jpg', onTap: () {  }),
+  Category(title: 'Fruits & Veggies', image: 'assets/grocery/category/veggie.jpg', onTap: () {  }),
 ]; 
