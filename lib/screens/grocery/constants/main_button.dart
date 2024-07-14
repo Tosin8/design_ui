@@ -14,11 +14,12 @@ class MainButton extends StatelessWidget {
         MaterialPageRoute(builder: (context) => const GroceryHome()),);
       },
       child: Container(
-        height: 100, width: 300,
+        height: 80, width: 250,
         decoration: BoxDecoration(
           color: Colors.green, 
-          borderRadius: BorderRadius.circular(20), 
+          borderRadius: BorderRadius.circular(50), 
         ),
+        child: Align(child: Text('Order Now', style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),)),
       ),
     );
   }

@@ -3,12 +3,10 @@ description: "A new Flutter project."
 
 publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
-
 version: 1.0.0+1
 
 environment:
   sdk: ">=3.2.3 <4.0.0"
-
 
 dependencies:
   animate_do: ^3.3.4
@@ -25,6 +23,7 @@ dependencies:
   fl_chart: ^0.68.0
   flutter:
     sdk: flutter
+  flutter_animate: ^4.5.0
   flutter_animated_button: ^2.0.3
   flutter_fadein: ^2.0.0
   flutter_phone_direct_caller: ^2.1.1
@@ -148,9 +147,8 @@ flutter:
     - assets/grocery/splash_main.jpg
     - assets/grocery/grocery_app_banner.jpg
     - assets/grocery/products/
-    - assets/grocery/category/ 
+    - assets/grocery/category/
     #   - images/a_dot_ham.jpeg
-  
   # example:
   # fonts:
   #   - family: Schyler
