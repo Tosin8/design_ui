@@ -148,6 +148,7 @@ flutter:
     - assets/grocery/splash_main.jpg
     - assets/grocery/grocery_app_banner.jpg
     - assets/grocery/products/
+    - assets/grocery/category/ 
     #   - images/a_dot_ham.jpeg
   
   # example:

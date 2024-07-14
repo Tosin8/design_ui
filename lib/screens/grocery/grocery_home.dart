@@ -23,6 +23,22 @@ class _GroceryHomeState extends State<GroceryHome> {
              child: Image.asset('assets/grocey/grocery_app_banner.jpg'),
            )),
       ),
+      body: GestureDetector( 
+        onTap: (){},
+        child: Container(
+          height: 400, width: 400,
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              
+              image: const AssetImage('assets/grocery/category/beef.jpg'), fit: BoxFit.cover, 
+              colorFilter: ColorFilter.mode(
+                      Colors.black.withOpacity(0.2), BlendMode.darken),), 
+          ),
+          child: const Align(
+            alignment: Alignment.topLeft,
+            child: Text('Beef', style: TextStyle(color: Colors.white, fontSize: 16),))
+        ),
+      ), 
     );
   }
 }
