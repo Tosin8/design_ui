@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ui_design/screens/grocery/grocery_home.dart';
+import 'package:ui_design/screens/grocery/grocery_splash.dart';
 import 'package:ui_design/shots/list_slidable.dart';
 import 'package:ui_design/shots/moviebox.dart';
 
@@ -79,7 +81,7 @@ class MyApp extends StatelessWidget {
     //   tabletScaffold: TabletViewL(),
     //   desktopScaffold: DesktopView(),
     //   ), 
-home: const Moviebox()
+home: const GrocerySplash()
     ); 
   }
 }
