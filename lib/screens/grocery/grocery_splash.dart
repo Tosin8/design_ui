@@ -13,7 +13,7 @@ class GrocerySplash extends StatelessWidget {
           Container(
             height: 400, 
             width: double.infinity, 
-            child: Image.asset('assets/grocery/splash.jpg'),
+            child: Image.asset('assets/grocery/splash_main.jpg'),
           ), 
           const SizedBox(height: 10,), 
           const Text('Grocery Delivery\nat your door', 

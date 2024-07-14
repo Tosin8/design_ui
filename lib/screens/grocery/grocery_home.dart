@@ -10,6 +10,11 @@ class GroceryHome extends StatefulWidget {
 class _GroceryHomeState extends State<GroceryHome> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold( 
+      appBar: AppBar(
+        title: Text('VeggieRoot'), 
+        bottom: PreferredSize(preferredSize: preferredSize, child: child),
+      ),
+    );
   }
 }

@@ -145,7 +145,7 @@ flutter:
     - assets/dashboard/users/
 
     #grocery UI
-    - assets/grocery/splash.jpg
+    - assets/grocery/splash_main.jpg
     - assets/grocery/products/
     #   - images/a_dot_ham.jpeg
   
