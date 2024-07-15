@@ -3,7 +3,7 @@ import 'product_model.dart';
 class Productitem {
   int quantity; 
   final Product? product; 
-  Productitem({required this.quantity, required this.product});
+  Productitem({this.quantity = 1 , required this.product});
 
   void increment() {
     quantity++;
@@ -11,5 +11,5 @@ class Productitem {
 
   // void add () {} 
 
-  // void subtract(){}
+  // void subtract()
 }
