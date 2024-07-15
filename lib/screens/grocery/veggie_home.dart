@@ -206,9 +206,14 @@ class _VeggieHomeState extends State<VeggieHome> {
                                     press: () {
                                       Navigator.push(
                                         context,
-                                        MaterialPageRoute(
-                                          builder: (context) => VeggieDetailScreen(
-                                            product: veggie_products[index],
+                                        PageRouteBuilder(
+                                          transitionDuration: Duration(milliseconds: 500),
+                                        reverseTransitionDuration: Duration(milliseconds: 500),
+                                          pageBuilder: (context, animation, secondaryAnimation) => FadeTransition( 
+                                            opacity: animation,
+                                            child: VeggieDetailScreen(
+                                              product: veggie_products[index],
+                                            ),
                                           ),
                                         ),
                                       ); 
