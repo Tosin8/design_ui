@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ui_design/screens/grocery/constants/app_info.dart';
 
 import 'model/product_model.dart';
+import 'model/veggie/home_header.dart';
 import 'model/veggie/veggie_productcard.dart';
 
 class VeggieHome extends StatelessWidget {
@@ -15,9 +16,15 @@ class VeggieHome extends StatelessWidget {
         bottom: false,
         child: Container(
           color: Color(0xFFEAEAEA), 
-          child: Column(
+          child: Stack(
             children: [
-             // HomeHeader(), 
+              Positioned(
+                top: 0, 
+                right: 0, 
+                left: 0, 
+                child: HomeHeader(), 
+              ), 
+       
               Expanded(
                 child: Container(
                   padding: const EdgeInsets.symmetric(horizontal: defaultPadding), 

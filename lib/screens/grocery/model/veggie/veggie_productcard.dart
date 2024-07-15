@@ -34,12 +34,21 @@ style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
               children: [
                 Text('\$${product.price}', style: TextStyle(color: primaryColor),), 
                 Spacer(), 
-                Icon(Iconsax.bag, color: primaryColor, size: 28,),
+             //  FavBtn(), 
               ],
             )
           ],
         ),
       ),
     );
+  }
+}
+
+class FavBtn extends StatelessWidget {
+  const FavBtn({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
   }
 }
