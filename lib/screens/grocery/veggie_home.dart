@@ -247,6 +247,7 @@ class _VeggieHomeState extends State<VeggieHome> {
                           child: Container(
                             padding: const EdgeInsets.all(defaultPadding), 
                             color: Color(0xFFEAEAEA),
+                            alignment: Alignment.topLeft,
                             child: AnimatedSwitcher(duration: panelTransition, 
                             child: controller.veggieState == VeggieState.normal ? CardShortView(controller: controller ,) : CartDetailsView(controller: controller),
                             ), 
