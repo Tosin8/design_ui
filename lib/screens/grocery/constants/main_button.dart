@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ui_design/screens/grocery/grocery_home.dart';
 
+import 'scale_transition.dart';
+
 class MainButton extends StatelessWidget {
   const MainButton({
     super.key,
@@ -9,31 +11,24 @@ class MainButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector( 
-      onTap: () {
+      onTap: () =>
         Navigator.push(context, 
-        MaterialPageRoute(builder: (context) => const GroceryHome()),);
-      },
+        // MaterialPageRoute(builder: (context) => ScaleTransitionHome (GroceryHome())),
+         ScaleTransitionHome(page: const GroceryHome()),
+        ), 
+      
       child: Container(
         height: 60, width: 250,
         decoration: BoxDecoration(
           color: Colors.green, 
           borderRadius: BorderRadius.circular(50), 
         ),
-        child: Align(child: Text('Order Now', style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),)),
+        child: const Align(child: Text('Order Now', style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),)),
       ),
     );
   }
 }
 
 
-class ScaleTransitionHome extends PageRouteBuilder{
-  
-}
 
-const defaultPadding = 20.0; 
-const cartBarHeight = 100.0; 
-const headerHeight = 85.0; 
-const bgColor = Color(0xfff6f5f2); 
-const primaryColor = Color(0xff40a944);
 
-const panelTransition = Duration(milliseconds: 500);
