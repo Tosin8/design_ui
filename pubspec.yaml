@@ -150,6 +150,7 @@ flutter:
     - assets/grocery/user.jpg
     - assets/grocery/logo.png
     - assets/grocery/products/
+    - assets/grocery/products/veggie/
     - assets/grocery/category/
     #   - images/a_dot_ham.jpeg
   # example:
