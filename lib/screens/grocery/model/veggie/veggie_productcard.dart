@@ -21,9 +21,12 @@ final VoidCallback press;
           ), 
         ),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Hero(tag: product.title, 
-            child: Image.asset(product.image),
+            child: Container(
+              width: 150, height: 150,
+              child: Image.asset(product.image)),
             ), 
             Text(
 product.title,  
@@ -32,7 +35,7 @@ style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
             Text('Veggies', style: TextStyle(color: Colors.grey),), 
             Row(
               children: [
-                Text('\$${product.price}', style: TextStyle(color: primaryColor),), 
+                Text('\$${product.price}', style: TextStyle(color: primaryColor, fontWeight: FontWeight.bold, fontSize: 16),), 
                 Spacer(), 
              //  FavBtn(), 
               ],
