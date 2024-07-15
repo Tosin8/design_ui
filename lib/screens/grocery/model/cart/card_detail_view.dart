@@ -22,12 +22,12 @@ class CartDetailsView extends StatelessWidget {
             controller.cart.length,
             (index) => CartDetailsViewCard(productItem: controller.cart[index]),
           ),
-          SizedBox(height: defaultPadding),
+          const SizedBox(height: defaultPadding),
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
               onPressed: () {},
-              child: Text("Next - \$30"),
+              child: const Text("Next - \$30"),
             ),
           )
         ],

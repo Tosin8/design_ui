@@ -21,10 +21,10 @@ class CartDetailsViewCard extends StatelessWidget {
       leading: CircleAvatar(
         radius: 25,
         backgroundColor: Colors.white,
-        backgroundImage: AssetImage(productItem.product!.image!),
+        backgroundImage: AssetImage(productItem.product!.image),
       ),
       title: Text(
-        productItem.product!.title!,
+        productItem.product!.title, 
         style: Theme.of(context)
             .textTheme
             .displayMedium
@@ -33,6 +33,7 @@ class CartDetailsViewCard extends StatelessWidget {
       trailing: FittedBox(
         child: Row(
           children: [
+            Text('\$${productItem.product!.price}',), 
            // Price(amount: "20"),
             Text(
               "  x ${productItem.quantity}",
