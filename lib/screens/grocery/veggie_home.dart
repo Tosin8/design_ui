@@ -110,6 +110,7 @@
 import 'package:flutter/material.dart';
 import 'package:ui_design/screens/grocery/constants/app_info.dart';
 import 'controllers/veggie_controller.dart';
+import 'model/cart/cart_short_view.dart';
 import 'model/product_model.dart';
 import 'model/veggie/home_header.dart';
 import 'model/veggie/veggie_detail_screen.dart';
@@ -213,6 +214,10 @@ class _VeggieHomeState extends State<VeggieHome> {
                                             opacity: animation,
                                             child: VeggieDetailScreen(
                                               product: veggie_products[index],
+                                                onProductAdd: () {
+                                            controller.addProductToCart(
+                                                veggie_products[index]);
+                                          },
                                             ),
                                           ),
                                         ),
@@ -239,7 +244,9 @@ class _VeggieHomeState extends State<VeggieHome> {
                         child: GestureDetector(
                           onVerticalDragUpdate: _onVerticalGesture,
                           child: Container(
+                            padding: const EdgeInsets.all(defaultPadding), 
                             color: Color(0xFFEAEAEA),
+                            child: CardShortView(controller: controller),
                           ),
                         ),
                       ),
