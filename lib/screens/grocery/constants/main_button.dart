@@ -14,7 +14,7 @@ class MainButton extends StatelessWidget {
         MaterialPageRoute(builder: (context) => const GroceryHome()),);
       },
       child: Container(
-        height: 80, width: 250,
+        height: 60, width: 250,
         decoration: BoxDecoration(
           color: Colors.green, 
           borderRadius: BorderRadius.circular(50), 

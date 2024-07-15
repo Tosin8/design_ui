@@ -15,4 +15,6 @@ final categories = [
   Category(title: 'Dairy & Eggs', image: 'assets/grocery/category/egg.jpg', onTap: () {  }),
   Category(title: 'Juice & Drinks', image: 'assets/grocery/category/juice.jpg', onTap: () {  }),
   Category(title: 'Fruits & Veggies', image: 'assets/grocery/category/veggie.jpg', onTap: () {  }),
+   Category(title: 'Cereals', image: 'assets/grocery/category/cereal.jpg', onTap: () {  }), 
+   Category(title: 'Snacks', image: 'assets/grocery/category/snacks.jpg', onTap: () {  }),
 ]; 

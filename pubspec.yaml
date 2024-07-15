@@ -147,6 +147,7 @@ flutter:
     #grocery UI
     - assets/grocery/splash_main.jpg
     - assets/grocery/grocery_app_banner.jpg
+    - assets/grocery/user.jpg
     - assets/grocery/logo.png
     - assets/grocery/products/
     - assets/grocery/category/

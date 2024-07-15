@@ -3,6 +3,9 @@ import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:ui_design/screens/grocery/model/category_model.dart';
 
+import 'constants/custom_drawer.dart';
+import 'model/category_card.dart';
+
 class GroceryHome extends StatefulWidget {
   const GroceryHome({super.key});
 
@@ -11,14 +14,67 @@ class GroceryHome extends StatefulWidget {
 }
 
 class _GroceryHomeState extends State<GroceryHome> with SingleTickerProviderStateMixin {
+   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+  final List<String> items = ["Home", "Cart", "Wishlist", "Profile", "Notification"];
+  final List<IconData> icons = [Icons.home, Icons.shopping_cart, Icons.favorite, Icons.account_circle, Icons.notifications];
+  late AnimationController _animationController;
+  String activeScreen = "Home";
+ 
+
+  @override
+  void initState() {
+    super.initState();
+    _animationController = AnimationController(
+      vsync: this,
+      duration: Duration(milliseconds: 1500),
+    );
+
+  
+
+    _animationController.forward();
+  }
+
+  @override
+  void dispose() {
+    _animationController.dispose();
+    super.dispose();
+  }
+
+  void _onItemTap(String screen) {
+    setState(() {
+      activeScreen = screen;
+    });
+
+    Navigator.pop(context);
+
+    switch (screen) {
+      case "Home":
+        Navigator.push(context, MaterialPageRoute(builder: (context) => GroceryHome()));
+        break;
+      case "Cart":
+        Navigator.push(context, MaterialPageRoute(builder: (context) => CartPage()));
+        break;
+      case "Wishlist":
+        Navigator.push(context, MaterialPageRoute(builder: (context) => WishlistPage()));
+        break;
+      case "Profile":
+        Navigator.push(context, MaterialPageRoute(builder: (context) => ProfilePage()));
+        break;
+      case "Notification":
+       Navigator.push(context, MaterialPageRoute(builder: (context) => NotificationPage()));
+        // Implement your logout logic here
+        break;
+    }
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold( 
+      key: _scaffoldKey,
       appBar: AppBar(
         leading: IconButton(
             icon: const Icon(Iconsax.menu),
           onPressed: (){
-          Scaffold.of(context).openDrawer();
+           _scaffoldKey.currentState?.openDrawer();
        
   }),
         title: Row(
@@ -50,6 +106,14 @@ class _GroceryHomeState extends State<GroceryHome> with SingleTickerProviderStat
              ),
            )),
       ),
+drawer: CustomDrawer(
+        items: items,
+        icons: icons,
+        animationController: _animationController,
+        activeScreen: activeScreen,
+        onItemTap: _onItemTap,
+      ),
+
       body:AnimationLimiter(
       child: GridView.builder(
         padding: const EdgeInsets.all(8.0),
@@ -62,7 +126,7 @@ class _GroceryHomeState extends State<GroceryHome> with SingleTickerProviderStat
         itemBuilder: (context, index) {
           return AnimationConfiguration.staggeredGrid(
             position: index,
-            duration: const Duration(milliseconds: 1500),
+            duration: const Duration(milliseconds: 1200),
             columnCount: 2,
             child: SlideAnimation(
               curve: Curves.easeIn,
@@ -85,37 +149,39 @@ class _GroceryHomeState extends State<GroceryHome> with SingleTickerProviderStat
   }
 }
 
-class CategoryCard extends StatelessWidget {
-
-final String title; 
-final VoidCallback onTap;
-final String image;
-  final Category categories;
-  const CategoryCard({
-    super.key, required this.categories, required this.title, required this.image, required this.onTap,
-  });
+class CartPage extends StatelessWidget {
+  const CartPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector( 
-      onTap: onTap,
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Container(
-          height: 200, width: 200,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
-            image: DecorationImage(
-              
-              image:  AssetImage(categories.image), fit: BoxFit.cover, 
-              colorFilter: ColorFilter.mode(
-                      Colors.black.withOpacity(0.2), BlendMode.darken),), 
-          ),
-          child:  Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: Text(categories.title, style: const TextStyle(color: Colors.white, fontSize: 20),),
-          ))
-        ),
-      );
+    return Container();
+  }
+}
+
+
+class WishlistPage extends StatelessWidget {
+  const WishlistPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+
+class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+
+class NotificationPage extends StatelessWidget {
+  const NotificationPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
   }
 }
