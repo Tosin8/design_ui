@@ -17,7 +17,7 @@ List<Category> getCategories(BuildContext context) {
     Category(title: 'Dairy & Eggs', image: 'assets/grocery/category/egg.jpg', onTap: () {}),
     Category(title: 'Juice & Drinks', image: 'assets/grocery/category/juice.jpg', onTap: () {}),
     Category(title: 'Fruits & Veggies', image: 'assets/grocery/category/veggie.jpg', onTap: () {
-      Navigator.push(context, MaterialPageRoute(builder: (context) => const VeggieHome()));
+      Navigator.push(context, MaterialPageRoute(builder: (context) =>  VeggieHome()));
     }),
     Category(title: 'Cereals', image: 'assets/grocery/category/cereal.jpg', onTap: () {}),
     Category(title: 'Snacks', image: 'assets/grocery/category/snacks.jpg', onTap: () {}),

@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
 
-emum VeggieState {normal, cart} 
+enum VeggieState { normal, cart }
 
-class VeggieController extends ChangeNotifier{}
+class VeggieController extends ChangeNotifier {
+  VeggieState veggieState = VeggieState.normal;
+
+  void changeVeggieState(VeggieState state) {
+    veggieState = state;
+    notifyListeners();
+  }
+}
