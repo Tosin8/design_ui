@@ -110,6 +110,7 @@
 import 'package:flutter/material.dart';
 import 'package:ui_design/screens/grocery/constants/app_info.dart';
 import 'controllers/veggie_controller.dart';
+import 'model/cart/card_detail_view.dart';
 import 'model/cart/cart_short_view.dart';
 import 'model/product_model.dart';
 import 'model/veggie/home_header.dart';
@@ -246,7 +247,7 @@ class _VeggieHomeState extends State<VeggieHome> {
                           child: Container(
                             padding: const EdgeInsets.all(defaultPadding), 
                             color: Color(0xFFEAEAEA),
-                            child: CardShortView(controller: controller),
+                            child: controller.veggieState == VeggieState.normal ? CardShortView(controller: controller ,) : CartDetailsView(controller: controller),
                           ),
                         ),
                       ),

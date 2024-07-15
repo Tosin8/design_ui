@@ -33,12 +33,12 @@ class CartDetailsViewCard extends StatelessWidget {
       trailing: FittedBox(
         child: Row(
           children: [
-            Price(amount: "20"),
+           // Price(amount: "20"),
             Text(
               "  x ${productItem.quantity}",
               style: Theme.of(context)
                   .textTheme
-                  .subtitle1!
+                  .labelSmall!
                   .copyWith(fontWeight: FontWeight.bold),
             )
           ],
