@@ -4,7 +4,10 @@ import 'category_model.dart';
 class CategoryCard extends StatelessWidget {
   final Category category;
 
-  const CategoryCard({required this.category, super.key});
+  const CategoryCard({required this.category, super.key, 
+ 
+  
+  });
 
   @override
   Widget build(BuildContext context) {

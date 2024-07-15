@@ -112,6 +112,7 @@ import 'package:ui_design/screens/grocery/constants/app_info.dart';
 import 'controllers/veggie_controller.dart';
 import 'model/product_model.dart';
 import 'model/veggie/home_header.dart';
+import 'model/veggie/veggie_detail_screen.dart';
 import 'model/veggie/veggie_productcard.dart';
 
 class VeggieHome extends StatefulWidget {
@@ -202,7 +203,16 @@ class _VeggieHomeState extends State<VeggieHome> {
                                   ),
                                   itemBuilder: (context, index) => ProductCard(
                                     product: veggie_products[index],
-                                    press: () {},
+                                    press: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => VeggieDetailScreen(
+                                            product: veggie_products[index],
+                                          ),
+                                        ),
+                                      ); 
+                                    },
                                   ),
                                 ),
                               ),
