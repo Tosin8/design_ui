@@ -25,14 +25,14 @@ class VeggieHome extends StatelessWidget {
                   top: 0,
                   right: 0,
                   left: 0,
-                  height: 85,
+                  height: headerHeight,
                   child: HomeHeader(),
                 ),
                 Positioned(
-                  top: 85,
+                  top: headerHeight,
                   left: 0,
                   right: 0,
-                  bottom: cartBarHeight, // Account for the height of the bottom bar
+                  height: connstraints.maxHeight - headerHeight - cartBarHeight, // Account for the height of the bottom bar
                   child: Container(
                     padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
                     decoration: BoxDecoration(
@@ -69,9 +69,15 @@ class VeggieHome extends StatelessWidget {
                   left: 0,
                   right: 0,
                   height: cartBarHeight,
-                  child: Container(
-                    color: Colors.grey, // Placeholder color, adjust as needed
-                    // Add content for the bottom bar here
+                  child: GestureDetector( 
+                    onVerticalDragUpdate: (details) {
+                      // Handle vertical swipe gesture
+                      print(details.primaryDelta); 
+                    },
+                    child: Container(
+                      //color: Colors.grey, // Placeholder color, adjust as needed
+                      // Add content for the bottom bar here
+                    ),
                   ),
                 ),
               ],
