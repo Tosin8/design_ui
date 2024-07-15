@@ -5,7 +5,7 @@ class Product {
   Product({required this.title, required this.image}); 
 }
 
-List<Product> _products = [
+List<Product> veggie_products = [
   Product(title: 'Cabbage', image: 'assets/grocery/products/veggie/cabbage.png'),
   Product(title: 'Broccoli', image: 'assets/grocery/products/veggie/broccoli.png'),
   Product(title: 'Carrot', image: 'assets/grocery/products/veggie/carrot.png'),
