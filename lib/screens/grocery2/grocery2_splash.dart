@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'grocery2_home.dart';
 
@@ -92,33 +93,42 @@ class _Grocery2SplashState extends State<Grocery2Splash> with TickerProviderStat
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text('Right Taste', style: TextStyle(color: Colors.black, fontSize: 30, fontWeight: FontWeight.w500)),
-                    const Text('The Right Taste for Every Belly', style: TextStyle(color: Colors.black, fontSize: 14, fontWeight: FontWeight.w400)),
+                    FadeInUp(
+                      duration: const Duration(milliseconds: 1500),
+                      child: const Text('Right Taste', style: TextStyle(color: Colors.black, fontSize: 30, fontWeight: FontWeight.w500))),
+                    FadeInUp(
+                      delay: Duration(milliseconds: 500), 
+                      duration: Duration(milliseconds: 1500),
+                      child: const Text('The Right Taste for Every Belly', style: TextStyle(color: Colors.black, fontSize: 14, fontWeight: FontWeight.w400))),
                     const SizedBox(height: 100),
-                    GestureDetector(
-                      onTap: () {
-                        textFadeController.forward();
-                        scaleController.forward();
-                      },
-                      child: Stack(
-                        alignment: Alignment.center,
-                        children: [
-                          AnimatedBuilder(
-                            animation: scaleAnimation,
-                            builder: (context, child) => Transform.scale(
-                              scale: scaleAnimation.value,
-                              child: Container(
-                                height: 50,
-                                width: 200,
-                                decoration: BoxDecoration(color: Colors.black, borderRadius: BorderRadius.circular(10)),
+                    FadeInUp( 
+                      delay: Duration(milliseconds: 600), 
+                      duration: Duration(milliseconds: 1500),
+                      child: GestureDetector(
+                        onTap: () {
+                          textFadeController.forward();
+                          scaleController.forward();
+                        },
+                        child: Stack(
+                          alignment: Alignment.center,
+                          children: [
+                            AnimatedBuilder(
+                              animation: scaleAnimation,
+                              builder: (context, child) => Transform.scale(
+                                scale: scaleAnimation.value,
+                                child: Container(
+                                  height: 50,
+                                  width: 200,
+                                  decoration: BoxDecoration(color: Colors.black, borderRadius: BorderRadius.circular(10)),
+                                ),
                               ),
                             ),
-                          ),
-                          FadeTransition(
-                            opacity: textFadeAnimation,
-                            child: const Text('Get Started', style: TextStyle(color: Colors.white, fontSize: 18)),
-                          ),
-                        ],
+                            FadeTransition(
+                              opacity: textFadeAnimation,
+                              child: const Text('Get Started', style: TextStyle(color: Colors.white, fontSize: 18)),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ],

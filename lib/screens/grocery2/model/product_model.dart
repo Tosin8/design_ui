@@ -19,7 +19,7 @@ List <GroceryProduct> groceryproducts = [
 
      GroceryProduct(
     name: 'Autumn\nHarvest Bowl', 
-    image: 'assets/grocery2/products/image_1.png', 
+    image: 'assets/grocery2/products/image_2.png', 
     description: 'A hearty blend of roasted butternut squash, crisp apple slices, and candied pecans atop a bed of baby spinach and kale. Tossed with dried cranberries and crumbled goat cheese, then finished with a warm maple-balsamic dressing that brings out the best of fall\'s bounty.', 
     price: 12.00,
     weight: '420kcal'
