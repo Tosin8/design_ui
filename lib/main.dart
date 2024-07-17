@@ -4,6 +4,7 @@ import 'package:ui_design/screens/grocery/grocery_splash.dart';
 import 'package:ui_design/shots/list_slidable.dart';
 import 'package:ui_design/shots/moviebox.dart';
 
+import 'screens/grocery2/grocery2_splash.dart';
 import 'shots/direct_phonecall.dart';
 
 
@@ -81,7 +82,7 @@ class MyApp extends StatelessWidget {
     //   tabletScaffold: TabletViewL(),
     //   desktopScaffold: DesktopView(),
     //   ), 
-home: const GrocerySplash()
+home: const Grocery2Splash()
     ); 
   }
 }
