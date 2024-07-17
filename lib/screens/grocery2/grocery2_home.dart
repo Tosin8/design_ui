@@ -22,14 +22,14 @@ class Grocery2Home extends StatelessWidget {
           ),
         ],
         ),
-      body: const Padding(
-        padding: EdgeInsets.all(15.0),
+      body: Padding(
+        padding: const EdgeInsets.all(15.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('Good food\nFast Delivery',
-            style: TextStyle(color: Colors.white, fontSize: 30),), SizedBox(height: 20,), 
-            SingleChildScrollView( 
+            const Text('Good food\nFast Delivery',
+            style: TextStyle(color: Colors.white, fontSize: 30),), const SizedBox(height: 20,), 
+            const SingleChildScrollView( 
               scrollDirection: Axis.horizontal,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -43,18 +43,24 @@ class Grocery2Home extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 20,) , 
-            Text('Popular Now', 
+            const SizedBox(height: 20,) , 
+            const Text('Popular Now', 
             style: TextStyle(color: Colors.white,
              fontSize: 20),), 
-              SizedBox(height: 20,) , 
+              const SizedBox(height: 20,) , 
 
               // product card. 
               SingleChildScrollView( 
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    productCard(),
+                    ListView.builder(
+                      itemCount: groceryproducts.length,
+                      itemBuilder: (context, index) {
+                        return productCard(groceryproducts: groceryproducts[index]);
+                      },
+                    )
+                  
                     
                   ],
                 ),
