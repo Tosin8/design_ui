@@ -2,6 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
+import 'model/product_model.dart';
+
 class Grocery2Home extends StatelessWidget {
   const Grocery2Home({super.key});
 
@@ -53,7 +55,7 @@ class Grocery2Home extends StatelessWidget {
                 child: Row(
                   children: [
                     productCard(),
-                    productCard(), 
+                    
                   ],
                 ),
               ), 
@@ -68,8 +70,10 @@ class Grocery2Home extends StatelessWidget {
 }
 
 class productCard extends StatelessWidget {
+
+  final GroceryProduct groceryproducts; 
   const productCard({
-    super.key,
+    super.key, required this.groceryproducts,
   });
 
   @override
@@ -97,33 +101,34 @@ class productCard extends StatelessWidget {
             topRight: Radius.circular(120)), 
             color: Colors.white.withOpacity(0.9), 
           ),
-           child: const Padding(
-             padding: EdgeInsets.all(12.0),
+           child:  Padding(
+             padding: const EdgeInsets.all(12.0),
              child: Column(
               
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-      SizedBox(height: 180,),
-      Text('Mediterranean\nSunset Salad', 
-      style: TextStyle(color: Colors.black, fontSize: 18),), 
+      const SizedBox(height: 180,),
+      Text(groceryproducts.name, 
+      style: const TextStyle(color: Colors.black, fontSize: 18),), 
       
-      SizedBox(height: 10,), 
-      Text('A vibrant mix of crisp romaine lettuce, juicy cherry tomatoes, tangy feta cheese, Kalamata olives, and crisp cucumber slices. Topped with grilled chicken and drizzled with a zesty lemon-herb vinaigrette, this salad captures the essence of Mediterranean flavors in every bite.', style: TextStyle(color: Colors.grey, fontSize: 15),
+      const SizedBox(height: 10,), 
+       Text(groceryproducts.description, style: const TextStyle(color: Colors.grey, fontSize: 15),
       softWrap: true, 
       overflow: TextOverflow.ellipsis, 
       maxLines: 2,
       
       ), 
-      SizedBox(height: 15,) , 
+      const SizedBox(height: 15,) , 
       Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-        Text('\$15.00', 
-        style: TextStyle(fontSize: 22, 
+        Text('\$${groceryproducts.price}', 
+        style: const TextStyle(fontSize: 22, 
         color: Colors.black, 
         fontWeight: FontWeight.bold),
                   ),
-                  Text('420kcal', style: TextStyle(fontSize: 15, color: Colors.black),), 
+                  Text(groceryproducts.weight, 
+                  style: const TextStyle(fontSize: 15, color: Colors.black),), 
                   ])
                   ],
                 ),
