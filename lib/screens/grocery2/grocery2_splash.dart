@@ -1,4 +1,6 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
+import 'grocery2_home.dart';
 
 class Grocery2Splash extends StatefulWidget {
   const Grocery2Splash({super.key});
@@ -8,26 +10,36 @@ class Grocery2Splash extends StatefulWidget {
 }
 
 class _Grocery2SplashState extends State<Grocery2Splash> with TickerProviderStateMixin {
-
-  AnimationController scaleController; 
-  Animation<double> scaleAnimation; 
+  late AnimationController scaleController; 
+  late Animation<double> scaleAnimation; 
 
   @override
   void initState() {
-   
     super.initState();
-    scaleController = AnimationController(vsync: this, duration: const Duration(milliseconds: 1000));
+    scaleController = AnimationController(
+      vsync: this, 
+      duration: const Duration(milliseconds: 500)
+    )..addStatusListener((status) {
+      if (status == AnimationStatus.completed) {
+        Navigator.push(
+          context, 
+          AnimatingRoute(route: const Grocery2Home())
+        );
+        Timer(const Duration(milliseconds: 500), () {
+          scaleController.reset();
+        });
+      }
+    });
+
     scaleAnimation = Tween<double>(begin: 0, end: 1).animate(scaleController);
   }
 
   @override
   void dispose() {
-
-    super.dispose();
     scaleController.dispose();
+    super.dispose();
   }
 
-  
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -40,32 +52,56 @@ class _Grocery2SplashState extends State<Grocery2Splash> with TickerProviderStat
           ),
           foregroundDecoration: const BoxDecoration(
             gradient: LinearGradient(
-              colors: [Colors.black38, Colors.transparent,Colors.transparent], 
-              
-              begin: Alignment.bottomCenter, end: Alignment.topRight)),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-
-                  // title
-                  const Text('Right Taste', style: TextStyle(color: Colors.black, fontSize: 30, fontWeight: FontWeight.w500),),
-
-                  // subtitle 
-                  const Text('The Right Taste for Every Belly', style: TextStyle(color: Colors.black, fontSize: 14, fontWeight: FontWeight.w400),),
-
-                  const SizedBox(height: 100,),
-                  GestureDetector(
-                    onTap: () {},
+              colors: [Colors.black38, Colors.transparent, Colors.transparent], 
+              begin: Alignment.bottomCenter, 
+              end: Alignment.topRight
+            )
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text('Right Taste', style: TextStyle(color: Colors.black, fontSize: 30, fontWeight: FontWeight.w500)),
+              const Text('The Right Taste for Every Belly', style: TextStyle(color: Colors.black, fontSize: 14, fontWeight: FontWeight.w400)),
+              const SizedBox(height: 100),
+              GestureDetector(
+                onTap: () {
+                  scaleController.forward();
+                },
+                child: AnimatedBuilder(
+                  animation: scaleAnimation,
+                  builder: (context, child) => Transform.scale(
+                    scale: scaleAnimation.value,
                     child: Container(
-                      height: 50, width: 200,
+                      height: 50, 
+                      width: 200,
                       decoration: BoxDecoration(color: Colors.black, borderRadius: BorderRadius.circular(10)),
-                      child: const Align(child: Text('Get Started', style: TextStyle(color: Colors.white, fontSize: 18),)),
+                      child: const Align(child: Text('Get Started', style: TextStyle(color: Colors.white, fontSize: 18))),
                     ),
-                  )
-                ],
-              ),
-        )
+                  ),
+                ),
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
+}
+
+class AnimatingRoute extends PageRouteBuilder {
+  final Widget route;
+
+  AnimatingRoute({ required this.route }) : super(
+    pageBuilder: (
+      BuildContext context, 
+      Animation<double> animation, 
+      Animation<double> secondaryAnimation
+    ) => route,
+    transitionsBuilder: (
+      BuildContext context, 
+      Animation<double> animation, 
+      Animation<double> secondaryAnimation, 
+      Widget child
+    ) => FadeTransition(opacity: animation, child: child),
+  );
 }

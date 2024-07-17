@@ -7,6 +7,12 @@ class Grocery2Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold( 
       appBar: AppBar(title: const Text('Grocery 2')),
+      body: Column(
+        children: [
+          Text('Good food\nFast Delivery')
+        ],
+      ),
     );
+  
   }
 }
