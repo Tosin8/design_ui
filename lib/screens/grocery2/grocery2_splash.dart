@@ -1,8 +1,33 @@
 import 'package:flutter/material.dart';
 
-class Grocery2Splash extends StatelessWidget {
+class Grocery2Splash extends StatefulWidget {
   const Grocery2Splash({super.key});
 
+  @override
+  State<Grocery2Splash> createState() => _Grocery2SplashState();
+}
+
+class _Grocery2SplashState extends State<Grocery2Splash> with TickerProviderStateMixin {
+
+  AnimationController scaleController; 
+  Animation<double> scaleAnimation; 
+
+  @override
+  void initState() {
+   
+    super.initState();
+    scaleController = AnimationController(vsync: this, duration: const Duration(milliseconds: 1000));
+    scaleAnimation = Tween<double>(begin: 0, end: 1).animate(scaleController);
+  }
+
+  @override
+  void dispose() {
+
+    super.dispose();
+    scaleController.dispose();
+  }
+
+  
   @override
   Widget build(BuildContext context) {
     return SafeArea(
