@@ -10,11 +10,11 @@ class GroceryProduct{
 
 List <GroceryProduct> groceryproducts = [
   GroceryProduct(
-    name: 'Orange', 
-    image: 'assets/grocery/orange.png', 
-    description: 'Fresh oranges', 
-    price: 1.20,
-    weight: '1kg'
+    name: 'Mediterranean\nSunset Salad', 
+    image: 'assets/grocery2/products/image_1.png', 
+    description: 'A vibrant mix of crisp romaine lettuce, juicy cherry tomatoes, tangy feta cheese, Kalamata olives, and crisp cucumber slices. Topped with grilled chicken and drizzled with a zesty lemon-herb vinaigrette, this salad captures the essence of Mediterranean flavors in every bite.', 
+    price: 15.00,
+    weight: '420kcal'
     ),
 
 ]; 
