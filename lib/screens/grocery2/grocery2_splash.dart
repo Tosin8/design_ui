@@ -5,12 +5,14 @@ class Grocery2Splash extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold( 
-      body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(image: image, fit: BoxFit.cover),
-        ),
-      )
+    return SafeArea(
+      child: Scaffold( 
+        body: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(image: AssetImage('assets/grocery2/splash_main.jpg'), fit: BoxFit.cover),
+          ),
+        )
+      ),
     );
   }
 }
