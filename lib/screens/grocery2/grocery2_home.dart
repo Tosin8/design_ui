@@ -1,6 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:ui_design/screens/grocery2/grocery2_detail.dart';
 
 import 'model/product_model.dart';
 
@@ -149,7 +150,10 @@ class ProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(context, 
+        MaterialPageRoute(builder: (context) => Grocery2Detail(groceryproduct: groceryproduct)));
+      },
       child: Container(
         margin: const EdgeInsets.only(right: 15), // Add margin for spacing
         height: 400,
