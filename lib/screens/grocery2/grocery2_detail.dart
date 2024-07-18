@@ -37,6 +37,7 @@ class Grocery2Detail extends StatelessWidget {
          // product description card. 
          FadeInUp( 
           duration: Duration(milliseconds: 500),
+          curve: Curves.easeInOutSine, 
            child: Container(
              width: double.infinity,
              height: 700,
