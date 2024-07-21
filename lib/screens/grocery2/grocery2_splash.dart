@@ -97,13 +97,13 @@ class _Grocery2SplashState extends State<Grocery2Splash> with TickerProviderStat
                       duration: const Duration(milliseconds: 1500),
                       child: const Text('Right Taste', style: TextStyle(color: Colors.black, fontSize: 30, fontWeight: FontWeight.w500))),
                     FadeInUp(
-                      delay: Duration(milliseconds: 500), 
-                      duration: Duration(milliseconds: 1500),
+                      delay: const Duration(milliseconds: 500), 
+                      duration: const Duration(milliseconds: 1500),
                       child: const Text('The Right Taste for Every Belly', style: TextStyle(color: Colors.black, fontSize: 14, fontWeight: FontWeight.w400))),
                     const SizedBox(height: 100),
                     FadeInUp( 
-                      delay: Duration(milliseconds: 600), 
-                      duration: Duration(milliseconds: 1500),
+                      delay: const Duration(milliseconds: 600), 
+                      duration: const Duration(milliseconds: 1500),
                       child: GestureDetector(
                         onTap: () {
                           textFadeController.forward();

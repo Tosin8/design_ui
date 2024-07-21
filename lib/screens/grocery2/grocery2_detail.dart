@@ -36,7 +36,7 @@ class Grocery2Detail extends StatelessWidget {
          
          // product description card. 
          FadeInUp( 
-          duration: Duration(milliseconds: 500),
+          duration: const Duration(milliseconds: 500),
           curve: Curves.easeInOutSine, 
            child: Container(
              width: double.infinity,
@@ -61,8 +61,8 @@ class Grocery2Detail extends StatelessWidget {
                    ),
                    child: FadeInUp(
 
-delay: Duration(milliseconds: 500),
-duration: Duration(milliseconds: 1000),
+delay: const Duration(milliseconds: 500),
+duration: const Duration(milliseconds: 1000),
                      child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                        children: [
@@ -94,8 +94,8 @@ duration: Duration(milliseconds: 1000),
                     right: 20,
                   ),
                   child: FadeInUp( 
-                    delay: Duration(milliseconds: 1000),
-                    duration: Duration(milliseconds: 1200),
+                    delay: const Duration(milliseconds: 1000),
+                    duration: const Duration(milliseconds: 1200),
                     child: Text(
                       groceryproduct.description,
                       style: const TextStyle(
@@ -108,48 +108,48 @@ duration: Duration(milliseconds: 1000),
                 ),
                 const SizedBox(height: 100,), 
                 FadeInUp( 
-                  delay: Duration(milliseconds: 1200),
-                  duration: Duration(milliseconds: 1200),
+                  delay: const Duration(milliseconds: 1200),
+                  duration: const Duration(milliseconds: 1200),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                              
-                      // quality counter
-                      Padding(
-                        padding: const EdgeInsets.only(
-                          left: 20,
-                        ),
-                        child: Row(
-                          children: [
-                            Container(
-                              height: 30, width: 30,
-                             decoration: const BoxDecoration(
-                              color: Colors.black, 
-                              borderRadius: BorderRadius.all(Radius.circular(5)),
-                             ),
-                             child: const Center(child: Text('-', style: TextStyle(fontSize: 30, color: Colors.white),)),
-                            ),
-                              SizedBox(width: 12,),  
-                             const Text(
-                                ' 1',
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold, 
-                                ), 
-                              ),
-                              SizedBox(width: 12,), 
-                              Container(
-                              height: 30, width: 30,
-                             decoration: const BoxDecoration(
-                              borderRadius: BorderRadius.all(Radius.circular(5)), color: Colors.black
-                             ),
-                             child: const Align(child: Text('+', style: TextStyle(fontSize: 30, color: Colors.white),)),
-                            ), 
+                      // // quality counter
+                      // Padding(
+                      //   padding: const EdgeInsets.only(
+                      //     left: 20,
+                      //   ),
+                      //   child: Row(
+                      //     children: [
+                      //       Container(
+                      //         height: 30, width: 30,
+                      //        decoration: const BoxDecoration(
+                      //         color: Colors.black, 
+                      //         borderRadius: BorderRadius.all(Radius.circular(5)),
+                      //        ),
+                      //        child: const Center(child: Text('-', style: TextStyle(fontSize: 30, color: Colors.white),)),
+                      //       ),
+                      //         SizedBox(width: 12,),  
+                      //        const Text(
+                      //           ' 1',
+                      //           style: TextStyle(
+                      //             color: Colors.black,
+                      //             fontSize: 20,
+                      //             fontWeight: FontWeight.bold, 
+                      //           ), 
+                      //         ),
+                      //         SizedBox(width: 12,), 
+                      //         Container(
+                      //         height: 30, width: 30,
+                      //        decoration: const BoxDecoration(
+                      //         borderRadius: BorderRadius.all(Radius.circular(5)), color: Colors.black
+                      //        ),
+                      //        child: const Align(child: Text('+', style: TextStyle(fontSize: 30, color: Colors.white),)),
+                      //       ), 
                             
-                          ],
-                        )
-                      ), 
+                      //     ],
+                      //   )
+                      // ), 
                       // add to cart button. 
                       Padding(
                         padding: const EdgeInsets.only(
@@ -158,7 +158,7 @@ duration: Duration(milliseconds: 1000),
                         child: GestureDetector(
                           onTap: () {},
                           child: Container(
-                            height: 60, width:  180,
+                            height: 60, width:  350,
                             decoration: BoxDecoration(
                               color: Colors.black,
                               borderRadius: BorderRadius.circular(10),
@@ -176,7 +176,7 @@ duration: Duration(milliseconds: 1000),
                           ),
                         )
                       ),
-                      SizedBox(width: 6,), 
+                      const SizedBox(width: 6,), 
                       // buy now button.
                     
                     ],
