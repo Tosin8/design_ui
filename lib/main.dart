@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:ui_design/screens/coffee_shop/screen/splash.dart';
+import 'package:ui_design/screens/discover_ui/discover.dart';
+import 'package:ui_design/screens/furniture_app/splash.dart';
 import 'package:ui_design/screens/grocery/grocery_home.dart';
 import 'package:ui_design/screens/grocery/grocery_splash.dart';
+import 'package:ui_design/screens/hommy/splash_screen.dart';
 import 'package:ui_design/shots/list_slidable.dart';
 import 'package:ui_design/shots/moviebox.dart';
 
@@ -72,7 +77,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp( debugShowCheckedModeBanner: false, 
+    return GetMaterialApp( debugShowCheckedModeBanner: false, 
     title: 'Flutter Demo',
     theme: ThemeData(
       primarySwatch: Colors.blue,
@@ -82,7 +87,7 @@ class MyApp extends StatelessWidget {
     //   tabletScaffold: TabletViewL(),
     //   desktopScaffold: DesktopView(),
     //   ), 
-home: const Grocery2Splash()
+home: const Hommy()
     ); 
   }
 }
