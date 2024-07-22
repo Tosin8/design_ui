@@ -181,7 +181,7 @@ class _SlideGradientTransform extends GradientTransform {
 
   final double percent;
 
-  _SlideGradientTransform({required this.percent}); 
+  const _SlideGradientTransform({required this.percent}); 
   @override
   Matrix4? transform(Rect bounds, {TextDirection? textDirection}) {
    return Matrix4.translationValues(bounds.height* percent, 0, 0); 
