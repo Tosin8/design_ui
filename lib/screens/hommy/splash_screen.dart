@@ -2,7 +2,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:get/get.dart';
 import 'package:ui_design/screens/hommy/home.dart';
 
