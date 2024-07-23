@@ -87,7 +87,7 @@ class MyApp extends StatelessWidget {
     //   tabletScaffold: TabletViewL(),
     //   desktopScaffold: DesktopView(),
     //   ), 
-home: const Hommy()
+home: const Grocery2Splash()
     ); 
   }
 }
