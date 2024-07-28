@@ -46,12 +46,46 @@ username: '@ellianpol',
   isFollowedByMe: false), 
 
 ]; 
-final List<User> _foundedUsers = []; 
+ List<User> _foundedUsers = []; 
+
+@override
+  void initState() {
+    
+    super.initState();
+    setState(() {
+      _foundedUsers = _users; 
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold( 
+        appBar: AppBar(
+          elevation: 0, 
+          backgroundColor: Colors.grey.shade900, 
+          title:  SizedBox(
+            height: 38, 
+            child: TextField(
+              onChanged: (value) => onSearch(value),
+              decoration: InputDecoration(
+                
+                filled: true, 
+                fillColor: Colors.grey.shade800,
+                contentPadding: const EdgeInsets.all(10),
+                prefixIcon: Icon(Icons.search, color: Colors.grey.shade500),
+                border:  OutlineInputBorder(borderSide: BorderSide.none, 
+                borderRadius: BorderRadius.circular(20), 
+                ),
+                hintStyle: TextStyle(
+                  fontSize: 14, 
+                  color: Colors.grey.shade500,
+                ),
+                hintText: 'Search Users'
+              ),
+            ),
+          )
+        ),
         body: Container(
           color: Colors.grey.shade900
         )
