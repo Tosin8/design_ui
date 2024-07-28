@@ -57,6 +57,10 @@ username: '@ellianpol',
     });
   }
 
+  onSearch(String search){
+    print(search); 
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -91,5 +95,23 @@ username: '@ellianpol',
         )
       ),
     );
+  }
+
+  userComponent({required User user}) {
+    return Container(
+      padding: const EdgeInsets.only(top: 10, bottom: 10), 
+      child: Row(
+        children: [
+          SizedBox(
+            width: 60, 
+            height: 60, 
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(50), 
+              child: Image.network(user.image),
+            ),
+          )
+        ],
+      ),
+    ); 
   }
 }
