@@ -6,6 +6,7 @@ import 'package:ui_design/screens/furniture_app/splash.dart';
 import 'package:ui_design/screens/grocery/grocery_home.dart';
 import 'package:ui_design/screens/grocery/grocery_splash.dart';
 import 'package:ui_design/screens/hommy/splash_screen.dart';
+import 'package:ui_design/screens/seachable_list/search_home.dart';
 import 'package:ui_design/shots/list_slidable.dart';
 import 'package:ui_design/shots/moviebox.dart';
 
@@ -77,7 +78,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp( debugShowCheckedModeBanner: false, 
+    return MaterialApp( debugShowCheckedModeBanner: false, 
     title: 'Flutter Demo',
     theme: ThemeData(
       primarySwatch: Colors.blue,
@@ -87,7 +88,7 @@ class MyApp extends StatelessWidget {
     //   tabletScaffold: TabletViewL(),
     //   desktopScaffold: DesktopView(),
     //   ), 
-home: const GrocerySplash()
+home: const SearchHome()
     ); 
   }
 }
