@@ -10,6 +10,12 @@ class SearchHome extends StatefulWidget {
 class _SearchHomeState extends State<SearchHome> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return SafeArea(
+      child: Scaffold( 
+        body: Container(
+          color: Colors.grey.shade900
+        )
+      ),
+    );
   }
 }
