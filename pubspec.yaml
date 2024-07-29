@@ -41,6 +41,7 @@ dependencies:
   iconsax: ^0.0.8
   liquid_pull_to_refresh: ^3.0.1
   liquid_swipe: ^3.1.0
+  nfc_manager: ^3.5.0
   page_transition: ^2.1.0
   percent_indicator: ^4.2.3
   provider: ^6.1.2
