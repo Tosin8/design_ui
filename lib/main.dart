@@ -6,6 +6,7 @@ import 'package:ui_design/screens/furniture_app/splash.dart';
 import 'package:ui_design/screens/grocery/grocery_home.dart';
 import 'package:ui_design/screens/grocery/grocery_splash.dart';
 import 'package:ui_design/screens/hommy/splash_screen.dart';
+import 'package:ui_design/screens/nfc/views/home_view.dart';
 import 'package:ui_design/screens/seachable_list/search_home.dart';
 import 'package:ui_design/shots/list_slidable.dart';
 import 'package:ui_design/shots/moviebox.dart';
@@ -89,7 +90,7 @@ class MyApp extends StatelessWidget {
     //   tabletScaffold: TabletViewL(),
     //   desktopScaffold: DesktopView(),
     //   ), 
-home:  SenderView()
+home:  const HomeView()
     ); 
   }
 }
