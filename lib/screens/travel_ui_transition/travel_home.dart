@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 
 class TravelHome extends StatefulWidget {
@@ -22,29 +23,40 @@ void _onScroll() {
   @override
   Widget build(BuildContext context) {
     return  Scaffold( 
-      body: PageView(
-        controller: _pageController,
-        children: [
-          Screen(image: 'assets/travel_ui/images/safari.jpg', 
-          title: 'SAFARI RESERVE', 
-          description: '', 
-          page: 1), 
-            Screen(image: 'assets/travel_ui/images/victoria.jpg', 
-            title: 'VICTORIA FALL',
-            description: '', 
-            page: 2),   
-            Screen(image: 'assets/travel_ui/images/wall.jpg', 
-            title: 'WALL OF CHINA', 
-            description: '', 
-            page: 3), 
-
-               ],
-      )
+      body: Stack(
+        children:[ PageView(
+          controller: _pageController,
+          children: [
+            Screen(image: 'assets/travel_ui/images/safari.jpg', 
+            title: 'SAFARI RESERVE', location: 'Zambia',
+            description: 'Embark on a thrilling journey into the wild as you explore a premier safari reserve. Experience the untamed beauty of nature up close, where vast savannahs and lush forests teem with diverse wildlife. With expert guides leading the way, witness majestic animals like elephants, lions, and giraffes in their natural habitats. ', 
+            page: 1), 
+              Screen(image: 'assets/travel_ui/images/victoria.jpg', location: 'USA',
+              title: 'VICTORIA FALL',
+              description: 'Discover the awe-inspiring power and beauty of Victoria Falls, one of the world\'s most spectacular natural wonders. Known locally as The Smoke that Thunders this breathtaking waterfall spans the border between Zambia and Zimbabwe, sending plumes of mist skyward as it plunges into the Zambezi River gorge below',
+              page: 2),   
+              Screen(image: 'assets/travel_ui/images/wall.jpg', location: 'China',
+              title: 'WALL OF CHINA', 
+              description: ' This tour takes you to some of the most well-preserved sections of the wall, where you\'ll learn about its rich history, strategic importance, and the immense efforts taken to build this massive structure over centuries. Enjoy breathtaking views of the rugged mountains and lush valleys that stretch as far as the eye can see. ', 
+              page: 3), 
+        
+                 ],
+        ),
+         Positioned(
+          bottom: 30,
+          right: 30, left: 30, 
+          child: Container(
+            height: 60, 
+            width: 300,
+            decoration:  const BoxDecoration(color: Colors.blueGrey,
+             borderRadius: BorderRadius.all(Radius.circular(10))),
+            child: const Align(child: Text('Get Started', style: TextStyle(color: Colors.white, fontSize: 20),)),)),
+    ]  )
     );
   }
 
 
-  Widget Screen({image, title, description, page}) {
+  Widget Screen({image, title, description, page, location}) {
     return Container(
       decoration:  BoxDecoration(
         image: DecorationImage(
@@ -81,12 +93,30 @@ void _onScroll() {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 
-                 Text(title, 
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                   fontSize: 26),), 
-                   const SizedBox(height: 20,), 
+                 FadeInUp(
+              curve: Curves.ease, 
+              duration: const Duration(milliseconds: 1200),
+                   child: Text(title, 
+                                   style: const TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                     fontSize: 26),),
+                 ), 
+                   const SizedBox(height: 8,), 
+                    FadeInUp(
+                      delay: const Duration(milliseconds: 1400),
+              curve: Curves.ease, 
+              duration: const Duration(milliseconds: 1200),
+                   child: Row(
+                     children:[
+                      const Icon(Icons.location_on, color: Colors.white,), const SizedBox(width: 2,), 
+                       Text(location, 
+                                     style: const TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w600,
+                       fontSize: 18),),
+                 ] ),
+                 ),
                    Row(
                     children: [
                       Container(
@@ -114,11 +144,15 @@ void _onScroll() {
                    ), 
                    const SizedBox(height: 20,), 
                    Padding(
-                     padding: const EdgeInsets.only(right: 30.0),
-                     child: Text(description, 
-                     style: const TextStyle(color: Colors.white, 
-                     fontSize: 18, height: 1.2),),
+                     padding: const EdgeInsets.only(right: 20.0),
+                     child: FadeInUp(
+                      delay: const Duration(milliseconds: 1000),
+                       child: Text(description, 
+                       style: const TextStyle(color: Colors.white, 
+                       fontSize: 18, ),),
+                     ),
                    ), 
+                   const SizedBox(height: 100,), 
               ],
             )), 
           ],
