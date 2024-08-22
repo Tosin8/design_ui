@@ -100,6 +100,9 @@ flutter:
     - assets/furniture/icons/ripple.gif
     - assets/travel_ui/payment.png
     - assets/travel_ui/relax.png
+    - assets/travel_ui/images/safari.jpg
+    - assets/travel_ui/images/victoria.jpg
+    - assets/travel_ui/images/wall.jpg
     - assets/travel_ui/travel.png
     - assets/furniture_onboard/1.jpg
     - assets/furniture_onboard/2.jpg

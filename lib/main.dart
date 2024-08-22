@@ -1,19 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:ui_design/screens/coffee_shop/screen/splash.dart';
-import 'package:ui_design/screens/discover_ui/discover.dart';
-import 'package:ui_design/screens/furniture_app/splash.dart';
-import 'package:ui_design/screens/grocery/grocery_home.dart';
-import 'package:ui_design/screens/grocery/grocery_splash.dart';
-import 'package:ui_design/screens/hommy/splash_screen.dart';
-import 'package:ui_design/screens/nfc/views/home_view.dart';
-import 'package:ui_design/screens/seachable_list/search_home.dart';
-import 'package:ui_design/shots/list_slidable.dart';
-import 'package:ui_design/shots/moviebox.dart';
 
-import 'screens/grocery2/grocery2_splash.dart';
-import 'screens/nfc/views/sender_views.dart';
-import 'shots/direct_phonecall.dart';
+import 'screens/travel_onboard/swipe_home.dart';
+import 'screens/travel_ui_transition/travel_home.dart';
 
 
 
@@ -90,7 +78,7 @@ class MyApp extends StatelessWidget {
     //   tabletScaffold: TabletViewL(),
     //   desktopScaffold: DesktopView(),
     //   ), 
-home:  const GroceryHome()
+home:  const TravelHome(), 
     ); 
   }
 }
