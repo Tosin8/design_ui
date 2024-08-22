@@ -24,9 +24,15 @@ void _onScroll() {
       body: PageView(
         controller: _pageController,
         children: [
-          Screen(image: 'assets/travel_ui/images/safari.jpg'), 
-            Screen(image: 'assets/travel_ui/images/victoria.jpg'),   
-            Screen(image: 'assets/travel_ui/images/wall.jpg'), 
+          Screen(image: 'assets/travel_ui/images/safari.jpg', 
+          title: 'SAFARI RESERVE', 
+          description: ''), 
+            Screen(image: 'assets/travel_ui/images/victoria.jpg', 
+            title: 'VICTORIA FALL',
+            description: ''),   
+            Screen(image: 'assets/travel_ui/images/wall.jpg', 
+            title: 'WALL OF CHINA', 
+            description: ''), 
 
                ],
       )
@@ -34,7 +40,7 @@ void _onScroll() {
   }
 
 
-  Widget Screen({image}) {
+  Widget Screen({image, title, description}) {
     return Container(
       decoration:  BoxDecoration(
         image: DecorationImage(
@@ -71,11 +77,11 @@ void _onScroll() {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 
-                const Text('SAFARI', 
-                style: TextStyle(
+                 Text(title, 
+                style: const TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
-                   fontSize: 30),), 
+                   fontSize: 26),), 
                    const SizedBox(height: 20,), 
                    Row(
                     children: [
@@ -96,8 +102,16 @@ void _onScroll() {
                         margin: const EdgeInsets.only(right: 3),
                         child: const Icon(Icons.star_half, 
                         color: Colors.grey, size: 15,),), 
+                        const Text('3', 
+                        style: TextStyle(color: Colors.white),), 
+                        const Text('(200)', 
+                        style: TextStyle(color: Colors.white),)
                     ],
-                   )
+                   ), 
+                   const SizedBox(height: 20,), 
+                   Text(description, 
+                   style: const TextStyle(color: Colors.white, 
+                   fontSize: 20),), 
               ],
             )), 
           ],
