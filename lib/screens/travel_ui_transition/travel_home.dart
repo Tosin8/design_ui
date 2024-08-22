@@ -51,6 +51,57 @@ void _onScroll() {
           Colors.black.withOpacity(0.2), 
           ])
         ),
+        child:  Padding(padding: const EdgeInsets.all(20), 
+        child: Column(
+          children: [
+            const SizedBox(
+              height: 40,
+            ), 
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.end, 
+              crossAxisAlignment: CrossAxisAlignment.baseline, 
+              textBaseline: TextBaseline.alphabetic,
+              children: [
+                Text('1', style: TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.bold),), 
+                Text('/4', style: TextStyle(color: Colors.white, fontSize: 15, ),)
+              ],
+            ), 
+            Expanded(child: Column(
+              mainAxisAlignment: MainAxisAlignment.end, 
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                
+                const Text('SAFARI', 
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                   fontSize: 30),), 
+                   const SizedBox(height: 20,), 
+                   Row(
+                    children: [
+                      Container(
+                        margin: const EdgeInsets.only(right: 3),
+                        child: const Icon(Icons.star, 
+                        color: Colors.yellow, size: 15,),), 
+                                        Container(
+                        margin: const EdgeInsets.only(right: 3),
+                        child: const Icon(Icons.star, 
+                        color: Colors.yellow, size: 15,),),                 Container(
+                        margin: const EdgeInsets.only(right: 3),
+                        child: const Icon(Icons.star, 
+                        color: Colors.yellow, size: 15,),),                 Container(
+                        margin: const EdgeInsets.only(right: 3),
+                        child: const Icon(Icons.star_half, 
+                        color: Colors.grey, size: 15,),),                 Container(
+                        margin: const EdgeInsets.only(right: 3),
+                        child: const Icon(Icons.star_half, 
+                        color: Colors.grey, size: 15,),), 
+                    ],
+                   )
+              ],
+            )), 
+          ],
+        ))
       )
     ); 
   }
