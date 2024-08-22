@@ -9,6 +9,7 @@ class TravelHome extends StatefulWidget {
 
 class _TravelHomeState extends State<TravelHome> {
   late PageController _pageController; 
+  int totalPage = 3; 
 
 void _onScroll() {
 
@@ -26,13 +27,16 @@ void _onScroll() {
         children: [
           Screen(image: 'assets/travel_ui/images/safari.jpg', 
           title: 'SAFARI RESERVE', 
-          description: ''), 
+          description: '', 
+          page: 1), 
             Screen(image: 'assets/travel_ui/images/victoria.jpg', 
             title: 'VICTORIA FALL',
-            description: ''),   
+            description: '', 
+            page: 2),   
             Screen(image: 'assets/travel_ui/images/wall.jpg', 
             title: 'WALL OF CHINA', 
-            description: ''), 
+            description: '', 
+            page: 3), 
 
                ],
       )
@@ -40,7 +44,7 @@ void _onScroll() {
   }
 
 
-  Widget Screen({image, title, description}) {
+  Widget Screen({image, title, description, page}) {
     return Container(
       decoration:  BoxDecoration(
         image: DecorationImage(
@@ -63,13 +67,13 @@ void _onScroll() {
             const SizedBox(
               height: 40,
             ), 
-            const Row(
+             Row(
               mainAxisAlignment: MainAxisAlignment.end, 
               crossAxisAlignment: CrossAxisAlignment.baseline, 
               textBaseline: TextBaseline.alphabetic,
               children: [
-                Text('1', style: TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.bold),), 
-                Text('/4', style: TextStyle(color: Colors.white, fontSize: 15, ),)
+                Text(page.toString(), style: const TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.bold),), 
+                Text('/$totalPage', style: const TextStyle(color: Colors.white, fontSize: 15, ),)
               ],
             ), 
             Expanded(child: Column(
@@ -109,9 +113,12 @@ void _onScroll() {
                     ],
                    ), 
                    const SizedBox(height: 20,), 
-                   Text(description, 
-                   style: const TextStyle(color: Colors.white, 
-                   fontSize: 20),), 
+                   Padding(
+                     padding: const EdgeInsets.only(right: 30.0),
+                     child: Text(description, 
+                     style: const TextStyle(color: Colors.white, 
+                     fontSize: 18, height: 1.2),),
+                   ), 
               ],
             )), 
           ],
