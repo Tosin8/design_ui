@@ -193,7 +193,7 @@ class _TravelHomeState extends State<TravelHome> {
           controller: _pageController,
           children: [
             Screen(
-              videoPath: 'assets/travel_ui/videos/nike.mp4',
+              videoPath: 'assets/travel_ui/videos/safari.mp4',
               title: 'SAFARI RESERVE',
               location: 'Zambia',
               description:
@@ -203,7 +203,7 @@ class _TravelHomeState extends State<TravelHome> {
             Screen(
               videoPath: 'assets/travel_ui/videos/victoria.mp4',
               title: 'VICTORIA FALL',
-              location: 'USA',
+              location: 'Zimbabwe',
               description:
                   'Discover the awe-inspiring power and beauty of Victoria Falls, one of the world\'s most spectacular natural wonders. Known locally as The Smoke that Thunders this breathtaking waterfall spans the border between Zambia and Zimbabwe, sending plumes of mist skyward as it plunges into the Zambezi River gorge below.',
               page: 2,
