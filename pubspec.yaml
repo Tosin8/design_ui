@@ -55,6 +55,7 @@ dependencies:
   uuid: ^4.2.2
   vertical_card_pager: ^1.5.0
   video_player: ^2.9.1
+  flutter_load_kit: ^0.0.2
 
 dev_dependencies:
   flutter_lints: ^2.0.0
@@ -105,6 +106,8 @@ flutter:
     - assets/travel_ui/images/wall.jpg
     - assets/travel_ui/travel.png
     - assets/travel_ui/videos/safari.mp4
+    - assets/travel_ui/videos/victoria.mp4
+    - assets/travel_ui/videos/wall.mp4
     - assets/furniture_onboard/1.jpg
     - assets/furniture_onboard/2.jpg
     - assets/furniture_onboard/3.jpg

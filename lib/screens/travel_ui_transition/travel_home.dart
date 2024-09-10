@@ -165,6 +165,8 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
+import 'package:flutter_load_kit/flutter_load_kit.dart';
+
 
 class TravelHome extends StatefulWidget {
   const TravelHome({super.key});
@@ -396,6 +398,9 @@ class _VideoBackgroundState extends State<VideoBackground> {
               ),
             ),
           )
-        : const Center(child: CircularProgressIndicator());
+        : const Center(
+          child: LoadKitScalingWave(), 
+         // child: CircularProgressIndicator()
+          );
   }
 }

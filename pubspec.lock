@@ -294,6 +294,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.3"
+  flutter_load_kit:
+    dependency: "direct main"
+    description:
+      name: flutter_load_kit
+      sha256: d94037e7fecf3aa28e10e26a31032a539e22166ff8b0097bd168a46b5b630777
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.2"
   flutter_phone_direct_caller:
     dependency: "direct main"
     description:
