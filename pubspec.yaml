@@ -2,7 +2,6 @@ name: ui_design
 description: "A new Flutter project."
 
 # Remove this line if you wish to publish to pub.dev
-
 version: 1.0.0+1
 
 environment:
@@ -49,8 +48,8 @@ dependencies:
   read_more_text: ^0.0.5
   readmore: ^3.0.0
   shadow: ^1.5.0
-  simple_shadow: ^0.3.1
   simple_animations: ^5.0.2
+  simple_shadow: ^0.3.1
   staggered_grid_view_flutter: ^0.0.4
   url_launcher: ^6.3.0
   uuid: ^4.2.2
@@ -105,6 +104,7 @@ flutter:
     - assets/travel_ui/images/victoria.jpg
     - assets/travel_ui/images/wall.jpg
     - assets/travel_ui/travel.png
+    - assets/travel_ui/videos/nike.mp4
     - assets/furniture_onboard/1.jpg
     - assets/furniture_onboard/2.jpg
     - assets/furniture_onboard/3.jpg
