@@ -193,7 +193,7 @@ class _TravelHomeState extends State<TravelHome> {
           controller: _pageController,
           children: [
             Screen(
-              videoPath: 'assets/travel_ui/videos/safari.mp4',
+              videoPath: 'assets/travel_ui/videos/nike.mp4',
               title: 'SAFARI RESERVE',
               location: 'Zambia',
               description:
