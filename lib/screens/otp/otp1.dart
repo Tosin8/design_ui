@@ -18,9 +18,12 @@ class OTP1 extends StatelessWidget {
             
             child: Image.asset('assets/otp/phone.png'),
             ), 
-                const SizedBox(height: 30,),   
+                const SizedBox(height: 30,), 
+                const Text('Verify Phone', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),), 
+                const SizedBox(height: 20,), 
             const Text('Please enter the 6 digits code sent to +91 9999999999', textAlign: TextAlign.center, 
-            style: TextStyle(color: Colors.grey, fontSize: 16),)
+            style: TextStyle(
+              color: Colors.grey, fontSize: 16),)
             ],
           ),
         ),
