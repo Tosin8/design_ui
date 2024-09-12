@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_design/screens/otp/otp1.dart';
 
 import 'screens/travel_onboard/swipe_home.dart';
 import 'screens/travel_ui_transition/travel_home.dart';
@@ -78,7 +79,7 @@ class MyApp extends StatelessWidget {
     //   tabletScaffold: TabletViewL(),
     //   desktopScaffold: DesktopView(),
     //   ), 
-home:  const TravelHome(), 
+home:  const OTP1(), 
     ); 
   }
 }
