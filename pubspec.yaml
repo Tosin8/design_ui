@@ -111,6 +111,7 @@ flutter:
     - assets/furniture_onboard/1.jpg
     - assets/furniture_onboard/2.jpg
     - assets/furniture_onboard/3.jpg
+    - assets/otp/phone.png
 
     # gridview
     - assets/furniture_grid/1.jpg
