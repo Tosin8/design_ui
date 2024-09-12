@@ -22,9 +22,10 @@ class OTP1 extends StatelessWidget {
                 const SizedBox(height: 30,), 
                 const Text('Verify Phone', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),), 
                 const SizedBox(height: 20,), 
-            const Text('Please enter the 6 digits code sent to +91 9999999999', textAlign: TextAlign.center, 
+            const Text('Please enter the 6 digits \ncode sent to +91 9999999999', textAlign: TextAlign.center, 
             style: TextStyle(
               color: Colors.grey, fontSize: 16),), 
+              const SizedBox(height: 30,), 
               VerificationCode(
                 length: 6, 
                 keyboardType: TextInputType.number, 
@@ -36,6 +37,9 @@ class OTP1 extends StatelessWidget {
                 onEditing: (bool value) {
                   print(value);
                 },), 
+                const SizedBox(height: 20,), 
+                const Text('Didn\'t not receive the code?',
+                style: TextStyle(color: Colors.grey, fontSize: 16),)
             ],
           ),
         ),
