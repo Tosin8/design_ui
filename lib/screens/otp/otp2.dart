@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -12,6 +14,28 @@ class otp2 extends StatefulWidget {
 }
 
 class _otp2State extends State<otp2> {
+Timer? _timer;
+  final int _counter = 0;
+  bool _isTimerActive = false;
+  int _timeLeft = 90; 
+void startTimer() {
+    setState(() {
+      _isTimerActive = true;
+    });
+
+    _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
+      setState(() {
+        if (_timeLeft > 0) {
+          _timeLeft--; // Decrease the time left every second
+        } else {
+          _timer?.cancel(); // Stop the timer after 90 seconds
+          _isTimerActive = false; // Enable the Resend button again
+          _timeLeft = 90; // Reset timer for the next usage
+        }
+      });
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
