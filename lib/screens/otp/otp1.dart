@@ -16,7 +16,7 @@ class _OTP1State extends State<OTP1> {
   bool _isVerified = false; 
  bool _isLoading = false; 
 
-final String _code = ''; 
+ String _code = ''; 
 late Timer _timer; 
  int _start = 60; 
 
@@ -84,8 +84,10 @@ verify() {
                 keyboardType: TextInputType.number, 
                 underlineColor: Colors.grey, 
                 underlineUnfocusedColor: Colors.grey, 
-                onCompleted: (String value) {
-                  print(value);
+                onCompleted: ( value) {
+                 setState(() {
+                   _code = value;
+                 });
                 },
                 onEditing: (bool value) {
                   print(value);
