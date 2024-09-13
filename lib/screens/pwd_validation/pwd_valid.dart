@@ -138,7 +138,7 @@ class _PwdValidState extends State<PwdValid> {
                       
                        
                   ],
-                ),const SizedBox(height: 20),
+                ),const SizedBox(height: 10),
                Row(
                 children: [
                   AnimatedContainer(
