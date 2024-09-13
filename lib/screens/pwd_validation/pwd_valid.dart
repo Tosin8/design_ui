@@ -82,10 +82,19 @@ class _PwdValidState extends State<PwdValid> {
                   ),
                 ) , 
                 const SizedBox(height: 20,), 
+
+                // Repeat Password. 
                    TextField(
                   onChanged: (repeatPassword) => onRepeatPwdChanged(repeatPassword),
                   obscureText: true,
                   decoration: InputDecoration(
+                     suffixIcon: IconButton(
+                      onPressed: (){
+                      setState(() {
+                        _isvisible = !_isvisible; 
+                      });
+                    },
+                     icon: _isvisible ?  const Icon(Icons.visibility, color: Colors.black,) : const Icon(Icons.visibility_off, color: Colors.grey,)),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
                       borderSide: const BorderSide(color: Colors.black),
