@@ -12,7 +12,14 @@ class _otp2State extends State<otp2> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      body: Container(child: const Column(children: [],),)
+      body: Container(
+        child: const Padding(
+          padding: EdgeInsets.symmetric(vertical: 80.0, horizontal: 12.0),
+          child: Column(
+            children: [
+              Text('Verification Code', style: TextStyle(color: Colors.white, fontSize: 23, fontWeight: FontWeight.bold),)
+            ],),
+        ),)
     ); 
   }
 }
