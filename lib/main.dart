@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ui_design/screens/otp/otp1.dart';
 import 'package:ui_design/screens/otp/otp2.dart';
+import 'package:ui_design/screens/pwd_validation/pwd_valid.dart';
 
 import 'screens/travel_onboard/swipe_home.dart';
 import 'screens/travel_ui_transition/travel_home.dart';
@@ -80,7 +81,7 @@ class MyApp extends StatelessWidget {
     //   tabletScaffold: TabletViewL(),
     //   desktopScaffold: DesktopView(),
     //   ), 
-home:  const otp2(), 
+home:  const PwdValid(), 
     ); 
   }
 }
