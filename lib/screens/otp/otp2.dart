@@ -15,7 +15,7 @@ class otp2 extends StatefulWidget {
 
 class _otp2State extends State<otp2> {
 Timer? _timer;
-  final int _counter = 0;
+  
   bool _isTimerActive = false;
   int _timeLeft = 90; 
 void startTimer() {
@@ -36,39 +36,84 @@ void startTimer() {
     });
   }
 
+ @override
+  void dispose() {
+    _timer?.cancel(); // Cancel the timer when the widget is disposed
+    super.dispose();
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
       body: SingleChildScrollView(
         child: Container(
-          child:  const Padding(
-            padding: EdgeInsets.symmetric(vertical: 80.0, horizontal: 20.0),
+          child:  Padding(
+            padding: const EdgeInsets.symmetric(vertical: 80.0, horizontal: 20.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('Verification Code', style: TextStyle(color: Colors.white, fontSize: 23, fontWeight: FontWeight.bold),), 
-                 SizedBox(height: 8,),
-                 Text('We have sent the code verification to ', style: TextStyle(color: Colors.grey, fontSize: 16, fontWeight: FontWeight.w500),), 
-                 SizedBox(height: 8,), 
-                 Row(
+                const Text('Verification Code', style: TextStyle(color: Colors.white, fontSize: 23, fontWeight: FontWeight.bold),), 
+                 const SizedBox(height: 8,),
+                 const Text('We have sent the code verification to ', style: TextStyle(color: Colors.grey, fontSize: 16, fontWeight: FontWeight.w500),), 
+                 const SizedBox(height: 8,), 
+                 const Row(
                    children: [
                      Text('+234*******098 ', style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),),
                      SizedBox(width: 10,), 
                       Text('Change phone number? ', style: TextStyle(color: Colors.blue, fontSize: 15, fontWeight: FontWeight.bold, ),),
                    ],
                  ), 
-                 SizedBox(height: 30,), 
-                 OTPFORM(), 
-                 SizedBox(height: 20,), 
+                 const SizedBox(height: 30,), 
+                 const OTPFORM(), 
+                 const SizedBox(height: 20,), 
                  Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text('Resend code after', style: TextStyle(color: Colors.white),)
+
+
+              Text(
+                _isTimerActive ? 
+                'Resend code after ${_timeLeft ~/ 60}:${(_timeLeft % 60).toString().padLeft(2, '0')}' : 'Resend code', style: const TextStyle(color: Colors.grey, fontSize: 16, fontWeight: FontWeight.bold),), 
                   ],
                  ), 
-                 SizedBox(height: 300,),
-                 OTPBUTTONS()
+                 const SizedBox(height: 300,),
+                 Row(
+     children: [
+       Expanded(
+         child: GestureDetector( 
+           onTap: _isTimerActive? null: startTimer,
+           child: Container(
+             decoration:  BoxDecoration(
+               border: Border.all(color: Colors.blue),
+              //color: Colors.blue,
+               borderRadius: BorderRadius.circular(10), 
+             ),
+             height: 60,
+             width: 200,
+             child: const Center(child: Text('Resend', style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),)),
+           ),
+         ),
+       ), 
+       const SizedBox(width: 10,), 
+       Expanded(
+         child: GestureDetector( 
+           onTap: (){},
+           child: Container(
+             decoration:  BoxDecoration(
+               
+               color: Colors.blue,
+               borderRadius: BorderRadius.circular(10), 
+             ),
+             height: 60,
+             width: 200,
+             child: const Center(child: Text('Confirm', style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),)),
+           ),
+         ),
+       ),
+     ],
+    )
               ],),
           ),),
       )
