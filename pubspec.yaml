@@ -169,7 +169,16 @@ flutter:
     - assets/grocery2/products/
 
     #food menu
-    - assets/
+    - assets/food/all/
+    - assets/food/burger/
+    - assets/food/chicken/
+    - assets/food/desserts/
+    - assets/food/drink/
+    - assets/food/receipe/
+    - assets/food/salad/ 
+    - assets/food/sandwish/
+    - assets/food/seafood/ 
+    - assets/food/soup/
     #   - images/a_dot_ham.jpeg
   # example:
   # fonts:
