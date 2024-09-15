@@ -10,9 +10,34 @@ class Shop1 extends StatefulWidget {
 class _Shop1State extends State<Shop1> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold( 
+    return Scaffold( 
       body: CustomScrollView(
-        slivers: [],
+        slivers: [
+          SliverAppBar(
+            expandedHeight: 200, 
+            flexibleSpace: FlexibleSpaceBar(
+               background: Container(
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/food/all/17.jpg'
+                    
+                    ),
+                    fit: BoxFit.cover, 
+                ),
+                
+              ),
+              foregroundDecoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    Colors.black, 
+                    Colors.black.withOpacity(0.6), 
+                  ]
+                  
+                  )
+              ),
+               ),),
+          )
+        ],
       )
     );
   }
