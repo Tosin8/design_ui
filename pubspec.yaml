@@ -167,6 +167,9 @@ flutter:
     #grocery2 UI
     - assets/grocery2/splash_main.jpg
     - assets/grocery2/products/
+
+    #food menu
+    - assets/
     #   - images/a_dot_ham.jpeg
   # example:
   # fonts:

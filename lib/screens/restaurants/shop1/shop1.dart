@@ -10,6 +10,10 @@ class Shop1 extends StatefulWidget {
 class _Shop1State extends State<Shop1> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return const Scaffold( 
+      body: CustomScrollView(
+        slivers: [],
+      )
+    );
   }
 }
