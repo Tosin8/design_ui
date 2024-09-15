@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_design/screens/pwd_validation/pwd_valid.dart';
+import 'package:ui_design/screens/restaurants/shop1/shop1.dart';
 
 
 
@@ -77,7 +78,7 @@ class MyApp extends StatelessWidget {
     //   tabletScaffold: TabletViewL(),
     //   desktopScaffold: DesktopView(),
     //   ), 
-home:  const PwdValid(), 
+home:  const Shop1(), 
     ); 
   }
 }
