@@ -37,10 +37,7 @@ class ShopAppBar extends StatelessWidget {
          child: CircleAvatar( backgroundColor: Colors.white, 
          child: Icon(Icons.arrow_back, color: Colors.black,),)
          ), 
-         title: const Text('Belly Fix', 
-         style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         
-        ),
         centerTitle: true,
         actions: const [
           Padding(padding: EdgeInsets.only(right: 16), 

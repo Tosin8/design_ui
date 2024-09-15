@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
 
 import 'widgets/shop_appbar.dart';
+import 'widgets/shop_info.dart';
 
 class Shop1 extends StatefulWidget {
   const Shop1({super.key});
@@ -15,7 +17,10 @@ class _Shop1State extends State<Shop1> {
     return const Scaffold( 
       body: CustomScrollView(
         slivers: [
-          ShopAppBar()
+          ShopAppBar(), 
+          SliverToBoxAdapter(
+            child: ShopInfo(),
+          )
         ],
       )
     );
