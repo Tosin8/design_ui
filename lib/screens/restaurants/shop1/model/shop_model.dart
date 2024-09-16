@@ -17,23 +17,23 @@ final List<CategoryMenu> demoCategoriesMenus = [
    items: [
     Menu(
       title: 'Cockie Sandwich',
-     image: '',
+     image: 'assets/food/all/1.jpg',
       price: 7.5),
       Menu(
       title: 'Cockie Sandwich',
-     image: '',
+     image: 'assets/food/all/2.jpg',
       price: 7.5),
        Menu(
       title: 'Cockie Sandwich',
-     image: '',
+     image: 'assets/food/all/3.jpg',
       price: 7.5),
        Menu(
       title: 'Cockie Sandwich',
-     image: '',
+     image: 'assets/food/all/4.jpg',
       price: 7.5),
        Menu(
       title: 'Cockie Sandwich',
-     image: '',
+     image: 'assets/food/all/5.jpg',
       price: 7.5),  
 
    ]
@@ -46,19 +46,19 @@ final List<CategoryMenu> demoCategoriesMenus = [
    items: [
     Menu(
       title: 'Cockie Sandwich',
-     image: '',
+     image: 'assets/food/burger/1.jpg',
       price: 7.5),
       Menu(
       title: 'Cockie Sandwich',
-     image: '',
+     image: 'assets/food/burger/2.jpg',
       price: 7.5),
        Menu(
       title: 'Cockie Sandwich',
-     image: '',
+     image: 'assets/food/burger/3.jpg',
       price: 7.5),
        Menu(
       title: 'Cockie Sandwich',
-     image: '',
+     image: 'assets/food/all/4.jpg',
       price: 7.5),
        Menu(
       title: 'Cockie Sandwich',

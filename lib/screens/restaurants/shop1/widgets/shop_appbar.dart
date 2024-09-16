@@ -11,6 +11,8 @@ class ShopAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverAppBar(
       expandedHeight: 200, 
+      backgroundColor: Colors.white, elevation: 0,
+      pinned: true,
       flexibleSpace: FlexibleSpaceBar(
          background: Container(
           decoration: const BoxDecoration(
