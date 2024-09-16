@@ -3,24 +3,33 @@ import 'package:ui_design/screens/restaurants/shop1/model/shop_model.dart';
 
 
 class ShopCategories extends SliverPersistentHeaderDelegate{
+
+  final ValueChanged<int> onChanged; 
+  final int selectedIndex;
+
+  ShopCategories({required this.onChanged, required this.selectedIndex}); 
+
+
   @override
   Widget build(BuildContext context, double shrinkOffset, bool overlapsContent) {
-    // TODO: implement build
-    throw UnimplementedError();
+  
+    return Container(
+      height: 52,
+      color: Colors.white, 
+      child: Categories(onChanged: onChanged,
+      selectedIndex: selectedIndex,),
+    ); 
   }
 
   @override
-  // TODO: implement maxExtent
-  double get maxExtent => throw UnimplementedError();
+  double get maxExtent => 52;
 
   @override
-  // TODO: implement minExtent
-  double get minExtent => throw UnimplementedError();
+  double get minExtent => 52; 
 
   @override
   bool shouldRebuild(covariant SliverPersistentHeaderDelegate oldDelegate) {
-    // TODO: implement shouldRebuild
-    throw UnimplementedError();
+   return true; 
   }
   
 }
@@ -36,15 +45,43 @@ class Categories extends StatefulWidget {
 }
 
 class _CategoriesState extends State<Categories> {
+  late ScrollController controller; 
+
+@override
+  void initState() {
+    controller = ScrollController();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+     controller.dispose();
+    super.dispose();
+   
+  }
+
+  
+   @override
+  void didUpdateWidget (covariant Categories oldWidget) {
+    controller.animateTo (
+      
+      80.0 * widget.selectedIndex, duration: const Duration(milliseconds: 200), curve: Curves.easeInOut);
+    super.didUpdateWidget(oldWidget);
+    
+  }
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView( 
+      controller: controller,
       scrollDirection: Axis.horizontal,
       child: Row(
         children: List.generate(
           demoCategoriesMenus.length, 
           (index) =>   Padding(padding: const EdgeInsets.only(left: 8), 
-          child: TextButton(onPressed: (){},
+          child: TextButton(onPressed: (){
+            widget.onChanged(index);
+          },
           style: TextButton.styleFrom(foregroundColor: widget.selectedIndex == index ? Colors.black : Colors.black26),
            child: Text(demoCategoriesMenus[index].category, style: const TextStyle(fontSize: 20),))
           )),

@@ -13,21 +13,108 @@ class Shop1 extends StatefulWidget {
 }
 
 class _Shop1State extends State<Shop1> {
+  final scrollController = ScrollController(); 
+
+  int selectedCategoryIndex = 0; 
+
+  double shopInfoHeight = 200 + 170 - kToolbarHeight; // appbar expanded height + info height 
+
+  @override
+  void initState() {
+    createBreakPoints(); 
+  scrollController.addListener((){
+    //print(scrollController.offset); 
+    updateCategoryIndexOnScroll(scrollController.offset); 
+  }); 
+    super.initState();
+  }
+
+  void scrollToCategory (int index) {
+if (selectedCategoryIndex != index) {
+    int totalItems = 0; 
+
+    for(var i = 0; i < index; i++){
+      totalItems += demoCategoriesMenus[i].items.length;
+    }
+   scrollController.animateTo(
+    // 116 = 100 menu items height + 16 bottom padding of each item. 
+    // 50 = 18 title font size + 32 (16 vertical padding on title)
+    shopInfoHeight + (116 * totalItems)+ (50 * index), 
+   duration: const Duration(milliseconds: 500),
+    curve: Curves.easeIn);  
+    setState(() {
+      selectedCategoryIndex = index;
+    });
+  }
+  }
+
+  // scroll to selected categories. 
+
+List<double> breakPoints = []; 
+void createBreakPoints(){
+
+  // 116 = 100 menu item height + 16 bottom padding of each item.
+  // 50 = 18 title font size + 32 (16 vertical padding on title)
+
+double firstBreakPoint = shopInfoHeight + 50 + (116 * demoCategoriesMenus[0].items.length);
+breakPoints.add(firstBreakPoint);
+for( var i = 1; i < demoCategoriesMenus.length; i++){
+  // double breakPoint = breakPoints[i] + 116 + 50 + (116 * demoCategoriesMenus[i+1].items.length);
+  double breakPoint = breakPoints.last + 50 + (116 * demoCategoriesMenus[i].items.length);
+  breakPoints.add(breakPoint);
+}
+
+}
+
+void updateCategoryIndexOnScroll(double offset) {
+  for (var i = 0; i < demoCategoriesMenus.length; i++) {
+    if (i == 0) {
+      if ((offset < breakPoints.first) & (selectedCategoryIndex != 0)) {
+        setState(() {
+          selectedCategoryIndex = 0;
+        });
+      } 
+    }
+     else if ((breakPoints [i - 1] <= offset) & (offset < breakPoints[i])){
+if(selectedCategoryIndex != i) {
+  setState(() {
+    selectedCategoryIndex = i;
+  });
+}
+
+
+     }
+  }
+ 
+}
+
   @override
   Widget build(BuildContext context) {
     return  Scaffold( 
+      backgroundColor: Colors.white,
       body: CustomScrollView(
+        controller: scrollController, 
         slivers: [
           const ShopAppBar(), 
           const SliverToBoxAdapter(
             child: ShopInfo(),
-          ), 
-          SliverToBoxAdapter(
-            child: Categories (
-               onChanged: (value) {}, 
-               selectedIndex: 0, 
-               ), 
-          ), 
+          ),
+
+          // WITH NO SCROLL.  
+          // SliverToBoxAdapter(
+          //   child: Categories (
+          //      onChanged: (value) {}, 
+          //      selectedIndex: 0, 
+          //      ), 
+          // ), 
+          SliverPersistentHeader(
+            delegate: ShopCategories(onChanged: scrollToCategory, 
+            selectedIndex: selectedCategoryIndex, 
+            
+            
+            ), 
+            pinned: true,
+            ), 
         SliverPadding(
           padding: const EdgeInsets.symmetric(horizontal: 16), 
           sliver: SliverList(
