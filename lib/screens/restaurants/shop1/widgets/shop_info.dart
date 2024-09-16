@@ -15,7 +15,7 @@ class ShopInfo extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text('Belly Fix Restuarant', 
+          const Text('SubWay Restuarant', 
           style: TextStyle(fontSize: 23, fontWeight: FontWeight.w600),), 
           const SizedBox(height: 4,), 
           const Text('Local Dish, American and Chinese Food', 

@@ -17,30 +17,30 @@ final List<CategoryMenu> demoCategoriesMenus = [
   
    items: [
     Menu(
-      title: 'Cockie Sandwich',
-     image: 'assets/food/all/1.jpg',
-     description: '', 
+      title: 'Margherita Pizza',
+     image: 'assets/food/all/6.jpg',
+     description: 'A classic Italian pizza topped with fresh mozzarella, ripe tomatoes, and fragrant basil leaves, all on a crispy, wood-fired crust', 
       price: 7.5),
       Menu(
-      title: 'Cockie Sandwich',
-     image: 'assets/food/all/2.jpg',
-      description: '',
+      title: 'Beef Stroganoff',
+     image: 'assets/food/all/15.jpg',
+      description: 'Tender strips of beef sautéed with mushrooms and onions, then simmered in a rich and creamy sauce, served over buttered noodles.',
       price: 7.5),
        Menu(
-      title: 'Cockie Sandwich',
+      title: 'Penne Alfredo',
      image: 'assets/food/all/3.jpg',
-      description: '',
+      description: 'A comforting pasta dish with penne tossed in a creamy garlic and parmesan Alfredo sauce, topped with grilled chicken or shrimp.',
       price: 7.5),
        Menu(
-      title: 'Cockie Sandwich',
+      title: 'Avocado Toast',
      image: 'assets/food/all/4.jpg',
-      description: '',
+      description: 'Creamy mashed avocado spread over toasted sourdough bread, topped with a sprinkle of salt, pepper, and chili flakes for a quick, healthy bite',
       
 
       price: 7.5),
        Menu(
-      title: 'Cockie Sandwich',
-       description: '',
+      title: 'Falafel Wrap',
+       description: 'Crispy, golden falafel balls wrapped in a soft pita, filled with fresh veggies, and drizzled with a tangy tahini sauce for a flavorful vegetarian meal.',
      image: 'assets/food/all/5.jpg',
       price: 7.5),  
 
