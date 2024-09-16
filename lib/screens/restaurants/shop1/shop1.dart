@@ -29,6 +29,13 @@ class _Shop1State extends State<Shop1> {
     super.initState();
   }
 
+  @override
+  void dispose() {
+    scrollController.dispose();
+    super.dispose();
+    
+  }
+
   void scrollToCategory (int index) {
 if (selectedCategoryIndex != index) {
     int totalItems = 0; 
@@ -56,7 +63,7 @@ void createBreakPoints(){
   // 116 = 100 menu item height + 16 bottom padding of each item.
   // 50 = 18 title font size + 32 (16 vertical padding on title)
 
-double firstBreakPoint = shopInfoHeight + 50 + (116 * demoCategoriesMenus[0].items.length);
+double firstBreakPoint = shopInfoHeight + 50 + (40 * demoCategoriesMenus[0].items.length);
 breakPoints.add(firstBreakPoint);
 for( var i = 1; i < demoCategoriesMenus.length; i++){
   // double breakPoint = breakPoints[i] + 116 + 50 + (116 * demoCategoriesMenus[i+1].items.length);
