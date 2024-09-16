@@ -198,7 +198,6 @@ final List<CategoryMenu> demoCategoriesMenus = [
    ),
    CategoryMenu(
     category: 'SandWish',
-  
    items: [
     Menu(
       title: 'Turkey Club Sandwich',
@@ -221,7 +220,6 @@ final List<CategoryMenu> demoCategoriesMenus = [
    
    ),CategoryMenu(
     category: 'Seafood',
-  
    items: [
     Menu(
       title: 'Grilled Salmon',
@@ -237,7 +235,8 @@ final List<CategoryMenu> demoCategoriesMenus = [
 
    ]
    
-   ),CategoryMenu(
+   ),
+   CategoryMenu(
     category: 'Soup',
   
    items: [
