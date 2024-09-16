@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
+import 'widgets/categories.dart';
 import 'widgets/shop_appbar.dart';
 import 'widgets/shop_info.dart';
 
@@ -20,6 +21,12 @@ class _Shop1State extends State<Shop1> {
           ShopAppBar(), 
           SliverToBoxAdapter(
             child: ShopInfo(),
+          ), 
+          SliverToBoxAdapter(
+            child: Categories (
+               onChanged: (value) {}, 
+               selectedIndex: 0, 
+               ), 
           )
         ],
       )
