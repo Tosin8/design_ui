@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:ui_design/screens/restaurants/shop1/model/shop_model.dart';
 
 import 'widgets/categories.dart';
@@ -43,6 +42,7 @@ class _Shop1State extends State<Shop1> {
               title: items[index].title, 
               image: items[index].image,
                price: items[index].price, 
+               description: items[index].description
                ), )
                ),
             
@@ -59,21 +59,35 @@ class _Shop1State extends State<Shop1> {
 }
 
 class MenuCard extends StatelessWidget {
-   MenuCard({super.key, required this.title, required this.price, required this.image});
+   MenuCard({super.key, required this.title, required this.price, required this.image, required this.description});
 
 String title; 
 double price; 
 String image; 
+String description; 
   @override
   Widget build(BuildContext context) {
     return Container(
       child:  Row(
         children: [
-          Image.asset('image'), 
+          Container( 
+            decoration: BoxDecoration( 
+              borderRadius: BorderRadius.circular(10),
+              image: DecorationImage(image: AssetImage(image), fit: BoxFit.cover),
+            ),
+            width: 100, height: 100,
+          
+            ),
+            const SizedBox(width: 10,), 
           Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(title), 
-              Text(price.toString()),
+              Text(title, style: const TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 16),), 
+              SizedBox(
+                width: 250 ,
+                child: Text(description, maxLines: 2,softWrap: true,overflow: TextOverflow.ellipsis,)),
+              const SizedBox(height: 5,), 
+              Text('\$$price', style: const TextStyle(color: Colors.green, fontSize: 16, fontWeight: FontWeight.bold),),
             ],
           )
         ],
@@ -105,6 +119,7 @@ class MenuCategoryItem extends StatelessWidget {
           ),
           const SizedBox(height: 10), // Space between title and items
           Column(
+        
             children: items, // Pass the list of Padding widgets
           ),
         ],
