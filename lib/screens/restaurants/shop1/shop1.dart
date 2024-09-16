@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:ui_design/screens/restaurants/shop1/model/shop_model.dart';
 
 import 'widgets/categories.dart';
 import 'widgets/shop_appbar.dart';
@@ -18,8 +19,8 @@ class _Shop1State extends State<Shop1> {
     return  Scaffold( 
       body: CustomScrollView(
         slivers: [
-          ShopAppBar(), 
-          SliverToBoxAdapter(
+          const ShopAppBar(), 
+          const SliverToBoxAdapter(
             child: ShopInfo(),
           ), 
           SliverToBoxAdapter(
@@ -27,7 +28,27 @@ class _Shop1State extends State<Shop1> {
                onChanged: (value) {}, 
                selectedIndex: 0, 
                ), 
-          )
+          ), 
+        SliverList(
+            delegate: SliverChildBuilderDelegate(
+(context, categoryIndex) {
+  List<Menu> items = demoCategoriesMenus[categoryIndex].items;
+return MenuCategoryItem(
+  title: demoCategoriesMenus[categoryIndex].category,
+  items: List.generate(items.length,
+   (index) => Padding(padding: const EdgeInsets.only(bottom: 20), 
+   child: MenuCard( 
+    title: items[index].title, 
+    image: items[index].image,
+     price: items[index].price, 
+     ), )
+     ),
+  
+   );
+
+    }  , 
+    childCount: demoCategoriesMenus.length, 
+    ))
         ],
       )
     );
