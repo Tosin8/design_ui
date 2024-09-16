@@ -7,5 +7,24 @@ class Landing {
 }
 
 final List<Landing> demoLandings = [
-  
+  Landing(
+    title: 'Burger King', 
+  image: '', 
+  route: ''), 
+  Landing(
+    title: 'McDonalds', 
+  image: '', 
+  route: ''), Landing(
+    title: 'KFC', 
+  image: '', 
+  route: ''), Landing(
+    title: 'SubWay', 
+  image: '', 
+  route: ''), Landing(
+    title: 'Pizza Hut', 
+  image: '', 
+  route: ''), Landing(
+    title: 'Dominion Pizza', 
+  image: '', 
+  route: ''), 
 ]; 
