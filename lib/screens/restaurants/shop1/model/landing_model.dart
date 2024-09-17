@@ -1,3 +1,5 @@
+import '../routes.dart';
+
 class Landing {
   final String title; 
   final String image; 
@@ -24,7 +26,7 @@ final List<Landing> demoLandings = [
    Landing(
     title: 'SubWay', 
   image: 'assets/food/brand_company/subway.png', 
-  route: ''), 
+  route: AppRoutes.subway), 
   Landing(
     title: 'Pizza Hut', 
   image: 'assets/food/brand_company/pizza_hunt.png', 

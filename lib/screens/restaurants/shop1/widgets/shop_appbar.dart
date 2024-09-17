@@ -17,7 +17,7 @@ class ShopAppBar extends StatelessWidget {
          background: Container(
           decoration: const BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('assets/food/all/17.jpg'
+              image: AssetImage('assets/food/brand_company/subway.png'
               
               ),
               fit: BoxFit.cover, 
@@ -35,9 +35,13 @@ class ShopAppBar extends StatelessWidget {
             )
         ),
          ),),
-         leading: const Padding(padding: EdgeInsets.only(left: 16), 
+         leading: Padding(padding: const EdgeInsets.only(left: 16), 
          child: CircleAvatar( backgroundColor: Colors.white, 
-         child: Icon(Icons.arrow_back, color: Colors.black,),)
+         child: IconButton(
+          onPressed: () {
+            Navigator.pop(context); 
+          }, 
+         icon: const Icon(Icons.arrow_back), color: Colors.black,),)
          ), 
         
         centerTitle: true,
