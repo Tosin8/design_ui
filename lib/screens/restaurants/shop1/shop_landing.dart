@@ -92,7 +92,7 @@ class _ShopLandingState extends State<ShopLanding> {
                   crossAxisSpacing: 12.0, // Horizontal space between grid items
                 ),
               ),
-              const SizedBox(height: 30),
+              const SizedBox(height: 10),
               ClipRRect(
                 borderRadius: const BorderRadius.all(Radius.circular(10)),
                 child: Image.asset('assets/food/brand_company/banner.png'),
