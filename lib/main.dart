@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ui_design/screens/restaurants/shop1/shop1.dart';
 
+import 'screens/restaurants/shop1/shop_landing.dart';
+
 
 
 
@@ -77,7 +79,7 @@ class MyApp extends StatelessWidget {
     //   tabletScaffold: TabletViewL(),
     //   desktopScaffold: DesktopView(),
     //   ), 
-home:  const Shop1(), 
+home:  const ShopLanding(), 
     ); 
   }
 }

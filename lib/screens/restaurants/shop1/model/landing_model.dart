@@ -9,22 +9,26 @@ class Landing {
 final List<Landing> demoLandings = [
   Landing(
     title: 'Burger King', 
-  image: '', 
+  image: 'assets/food/brand_company/burger_king.png', 
   route: ''), 
   Landing(
     title: 'McDonalds', 
-  image: '', 
-  route: ''), Landing(
+  image: 'assets/food/brand_company/mcdonalds.jpg', 
+  route: ''),
+   Landing(
     title: 'KFC', 
-  image: '', 
-  route: ''), Landing(
+  image: 'assets/food/brand_company/kfc.jpg', 
+  route: ''),
+   Landing(
     title: 'SubWay', 
-  image: '', 
-  route: ''), Landing(
+  image: 'assets/food/brand_company/subway.png', 
+  route: ''), 
+  Landing(
     title: 'Pizza Hut', 
-  image: '', 
-  route: ''), Landing(
+  image: 'assets/food/brand_company/pizza_hunt.png', 
+  route: ''),
+   Landing(
     title: 'Dominion Pizza', 
-  image: '', 
+  image: 'assets/food/brand_company/dominion.png', 
   route: ''), 
 ]; 

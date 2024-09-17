@@ -179,6 +179,7 @@ flutter:
     - assets/food/sandwish/
     - assets/food/seafood/ 
     - assets/food/soup/
+    - assets/food/brand_company/
     #   - images/a_dot_ham.jpeg
   # example:
   # fonts:

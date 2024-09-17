@@ -8,6 +8,8 @@ class ShopLanding extends StatelessWidget {
     return Scaffold( 
       appBar: AppBar(
         backgroundColor: Colors.white, 
+        leading: const Icon(Icons.menu), 
+        title: const Text('Kitchen'), 
       ),
     );
   }
