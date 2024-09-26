@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_design/screens/payment_api/payment_api.dart';
 import 'package:ui_design/screens/restaurants/shop1/shop1.dart';
 
 import 'screens/restaurants/shop1/routes.dart';
@@ -81,7 +82,7 @@ class MyApp extends StatelessWidget {
     //   desktopScaffold: DesktopView(),
     //   ), 
     routes:AppRoutes.routes, 
-home:  const ShopLanding(), 
+home:  const PaymentApi(), 
     ); 
   }
 }
