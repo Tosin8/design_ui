@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_paystack/flutter_paystack.dart'; 
+import 'package:flutter_paystack/flutter_paystack.dart';
+
+import 'payment_success.dart'; 
 
 class PaymentApi extends StatefulWidget {
   const PaymentApi({super.key});
@@ -35,6 +37,17 @@ void makePayment()async{
 
   CheckoutResponse response = await plugin.checkout(context, charge: charge, 
   method: CheckoutMethod.card); 
+
+if (response.status == true) {
+  message = 'Payment was successful. Ref: ${response.reference}'; 
+  if (mounted){} 
+  Navigator.pushAndRemoveUntil(context,
+   MaterialPageRoute(builder: (context) => PaymentSuccess(message: message)), 
+   ModalRoute.withName('/')
+   ); 
+} else {
+  print(response.message); 
+}
 }
 
   @override
