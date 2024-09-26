@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_paystack/flutter_paystack.dart'; 
 
 class PaymentApi extends StatefulWidget {
   const PaymentApi({super.key});
@@ -8,6 +9,13 @@ class PaymentApi extends StatefulWidget {
 }
 
 class _PaymentApiState extends State<PaymentApi> {
+  final _formKey = GlobalKey<FormState>(); 
+  TextEditingController amountController = TextEditingController(); 
+  TextEditingController emailController = TextEditingController();
+
+  String publicKey = 'sk_test_4022a9a91a9fb0fece157832994253076af5e9df'; 
+  final plugin = PaystackPlugin(); 
+  String message = '';
   @override
   Widget build(BuildContext context) {
     return Scaffold( 
@@ -19,12 +27,18 @@ class _PaymentApiState extends State<PaymentApi> {
         child: Column(
         
           children: [
-            Form(child: 
+            Form
+            
+            (
+              key: _formKey, 
+
+              child: 
             
             
             Column(
               children: [
                 TextFormField(
+                  controller: emailController,
                   validator: (value) {
                     if(value == null ||value.isEmpty){
                       return 'Enter your email'; 
@@ -43,9 +57,10 @@ class _PaymentApiState extends State<PaymentApi> {
 
                 const SizedBox(height: 20,), 
                 TextFormField(
+                  controller: amountController,
               validator: (value) {
                 if(value == null ||value.isEmpty){
-                  return 'Enter your email'; 
+                  return 'Enter your amount'; 
                 }
                 return null;
               
