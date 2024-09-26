@@ -15,25 +15,58 @@ class _PaymentApiState extends State<PaymentApi> {
         title: const Text('Make Payment')
       ),
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding:  const EdgeInsets.all(15.0),
         child: Column(
+        
           children: [
             Form(child: 
             
-            TextFormField(
+            
+            Column(
+              children: [
+                TextFormField(
+                  validator: (value) {
+                    if(value == null ||value.isEmpty){
+                      return 'Enter your email'; 
+                    }
+                    return null;
+                  
+                    
+                  },
+                  decoration: const InputDecoration(
+                    hintText: 'Input Amount', 
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.zero)
+                    )
+                  ),
+                ),
+
+                const SizedBox(height: 20,), 
+                TextFormField(
               validator: (value) {
-                if(value = null ||value.isEmpty){
+                if(value == null ||value.isEmpty){
                   return 'Enter your email'; 
                 }
                 return null;
               
                 
               },
+              autovalidateMode: AutovalidateMode.onUserInteraction,
               decoration: const InputDecoration(
-                hintText: 'Input Email'
+                hintText: 'Input Email', 
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.zero)
+                )
               ),
+            ) ,
+              ],
             ) , 
-                       )
+
+
+            
+                       ), 
+                       const SizedBox(height: 20,), 
+                       ElevatedButton(onPressed: (){}, child: const Text('Make Payment Now'))
           ],
         ),
       )

@@ -81,7 +81,7 @@ class MyApp extends StatelessWidget {
     //   tabletScaffold: TabletViewL(),
     //   desktopScaffold: DesktopView(),
     //   ), 
-    routes:AppRoutes.routes, 
+   // routes:AppRoutes.routes, 
 home:  const PaymentApi(), 
     ); 
   }
