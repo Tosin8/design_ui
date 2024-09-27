@@ -54,7 +54,7 @@ if (response.status == true) {
   Widget build(BuildContext context) {
     return Scaffold( 
       appBar: AppBar(
-        title: const Text('Make Payment')
+        title: const Text('Make Payment') 
       ),
       body: Padding(
         padding:  const EdgeInsets.all(15.0),
