@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_design/screens/payment_api/payment_api.dart';
-import 'package:ui_design/screens/restaurants/shop1/shop1.dart';
 
-import 'screens/restaurants/shop1/routes.dart';
-import 'screens/restaurants/shop1/shop_landing.dart';
 
 
 
