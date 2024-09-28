@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_design/screens/payment_api/payment_api.dart';
+import 'package:ui_design/screens/quick_actions/quick_actions_home.dart';
 
 
 
@@ -79,7 +80,7 @@ class MyApp extends StatelessWidget {
     //   desktopScaffold: DesktopView(),
     //   ), 
    // routes:AppRoutes.routes, 
-home:  const PaymentApi(), 
+home:  const QuickActionsHome(), 
     ); 
   }
 }
