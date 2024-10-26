@@ -25,7 +25,7 @@ class IntroWidget extends StatelessWidget {
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            stops: [0, .3, 0.4],
+            stops: const [0, .3, 0.4],
             colors: [Colors.white, kBrownColor, Colors.white.withOpacity(0.8)],
           ),
         ),
@@ -50,7 +50,7 @@ class IntroWidget extends StatelessWidget {
             );
           }).toList(),
           Align(
-            alignment: Alignment.center + Alignment(0, 0.25),
+            alignment: Alignment.center + const Alignment(0, 0.25),
             child: Stack(
               clipBehavior: Clip.none,
               children: [
@@ -82,7 +82,7 @@ class IntroWidget extends StatelessWidget {
                   child: Transform.rotate(
                     angle: pi / 6,
                     child: Image.asset(
-                      'assets/images/bean.png',
+                      'assets/coffee_1/images/bean.png',
                       height: 22,
                     ),
                   ),

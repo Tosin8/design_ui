@@ -138,6 +138,27 @@ flutter:
     - assets/form/1.jpg
     - assets/form/2.jpg
 
+    #coffee
+    - assets/coffee_1/images/coffee/GLASS-0.png
+    - assets/coffee_1/images/coffee/GLASS-1.png
+    - assets/coffee_1/images/coffee/GLASS-2.png
+    - assets/coffee_1/images/coffee/GLASS-3.png
+    - assets/coffee_1/images/coffee/GLASS-4.png
+    - assets/coffee_1/images/coffee/GLASS-5.png
+    - assets/coffee_1/images/coffee/GLASS-6.png
+    - assets/coffee_1/images/coffee/GLASS-7.png
+    - assets/coffee_1/images/coffee/GLASS-8.png
+    - assets/coffee_1/images/treat/TREAT_0.png
+    - assets/coffee_1/images/treat/TREAT_1.png
+    - assets/coffee_1/images/treat/TREAT_2.png
+    - assets/coffee_1/images/treat/TREAT_3.png
+    - assets/coffee_1/images/treat/TREAT_4.png
+    - assets/coffee_1/images/treat/TREAT_5.png
+    - assets/coffee_1/images/treat/TREAT_6.png
+    - assets/coffee_1/images/bean.png
+  
+   
+
     #social network
     - assets/social_net/1.png
     - assets/social_net/2.png
