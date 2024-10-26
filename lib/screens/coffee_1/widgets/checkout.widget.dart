@@ -1,12 +1,11 @@
-import 'package:coffee_app/models/coffee_item.model.dart';
-import 'package:coffee_app/models/treat_item.model.dart';
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:google_fonts/google_fonts.dart';
 
 import '../config/colors_constants.dart';
+import '../models/coffee_item.model.dart';
+import '../models/treat_item.model.dart';
 
 class CheckoutWidget extends StatelessWidget {
   final CoffeeItem coffee;
@@ -97,7 +96,7 @@ class CheckoutWidget extends StatelessWidget {
                 Spacer(),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    primary: kTitleColor,
+                    backgroundColor: kTitleColor,
                     padding: EdgeInsets.symmetric(vertical: 20),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8),

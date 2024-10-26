@@ -1,12 +1,13 @@
-import 'package:coffee_app/config/scroll_config.dart';
-import 'package:coffee_app/models/coffee_item.model.dart';
-import 'package:coffee_app/models/treat_item.model.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ui_design/screens/coffee_1/config/scroll_config.dart';
+import 'package:ui_design/screens/coffee_1/models/treat_item.model.dart';
 
 import '../config/colors_constants.dart';
 import '../config/services_locator.dart';
+import '../models/coffee_item.model.dart';
 import '../services/navigation.service.dart';
 
 class TreatsListWidget extends StatefulWidget {

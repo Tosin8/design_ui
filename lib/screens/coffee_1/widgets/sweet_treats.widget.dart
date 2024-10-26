@@ -1,4 +1,4 @@
-import 'package:coffee_app/widgets/treats_list.widget.dart';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -6,6 +6,7 @@ import '../config/colors_constants.dart';
 import '../config/services_locator.dart';
 import '../models/coffee_item.model.dart';
 import '../services/navigation.service.dart';
+import 'treats_list.widget.dart';
 
 class SweetTreatsWidget extends StatefulWidget {
   final CoffeeItem coffee;

@@ -1,9 +1,10 @@
-import 'package:coffee_app/config/services_locator.dart';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../config/colors_constants.dart';
 import '../config/scroll_config.dart';
+import '../config/services_locator.dart';
 import '../models/coffee_item.model.dart';
 import '../services/navigation.service.dart';
 

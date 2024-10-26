@@ -1,12 +1,13 @@
 import 'dart:math';
 
-import 'package:coffee_app/config/colors_constants.dart';
-import 'package:coffee_app/config/services_locator.dart';
-import 'package:coffee_app/models/coffee_item.model.dart';
-import 'package:coffee_app/services/navigation.service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ui_design/screens/coffee_1/config/services_locator.dart';
+import 'package:ui_design/screens/coffee_1/models/coffee_item.model.dart';
+
+import '../config/colors_constants.dart';
+import '../services/navigation.service.dart';
 
 class IntroWidget extends StatelessWidget {
   const IntroWidget({super.key});
