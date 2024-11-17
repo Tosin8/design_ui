@@ -5,6 +5,11 @@ class DatingHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(  
+      appBar: AppBar(
+        backgroundColor: Colors.pink,
+        title: const Text('Dating App'),
+      ),
+    );
   }
 }
