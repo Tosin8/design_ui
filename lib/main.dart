@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ui_design/screens/coffee_1/home.page.dart';
 import 'package:ui_design/screens/dating/pages/home/home.dart';
-import 'package:ui_design/screens/payment_api/payment_api.dart';
-import 'package:ui_design/screens/quick_actions/quick_actions_home.dart';
 
 import 'screens/coffee_1/config/services_locator.dart';
 
