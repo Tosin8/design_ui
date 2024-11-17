@@ -7,6 +7,7 @@ class DatingHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(  
       appBar: AppBar(
+        
         backgroundColor: Colors.pink,
         title: const Text('Dating App'),
       ),
