@@ -11,6 +11,9 @@ class DatingHome extends StatelessWidget {
         backgroundColor: Colors.pink,
         title: const Text('Dating App'),
       ),
+      body: Center(
+        child: Text('Hello')
+        ); 
     );
   }
 }
