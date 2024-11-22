@@ -9,7 +9,7 @@ class DatingHome extends StatelessWidget {
       appBar: AppBar(
         
         backgroundColor: Colors.pink,
-        title: const Text('Dating App'),
+        title: Text('Dating App'),
       ),
       body: Center(
         child: Text('Hello')
